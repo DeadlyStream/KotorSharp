@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{986C02F4-62B4-4F6F-9308-58D2732699B3}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KPatcher</RootNamespace>
+    <AssemblyName>KPatcher</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Installation\Controllers\InstallationController.cs" />
+    <Compile Include="Installation\GameVersionExtensions.cs" />
+    <Compile Include="Newtonsoft\JsonExtensions.cs" />
+    <Compile Include="Newtonsoft\JsonModelable.cs" />
+    <Compile Include="PatchConversion\NamespacesInfo.cs" />
+    <Compile Include="PatchConversion\PatchConversionController.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Source\Constants\KotorGameType.cs" />
+    <Compile Include="Source\Exceptions\FileNotOpenedException.cs" />
+    <Compile Include="Source\Managers\GFFProcessor.cs" />
+    <Compile Include="Source\Managers\InstallationController.cs" />
+    <Compile Include="Source\Managers\InstallListProcessor.cs" />
+    <Compile Include="Source\Managers\KeyValueManifest.cs" />
+    <Compile Include="Source\Managers\NWScriptProcessor.cs" />
+    <Compile Include="Source\Managers\PatchFIleManager.cs" />
+    <Compile Include="Source\Managers\PathManager.cs" />
+    <Compile Include="Source\Managers\ProgramController.cs" />
+    <Compile Include="Source\Managers\TLKProcessor.cs" />
+    <Compile Include="Source\Managers\_2daProcessor.cs" />
+    <Compile Include="Source\Paths\TSLPatchDataPath.cs" />
+    <Compile Include="Source\Paths\TSLPatcherPath.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AppToolbox\AppToolbox.csproj">
+      <Project>{2356acb9-937a-4808-bf4c-b58072f6e7ab}</Project>
+      <Name>AppToolbox</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AuroraIO\AuroraIO.csproj">
+      <Project>{521f1e36-8f61-4dc5-b82f-291d51b6628b}</Project>
+      <Name>AuroraIO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KotorManifest\KotorManifest.csproj">
+      <Project>{755c8132-535e-4b54-9df9-28ff7a3af6d8}</Project>
+      <Name>KotorManifest</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KPatcherBase\KPatcherBase.csproj">
+      <Project>{f134aa51-a3e3-475c-84eb-268cd7eeec3f}</Project>
+      <Name>KPatcherBase</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

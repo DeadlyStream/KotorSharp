@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F134AA51-A3E3-475C-84EB-268CD7EEEC3F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KPatcherBase</RootNamespace>
+    <AssemblyName>KPatcherBase</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="INIFileParser, Version=2.5.2.0, Culture=neutral, PublicKeyToken=79af7b307b65cf3c, processorArchitecture=MSIL">
+      <HintPath>..\packages\ini-parser.2.5.2\lib\net20\INIFileParser.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\KPatcher\bin\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Source\Managers\FileLoader+ItemPropertyManagerExtensions.cs" />
+    <Compile Include="Source\Managers\FileManager+Extensions.cs" />
+    <Compile Include="Source\Managers\ItemPropertyManager.cs" />
+    <Compile Include="Source\Models\Install\GameInstallVersion.cs" />
+    <Compile Include="Source\Models\Install\GamePath.cs" />
+    <Compile Include="Source\Models\Install\ModInstallInfo.cs" />
+    <Compile Include="Source\Models\Install\ModInstallOptionMap.cs" />
+    <Compile Include="Source\Models\Install\PatcherPath.cs" />
+    <Compile Include="Source\Models\ItemPropertyInfoModel.cs" />
+    <Compile Include="Source\Models\Mod\InstallCommands\FolderCopyInstallCommand.cs" />
+    <Compile Include="Source\Models\Mod\InstallCommands\ModFileInstallCommand.cs" />
+    <Compile Include="Source\Models\Mod\InstallCommands\SingleFileCopyInstallCommand.cs" />
+    <Compile Include="Source\Models\Mod\ModFileInstallSet.cs" />
+    <Compile Include="Source\Models\Mod\ModFilePatchSet.cs" />
+    <Compile Include="Source\Models\Mod\ModIfStatement.cs" />
+    <Compile Include="Source\Models\Mod\ModIfStatementType.cs" />
+    <Compile Include="Source\Models\Mod\ModOption.cs" />
+    <Compile Include="Source\Models\Mod\ModPackage.cs" />
+    <Compile Include="Source\Models\Mod\ModPackageComponent.cs" />
+    <Compile Include="Source\Models\Mod\ModVar.cs" />
+    <Compile Include="Source\Models\Mod\PatchCommands\2da\_2daAddRowPatchCommand.cs" />
+    <Compile Include="Source\Models\Mod\PatchCommands\2da\_2daClearRowPatchCommand.cs" />
+    <Compile Include="Source\Models\Mod\PatchCommands\2da\_2daModRowPatchCommand.cs" />
+    <Compile Include="Source\Models\Mod\PatchCommands\2da\_2daRowIndexPatchCommand.cs" />
+    <Compile Include="Source\Models\Mod\PatchCommands\ModFilePatchCommand.cs" />
+    <Compile Include="Source\Models\Mod\PatchCommands\Tlk\TlkAddEntryPatchCommand.cs" />
+    <Compile Include="Source\Models\Mod\PatchCommands\Tlk\TlkLoadEntryPatchCommand.cs" />
+    <Compile Include="Source\Models\Mod\PatchCommands\Tlk\TlkModEntryPatchCommand.cs" />
+    <Compile Include="Source\Models\Mod\ValueExpressions\ModBooleanExpression.cs" />
+    <Compile Include="Source\Models\Mod\ValueExpressions\ModBooleanOperator.cs" />
+    <Compile Include="Source\Models\Mod\ValueExpressions\ModPatchCommandExpression.cs" />
+    <Compile Include="Source\Models\Mod\ValueExpressions\ModSimpleExpression.cs" />
+    <Compile Include="Source\Models\Mod\ValueExpressions\ModValueExpression.cs" />
+    <Compile Include="Source\Models\Mod\ValueExpressions\ModWhereExpression.cs" />
+    <Compile Include="Source\Models\Install\PathInfo.cs" />
+    <Compile Include="Source\Patcher\ChangesCollection.cs" />
+    <Compile Include="Source\Patcher\InstructionSet.cs" />
+    <Compile Include="Source\Patcher\LogLevel.cs" />
+    <Compile Include="Source\Patcher\NamespaceInfo.cs" />
+    <Compile Include="Source\Patcher\NamespaceCollection.cs" />
+    <Compile Include="Source\Patcher\PatchLoader.cs" />
+    <Compile Include="Source\Patching\Conversion\Common\DirectoryDesignation.cs" />
+    <Compile Include="Source\Patching\Conversion\Common\DirectoryTree.cs" />
+    <Compile Include="Source\Patching\Conversion\Common\ModConverter.cs" />
+    <Compile Include="Source\Patching\Conversion\NamespacesInfo.cs" />
+    <Compile Include="Source\Patching\Parsing\Extensions\ModFileInstallCommandParsingExtensions.cs" />
+    <Compile Include="Source\Patching\Parsing\Extensions\ModFilePatchCommandParserExtensions.cs" />
+    <Compile Include="Source\Patching\Parsing\Extensions\ModIfStatementParsingExtensions.cs" />
+    <Compile Include="Source\Patching\Parsing\Extensions\ModPackageComponentParserExtensions.cs" />
+    <Compile Include="Source\Patching\Parsing\Extensions\ModTermParser.cs" />
+    <Compile Include="Source\Patching\Parsing\Extensions\TLKFilePatchParsingExtensions.cs" />
+    <Compile Include="Source\Patching\Parsing\Extensions\TSLPatcherModParsingExtensions.cs" />
+    <Compile Include="Source\Patching\Parsing\Extensions\_2daFilePatchParsingExtensions.cs" />
+    <Compile Include="Source\Patching\Parsing\FileLoader+ParsingContainer.cs" />
+    <Compile Include="Source\Patching\Parsing\ModParser.cs" />
+    <Compile Include="Source\Patching\Parsing\ParsingContainer.cs" />
+    <Compile Include="Source\Patching\Parsing\ReservedWord.cs" />
+    <Compile Include="Source\Patching\Parsing\SyntaxChar.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Source\Patching\Conversion\TSLPatcher\" />
+    <Folder Include="Source\Patching\Processing\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AppToolbox\AppToolbox.csproj">
+      <Project>{2356ACB9-937A-4808-BF4C-B58072F6E7AB}</Project>
+      <Name>AppToolbox</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AuroraIO\AuroraIO.csproj">
+      <Project>{521F1E36-8F61-4DC5-B82F-291D51B6628B}</Project>
+      <Name>AuroraIO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KotorManifest\KotorManifest.csproj">
+      <Project>{755C8132-535E-4B54-9DF9-28FF7A3AF6D8}</Project>
+      <Name>KotorManifest</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

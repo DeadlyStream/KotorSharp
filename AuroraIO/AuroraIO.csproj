@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{521F1E36-8F61-4DC5-B82F-291D51B6628B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AuroraIO</RootNamespace>
+    <AssemblyName>AuroraIO</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Source\Collections\Bif\BiffArchive.cs" />
+    <Compile Include="Source\Collections\Bif\BiffVariableResourceEntry.cs" />
+    <Compile Include="Source\Collections\ERF\ERFArchive.cs" />
+    <Compile Include="Source\Collections\ERF\ERFKeyListElement.cs" />
+    <Compile Include="Source\Collections\ERF\ERFResourceInfo.cs" />
+    <Compile Include="Source\Collections\Key\KeyArchive.cs" />
+    <Compile Include="Source\Collections\Key\KeyFileEntryInfo.cs" />
+    <Compile Include="Source\Collections\Key\KeyResourceEntry.cs" />
+    <Compile Include="Source\Collections\RIM\RIMArchive.cs" />
+    <Compile Include="Source\Collections\RIM\RIMResourceInfo.cs" />
+    <Compile Include="Source\Common\AuroraCoder.cs" />
+    <Compile Include="Source\Common\AuroraResourceLoader.cs" />
+    <Compile Include="Source\Common\ASCIIEncoder\ASCIICoder.cs" />
+    <Compile Include="Source\Common\ASCIIEncoder\ASCIIOutputProtocol.cs" />
+    <Compile Include="Source\Extensions\Extensions.cs" />
+    <Compile Include="Source\Extensions\IndexMap.cs" />
+    <Compile Include="Source\Models\2da\Array2D.cs" />
+    <Compile Include="Source\Models\2da\Array2DASCIIOutputExtensions.cs" />
+    <Compile Include="Source\Models\2da\_2daCoder.cs" />
+    <Compile Include="Source\Models\ASCII\TSVCoder.cs" />
+    <Compile Include="Source\Models\Base\AuroraBinaryObject.cs" />
+    <Compile Include="Source\Models\Base\AuroraResource.cs" />
+    <Compile Include="Source\Models\Base\AuroraResourceCollection.cs" />
+    <Compile Include="Source\Models\Base\AuroraResourceInfo.cs" />
+    <Compile Include="Source\Models\Base\AuroraResourceType.cs" />
+    <Compile Include="Source\Models\Base\AuroraTextObject.cs" />
+    <Compile Include="Source\Models\GFF\AreaInfoObject.cs" />
+    <Compile Include="Source\Models\GFF\Base\GFFByteDataObject.cs" />
+    <Compile Include="Source\Models\GFF\Base\GFFCExoLocStringDataObject.cs" />
+    <Compile Include="Source\Models\GFF\Base\GFFCExoStringDataObject.cs" />
+    <Compile Include="Source\Models\GFF\Base\GFFCharDataObject.cs" />
+    <Compile Include="Source\Models\GFF\Base\GFFDoubleDataObject.cs" />
+    <Compile Include="Source\Models\GFF\Base\GFFDWord64DataObject.cs" />
+    <Compile Include="Source\Models\GFF\Base\GFFDWordDataObject.cs" />
+    <Compile Include="Source\Models\GFF\Base\GFFFieldDataObject.cs" />
+    <Compile Include="Source\Models\GFF\Base\GFFFieldInfo.cs" />
+    <Compile Include="Source\Models\GFF\Base\GFFFieldType.cs" />
+    <Compile Include="Source\Models\GFF\Base\GFFFloatDataObject.cs" />
+    <Compile Include="Source\Models\GFF\Base\GFFInt64DataObject.cs" />
+    <Compile Include="Source\Models\GFF\Base\GFFIntDataObject.cs" />
+    <Compile Include="Source\Models\GFF\Base\GFFLanguage.cs" />
+    <Compile Include="Source\Models\GFF\Base\GFFListDataObject.cs" />
+    <Compile Include="Source\Models\GFF\Base\GFFObject.cs" />
+    <Compile Include="Source\Models\GFF\Base\GFFPath.cs" />
+    <Compile Include="Source\Models\GFF\Base\GFFPathComponent.cs" />
+    <Compile Include="Source\Models\GFF\Base\GFFQuaternionDataObject.cs" />
+    <Compile Include="Source\Models\GFF\Base\GFFResrefDataObject.cs" />
+    <Compile Include="Source\Models\GFF\Base\GFFShortDataObject.cs" />
+    <Compile Include="Source\Models\GFF\Base\GFFStrRefObject.cs" />
+    <Compile Include="Source\Models\GFF\Base\GFFStruct.cs" />
+    <Compile Include="Source\Models\GFF\Base\GFFStructDataObject.cs" />
+    <Compile Include="Source\Models\GFF\Base\GFFVectorDataObject.cs" />
+    <Compile Include="Source\Models\GFF\Base\GFFVoidDataObject.cs" />
+    <Compile Include="Source\Models\GFF\Base\GFFWordDataObject.cs" />
+    <Compile Include="Source\Models\GFF\CharacterObject.cs" />
+    <Compile Include="Source\Models\GFF\ConversationObject.cs" />
+    <Compile Include="Source\Models\GFF\CreatureBlueprintObject.cs" />
+    <Compile Include="Source\Models\GFF\DoorBlueprintObject.cs" />
+    <Compile Include="Source\Models\GFF\EncounterBlueprintObject.cs" />
+    <Compile Include="Source\Models\GFF\FactionObject.cs" />
+    <Compile Include="Source\Models\GFF\GameCommentObject.cs" />
+    <Compile Include="Source\Models\GFF\GameInstanceObject.cs" />
+    <Compile Include="Source\Models\GFF\GFFObjectASCIIEncodingExtensions.cs" />
+    <Compile Include="Source\Models\GFF\Helpers\GFFConstants.cs" />
+    <Compile Include="Source\Models\GFF\Helpers\GFFElementFactory.cs" />
+    <Compile Include="Source\Models\GFF\Helpers\GFFCoder.cs" />
+    <Compile Include="Source\Models\GFF\Helpers\GFFStructInfo.cs" />
+    <Compile Include="Source\Models\GFF\ItemBlueprintObject.cs" />
+    <Compile Include="Source\Models\GFF\JournalObject.cs" />
+    <Compile Include="Source\Models\GFF\ModuleInfoObject.cs" />
+    <Compile Include="Source\Models\GFF\PalletteBlueprintObject.cs" />
+    <Compile Include="Source\Models\GFF\PlaceableBlueprintObject.cs" />
+    <Compile Include="Source\Models\GFF\PlotManagerObject.cs" />
+    <Compile Include="Source\Models\GFF\PlotWizardBlueprintObject.cs" />
+    <Compile Include="Source\Models\GFF\SoundBlueprintObject.cs" />
+    <Compile Include="Source\Models\GFF\StoreBlueprintObject.cs" />
+    <Compile Include="Source\Models\GFF\TriggerBlueprintObject.cs" />
+    <Compile Include="Source\Models\GFF\UserInterfaceLayoutObject.cs" />
+    <Compile Include="Source\Models\GFF\WaypointBlueprintObject.cs" />
+    <Compile Include="Source\Models\Helpers\AuroraConversionExtensions.cs" />
+    <Compile Include="Source\Models\Helpers\AuroraFile.cs" />
+    <Compile Include="Source\Models\Helpers\AuroraResourceLoader.cs" />
+    <Compile Include="Source\Models\TLK\TalkTable.cs" />
+    <Compile Include="Source\Models\TLK\TLKEncoder.cs" />
+    <Compile Include="Source\Models\TLK\TlkStrRefEntry.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
