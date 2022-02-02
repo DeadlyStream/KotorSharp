@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -26,6 +26,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="bin\Debug\netcoreapp3.1\Artifacts\_2DACoderTests_testAddRow" />
+    <None Include="bin\Debug\netcoreapp3.1\Artifacts\_2DACoderTests_testClearValue" />
+    <None Include="bin\Debug\netcoreapp3.1\Artifacts\_2DACoderTests_testModifyColumnName" />
+    <None Include="bin\Debug\netcoreapp3.1\Artifacts\_2DACoderTests_testModifyValue" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -38,10 +45,6 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Source\Models\" />
   </ItemGroup>
 
 </Project>

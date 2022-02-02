@@ -30,7 +30,7 @@ namespace KPatcher.Source.Managers {
                         row = table[rowIndex];
                     } else {
                         Log.debugLine(String.Format("Adding new row {0}", table.rowCount));
-                        row = table.addNewRow();
+                        row = table.addEmptyRow();
                     }
 
                     foreach (KeyValuePair<String, String> keyPair in instruction.keyValueSet) {

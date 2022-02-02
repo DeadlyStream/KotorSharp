@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace AuroraIO {
     internal static class Extensions {
@@ -16,6 +17,13 @@ namespace AuroraIO {
                 }
             }
             return s.ToString();
+        }
+
+        internal static string sanitize(this string value)
+        {
+            if (value == null) { return null; }
+            var regex = new Regex("[\n\r\t]*");
+            return regex.Replace(value, "");
         }
 
         internal static IndexMap<T> generateIndexMap<T>(this T[] array) {

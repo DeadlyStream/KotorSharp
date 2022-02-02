@@ -78,8 +78,14 @@ namespace AuroraIO.Models {
             }
         }
 
-        public Row addNewRow() {
+        public Row addEmptyRow() {
             rows.Add(new Row(columns));
+            return rows.Last();
+        }
+
+        public Row addRowWithValues(string[] rowData)
+        {
+            rows.Add(new Row(columns, rowData));
             return rows.Last();
         }
 
@@ -122,7 +128,7 @@ namespace AuroraIO.Models {
         }
 
         public override byte[] toBytes() {
-            var coder = new _2daCoder();
+            var coder = new Array2DCoder();
             return coder.encode(this);
         }
 
