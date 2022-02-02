@@ -1,5 +1,7 @@
-﻿using AuroraIO.Source.Common;
+﻿using AuroraIO.Models;
+using AuroraIO.Source.Common;
 using AuroraIO.Source.Models._2da;
+using AuroraIO.Source.Models.GFF.Helpers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
@@ -25,6 +27,25 @@ namespace AuroraIOTests.Source.Asserts
                 File.WriteAllBytes(path, _2daCoder.encode(actual));
             }
             var expected = _2daCoder.decode(File.ReadAllBytes(path));
+            Assert.AreEqual(asciiCoder.encode(expected),
+                          asciiCoder.encode(actual));
+        }
+
+        public static void VerifyFile(GFFObject actual, MethodBase methodBase, bool record)
+        {
+            var asciiCoder = new ASCIICoder();
+            var gffCoder = new GFFCoder();
+            var path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Artifacts", String.Format("{0}_{1}", methodBase.DeclaringType.Name, methodBase.Name));
+
+            if (record)
+            {
+                if (!Directory.Exists(Path.GetDirectoryName(path)))
+                {
+                    Directory.CreateDirectory(Path.GetDirectoryName(path));
+                }
+                File.WriteAllBytes(path, gffCoder.encode(actual));
+            }
+            var expected = gffCoder.decode(File.ReadAllBytes(path));
             Assert.AreEqual(asciiCoder.encode(expected),
                           asciiCoder.encode(actual));
         }

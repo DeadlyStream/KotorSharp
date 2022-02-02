@@ -3,6 +3,7 @@ using AuroraIO.Models;
 using AuroraIO.Source.Common;
 using AuroraIO.Source.Models.GFF.Helpers;
 using AuroraIOTests.Properties;
+using AuroraIOTests.Source.Stubs;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
@@ -11,11 +12,12 @@ using System.Reflection.Metadata.Ecma335;
 
 namespace AuroraIOTests.Source.Models {
     [TestClass]
-    public class GFFTests {
+    public class GFFCoderTests {
         [TestMethod]
         public void testReadGFFFile() {
             ASCIICoder asciiCoder = new ASCIICoder();
             GFFCoder gffCoder = new GFFCoder();
+            var stub = AuroraStructStubs.stub1();
             GFFObject gffObject = gffCoder.decode(Resources.TestDataTypes);
 
             string gffString = asciiCoder.encode(gffObject);
