@@ -1,4 +1,4 @@
-﻿using AuroraIO.Source.Common;
+﻿using AuroraIO.Source.Coders;
 using AuroraIO.Source.Models.GFF;
 using AuroraIO.Source.Models.GFF.Helpers;
 using System;
@@ -62,7 +62,8 @@ namespace AuroraIO {
             })));
         }
 
-        public string asciiEncoding() {
+        public string asciiEncoding(string indent = "")
+        {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine(String.Format("struct"));
             sb.AppendLine(String.Format("id {0}", structType));
@@ -71,7 +72,7 @@ namespace AuroraIO {
                 sb.AppendLine(String.Format("beginfield"));
                 sb.AppendLine(String.Format("type {0}", pair.Value.fieldType().stringValue()));
                 sb.AppendLine(String.Format("label {0}", pair.Key));
-                sb.AppendLine(String.Format("{0}", pair.Value.asciiEncoding()));
+                sb.AppendLine(String.Format("{0}", pair.Value.asciiEncoding("")));
                 sb.AppendLine(String.Format("endfield"));
             }
             

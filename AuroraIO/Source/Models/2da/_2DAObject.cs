@@ -1,4 +1,4 @@
-﻿using AuroraIO.Source.Common;
+﻿using AuroraIO.Source.Coders;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -103,7 +103,7 @@ namespace AuroraIO.Source.Models._2da
             return addRow(rowData);
         }
 
-        public string asciiEncoding()
+        public string asciiEncoding(string indent = "")
         {
             StringBuilder sb = new StringBuilder();
             sb.Append(String.Join("\t", columns));

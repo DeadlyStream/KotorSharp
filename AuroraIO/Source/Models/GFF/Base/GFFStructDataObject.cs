@@ -58,10 +58,11 @@ namespace AuroraIO {
             );
         }
 
-        public string asciiEncoding() {
+        public string asciiEncoding(string indent = "")
+        {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine("value");
-            sb.AppendLine(String.Format("{0}", structInfo.asciiEncoding()));
+            sb.AppendLine(String.Format("{0}", structInfo.asciiEncoding("")));
             return sb.ToString();
         }
     }

@@ -18,7 +18,7 @@ namespace AuroraIO {
                 //TODO: this needs to be reinstated
                 return new Array2D();//(resInfo.resref, fileArray);
                 case AuroraResourceType.UTI:
-                    return new GFFCoder().decode(fileArray);
+                    //return new GFFObjectCoder().decode(fileArray);
                 case AuroraResourceType.ARE:
                 case AuroraResourceType.IFO:
                 case AuroraResourceType.BIC:
@@ -40,7 +40,7 @@ namespace AuroraIO {
                 case AuroraResourceType.UTW:
                 case AuroraResourceType.PTM:
                 case AuroraResourceType.PTT:
-                    return new GFFCoder().decode(fileArray);
+                    //return new GFFObjectCoder().decode(fileArray);
                 case AuroraResourceType.UNKNOWN:
                 case AuroraResourceType.BMP:
                 case AuroraResourceType.MVE:

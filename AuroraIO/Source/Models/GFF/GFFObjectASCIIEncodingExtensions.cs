@@ -17,7 +17,7 @@ namespace AuroraIO.Source.Models.GFF {
             foreach(KeyValuePair<String, GFFFieldDataObject> pair in gffStruct.fields) {
                 sb.AppendLine(String.Format("field {0}", pair.Key));
                 sb.AppendLine(String.Format("type {0}", pair.Value.fieldType().stringValue()));
-                sb.AppendLine(String.Format("data {0}", pair.Value.asciiEncoding()));
+                sb.AppendLine(String.Format("data {0}", pair.Value.asciiEncoding("")));
             }
             sb.AppendLine("end");
             sb.AppendLine("end");

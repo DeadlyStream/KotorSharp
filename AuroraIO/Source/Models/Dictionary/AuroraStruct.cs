@@ -1,29 +1,33 @@
-﻿using System;
+﻿using AuroraIO.Source.Coders;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
 namespace AuroraIO.Source.Models.Dictionary
 {
-    public class AuroraStruct: AuroraDataObject {
+    public class AuroraStruct: AuroraDataObject, AuroraStructType, ASCIIOutputProtocol {
 
-        public AuroraDataType dataType { get { return AuroraDataType.Struct; } }
+        public override AuroraDataType dataType => AuroraDataType.Struct;
+
+        public uint structType => id;
 
         public uint id;
 
         private Dictionary<string, AuroraDataObject> internalDict = new Dictionary<string, AuroraDataObject>();
 
-        public AuroraStruct()
+        AuroraStruct()
         {
             id = uint.MaxValue;
         }
 
-        public AuroraStruct(uint id)
+        AuroraStruct(uint id)
         {
             this.id = id;
         }
 
-        public AuroraStruct(uint id, Dictionary<string, AuroraDataObject> dictionary)
+        AuroraStruct(uint id, Dictionary<string, AuroraDataObject> dictionary)
         {
             this.id = id;
             internalDict = dictionary;
@@ -31,12 +35,32 @@ namespace AuroraIO.Source.Models.Dictionary
 
         public static AuroraStruct make(Action<Dictionary<string, AuroraDataObject>> initBlock)
         {
-            var instance = new AuroraStruct();
-            initBlock(instance.internalDict);
-            return instance;
+            Dictionary<string, AuroraDataObject> dict = new Dictionary<string, AuroraDataObject>();
+            initBlock(dict);
+            return new AuroraStruct(uint.MaxValue, dict);
         }
-        
 
+        public static AuroraStruct make(uint id, Action<Dictionary<string, AuroraDataObject>> initBlock)
+        {
+            Dictionary<string, AuroraDataObject> dict = new Dictionary<string, AuroraDataObject>();
+            initBlock(dict);
+            return new AuroraStruct(id, dict);
+        }
+
+        public static AuroraStruct make(uint id)
+        {
+            return new AuroraStruct(id);
+        }
+
+        public override void setValueForKey(string key, string value)
+        {
+            List<string> components = value.Split('\\').ToList();
+            components.RemoveAt(0);
+            string thisKey = components.First();
+            string newKey = String.Join("\\", components);
+
+            internalDict[thisKey].setValueForKey(newKey, value);
+        }
         public AuroraDataObject this[String key]
         {
             get
@@ -46,6 +70,31 @@ namespace AuroraIO.Source.Models.Dictionary
             {
                 internalDict[key] = value;
             }
+        }
+
+        public override string asciiEncoding(string indent = "")
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendFormat("{0}type: struct\n", indent);
+            sb.AppendFormat("{0}value:\n", indent);
+            sb.AppendFormat("{0}  id: {1}\n", indent, (int)id);
+            sb.AppendFormat("{0}  fields:\n", indent);
+
+            foreach (KeyValuePair<string, AuroraDataObject> pair in internalDict) {
+                sb.AppendFormat("{0}    {1}:\n", indent, pair.Key);
+                sb.Append(pair.Value.asciiEncoding(String.Format("{0}      ", indent)));
+            }
+            return sb.ToString();
+        }
+
+        public IEnumerator<KeyValuePair<string, AuroraDataObject>> GetEnumerator()
+        {
+            return internalDict.GetEnumerator();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
         }
     }
 }

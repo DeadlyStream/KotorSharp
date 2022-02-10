@@ -79,11 +79,12 @@ namespace AuroraIO {
                 String.Join(",", structInfoArray.Select(structInfo => structInfo.ToString()))
             );
         }
-        public string asciiEncoding() {
+        public string asciiEncoding(string indent = "")
+        {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine("value");
             foreach (GFFStruct gffStruct in structInfoArray) {
-                sb.AppendLine(String.Format("{0}", gffStruct.asciiEncoding()));
+                sb.AppendLine(String.Format("{0}", gffStruct.asciiEncoding("")));
             }
             
             return sb.ToString();

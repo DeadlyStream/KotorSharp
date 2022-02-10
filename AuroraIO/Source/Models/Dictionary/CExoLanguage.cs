@@ -29,4 +29,35 @@ namespace AuroraIO.Source.Models.Dictionary
         JapaneseMale = 262,
         JapaneseFemale = 263
     }
+
+    public static class CExoLanguageExtensions
+    {
+        public static string stringValue(this CExoLanguage languageID)
+        {
+            switch (languageID)
+            {
+                case CExoLanguage.EnglishMale: return "englishmale";
+                case CExoLanguage.EnglishFemale: return "englishfemale";
+                case CExoLanguage.FrenchMale: return "frenchmale";
+                case CExoLanguage.FrenchFemale: return "frenchfemale";
+                case CExoLanguage.GermanMale: return "germanmale";
+                case CExoLanguage.GermanFemale: return "germanfemale";
+                case CExoLanguage.ItalianMale: return "italianmale";
+                case CExoLanguage.ItalianFemale: return "italianfemale";
+                case CExoLanguage.SpanishMale: return "spanishmale";
+                case CExoLanguage.SpanishFemale: return "spanishfemale";
+                case CExoLanguage.PolishMale: return "polishmale";
+                case CExoLanguage.PolishFemale: return "polishfemale";
+                case CExoLanguage.KoreanMale: return "koreanmale";
+                case CExoLanguage.KoreanFemale: return "koreanfemale";
+                case CExoLanguage.ChineseTraditionalMale: return "chinesetraditionalmale";
+                case CExoLanguage.ChineseTraditionalFemale: return "chinesetraditionalfemale";
+                case CExoLanguage.ChineseSimplifiedMale: return "chinesesimplifiedmale";
+                case CExoLanguage.ChineseSimplifiedFemale: return "chinesesimplifiedfemale";
+                case CExoLanguage.JapaneseMale: return "japanesemale";
+                case CExoLanguage.JapaneseFemale: return "japanesefemale";
+                default: return null;
+            }
+        }
+    }
 }

@@ -73,6 +73,16 @@ namespace AuroraIOTests.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        public static byte[] GFFCoderTests_testEncode1LevelGFF {
+            get {
+                object obj = ResourceManager.GetObject("GFFCoderTests_testEncode1LevelGFF", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         public static byte[] portraits {
             get {
                 object obj = ResourceManager.GetObject("portraits", resourceCulture);

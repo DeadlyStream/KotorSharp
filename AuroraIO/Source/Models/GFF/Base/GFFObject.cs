@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using AuroraIO.Source.Models.GFF.Helpers;
 using AuroraIO.Source.Models.GFF;
-using AuroraIO.Source.Common;
+using AuroraIO.Source.Coders;
 using System.Security;
 
 namespace AuroraIO.Models {
@@ -38,15 +38,16 @@ namespace AuroraIO.Models {
         }
 
         public override byte[] toBytes () {
-            return new GFFCoder().encode(this);
+            return new byte[0];// new GFFObjectCoder().encode(this);
         }
 
         public override string ToString() {
             return String.Format("{{ {0} }}", new GFFStruct(uint.MaxValue, fields));
         }
 
-        public string asciiEncoding() {
-            return String.Format("{0}", new GFFStruct(uint.MaxValue, fields).asciiEncoding());
+        public string asciiEncoding(string indent = "")
+        {
+            return String.Format("{0}", new GFFStruct(uint.MaxValue, fields).asciiEncoding(""));
         }
     }
 }

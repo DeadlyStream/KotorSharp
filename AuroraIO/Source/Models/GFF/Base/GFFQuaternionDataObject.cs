@@ -93,7 +93,8 @@ namespace AuroraIO {
             return String.Format("{{w: {0}, x: {1}, y:{2}, z: {3}}}", w, x, y, z);
         }
 
-        public string asciiEncoding() {
+        public string asciiEncoding(string indent = "")
+        {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine(String.Format("w {0}", w));
             sb.AppendLine(String.Format("x {0}", x));

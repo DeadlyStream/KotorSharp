@@ -82,7 +82,8 @@ namespace AuroraIO {
             }).ToArray()));
         }
 
-        public string asciiEncoding() {
+        public string asciiEncoding(string indent = "")
+        {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine(String.Format("value\nstrref {0}", strref));
             foreach (KeyValuePair<GFFLanguage, string> pair in cexoSubStrings) {

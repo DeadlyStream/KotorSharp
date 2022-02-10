@@ -62,7 +62,7 @@ namespace KPatcher.Source.Managers {
             foreach (ApplicationPath path in paths) {
                 if (File.Exists(path)) {
                     Log.debugLine(String.Format("Found {0} in {1}", fileName, path.parentDirectory.directoryName));
-                    return new GFFCoder().decodeFileAtPath(path);
+                    return new GFFObjectCoder().decodeFileAtPath(path);
                 }
             }
             return null;
@@ -72,7 +72,7 @@ namespace KPatcher.Source.Managers {
         public void writeGFFFile(GFFObject gffObject, String filePath) {
             Log.infoLine(String.Format("Writing {0}", filePath));
 
-            GFFCoder coder = new GFFCoder();
+            GFFObjectCoder coder = new GFFObjectCoder();
             File.WriteAllBytes(filePath, coder.encode(gffObject));
         }
 

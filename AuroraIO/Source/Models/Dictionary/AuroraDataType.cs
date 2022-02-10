@@ -19,7 +19,7 @@ namespace AuroraIO.Source.Models.Dictionary
         Double = 9,
         CExoString = 10,
         CResref = 11,
-        CExOoLocString = 12,
+        CExoLocString = 12,
         Void = 13,
         Struct = 14,
         List = 15,

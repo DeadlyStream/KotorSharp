@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
 using AuroraIO.Source.Models.GFF;
-using AuroraIO.Source.Common;
+using AuroraIO.Source.Coders;
 
 namespace AuroraIO {
 

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace AuroraIO.Source.Models.ASCII {
+namespace AuroraIO.Source.Models.Coder {
     public class TSVCoder {
         public Array2D decode(String stringInput) {
             Regex regex = new Regex("\r\n|\r|\n", RegexOptions.IgnoreCase);

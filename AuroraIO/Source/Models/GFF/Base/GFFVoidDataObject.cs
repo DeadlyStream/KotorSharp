@@ -51,7 +51,8 @@ namespace AuroraIO {
             }).ToArray());
         }
 
-        public string asciiEncoding() {
+        public string asciiEncoding(string indent = "")
+        {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine(String.Format("value\n{0}", ToString()));
             return sb.ToString();

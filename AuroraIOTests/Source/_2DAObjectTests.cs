@@ -1,5 +1,5 @@
 ﻿using AuroraIO.Models;
-using AuroraIO.Source.Common;
+using AuroraIO.Source.Coders;
 using AuroraIO.Source.Models._2da;
 using AuroraIOTests.Properties;
 using AuroraIOTests.Source.Asserts;
@@ -8,11 +8,11 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace AuroraIOTests.Source.Models {
+namespace AuroraIOTests.Source {
     [TestClass]
-    public class _2DACoderTests {
+    public class _2DAObjectTests {
 
-        bool record = true;
+        bool record = false;
 
         _2DACoder coder = new _2DACoder();
 
@@ -21,7 +21,7 @@ namespace AuroraIOTests.Source.Models {
         {
             var array = _2daObjectStubs.stub1();
 
-            AIOAssert.VerifyFile(
+            Snapshot.Verify(
                 array,
                 MethodBase.GetCurrentMethod(),
                 record);
@@ -33,7 +33,7 @@ namespace AuroraIOTests.Source.Models {
             var array = _2daObjectStubs.stub1();
             var row = array.addRow();
 
-            AIOAssert.VerifyFile(
+            Snapshot.Verify(
                 array,
                 MethodBase.GetCurrentMethod(),
                 record);
@@ -44,7 +44,7 @@ namespace AuroraIOTests.Source.Models {
             var array = _2daObjectStubs.stub1();
             array.addRow(new string[] { "c1r4", "c2r4", "c3r4", "c4r4" });
 
-            AIOAssert.VerifyFile(
+            Snapshot.Verify(
                 array,
                 MethodBase.GetCurrentMethod(),
                 record);
@@ -62,7 +62,7 @@ namespace AuroraIOTests.Source.Models {
                 { "column3", "c3r4" }
             });
 
-            AIOAssert.VerifyFile(
+            Snapshot.Verify(
                 array,
                 MethodBase.GetCurrentMethod(),
                 record);
@@ -75,7 +75,7 @@ namespace AuroraIOTests.Source.Models {
             var row = array.addRow();
             row[0] = "mod";
 
-            AIOAssert.VerifyFile(
+            Snapshot.Verify(
                 array,
                 MethodBase.GetCurrentMethod(),
                 record);
@@ -88,7 +88,7 @@ namespace AuroraIOTests.Source.Models {
             var row = array.addRow();
             row["column0"] = "mod";
 
-            AIOAssert.VerifyFile(
+            Snapshot.Verify(
                 array,
                 MethodBase.GetCurrentMethod(),
                 record);
@@ -100,7 +100,7 @@ namespace AuroraIOTests.Source.Models {
             var array = _2daObjectStubs.stub1();
             array[0][0] = "mod";
 
-            AIOAssert.VerifyFile(
+            Snapshot.Verify(
                 array,
                 MethodBase.GetCurrentMethod(),
                 record);
@@ -112,7 +112,7 @@ namespace AuroraIOTests.Source.Models {
             var array = _2daObjectStubs.stub1();
             array[0]["column0"] = "mod";
 
-            AIOAssert.VerifyFile(
+            Snapshot.Verify(
                 array,
                 MethodBase.GetCurrentMethod(),
                 record);
@@ -125,7 +125,7 @@ namespace AuroraIOTests.Source.Models {
             array[0]["column0"] = "mod";
             array[2]["column3"] = "mod";
 
-            AIOAssert.VerifyFile(
+            Snapshot.Verify(
                 array,
                 MethodBase.GetCurrentMethod(),
                 record);
@@ -137,7 +137,7 @@ namespace AuroraIOTests.Source.Models {
             var array = _2daObjectStubs.stub1();
             array[0]["column0"] = null;
 
-            AIOAssert.VerifyFile(
+            Snapshot.Verify(
                 array,
                 MethodBase.GetCurrentMethod(),
                 record);

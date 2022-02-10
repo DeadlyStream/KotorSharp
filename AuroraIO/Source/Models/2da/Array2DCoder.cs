@@ -1,12 +1,11 @@
 ﻿using AuroraIO.Models;
-using AuroraIO.Source.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace AuroraIO.Source.Models._2da {
+namespace AuroraIO.Source.Coders {
     public class Array2DCoder: AuroraCoder<Array2D> {
 
         //Char parsing constants

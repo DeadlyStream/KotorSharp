@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Collections;
 using AuroraIO.Source.Models._2da;
-using AuroraIO.Source.Common;
+using AuroraIO.Source.Coders;
 
 namespace AuroraIO.Models {
     public class Array2D: AuroraResource, ICollection<Array2D.Row>, ASCIIOutputProtocol {
@@ -226,7 +226,8 @@ namespace AuroraIO.Models {
             }
         }
 
-        public string asciiEncoding() {
+        public string asciiEncoding(string indent = "")
+        {
             StringBuilder sb = new StringBuilder();
             sb.Append(String.Join("\t", columns));
             sb.Append("\n");

@@ -1,23 +1,157 @@
 ﻿using AuroraIO;
 using AuroraIO.Models;
-using AuroraIO.Source.Common;
-using AuroraIO.Source.Models.GFF.Helpers;
+using AuroraIO.Source.Coders;
+using AuroraIO.Source.Models.Dictionary;
 using AuroraIOTests.Properties;
+using AuroraIOTests.Source.Asserts;
 using AuroraIOTests.Source.Stubs;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Reflection.Metadata.Ecma335;
+using System.Reflection;
 
-namespace AuroraIOTests.Source.Models {
+namespace AuroraIOTests.Source {
     [TestClass]
     public class GFFCoderTests {
+
+        bool record = false;
+
+        GFFCoder coder = new GFFCoder();
+
+
+        [TestMethod]
+        public void testEncodeEmptyGFF() {
+            var dict = AuroraDictionary.make("GFF", dict => { });
+
+            Snapshot.VerifyEncoding(
+                dict,
+                MethodBase.GetCurrentMethod(),
+                record);
+        }
+
+        [TestMethod]
+        public void testEncodeStructWith1SimpleField() {
+            var dict = AuroraDictionary.make("GFF", dict => {
+                dict["field_byte"] = (byte)100;
+            });
+
+            Snapshot.VerifyEncoding(
+                dict,
+                MethodBase.GetCurrentMethod(),
+                record);
+        }
+
+        [TestMethod]
+        public void testEncodeStructWithMoreThan1SimpleField() {
+            var dict = AuroraDictionary.make("GFF", dict => {
+                dict["field_byte"] = (byte)100;
+                dict["field_dword"] = (uint)100;
+            });
+
+            Snapshot.VerifyEncoding(
+                dict,
+                MethodBase.GetCurrentMethod(),
+                record);
+        }
+
+        [TestMethod]
+        public void testEncodeStructWith1ComplexField() {
+            var dict = AuroraDictionary.make("GFF", dict => {
+                dict["cexostring"] = "testString";
+            });
+
+            Snapshot.VerifyEncoding(
+                dict,
+                MethodBase.GetCurrentMethod(),
+                record);
+        }
+
+        [TestMethod]
+        public void testEncodeStructWithMoreThan1ComplexField() {
+            var dict = AuroraDictionary.make("GFF", dict => {
+                dict["field_string"] = "test_string";
+                dict["field_int64"] = (Int64)100;
+            });
+
+            Snapshot.VerifyEncoding(
+                dict,
+                MethodBase.GetCurrentMethod(),
+                record);
+        }
+
+        [TestMethod]
+        public void testEncodeStructWith1List() {
+            var dict = AuroraDictionary.make("GFF", dict => {
+                dict["field_list"] = new AuroraStruct[] {
+                    AuroraStruct.make(0, dict => {
+                        dict["id"] = (int)10;
+                    }),
+                };
+            });
+
+            Snapshot.VerifyEncoding(
+                dict,
+                MethodBase.GetCurrentMethod(),
+                false);
+        }
+
+        [TestMethod]
+        public void testEncodeStructWithMoreThan1List() {
+            var dict = AuroraDictionary.make("GFF", dict => {
+                dict["field_list1"] = new AuroraStruct[] {
+                    AuroraStruct.make(0, dict => {
+                        dict["id"] = (int)10;
+                        dict["message"] = "value";
+                    }),
+                    AuroraStruct.make(1, dict => {
+                        dict["id"] = (int)10;
+                        dict["message"] = "value";
+                    }),
+                    AuroraStruct.make(2, dict => {
+                        dict["id"] = (int)10;
+                        dict["message"] = "value";
+                    })
+                };
+                dict["field_list2"] = new AuroraStruct[] {
+                    AuroraStruct.make(3, dict => {
+                        dict["id"] = (int)10;
+                        dict["message"] = "value";
+                    }),
+                    AuroraStruct.make(4, dict => {
+                        dict["id"] = (int)10;
+                        dict["message"] = "value";
+                    }),
+                    AuroraStruct.make(5, dict => {
+                        dict["id"] = (int)10;
+                        dict["message"] = "value";
+                    })
+                };
+                dict["field_string"] = "test_string";
+                dict["field_int64"] = (Int64)100;
+            });
+
+            Snapshot.VerifyEncoding(
+                dict,
+                MethodBase.GetCurrentMethod(),
+                record);
+        }
+
+        /*
+        [TestMethod]
+        public void testWriteAuroraDictionary() {
+
+            byte[] data = coder.encode(AuroraDictionaryStubs.stub1());
+
+            AuroraDictionary dict = coder.decode(data);
+            AIOAssert.VerifyFile(
+                dict,
+                MethodBase.GetCurrentMethod(),
+                record);
+        }*/
+        /*
         [TestMethod]
         public void testReadGFFFile() {
             ASCIICoder asciiCoder = new ASCIICoder();
-            GFFCoder gffCoder = new GFFCoder();
-            var stub = AuroraStructStubs.stub1();
+            GFFObjectCoder gffCoder = new GFFObjectCoder();
             GFFObject gffObject = gffCoder.decode(Resources.TestDataTypes);
 
             string gffString = asciiCoder.encode(gffObject);
@@ -37,10 +171,10 @@ namespace AuroraIOTests.Source.Models {
 
         [TestMethod]
         public void testAddByte() {
-            GFFCoder gFFCoder = new GFFCoder();
+            GFFObjectCoder gFFCoder = new GFFObjectCoder();
             ASCIICoder asciiCoder = new ASCIICoder();
             GFFObject gffObject = gFFCoder.decode(Resources._base);
-            
+
             //Add/remove fields here
             gffObject["testField"] = new GFFByteDataObject(1);
 
@@ -51,7 +185,7 @@ namespace AuroraIOTests.Source.Models {
 
         [TestMethod]
         public void testSetByteExisting() {
-            GFFCoder gFFCoder = new GFFCoder();
+            GFFObjectCoder gFFCoder = new GFFObjectCoder();
             ASCIICoder asciiCoder = new ASCIICoder();
             GFFObject gffObject = gFFCoder.decode(Resources._base);
 
@@ -66,7 +200,7 @@ namespace AuroraIOTests.Source.Models {
 
         [TestMethod]
         public void testAddChar() {
-            GFFCoder gFFCoder = new GFFCoder();
+            GFFObjectCoder gFFCoder = new GFFObjectCoder();
             ASCIICoder asciiCoder = new ASCIICoder();
             GFFObject gffObject = gFFCoder.decode(Resources._base);
 
@@ -79,7 +213,7 @@ namespace AuroraIOTests.Source.Models {
 
         [TestMethod]
         public void testSetCharExisting() {
-            GFFCoder gFFCoder = new GFFCoder();
+            GFFObjectCoder gFFCoder = new GFFObjectCoder();
             ASCIICoder asciiCoder = new ASCIICoder();
             GFFObject gffObject = gFFCoder.decode(Resources._base);
 
@@ -93,7 +227,7 @@ namespace AuroraIOTests.Source.Models {
         // word 
         [TestMethod]
         public void testAddWord() {
-            GFFCoder gFFCoder = new GFFCoder();
+            GFFObjectCoder gFFCoder = new GFFObjectCoder();
             ASCIICoder asciiCoder = new ASCIICoder();
             GFFObject gffObject = gFFCoder.decode(Resources._base);
 
@@ -106,7 +240,7 @@ namespace AuroraIOTests.Source.Models {
 
         [TestMethod]
         public void testSetWordExisting() {
-            GFFCoder gFFCoder = new GFFCoder();
+            GFFObjectCoder gFFCoder = new GFFObjectCoder();
             ASCIICoder asciiCoder = new ASCIICoder();
             GFFObject gffObject = gFFCoder.decode(Resources._base);
 
@@ -120,7 +254,7 @@ namespace AuroraIOTests.Source.Models {
         // short
         [TestMethod]
         public void testAddShort() {
-            GFFCoder gFFCoder = new GFFCoder();
+            GFFObjectCoder gFFCoder = new GFFObjectCoder();
             ASCIICoder asciiCoder = new ASCIICoder();
             GFFObject gffObject = gFFCoder.decode(Resources._base);
 
@@ -132,7 +266,7 @@ namespace AuroraIOTests.Source.Models {
         }
 
         public void testSetShortExisting() {
-            GFFCoder gFFCoder = new GFFCoder();
+            GFFObjectCoder gFFCoder = new GFFObjectCoder();
             ASCIICoder asciiCoder = new ASCIICoder();
             GFFObject gffObject = gFFCoder.decode(Resources._base);
 
@@ -146,7 +280,7 @@ namespace AuroraIOTests.Source.Models {
         //dword
         [TestMethod]
         public void testAddDword() {
-            GFFCoder gFFCoder = new GFFCoder();
+            GFFObjectCoder gFFCoder = new GFFObjectCoder();
             ASCIICoder asciiCoder = new ASCIICoder();
             GFFObject gffObject = gFFCoder.decode(Resources._base);
 
@@ -159,7 +293,7 @@ namespace AuroraIOTests.Source.Models {
 
         [TestMethod]
         public void testSetDwordExisting() {
-            GFFCoder gFFCoder = new GFFCoder();
+            GFFObjectCoder gFFCoder = new GFFObjectCoder();
             ASCIICoder asciiCoder = new ASCIICoder();
             GFFObject gffObject = gFFCoder.decode(Resources._base);
 
@@ -173,7 +307,7 @@ namespace AuroraIOTests.Source.Models {
         // int
         [TestMethod]
         public void testAddInt() {
-            GFFCoder gFFCoder = new GFFCoder();
+            GFFObjectCoder gFFCoder = new GFFObjectCoder();
             ASCIICoder asciiCoder = new ASCIICoder();
             GFFObject gffObject = gFFCoder.decode(Resources._base);
 
@@ -186,7 +320,7 @@ namespace AuroraIOTests.Source.Models {
 
         [TestMethod]
         public void testSetIntExisting() {
-            GFFCoder gFFCoder = new GFFCoder();
+            GFFObjectCoder gFFCoder = new GFFObjectCoder();
             ASCIICoder asciiCoder = new ASCIICoder();
             GFFObject gffObject = gFFCoder.decode(Resources._base);
 
@@ -200,7 +334,7 @@ namespace AuroraIOTests.Source.Models {
         // dword 64
         [TestMethod]
         public void testAddDword64() {
-            GFFCoder gFFCoder = new GFFCoder();
+            GFFObjectCoder gFFCoder = new GFFObjectCoder();
             ASCIICoder asciiCoder = new ASCIICoder();
             GFFObject gffObject = gFFCoder.decode(Resources._base);
 
@@ -213,7 +347,7 @@ namespace AuroraIOTests.Source.Models {
 
         [TestMethod]
         public void testSetDword64Existing() {
-            GFFCoder gFFCoder = new GFFCoder();
+            GFFObjectCoder gFFCoder = new GFFObjectCoder();
             ASCIICoder asciiCoder = new ASCIICoder();
             GFFObject gffObject = gFFCoder.decode(Resources._base);
 
@@ -227,7 +361,7 @@ namespace AuroraIOTests.Source.Models {
         // int64
         [TestMethod]
         public void testAddInt64() {
-            GFFCoder gFFCoder = new GFFCoder();
+            GFFObjectCoder gFFCoder = new GFFObjectCoder();
             ASCIICoder asciiCoder = new ASCIICoder();
             GFFObject gffObject = gFFCoder.decode(Resources._base);
 
@@ -240,7 +374,7 @@ namespace AuroraIOTests.Source.Models {
 
         [TestMethod]
         public void testSetInt64Existing() {
-            GFFCoder gFFCoder = new GFFCoder();
+            GFFObjectCoder gFFCoder = new GFFObjectCoder();
             ASCIICoder asciiCoder = new ASCIICoder();
             GFFObject gffObject = gFFCoder.decode(Resources._base);
 
@@ -254,7 +388,7 @@ namespace AuroraIOTests.Source.Models {
         // float
         [TestMethod]
         public void testAddFloat() {
-            GFFCoder gFFCoder = new GFFCoder();
+            GFFObjectCoder gFFCoder = new GFFObjectCoder();
             ASCIICoder asciiCoder = new ASCIICoder();
             GFFObject gffObject = gFFCoder.decode(Resources._base);
 
@@ -268,7 +402,7 @@ namespace AuroraIOTests.Source.Models {
 
         [TestMethod]
         public void testSetFloatExisting() {
-            GFFCoder gFFCoder = new GFFCoder();
+            GFFObjectCoder gFFCoder = new GFFObjectCoder();
             ASCIICoder asciiCoder = new ASCIICoder();
             GFFObject gffObject = gFFCoder.decode(Resources._base);
 
@@ -281,7 +415,7 @@ namespace AuroraIOTests.Source.Models {
 
         // double
         public void testAddDouble() {
-            GFFCoder gFFCoder = new GFFCoder();
+            GFFObjectCoder gFFCoder = new GFFObjectCoder();
             ASCIICoder asciiCoder = new ASCIICoder();
             GFFObject gffObject = gFFCoder.decode(Resources._base);
 
@@ -292,7 +426,7 @@ namespace AuroraIOTests.Source.Models {
 
         [TestMethod]
         public void testSetDoubleExisting() {
-            GFFCoder gFFCoder = new GFFCoder();
+            GFFObjectCoder gFFCoder = new GFFObjectCoder();
             ASCIICoder asciiCoder = new ASCIICoder();
             GFFObject gffObject = gFFCoder.decode(Resources._base);
 
@@ -306,7 +440,7 @@ namespace AuroraIOTests.Source.Models {
         // cexostring
         [TestMethod]
         public void testAddCexostring() {
-            GFFCoder gFFCoder = new GFFCoder();
+            GFFObjectCoder gFFCoder = new GFFObjectCoder();
             ASCIICoder asciiCoder = new ASCIICoder();
             GFFObject gffObject = gFFCoder.decode(Resources._base);
 
@@ -320,7 +454,7 @@ namespace AuroraIOTests.Source.Models {
 
         [TestMethod]
         public void testSetCexostringExisting() {
-            GFFCoder gFFCoder = new GFFCoder();
+            GFFObjectCoder gFFCoder = new GFFObjectCoder();
             ASCIICoder asciiCoder = new ASCIICoder();
             GFFObject gffObject = gFFCoder.decode(Resources._base);
 
@@ -333,7 +467,7 @@ namespace AuroraIOTests.Source.Models {
         // resref
         [TestMethod]
         public void testAddResref() {
-            GFFCoder gFFCoder = new GFFCoder();
+            GFFObjectCoder gFFCoder = new GFFObjectCoder();
             ASCIICoder asciiCoder = new ASCIICoder();
             GFFObject gffObject = gFFCoder.decode(Resources._base);
 
@@ -348,7 +482,7 @@ namespace AuroraIOTests.Source.Models {
 
         [TestMethod]
         public void testSetResrefExisting() {
-            GFFCoder gFFCoder = new GFFCoder();
+            GFFObjectCoder gFFCoder = new GFFObjectCoder();
             ASCIICoder asciiCoder = new ASCIICoder();
             GFFObject gffObject = gFFCoder.decode(Resources._base);
 
@@ -362,7 +496,7 @@ namespace AuroraIOTests.Source.Models {
         // cexolocstring
         [TestMethod]
         public void testAddCexolocstringStrRef() {
-            GFFCoder gFFCoder = new GFFCoder();
+            GFFObjectCoder gFFCoder = new GFFObjectCoder();
             ASCIICoder asciiCoder = new ASCIICoder();
             GFFObject gffObject = gFFCoder.decode(Resources._base);
 
@@ -377,7 +511,7 @@ namespace AuroraIOTests.Source.Models {
 
         [TestMethod]
         public void testSetCexolocstringExisting() {
-            GFFCoder gFFCoder = new GFFCoder();
+            GFFObjectCoder gFFCoder = new GFFObjectCoder();
             ASCIICoder asciiCoder = new ASCIICoder();
             GFFObject gffObject = gFFCoder.decode(Resources._base);
 
@@ -390,7 +524,7 @@ namespace AuroraIOTests.Source.Models {
 
         [TestMethod]
         public void testSetLanguageOnCexolocstringExisting() {
-            GFFCoder gFFCoder = new GFFCoder();
+            GFFObjectCoder gFFCoder = new GFFObjectCoder();
             ASCIICoder asciiCoder = new ASCIICoder();
             GFFObject gffObject = gFFCoder.decode(Resources._base);
 
@@ -403,7 +537,7 @@ namespace AuroraIOTests.Source.Models {
 
         [TestMethod]
         public void testSetStrRefOnCexolocstringExisting() {
-            GFFCoder gFFCoder = new GFFCoder();
+            GFFObjectCoder gFFCoder = new GFFObjectCoder();
             ASCIICoder asciiCoder = new ASCIICoder();
             GFFObject gffObject = gFFCoder.decode(Resources._base);
 
@@ -417,7 +551,7 @@ namespace AuroraIOTests.Source.Models {
         // void
         [TestMethod]
         public void testAddVoid() {
-            GFFCoder gFFCoder = new GFFCoder();
+            GFFObjectCoder gFFCoder = new GFFObjectCoder();
             ASCIICoder asciiCoder = new ASCIICoder();
             GFFObject gffObject = gFFCoder.decode(Resources._base);
 
@@ -432,7 +566,7 @@ namespace AuroraIOTests.Source.Models {
 
         [TestMethod]
         public void testSetVoidExisting() {
-            GFFCoder gFFCoder = new GFFCoder();
+            GFFObjectCoder gFFCoder = new GFFObjectCoder();
             ASCIICoder asciiCoder = new ASCIICoder();
             GFFObject gffObject = gFFCoder.decode(Resources._base);
 
@@ -446,7 +580,7 @@ namespace AuroraIOTests.Source.Models {
         // struct
         [TestMethod]
         public void testAddStruct() {
-            GFFCoder gFFCoder = new GFFCoder();
+            GFFObjectCoder gFFCoder = new GFFObjectCoder();
             ASCIICoder asciiCoder = new ASCIICoder();
             GFFObject gffObject = gFFCoder.decode(Resources._base);
 
@@ -461,7 +595,7 @@ namespace AuroraIOTests.Source.Models {
 
         [TestMethod]
         public void testSetStructExisting() {
-            GFFCoder gFFCoder = new GFFCoder();
+            GFFObjectCoder gFFCoder = new GFFObjectCoder();
             ASCIICoder asciiCoder = new ASCIICoder();
             GFFObject gffObject = gFFCoder.decode(Resources._base);
 
@@ -475,7 +609,7 @@ namespace AuroraIOTests.Source.Models {
         // list
         [TestMethod]
         public void testAddList() {
-            GFFCoder gFFCoder = new GFFCoder();
+            GFFObjectCoder gFFCoder = new GFFObjectCoder();
             ASCIICoder asciiCoder = new ASCIICoder();
             GFFObject gffObject = gFFCoder.decode(Resources._base);
 
@@ -493,7 +627,7 @@ namespace AuroraIOTests.Source.Models {
 
         [TestMethod]
         public void testSetListExisting() {
-            GFFCoder gFFCoder = new GFFCoder();
+            GFFObjectCoder gFFCoder = new GFFObjectCoder();
             ASCIICoder asciiCoder = new ASCIICoder();
             GFFObject gffObject = gFFCoder.decode(Resources._base);
 
@@ -506,7 +640,7 @@ namespace AuroraIOTests.Source.Models {
 
         [TestMethod]
         public void testAddStructToList() {
-            GFFCoder gFFCoder = new GFFCoder();
+            GFFObjectCoder gFFCoder = new GFFObjectCoder();
             ASCIICoder asciiCoder = new ASCIICoder();
             GFFObject gffObject = gFFCoder.decode(Resources._base);
 
@@ -519,7 +653,7 @@ namespace AuroraIOTests.Source.Models {
 
         [TestMethod]
         public void testRemoveStructFromList() {
-            GFFCoder gFFCoder = new GFFCoder();
+            GFFObjectCoder gFFCoder = new GFFObjectCoder();
             ASCIICoder asciiCoder = new ASCIICoder();
             GFFObject gffObject = gFFCoder.decode(Resources._base);
 
@@ -534,7 +668,7 @@ namespace AuroraIOTests.Source.Models {
 
         [TestMethod]
         public void testAddQuaternion() {
-            GFFCoder gFFCoder = new GFFCoder();
+            GFFObjectCoder gFFCoder = new GFFObjectCoder();
             ASCIICoder asciiCoder = new ASCIICoder();
             GFFObject gffObject = gFFCoder.decode(Resources._base);
 
@@ -547,7 +681,7 @@ namespace AuroraIOTests.Source.Models {
 
         [TestMethod]
         public void testSetXQuaternionExisting() {
-            GFFCoder gFFCoder = new GFFCoder();
+            GFFObjectCoder gFFCoder = new GFFObjectCoder();
             ASCIICoder asciiCoder = new ASCIICoder();
             GFFObject gffObject = gFFCoder.decode(Resources._base);
 
@@ -560,7 +694,7 @@ namespace AuroraIOTests.Source.Models {
 
         [TestMethod]
         public void testSetYQuaternionExisting() {
-            GFFCoder gFFCoder = new GFFCoder();
+            GFFObjectCoder gFFCoder = new GFFObjectCoder();
             ASCIICoder asciiCoder = new ASCIICoder();
             GFFObject gffObject = gFFCoder.decode(Resources._base);
 
@@ -573,7 +707,7 @@ namespace AuroraIOTests.Source.Models {
 
         [TestMethod]
         public void testSetWQuaternionExisting() {
-            GFFCoder gFFCoder = new GFFCoder();
+            GFFObjectCoder gFFCoder = new GFFObjectCoder();
             ASCIICoder asciiCoder = new ASCIICoder();
             GFFObject gffObject = gFFCoder.decode(Resources._base);
 
@@ -586,7 +720,7 @@ namespace AuroraIOTests.Source.Models {
 
         [TestMethod]
         public void testSetZQuaternionExisting() {
-            GFFCoder gFFCoder = new GFFCoder();
+            GFFObjectCoder gFFCoder = new GFFObjectCoder();
             ASCIICoder asciiCoder = new ASCIICoder();
             GFFObject gffObject = gFFCoder.decode(Resources._base);
 
@@ -600,7 +734,7 @@ namespace AuroraIOTests.Source.Models {
         // vector
         [TestMethod]
         public void testAddVector() {
-            GFFCoder gFFCoder = new GFFCoder();
+            GFFObjectCoder gFFCoder = new GFFObjectCoder();
             ASCIICoder asciiCoder = new ASCIICoder();
             GFFObject gffObject = gFFCoder.decode(Resources._base);
 
@@ -613,7 +747,7 @@ namespace AuroraIOTests.Source.Models {
 
         [TestMethod]
         public void testSetXVectorExisting() {
-            GFFCoder gFFCoder = new GFFCoder();
+            GFFObjectCoder gFFCoder = new GFFObjectCoder();
             ASCIICoder asciiCoder = new ASCIICoder();
             GFFObject gffObject = gFFCoder.decode(Resources._base);
 
@@ -626,7 +760,7 @@ namespace AuroraIOTests.Source.Models {
 
         [TestMethod]
         public void testSetYVectorExisting() {
-            GFFCoder gFFCoder = new GFFCoder();
+            GFFObjectCoder gFFCoder = new GFFObjectCoder();
             ASCIICoder asciiCoder = new ASCIICoder();
             GFFObject gffObject = gFFCoder.decode(Resources._base);
 
@@ -639,7 +773,7 @@ namespace AuroraIOTests.Source.Models {
 
         [TestMethod]
         public void testSetZVectorExisting() {
-            GFFCoder gFFCoder = new GFFCoder();
+            GFFObjectCoder gFFCoder = new GFFObjectCoder();
             ASCIICoder asciiCoder = new ASCIICoder();
             GFFObject gffObject = gFFCoder.decode(Resources._base);
 
@@ -659,6 +793,6 @@ namespace AuroraIOTests.Source.Models {
                 return value1.Equals(File.ReadAllText(filePath));
             }
         }
-
+        */
     }
 }
