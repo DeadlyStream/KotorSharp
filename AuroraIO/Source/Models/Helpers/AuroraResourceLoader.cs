@@ -7,7 +7,6 @@ using System.Text.RegularExpressions;
 using AuroraIO.Collections;
 using AuroraIO.Source.Coders;
 using AuroraIO.Source.Models.Base;
-using AuroraIO.Source.Models.GFF.Helpers;
 
 namespace AuroraIO.Models {
 

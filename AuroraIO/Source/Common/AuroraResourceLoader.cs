@@ -6,7 +6,6 @@ using System.Text;
 using AuroraIO.Models;
 using System.Text.RegularExpressions;
 using AuroraIO.Collections;
-using AuroraIO.Source.Models.GFF.Helpers;
 
 namespace AuroraIO {
 

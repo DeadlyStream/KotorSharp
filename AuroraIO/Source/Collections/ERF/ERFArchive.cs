@@ -1,4 +1,5 @@
 ﻿using AuroraIO.Source.Models.Base;
+using AuroraIO.Source.Models.Dictionary;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -8,13 +9,14 @@ using System.Text.RegularExpressions;
 
 namespace AuroraIO.Collections {
     public class ERFArchive: AuroraResourceCollection {
+        
         private int buildDay;
         private int buildYear;
         private int descriptionStrRef;
         private string fileVersion;
         private string filePath;
 
-        Dictionary<GFFLanguage, string> localizedStrings = new Dictionary<GFFLanguage, string>();
+        Dictionary<CExoLanguage, string> localizedStrings = new Dictionary<CExoLanguage, string>();
         Dictionary<AuroraResourceInfo, ERFResourceInfo> keyResourceMap = new Dictionary<AuroraResourceInfo, ERFResourceInfo>();
         Dictionary<AuroraResourceInfo, AuroraResource> pendingResources = new Dictionary<AuroraResourceInfo, AuroraResource>();
 
@@ -63,7 +65,7 @@ namespace AuroraIO.Collections {
             //Parse localized strings
             int readingOffset = 160;
             for (int i = 0; i < localizedStringCount; i++) {
-                GFFLanguage languageID = (GFFLanguage)(int)(BitConverter.ToUInt32(fileArray, readingOffset));
+                CExoLanguage languageID = (CExoLanguage)(int)(BitConverter.ToUInt32(fileArray, readingOffset));
                 int stringSize = (int)BitConverter.ToUInt32(fileArray, readingOffset + 4);
                 String localizedString = Encoding.ASCII.GetString(fileArray, readingOffset + 8, stringSize);
                 localizedStrings[languageID] = localizedString;
