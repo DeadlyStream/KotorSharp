@@ -1,7 +1,4 @@
-﻿using AuroraIO.Models;
-using AuroraIO.Source.Coders;
-using AuroraIO.Source.Models._2da;
-using AuroraIOTests.Properties;
+﻿using AuroraIOTests.Properties;
 using AuroraIOTests.Source.Asserts;
 using AuroraIOTests.Source.Stubs;
 using Microsoft.VisualStudio.TestTools.UnitTesting;

@@ -1,5 +1,4 @@
 ﻿using AuroraIO.Source.Coders;
-using AuroraIO.Source.Models._2da;
 using AuroraIO.Source.Models.Dictionary;
 using AuroraIO.Source.Models.Table;
 using Microsoft.VisualStudio.TestTools.UnitTesting;

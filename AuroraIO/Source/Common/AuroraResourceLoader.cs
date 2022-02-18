@@ -16,7 +16,7 @@ namespace AuroraIO {
             switch (resInfo.resourceType) {
                 case AuroraResourceType.TwoDA:
                 //TODO: this needs to be reinstated
-                return new Array2D();//(resInfo.resref, fileArray);
+                //return new Array2D();//(resInfo.resref, fileArray);
                 case AuroraResourceType.UTI:
                     //return new GFFObjectCoder().decode(fileArray);
                 case AuroraResourceType.ARE:

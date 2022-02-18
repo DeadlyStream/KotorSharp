@@ -67,12 +67,8 @@
     <Compile Include="Source\Coders\ASCIICoder.cs" />
     <Compile Include="Source\Extensions\Extensions.cs" />
     <Compile Include="Source\Extensions\IndexMap.cs" />
-    <Compile Include="Source\Models\2da\Array2D.cs" />
-    <Compile Include="Source\Models\2da\Array2DASCIIOutputExtensions.cs" />
-    <Compile Include="Source\Models\2da\Array2DCoder.cs" />
     <Compile Include="Source\Coders\_2DACoder.cs" />
     <Compile Include="Source\Models\Table\AuroraTable.cs" />
-    <Compile Include="Source\Coders\TSVCoder.cs" />
     <Compile Include="Source\Models\Dictionary\AuroraDataObject.cs" />
     <Compile Include="Source\Models\Dictionary\AuroraDataType.cs" />
     <Compile Include="Source\Models\Dictionary\AuroraDictionary.cs" />
@@ -151,9 +147,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Source\Models\ASCII\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

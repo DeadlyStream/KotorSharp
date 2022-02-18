@@ -1,5 +1,4 @@
-﻿using AuroraIO.Source.Models._2da;
-using AuroraIO.Source.Models.Table;
+﻿using AuroraIO.Source.Models.Table;
 using System;
 using System.Collections.Generic;
 using System.Text;
