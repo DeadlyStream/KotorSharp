@@ -1,7 +1,0 @@
-type: gff
-fields:
-  value:
-    type: struct
-    value:
-      id: 0
-      fields:

@@ -1,5 +1,0 @@
-type: gff
-fields:
-  value:
-    type: int
-    value: 100

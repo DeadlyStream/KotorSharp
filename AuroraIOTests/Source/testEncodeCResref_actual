@@ -1,5 +1,0 @@
-type: gff
-fields:
-  value:
-    type: resref
-    value: xxxxxxxxxxxxxxxx

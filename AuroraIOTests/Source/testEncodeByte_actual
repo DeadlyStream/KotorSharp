@@ -1,5 +1,0 @@
-type: gff
-fields:
-  value:
-    type: byte
-    value: 100

@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace AuroraIO.Source.Models._2da
+namespace AuroraIO.Source.Models.Table
 {
-    public class _2DAObject: ASCIIOutputProtocol {
+    public class AuroraTable: ASCIIOutputProtocol {
 
         public class Row
         {
@@ -62,7 +62,7 @@ namespace AuroraIO.Source.Models._2da
         public string[] columns;
         public List<string[]> rowList { get; }
 
-        public _2DAObject(string[] columns, string[][] rowData)
+        public AuroraTable(string[] columns, string[][] rowData)
         {
             this.columns = columns;
             this.rowList = rowData.Select(singleRowData => singleRowData).ToList();

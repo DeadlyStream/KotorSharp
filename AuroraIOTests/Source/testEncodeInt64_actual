@@ -1,5 +1,0 @@
-type: gff
-fields:
-  value:
-    type: int64
-    value: 100

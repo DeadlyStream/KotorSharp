@@ -1,5 +1,0 @@
-type: gff
-fields:
-  value:
-    type: dword64
-    value: 100

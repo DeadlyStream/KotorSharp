@@ -1,5 +1,0 @@
-type: gff
-fields:
-  value:
-    type: strref
-    value: -1

@@ -71,7 +71,7 @@
     <Compile Include="Source\Models\2da\Array2DASCIIOutputExtensions.cs" />
     <Compile Include="Source\Models\2da\Array2DCoder.cs" />
     <Compile Include="Source\Coders\_2DACoder.cs" />
-    <Compile Include="Source\Models\2da\_2DAObject.cs" />
+    <Compile Include="Source\Models\Table\AuroraTable.cs" />
     <Compile Include="Source\Coders\TSVCoder.cs" />
     <Compile Include="Source\Models\Dictionary\AuroraDataObject.cs" />
     <Compile Include="Source\Models\Dictionary\AuroraDataType.cs" />

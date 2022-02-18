@@ -1,6 +1,7 @@
 ﻿using AuroraIO.Source.Coders;
 using AuroraIO.Source.Models._2da;
 using AuroraIO.Source.Models.Dictionary;
+using AuroraIO.Source.Models.Table;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
@@ -38,7 +39,7 @@ namespace AuroraIOTests.Source.Asserts {
             return File.ReadAllText(resourceFileName(className, methodName));
         }
 
-        public static void VerifyEncoding(_2DAObject actual, [CallerFilePath] string className = "", [CallerMemberName] string methodName = "", bool record = false) {
+        public static void VerifyEncoding(AuroraTable actual, [CallerFilePath] string className = "", [CallerMemberName] string methodName = "", bool record = false) {
             Verify(new _2DACoder().encode(actual), className, methodName, record);
         }
 

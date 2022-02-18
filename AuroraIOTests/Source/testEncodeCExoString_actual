@@ -1,5 +1,0 @@
-type: gff
-fields:
-  value:
-    type: cexostring
-    value: stringValue

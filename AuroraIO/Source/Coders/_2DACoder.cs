@@ -1,13 +1,12 @@
-﻿using System;
+﻿using AuroraIO.Source.Models.Table;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace AuroraIO.Source.Models._2da
-{
-    public class _2DACoder
-    {
+namespace AuroraIO.Source.Coders {
+    public class _2DACoder {
         //Char parsing constants
         protected const char TabCharacter = (char)9;
         protected const char NullCharacter = (char)0;
@@ -17,8 +16,7 @@ namespace AuroraIO.Source.Models._2da
         protected const String NullTerm = "****";
         protected const int HeaderLength = 9;
 
-        public _2DAObject decode(byte[] byteArray)
-        {
+        public AuroraTable decode(byte[] byteArray) {
 
             int i = HeaderLength;
             char c = TabCharacter;
@@ -117,10 +115,10 @@ namespace AuroraIO.Source.Models._2da
                 i += 2;
             }
 
-            return new _2DAObject(columnNames.ToArray(), rows);
+            return new AuroraTable(columnNames.ToArray(), rows);
         }
 
-        public byte[] encode(_2DAObject obj)
+        public byte[] encode(AuroraTable obj)
         {
             ByteArray newFileArray = new ByteArray();
 
