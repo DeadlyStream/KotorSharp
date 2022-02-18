@@ -13,14 +13,10 @@ namespace AuroraIOTests.Source
     public class AuroraDictionaryTests
     {
 
-        bool record = false;
-
-        ASCIICoder coder = new ASCIICoder();
-
         [TestMethod]
         public void testPopulateDictionary()
         {
-            var arStruct = AuroraDictionary.make(dict =>
+            var dict = AuroraDictionary.make(dict =>
             {
                 dict["field_byte"] = (byte)0;
                 dict["field_char"] = 'c';
@@ -65,16 +61,13 @@ namespace AuroraIOTests.Source
                 dict["field_strref"] = AuroraStrRef.make(0);
             });
 
-            Snapshot.Verify(
-                arStruct,
-                MethodBase.GetCurrentMethod(),
-                record);
+            Snapshot.Verify(dict);
         }
 
         [TestMethod]
         public void testNestedListDictionary()
         {
-            var arStruct = AuroraDictionary.make(dict =>
+            var dict = AuroraDictionary.make(dict =>
             {
                 dict["baseList"] = new AuroraStruct[] {
                     AuroraStruct.make(0, dict => {
@@ -94,16 +87,13 @@ namespace AuroraIOTests.Source
                     }),
                 };
             });
-            Snapshot.Verify(
-                arStruct,
-                MethodBase.GetCurrentMethod(),
-                record);
+            Snapshot.Verify(dict);
         }
 
         [TestMethod]
         public void testNestedStructDictionary()
         {
-            var arStruct = AuroraDictionary.make(dict =>
+            var dict = AuroraDictionary.make(dict =>
             {
                 dict["struct"] = AuroraStruct.make(dict =>
                 {
@@ -116,10 +106,7 @@ namespace AuroraIOTests.Source
                     });
                 });
             });
-            Snapshot.Verify(
-                arStruct,
-                MethodBase.GetCurrentMethod(),
-                record);
+            Snapshot.Verify(dict);
         }
     }
 }

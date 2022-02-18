@@ -6,61 +6,86 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace AuroraIOTests.Source.Asserts {
     public static class Snapshot {
 
-        static string testFileBaseName(MethodBase methodName) {
+        static string testFileBaseName(string className, string methodName) {
+            return Path.Combine(Bundle.SnapshotDirectory,
+                "Artifacts",
+                String.Format("{0}\\{1}", Path.GetFileNameWithoutExtension(className), methodName));
+        }
+
+        private static string resourceFileName(string className, string methodName) {
+            return Path.Combine(Bundle.SnapshotDirectory,
+                "Resources",
+                String.Format("{0}\\{1}", Path.GetFileNameWithoutExtension(className), methodName));
+        }
+
+        static string testFileOutputName(string className,  string methodName) {
             return Path.Combine(AppDomain.CurrentDomain.BaseDirectory,
                 "Artifacts",
-                String.Format("{0}\\{1}", methodName.DeclaringType.Name, methodName.Name));
+                String.Format("{0}\\{1}_actual", Path.GetFileNameWithoutExtension(className), methodName));
         }
 
-        static string testFileActualName(MethodBase methodName) {
-            return Path.Combine(AppDomain.CurrentDomain.BaseDirectory,
-                "Artifacts",
-                String.Format("{0}\\{1}_actual", methodName.DeclaringType.Name, methodName.Name));
+        public static byte[] DataResource([CallerFilePath] string className = "", [CallerMemberName] string methodName = "") {
+            return File.ReadAllBytes(resourceFileName(className, methodName));
         }
 
-        public static void VerifyEncoding(_2DAObject actual, MethodBase methodName, bool record) {
-            Verify(new _2DACoder().encode(actual), methodName, record);
+        public static string TextResource([CallerFilePath] string className = "", [CallerMemberName] string methodName = "") {
+            return File.ReadAllText(resourceFileName(className, methodName));
         }
 
-        public static void VerifyEncoding(AuroraDictionary actual, MethodBase methodName, bool record) {
-            Verify(new GFFCoder().encode(actual), methodName, record);
+        public static void VerifyEncoding(_2DAObject actual, [CallerFilePath] string className = "", [CallerMemberName] string methodName = "", bool record = false) {
+            Verify(new _2DACoder().encode(actual), className, methodName, record);
         }
 
-        public static void Verify(ASCIIOutputProtocol actual, MethodBase methodName, bool record) {
-            Verify(new ASCIICoder().encode(actual), methodName, record);
+        public static void VerifyEncoding(AuroraDictionary actual, [CallerFilePath] string className = "", [CallerMemberName] string methodName = "", bool record = false) {
+            Verify(new GFFCoder().encode(actual), className, methodName, record);
         }
 
-        public static void Verify(byte[] actual, MethodBase methodName, bool record) {
-            var path = testFileBaseName(methodName);
+        public static void Verify(ASCIIOutputProtocol actual, [CallerFilePath] string className = "", [CallerMemberName] string methodName = "", bool record = false) {
+            Verify(new ASCIICoder().encode(actual), className, methodName, record);
+        }
+
+        public static void Verify(byte[] actual, [CallerFilePath] string className = "", [CallerMemberName] string methodName = "", bool record = false) {
+            var expectedPath = testFileBaseName(className, methodName);
+            var actualPath = testFileOutputName(className, methodName);
 
             if (record) {
-                if (!Directory.Exists(Path.GetDirectoryName(path))) {
-                    Directory.CreateDirectory(Path.GetDirectoryName(path));
+                if (!Directory.Exists(Path.GetDirectoryName(expectedPath))) {
+                    Directory.CreateDirectory(Path.GetDirectoryName(expectedPath));
                 }
-                File.WriteAllBytes(path, actual);
+                File.WriteAllBytes(expectedPath, actual);
+            } else {
+                if (!Directory.Exists(Path.GetDirectoryName(actualPath))) {
+                    Directory.CreateDirectory(Path.GetDirectoryName(actualPath));
+                }
             }
-            File.WriteAllBytes(testFileActualName(methodName), actual);
-            var expected = File.ReadAllBytes(path);
-            Assert.AreEqual(Encoding.ASCII.GetString(actual), Encoding.ASCII.GetString(expected));
+            File.WriteAllBytes(actualPath, actual);
+            var expected = File.ReadAllBytes(expectedPath);
+            Assert.AreEqual(Encoding.ASCII.GetString(expected), Encoding.ASCII.GetString(actual));
         }
 
-        public static void Verify(String actual, MethodBase methodName, bool record) {
-            var path = testFileBaseName(methodName);
+        public static void Verify(String actual, [CallerFilePath] string className = "", [CallerMemberName] string methodName = "", bool record = false) {
+            var expectedPath = testFileBaseName(className, methodName);
+            var actualPath = testFileOutputName(className, methodName);
 
             if (record) {
-                if (!Directory.Exists(Path.GetDirectoryName(path))) {
-                    Directory.CreateDirectory(Path.GetDirectoryName(path));
+                if (!Directory.Exists(Path.GetDirectoryName(expectedPath))) {
+                    Directory.CreateDirectory(Path.GetDirectoryName(expectedPath));
                 }
-                File.WriteAllText(path, actual);
+                File.WriteAllText(expectedPath, actual);
+            } else {
+                if (!Directory.Exists(Path.GetDirectoryName(actualPath))) {
+                    Directory.CreateDirectory(Path.GetDirectoryName(actualPath));
+                }
             }
-            File.WriteAllText(testFileActualName(methodName), actual);
-            var expected = File.ReadAllText(path);
-            Assert.AreEqual(actual, expected);
+            File.WriteAllText(actualPath, actual);
+            var expected = File.ReadAllText(expectedPath);
+            Assert.AreEqual(expected, actual);
         }
     }
 }

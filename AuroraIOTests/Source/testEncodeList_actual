@@ -1,0 +1,11 @@
+type: gff
+fields:
+  value:
+    type: list
+    value:
+      - struct:
+        id: 0
+        fields:
+          value:
+            type: int
+            value: 100

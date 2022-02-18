@@ -23,13 +23,38 @@ namespace AuroraIO.Source.Coders
 
         struct GFFFieldInfo {
             public readonly AuroraDataType fieldType;
-            public readonly uint labelIndex;
+            public string label;
             public readonly uint dataOrDataOffset;
 
-            public GFFFieldInfo(AuroraDataType fieldType, uint labelIndex, uint dataOrDataOffset) {
+            public GFFFieldInfo(AuroraDataType fieldType, string label, uint dataOrDataOffset) {
                 this.fieldType = fieldType;
-                this.labelIndex = labelIndex;
+                this.label = label;
                 this.dataOrDataOffset = dataOrDataOffset;
+            }
+        }
+
+        class GFFBuildInfo {
+            public GFFStructInfo[] structInfoArray;
+            public GFFFieldInfo[] fieldInfoArray;
+            public string[] labels;
+            public byte[] complexFieldData;
+            public byte[] fieldIndicesArray;
+            public byte[] listIndicesArray;
+
+            public GFFBuildInfo(
+                GFFStructInfo[] structInfoArray,
+                GFFFieldInfo[] fieldInfoArray,
+                string[] labels,
+                byte[] complexFieldData,
+                byte[] fieldIndicesArray,
+                byte[] listIndicesArray
+            ) {
+                this.structInfoArray = structInfoArray;
+                this.fieldInfoArray = fieldInfoArray;
+                this.labels = labels;
+                this.complexFieldData = complexFieldData;
+                this.fieldIndicesArray = fieldIndicesArray;
+                this.listIndicesArray = listIndicesArray;
             }
         }
 
@@ -47,20 +72,7 @@ namespace AuroraIO.Source.Coders
 
             //Processing prep work
 
-            ByteArray complexFieldData = new ByteArray();
-            List<GFFFieldInfo> allFields = new List<GFFFieldInfo>();
-            List<GFFStructInfo> allStructs = new List<GFFStructInfo>();
-            IndexMap<String> labelMap = new IndexMap<String>();
-            List<int> listIndicesArray = new List<int>();
-            List<int> fieldIndicesArray = new List<int>();
-
-            processStruct(dict,
-                allFields,
-                allStructs,
-                labelMap,
-                complexFieldData,
-                fieldIndicesArray,
-                listIndicesArray);
+            var info = processDictionary(dict);
 
             ByteArray newByteArray = new ByteArray();
             String fileVersion = "V3.2";
@@ -81,7 +93,7 @@ namespace AuroraIO.Source.Coders
 
             //Write Struct Count
             //The total count of structs in the file - this includes structs inside of fields that are struct types and list types
-            UInt32 structCount = (UInt32)allStructs.Count();
+            UInt32 structCount = (UInt32)info.structInfoArray.Count();
             newByteArray.AddRange(BitConverter.GetBytes(structCount));
 
             //MARK: - Write Field offset 
@@ -90,7 +102,7 @@ namespace AuroraIO.Source.Coders
             newByteArray.AddRange(BitConverter.GetBytes(fieldOffset));
 
             //MARK: - Write field count (actual count)
-            UInt32 fieldCount = (UInt32)allFields.Count();
+            UInt32 fieldCount = (UInt32)info.fieldInfoArray.Count();
             newByteArray.AddRange(BitConverter.GetBytes(fieldCount));
 
             //MARK: - Write Label offset
@@ -99,7 +111,7 @@ namespace AuroraIO.Source.Coders
             newByteArray.AddRange(BitConverter.GetBytes(labelOffset));
 
             //MARK: - Write Label count
-            UInt32 labelCount = (UInt32)labelMap.Count();
+            UInt32 labelCount = (UInt32)info.labels.Count();
             newByteArray.AddRange(BitConverter.GetBytes(labelCount));
 
             //MARK: - Field data offset
@@ -108,7 +120,7 @@ namespace AuroraIO.Source.Coders
             newByteArray.AddRange(BitConverter.GetBytes(fieldDataOffset));
 
             //MARK: - FieldData length (in total bytes)
-            UInt32 fieldDataCount = (UInt32)complexFieldData.Count;
+            UInt32 fieldDataCount = (UInt32)info.complexFieldData.Length;
             newByteArray.AddRange(BitConverter.GetBytes(fieldDataCount));
 
             //MARK: - FieldIndices offset
@@ -119,7 +131,7 @@ namespace AuroraIO.Source.Coders
             newByteArray.AddRange(BitConverter.GetBytes(fieldIndicesOffset));
 
             //MARK: - Field Indices length (in bytes)
-            UInt32 fieldIndicesCount = (UInt32)fieldIndicesArray.Count * 4;
+            UInt32 fieldIndicesCount = (UInt32)info.fieldIndicesArray.Length;
             newByteArray.AddRange(BitConverter.GetBytes(fieldIndicesCount));
 
             //MARK: - List indices offset
@@ -127,53 +139,30 @@ namespace AuroraIO.Source.Coders
             newByteArray.AddRange(BitConverter.GetBytes(listIndicesOffset));
 
             //MARK: - List indices offset
-            UInt32 listIndicesCount = (UInt32)listIndicesArray.Count * 4;
+            UInt32 listIndicesCount = (UInt32)info.listIndicesArray.Length;
             newByteArray.AddRange(BitConverter.GetBytes(listIndicesCount));
 
-            Debug.Assert(newByteArray.Count == 56);
-
             //Write Struct data
-            HashSet<int> verifiedFields = new HashSet<int>();
-            
-            foreach (GFFStructInfo structInfo in allStructs) {
+            foreach (GFFStructInfo structInfo in info.structInfoArray) {
 
                 //Convert structInfo to bytes
                 newByteArray.AddRange(BitConverter.GetBytes((UInt32)structInfo.structType));
                 newByteArray.AddRange(BitConverter.GetBytes((UInt32)structInfo.dataOrDataOffset));
                 newByteArray.AddRange(BitConverter.GetBytes(structInfo.fieldCount));
-
-                if (structInfo.fieldCount > 1) {
-                    int startingIndex = (int)structInfo.dataOrDataOffset / 4;
-                    for (int i = 0; i < structInfo.fieldCount; i++) {
-                        verifiedFields.Add(fieldIndicesArray[startingIndex + i]);
-                    }
-                } else if (structInfo.fieldCount == 1) {
-                    verifiedFields.Add((int)structInfo.dataOrDataOffset);
-                }
             }
-
-            Debug.Assert(fieldCount == verifiedFields.Count);
 
             //Write Field Data
 
-            HashSet<string> verifiedLabels = new HashSet<string>();
-            ByteArray verifiedComplexDataBytes = new ByteArray();
-            HashSet<int> verifiedStructIndices = new HashSet<int>();
+            IndexMap<string> labelMap = info.labels.generateIndexMap();
 
-            foreach (GFFFieldInfo fieldInfo in allFields) {
-
+            foreach (GFFFieldInfo fieldInfo in info.fieldInfoArray) {
                 newByteArray.AddRange(BitConverter.GetBytes((uint)fieldInfo.fieldType));
-                newByteArray.AddRange(BitConverter.GetBytes(fieldInfo.labelIndex));
+                newByteArray.AddRange(BitConverter.GetBytes(labelMap[fieldInfo.label]));
                 newByteArray.AddRange(BitConverter.GetBytes(fieldInfo.dataOrDataOffset));
-
-                //Add to verified labels
-                verifiedLabels.Add(labelMap[(int)fieldInfo.labelIndex]);
             }   
 
-            Debug.Assert(labelMap.Count == verifiedLabels.Count);
-
             //Write Label Array
-            foreach(String label in labelMap) {
+            foreach(String label in info.labels) {
                 //Field label values must be padded to 16 length with 0's
                 String modifiedValue = label.Substring(0, Math.Min(label.Length, 16));
                 newByteArray.AddRange(ASCIIEncoding.ASCII.GetBytes(modifiedValue));
@@ -184,13 +173,13 @@ namespace AuroraIO.Source.Coders
             }
 
             //Write Complex Field Data Block
-            newByteArray.AddRange(complexFieldData.ToArray());
+            newByteArray.AddRange(info.complexFieldData.ToArray());
 
             //Write FieldIndices Array
-            newByteArray.AddRange(fieldIndicesArray.SelectMany(index => BitConverter.GetBytes((uint)index).ToArray()));
+            newByteArray.AddRange(info.fieldIndicesArray.ToArray());
 
             //Write ListIndices Array
-            newByteArray.AddRange(listIndicesArray.SelectMany(index => BitConverter.GetBytes((uint)index).ToArray()));
+            newByteArray.AddRange(info.listIndicesArray.ToArray());
 
             return newByteArray.ToArray();
         }
@@ -285,7 +274,7 @@ namespace AuroraIO.Source.Coders
                     break;
                 case AuroraDataType.CResref:
                     byte resrefLength = fileArray[complexOffset];
-                    dataObject = Encoding.ASCII.GetString(fileArray, complexOffset + 1, resrefLength);
+                    dataObject = AuroraResref.make(Encoding.ASCII.GetString(fileArray, complexOffset + 1, resrefLength));
                     break;
                 case AuroraDataType.CExoLocString:
                     UInt32 cexoLocStringSize = BitConverter.ToUInt32(fileArray, complexOffset);
@@ -305,7 +294,9 @@ namespace AuroraIO.Source.Coders
                     break;
                 case AuroraDataType.Void:
                     UInt32 dataLength = BitConverter.ToUInt32(fileArray, complexOffset);
-                    dataObject = new ArraySegment<byte>(fileArray, complexOffset + 4, (int)dataLength).Array;
+                    byte[] byteArray = new byte[dataLength];
+                    Array.ConstrainedCopy(fileArray, complexOffset + 4, byteArray, 0, (int)dataLength);
+                    dataObject = byteArray;
                     break;
                 case AuroraDataType.Quaternion:
                     float qW = BitConverter.ToSingle(fileArray, complexOffset);
@@ -325,7 +316,10 @@ namespace AuroraIO.Source.Coders
                     int unknownHeader = BitConverter.ToInt32(fileArray, complexOffset);
                     dataObject = AuroraStrRef.make(BitConverter.ToUInt32(fileArray, complexOffset + 4));
                     break;
-                //Structs are different and get an offset from struct array
+                   // Unlike most of the complex Field data types, a Struct Field's data is located not in the Field Data Block,
+                   // but in the Struct Array.
+                   // Normally, a Field's DataOrDataOffset value would be a byte offset into the Field Data Block, but for a
+                   // Struct, it is an index into the Struct Array
                 case AuroraDataType.Struct:
                     int structOffset = (int)dataOrDataOffset * 12;
                     dataObject = getStructAtOffset(fileArray, structOffset);
@@ -353,178 +347,288 @@ namespace AuroraIO.Source.Coders
             return new KeyValuePair<string, AuroraDataObject>(label, dataObject);
         }
 
-        AuroraStructType[] findStructs(AuroraStructType auroraStruct) {
-            var list = auroraStruct.SelectMany(pair =>
-            {
-                var dataObject = pair.Value;
-                switch (dataObject.dataType)
-                {
-                    case AuroraDataType.List:
-                        var subList = dataObject as AuroraList;
-                        return subList.ToList().SelectMany(item => findStructs(item)).ToArray();
-                    case AuroraDataType.Struct:
-                        return new AuroraStruct[] { dataObject as AuroraStruct };
-                    default:
-                        return new AuroraStruct[] { };
-                }
-            }).ToList();
+        private GFFBuildInfo processDictionary(AuroraDictionary dictionary) {
+           
+            List<GFFFieldInfo> fieldArray = new List<GFFFieldInfo>();
+            List<GFFStructInfo> structArray = new List<GFFStructInfo>();
+            HashSet<String> labels = new HashSet<String>();
+            ByteArray complexFieldData = new ByteArray();
+            ByteArray fieldIndicesArray = new ByteArray();
+            ByteArray listIndicesArray = new ByteArray();
 
-            list.Add(auroraStruct);
-            return list.ToArray();
+            processStruct(dictionary,
+                structArray,
+                fieldArray,
+                labels, 
+                complexFieldData,
+                fieldIndicesArray, 
+                listIndicesArray);
+
+            return new GFFBuildInfo(structArray.ToArray(),
+                fieldArray.ToArray(),
+                labels.ToArray(),
+                complexFieldData.ToArray(),
+                fieldIndicesArray.ToArray(),
+                listIndicesArray.ToArray()
+            );
         }
 
-        void processStruct(AuroraStructType baseStruct,
-            List<GFFFieldInfo> allFields,
-            List<GFFStructInfo> allStructs,
-            IndexMap<String> labelMap,
+        private void processStruct(
+            AuroraStructType baseStruct,
+            List<GFFStructInfo> structArray,
+            List<GFFFieldInfo> fieldArray,
+            HashSet<String> labels,
             ByteArray complexFieldData,
-            List<int> fieldIndicesArray,
-            List<int> listIndicesArray)
-        {
-            List<GFFStructInfo> localStructs = new List<GFFStructInfo>();
-            List<GFFFieldInfo> localFields = new List<GFFFieldInfo>();
-            List<int> localFieldIndicesArray = new List<int>();
+            ByteArray fieldIndicesArray,
+            ByteArray listIndicesArray
+         ) {
 
-            KeyValuePair<String, AuroraDataObject>[] orderedPairs = baseStruct.Select(pair => pair)
-                .OrderBy(pair => pair.Key)
-                .ToArray();
+            int fieldIndicesArrayStartingOffset = fieldIndicesArray.Count;
 
-            int fieldCount = baseStruct.Count();
+            GFFStructInfo structInfo;
+            int localFieldCount = baseStruct.Count();
+            if (localFieldCount > 1) {
+                structInfo = new GFFStructInfo(baseStruct.structType, fieldIndicesArrayStartingOffset, localFieldCount);
+            } else if (localFieldCount == 1) {
+                structInfo = new GFFStructInfo(baseStruct.structType, fieldArray.Count, localFieldCount);
+            } else {
+                structInfo = new GFFStructInfo(baseStruct.structType, -1, 0);
+            }
 
-            foreach (KeyValuePair<string, AuroraDataObject> pair in orderedPairs) {
+            structArray.Add(structInfo);
+
+            //Reserve the bytes in the fieldIndicesArray, then backfill with localFieldIndicesArray
+            fieldIndicesArray.AddRange(Enumerable.Repeat((byte)0, localFieldCount * 4));
+            
+            List<int> localFieldIndices = new List<int>();
+
+            foreach (KeyValuePair<string, AuroraDataObject> pair in baseStruct.OrderBy(pair => pair.Key)) {
+                //The field's index only has to be added to the fieldIndicesArray if it's part of a struct that has > 1 field
+
+                labels.Add(pair.Key);
+
                 var dataObject = pair.Value;
-                var label = pair.Key;
-                var fieldType = dataObject.dataType;
 
-                labelMap.Add(label);
+                if (localFieldCount > 1) {
+                    localFieldIndices.Add(fieldArray.Count);
+                }
 
-                uint dataOrDataOffset = uint.MaxValue;
-
-                switch (fieldType) {
+                switch (dataObject.dataType) {
                     case AuroraDataType.Undefined:
                         break;
                     case AuroraDataType.Byte: {
-                            byte[] value = AuroraBitConverter.GetBytes(dataObject as AuroraByte);
-                            dataOrDataOffset = BitConverter.ToUInt32(value, 0);
+                            fieldArray.Add(new GFFFieldInfo(
+                                    dataObject.dataType,
+                                    pair.Key,
+                                    BitConverter.ToUInt32(AuroraBitConverter.GetBytes(dataObject as AuroraByte), 0)
+                                ));
                         }
                         break;
                     case AuroraDataType.Char: {
-                            byte[] value = AuroraBitConverter.GetBytes(dataObject as AuroraChar);
-                            dataOrDataOffset = BitConverter.ToUInt32(value, 0);
+                            fieldArray.Add(new GFFFieldInfo(
+                                    dataObject.dataType,
+                                    pair.Key,
+                                    BitConverter.ToUInt32(AuroraBitConverter.GetBytes(dataObject as AuroraChar), 0)
+                                ));
                         }
                         break;
                     case AuroraDataType.Word: {
-                            byte[] value = AuroraBitConverter.GetBytes(dataObject as AuroraWord);
-                            dataOrDataOffset = BitConverter.ToUInt32(value, 0);
+                            fieldArray.Add(new GFFFieldInfo(
+                                    dataObject.dataType,
+                                    pair.Key,
+                                    BitConverter.ToUInt32(AuroraBitConverter.GetBytes(dataObject as AuroraWord), 0)
+                                ));
                         }
                         break;
                     case AuroraDataType.Short: {
-                            byte[] value = AuroraBitConverter.GetBytes(dataObject as AuroraShort);
-                            dataOrDataOffset = BitConverter.ToUInt32(value, 0);
+                            fieldArray.Add(new GFFFieldInfo(
+                                    dataObject.dataType,
+                                    pair.Key,
+                                    BitConverter.ToUInt32(AuroraBitConverter.GetBytes(dataObject as AuroraShort), 0)
+                                ));
                         }
                         break;
                     case AuroraDataType.Dword: {
-                            byte[] value = AuroraBitConverter.GetBytes(dataObject as AuroraDWord);
-                            dataOrDataOffset = BitConverter.ToUInt32(value, 0);
+                            fieldArray.Add(new GFFFieldInfo(
+                                    dataObject.dataType,
+                                    pair.Key,
+                                    BitConverter.ToUInt32(AuroraBitConverter.GetBytes(dataObject as AuroraDWord), 0)
+                                ));
                         }
                         break;
                     case AuroraDataType.Int: {
-                            byte[] value = AuroraBitConverter.GetBytes(dataObject as AuroraInt);
-                            dataOrDataOffset = BitConverter.ToUInt32(value, 0);
+                            fieldArray.Add(new GFFFieldInfo(
+                                    dataObject.dataType,
+                                    pair.Key,
+                                    BitConverter.ToUInt32(AuroraBitConverter.GetBytes(dataObject as AuroraInt), 0)
+                                ));
                         }
                         break;
                     case AuroraDataType.Float: {
-                            byte[] value = AuroraBitConverter.GetBytes(dataObject as AuroraFloat);
-                            dataOrDataOffset = BitConverter.ToUInt32(value, 0);
+                            fieldArray.Add(new GFFFieldInfo(
+                                    dataObject.dataType,
+                                    pair.Key,
+                                    BitConverter.ToUInt32(AuroraBitConverter.GetBytes(dataObject as AuroraFloat), 0)
+                                ));
                         }
                         break;
                     case AuroraDataType.Dword64: {
-                            dataOrDataOffset = Convert.ToUInt32(complexFieldData.Count);
+                            fieldArray.Add(new GFFFieldInfo(
+                                dataObject.dataType,
+                                pair.Key,
+                                Convert.ToUInt32(complexFieldData.Count)
+                            ));
 
-                            byte[] value = AuroraBitConverter.GetBytes(dataObject as AuroraDWord64);
-                            complexFieldData.AddRange(value);
+                            complexFieldData.AddRange(AuroraBitConverter.GetBytes(dataObject as AuroraDWord64));
                         }
                         break;
                     case AuroraDataType.Int64: {
-                            dataOrDataOffset = Convert.ToUInt32(complexFieldData.Count);
+                            fieldArray.Add(new GFFFieldInfo(
+                                dataObject.dataType,
+                                pair.Key,
+                                Convert.ToUInt32(complexFieldData.Count)
+                            ));
 
-                            byte[] value = AuroraBitConverter.GetBytes(dataObject as AuroraInt64);
-                            complexFieldData.AddRange(value);
+                            complexFieldData.AddRange(AuroraBitConverter.GetBytes(dataObject as AuroraInt64));
                         }
                         break;
                     case AuroraDataType.Double: {
-                            dataOrDataOffset = Convert.ToUInt32(complexFieldData.Count);
+                            fieldArray.Add(new GFFFieldInfo(
+                                dataObject.dataType,
+                                pair.Key,
+                                Convert.ToUInt32(complexFieldData.Count)
+                            ));
 
-                            byte[] value = AuroraBitConverter.GetBytes(dataObject as AuroraDouble);
-                            complexFieldData.AddRange(value);
+                            complexFieldData.AddRange(AuroraBitConverter.GetBytes(dataObject as AuroraDouble));
                         }
                         break;
                     case AuroraDataType.CExoString: {
-                            dataOrDataOffset = Convert.ToUInt32(complexFieldData.Count);
+                            fieldArray.Add(new GFFFieldInfo(
+                                dataObject.dataType,
+                                pair.Key,
+                                Convert.ToUInt32(complexFieldData.Count)
+                            ));
 
                             complexFieldData.AddRange(AuroraBitConverter.GetBytes(dataObject as AuroraCExoString));
                         }
                         break;
                     case AuroraDataType.CResref: {
-                            dataOrDataOffset = Convert.ToUInt32(complexFieldData.Count);
+                            fieldArray.Add(new GFFFieldInfo(
+                                dataObject.dataType,
+                                pair.Key,
+                                Convert.ToUInt32(complexFieldData.Count)
+                            ));
 
                             complexFieldData.AddRange(AuroraBitConverter.GetBytes(dataObject as AuroraResref));
                         }
                         break;
                     case AuroraDataType.CExoLocString: {
-                            dataOrDataOffset = Convert.ToUInt32(complexFieldData.Count);
+                            fieldArray.Add(new GFFFieldInfo(
+                                dataObject.dataType,
+                                pair.Key,
+                                Convert.ToUInt32(complexFieldData.Count)
+                            ));
 
                             complexFieldData.AddRange(AuroraBitConverter.GetBytes(dataObject as AuroraCExoLocString));
                         }
                         break;
                     case AuroraDataType.Void: {
-                            dataOrDataOffset = Convert.ToUInt32(complexFieldData.Count);
+                            fieldArray.Add(new GFFFieldInfo(
+                                dataObject.dataType,
+                                pair.Key,
+                                Convert.ToUInt32(complexFieldData.Count)
+                            ));
 
                             complexFieldData.AddRange(AuroraBitConverter.GetBytes(dataObject as AuroraVoid));
                         }
                         break;
                     case AuroraDataType.Struct: {
-                            //Not sure if this should go before processing the struct or after
-                            dataOrDataOffset = Convert.ToUInt32(allStructs.Count);
+                            // Unlike most of the complex Field data types, a Struct Field's data is located not in the Field Data Block,
+                            // but in the Struct Array.
+                            // Normally, a Field's DataOrDataOffset value would be a byte offset into the Field Data Block, but for a
+                            // Struct, it is an index into the Struct Array
 
-                            processStruct(dataObject as AuroraStruct, allFields, localStructs, labelMap, complexFieldData, localFieldIndicesArray, listIndicesArray);
+                            fieldArray.Add(new GFFFieldInfo(
+                                dataObject.dataType,
+                                pair.Key,
+                                Convert.ToUInt32(structArray.Count)
+                            ));
+
+                            //process this struct here
+                            processStruct(dataObject as AuroraStruct,
+                                structArray,
+                                fieldArray,
+                                labels,
+                                complexFieldData,
+                                fieldIndicesArray,
+                                listIndicesArray
+                            );
                         }
                         break;
                     case AuroraDataType.List: {
+                            // Unlike most of the complex Field data types, a List Field's data is located not in the Field Data Block,
+                            // but in the Field Indices Array.
+                            // The starting address of a List is specified in its Field's DataOrDataOffset value as a byte offset into the
+                            // Field Indices Array, at which is located a List element. Section 3.8 describes the structure a List element
+
                             var listDataObject = dataObject as AuroraList;
 
-                            //Add size of struct array to account for these structs;
-                            List<int> localListIndicesArray = new List<int>();
+                            int listIndicesArrayStartingOffset = listIndicesArray.Count();
+                            int localStructCount = listDataObject.Count();
 
-                            //Ofset into listIndicesArray
-                            int offset = listIndicesArray.Count * 4;
-                            dataOrDataOffset = Convert.ToUInt32(offset);
-                            int size = listDataObject.Count;
-                            localListIndicesArray.Add(size);
+                            fieldArray.Add(new GFFFieldInfo(
+                                dataObject.dataType,
+                                pair.Key,
+                                Convert.ToUInt32(listIndicesArray.Count())
+                            ));
+
+                            //Reserve the bytes in the listIndicesArray, then backfill with localListIndicesArray
+                            listIndicesArray.AddRange(Enumerable.Repeat((byte)0, (localStructCount + 1) * 4));
+
+                            List<int> localListIndices = new List<int>();
 
                             foreach (AuroraStruct arStruct in listDataObject) {
-                                processStruct(arStruct, allFields, localStructs, labelMap, complexFieldData, fieldIndicesArray, listIndicesArray);
-                                localListIndicesArray.Add(allStructs.Count);
+                                localListIndices.Add(structArray.Count());
+                                processStruct(arStruct,
+                                    structArray,
+                                    fieldArray,
+                                    labels,
+                                    complexFieldData,
+                                    fieldIndicesArray,
+                                    listIndicesArray);
                             }
 
-                            //Add to the total list indices
-                            listIndicesArray.AddRange(localListIndicesArray.ToArray());
+                            listIndicesArray.copyBytesToOffset(BitConverter.GetBytes((uint)localStructCount), listIndicesArrayStartingOffset);
+                            listIndicesArray.copyBytesToOffset(localListIndices.SelectMany(b => BitConverter.GetBytes((uint)b)).ToArray(),
+                                listIndicesArrayStartingOffset + 4);
                         }
                         break;
                     case AuroraDataType.Quaternion: {
-                            dataOrDataOffset = Convert.ToUInt32(complexFieldData.Count);
+                            fieldArray.Add(new GFFFieldInfo(
+                                dataObject.dataType,
+                                pair.Key,
+                                Convert.ToUInt32(complexFieldData.Count)
+                            ));
 
                             complexFieldData.AddRange(AuroraBitConverter.GetBytes(dataObject as AuroraQuaternion));
                         }
                         break;
                     case AuroraDataType.Vector: {
-                            dataOrDataOffset = Convert.ToUInt32(complexFieldData.Count);
+                            fieldArray.Add(new GFFFieldInfo(
+                                dataObject.dataType,
+                                pair.Key,
+                                Convert.ToUInt32(complexFieldData.Count)
+                            ));
 
                             complexFieldData.AddRange(AuroraBitConverter.GetBytes(dataObject as AuroraVector));
                         }
                         break;
                     case AuroraDataType.StrRef: {
-                            dataOrDataOffset = Convert.ToUInt32(complexFieldData.Count);
+                            fieldArray.Add(new GFFFieldInfo(
+                                dataObject.dataType,
+                                pair.Key,
+                                Convert.ToUInt32(complexFieldData.Count)
+                            ));
 
                             complexFieldData.AddRange(AuroraBitConverter.GetBytes(dataObject as AuroraStrRef));
                         }
@@ -532,90 +636,9 @@ namespace AuroraIO.Source.Coders
                     default:
                         break;
                 }
-
-                //The field's index only has to be added to the fieldIndicesArray if it's part of a struct that has > 1 field
-                if (fieldCount > 1) {
-                    localFieldIndicesArray.Add(localFields.Count);
-                }
-
-                localFields.Add(new GFFFieldInfo(fieldType, (uint)labelMap[label], dataOrDataOffset));
             }
 
-            GFFStructInfo structInfo;
-            int currentFieldIndex = allFields.Count;
-            if (localFields.Count > 1) {
-                //Offset into fieldIndicesArray
-                int fieldIndicesArrayOffset = fieldIndicesArray.Count * 4;
-                structInfo = new GFFStructInfo(baseStruct.structType, fieldIndicesArrayOffset, localFields.Count);
-                int[] modifiedListIndices = localFieldIndicesArray.Select(index => index + currentFieldIndex).ToArray();
-                fieldIndicesArray.AddRange(modifiedListIndices);
-            } else if (localFields.Count == 1) {
-                structInfo = new GFFStructInfo(baseStruct.structType, currentFieldIndex, 1);
-            } else {
-                structInfo = new GFFStructInfo(baseStruct.structType, -1, 0);
-            }
-
-            allStructs.Add(structInfo);
-            allStructs.AddRange(localStructs);
-            allFields.AddRange(localFields);
+            fieldIndicesArray.copyBytesToOffset(localFieldIndices.SelectMany(b => BitConverter.GetBytes(b)).ToArray(), fieldIndicesArrayStartingOffset);
         }
-
-        /*
-        private static GFFStruct[] allStructs(GFFStruct baseStruct)
-        {
-            List<GFFStruct> structs = new List<GFFStruct>();
-            structs.Add(baseStruct);
-            structs.AddRange(childStructs(baseStruct));
-            return structs.ToArray();
-        }
-        private static GFFStruct[] childStructs(GFFStruct structInfo)
-        {
-            List<GFFStruct> structs = new List<GFFStruct>();
-
-            foreach (KeyValuePair<string, GFFFieldDataObject> pair in structInfo.fields)
-            {
-                switch (pair.Value.fieldType())
-                {
-                    case GFFFieldType.STRUCT:
-                        {
-                            var structObject = pair.Value as GFFStructDataObject;
-                            structs.Add(structObject.structInfo);
-                            break;
-                        }
-                    case GFFFieldType.LIST:
-                        {
-                            var listDataObject = pair.Value as GFFListDataObject;
-                            structs.AddRange(listDataObject.structInfoArray);
-                            break;
-                        }
-                    default:
-                        {
-                            break;
-                        }
-                }
-            }
-
-            GFFStruct[] baseLevelStructs = structs.ToArray();
-            foreach (GFFStruct subStruct in baseLevelStructs)
-            {
-                structs.AddRange(childStructs(subStruct));
-            }
-
-            return structs.ToArray();
-        }
-
-        private static Dictionary<GFFStruct, UInt32> structMap(GFFStruct startingStruct)
-        {
-            GFFStruct[] allStructs = childStructs(startingStruct);
-
-            Dictionary<GFFStruct, UInt32> structMap = new Dictionary<GFFStruct, uint>();
-            UInt32 structIndex = 0;
-            foreach (GFFStruct structInfo in allStructs)
-            {
-                structMap[structInfo] = structIndex++;
-            }
-            return structMap;
-        }
-        */
     }
 }

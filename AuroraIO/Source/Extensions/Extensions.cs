@@ -43,5 +43,12 @@ namespace AuroraIO {
         }
     }
 
-    public class ByteArray: List<byte> { }
+    public class ByteArray: List<byte> {
+    
+        public void copyBytesToOffset(byte[] bytes, int offset) {
+            for (int i = 0; i < bytes.Length; i++) {
+                this[offset + i] = bytes[i];
+            }
+        }
+    }
 }

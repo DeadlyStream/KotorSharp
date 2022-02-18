@@ -55,8 +55,8 @@ namespace AuroraIO.Source.Coders {
 
         public static byte[] GetBytes(AuroraResref auroraData) {
             ByteArray byteArray = new ByteArray();
+            byteArray.Add((byte)auroraData.value.Length);
             byteArray.AddRange(Encoding.ASCII.GetBytes(auroraData.value));
-            byteArray.AddRange(BitConverter.GetBytes((UInt32)auroraData.value.Length));
             return byteArray.ToArray();
         }
 
@@ -78,7 +78,10 @@ namespace AuroraIO.Source.Coders {
         }
 
         public static byte[] GetBytes(AuroraVoid auroraData) {
-            return auroraData.value;
+            ByteArray byteArray = new ByteArray();
+            byteArray.AddRange(BitConverter.GetBytes((UInt32)auroraData.value.Length));
+            byteArray.AddRange(auroraData.value);
+            return byteArray.ToArray();
         }
 
         public static byte[] GetBytes(AuroraQuaternion auroraData) {

@@ -12,8 +12,6 @@ namespace AuroraIOTests.Source {
     [TestClass]
     public class _2DAObjectTests {
 
-        bool record = false;
-
         _2DACoder coder = new _2DACoder();
 
         [TestMethod]
@@ -21,10 +19,7 @@ namespace AuroraIOTests.Source {
         {
             var array = _2daObjectStubs.stub1();
 
-            Snapshot.Verify(
-                array,
-                MethodBase.GetCurrentMethod(),
-                record);
+            Snapshot.Verify(array);
         }
 
         [TestMethod]
@@ -33,10 +28,7 @@ namespace AuroraIOTests.Source {
             var array = _2daObjectStubs.stub1();
             var row = array.addRow();
 
-            Snapshot.Verify(
-                array,
-                MethodBase.GetCurrentMethod(),
-                record);
+            Snapshot.Verify(array);
         }
 
         [TestMethod]
@@ -44,10 +36,7 @@ namespace AuroraIOTests.Source {
             var array = _2daObjectStubs.stub1();
             array.addRow(new string[] { "c1r4", "c2r4", "c3r4", "c4r4" });
 
-            Snapshot.Verify(
-                array,
-                MethodBase.GetCurrentMethod(),
-                record);
+            Snapshot.Verify(array);
         }
 
         [TestMethod]
@@ -62,10 +51,7 @@ namespace AuroraIOTests.Source {
                 { "column3", "c3r4" }
             });
 
-            Snapshot.Verify(
-                array,
-                MethodBase.GetCurrentMethod(),
-                record);
+            Snapshot.Verify(array);
         }
 
         [TestMethod]
@@ -75,10 +61,7 @@ namespace AuroraIOTests.Source {
             var row = array.addRow();
             row[0] = "mod";
 
-            Snapshot.Verify(
-                array,
-                MethodBase.GetCurrentMethod(),
-                record);
+            Snapshot.Verify(array);
         }
 
         [TestMethod]
@@ -88,10 +71,7 @@ namespace AuroraIOTests.Source {
             var row = array.addRow();
             row["column0"] = "mod";
 
-            Snapshot.Verify(
-                array,
-                MethodBase.GetCurrentMethod(),
-                record);
+            Snapshot.Verify(array);
         }
 
         [TestMethod]
@@ -100,10 +80,7 @@ namespace AuroraIOTests.Source {
             var array = _2daObjectStubs.stub1();
             array[0][0] = "mod";
 
-            Snapshot.Verify(
-                array,
-                MethodBase.GetCurrentMethod(),
-                record);
+            Snapshot.Verify(array);
         }
 
         [TestMethod]
@@ -112,10 +89,7 @@ namespace AuroraIOTests.Source {
             var array = _2daObjectStubs.stub1();
             array[0]["column0"] = "mod";
 
-            Snapshot.Verify(
-                array,
-                MethodBase.GetCurrentMethod(),
-                record);
+            Snapshot.Verify(array);
         }
 
         [TestMethod]
@@ -125,10 +99,7 @@ namespace AuroraIOTests.Source {
             array[0]["column0"] = "mod";
             array[2]["column3"] = "mod";
 
-            Snapshot.Verify(
-                array,
-                MethodBase.GetCurrentMethod(),
-                record);
+            Snapshot.Verify(array);
         }
 
         [TestMethod]
@@ -137,10 +108,7 @@ namespace AuroraIOTests.Source {
             var array = _2daObjectStubs.stub1();
             array[0]["column0"] = null;
 
-            Snapshot.Verify(
-                array,
-                MethodBase.GetCurrentMethod(),
-                record);
+            Snapshot.Verify(array);
         }
     }
 }

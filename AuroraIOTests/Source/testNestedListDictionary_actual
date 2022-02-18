@@ -1,0 +1,32 @@
+type: gff
+fields:
+  baseList:
+    type: list
+    value:
+      - struct:
+        id: 0
+        fields:
+          list1:
+            type: list
+            value:
+              - struct:
+                id: 0
+                fields:
+      - struct:
+        id: 0
+        fields:
+          list2:
+            type: list
+            value:
+              - struct:
+                id: 0
+                fields:
+      - struct:
+        id: 0
+        fields:
+          list3:
+            type: list
+            value:
+              - struct:
+                id: 0
+                fields:
