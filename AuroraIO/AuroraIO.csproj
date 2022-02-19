@@ -68,6 +68,9 @@
     <Compile Include="Source\Extensions\Extensions.cs" />
     <Compile Include="Source\Extensions\IndexMap.cs" />
     <Compile Include="Source\Coders\_2DACoder.cs" />
+    <Compile Include="Source\Models\Base\CExoLocString.cs" />
+    <Compile Include="Source\Models\Base\CExoString.cs" />
+    <Compile Include="Source\Models\Base\CResRef.cs" />
     <Compile Include="Source\Models\Table\AuroraTable.cs" />
     <Compile Include="Source\Models\Dictionary\AuroraDataObject.cs" />
     <Compile Include="Source\Models\Dictionary\AuroraDataType.cs" />
@@ -81,7 +84,7 @@
     <Compile Include="Source\Models\Base\AuroraResourceType.cs" />
     <Compile Include="Source\Models\Base\AuroraTextObject.cs" />
     <Compile Include="Source\Models\Dictionary\AuroraStructType.cs" />
-    <Compile Include="Source\Models\Dictionary\CExoLanguage.cs" />
+    <Compile Include="Source\Models\Base\CExoLanguage.cs" />
     <Compile Include="Source\Models\Dictionary\SetKeyValueInterface.cs" />
     <Compile Include="Source\GameObjects\AreaInfoObject.cs" />
     <Compile Include="Source\GameObjects\CharacterObject.cs" />
@@ -108,6 +111,7 @@
     <Compile Include="Source\Models\Helpers\AuroraFile.cs" />
     <Compile Include="Source\Models\Helpers\AuroraResourceLoader.cs" />
     <Compile Include="Source\Models\TLK\TalkTable.cs" />
+    <Compile Include="Source\Models\TLK\TLKTable.cs" />
     <Compile Include="Source\Models\TLK\TLKEncoder.cs" />
     <Compile Include="Source\Models\TLK\TlkStrRefEntry.cs" />
   </ItemGroup>

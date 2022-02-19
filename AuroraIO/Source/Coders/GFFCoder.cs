@@ -1,4 +1,5 @@
-﻿using AuroraIO.Source.Models.Dictionary;
+﻿using AuroraIO.Source.Models.Base;
+using AuroraIO.Source.Models.Dictionary;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -281,7 +282,7 @@ namespace AuroraIO.Source.Coders
                     UInt32 stringResRef = BitConverter.ToUInt32(fileArray, complexOffset + 4);
                     UInt32 totalSubstrings = BitConverter.ToUInt32(fileArray, complexOffset + 8);
 
-                    dataObject = AuroraCExoLocString.make(stringResRef, dict =>{
+                    dataObject = AuroraLocalizedString.make(stringResRef, dict =>{
                         int substringStartingOffset = complexOffset + 12;
                         for (int i = 0; i < (int)totalSubstrings; i++) {
                             CExoLanguage stringID = (CExoLanguage)BitConverter.ToUInt32(fileArray, substringStartingOffset);
@@ -509,7 +510,7 @@ namespace AuroraIO.Source.Coders
                                 Convert.ToUInt32(complexFieldData.Count)
                             ));
 
-                            complexFieldData.AddRange(AuroraBitConverter.GetBytes(dataObject as AuroraCExoString));
+                            complexFieldData.AddRange(AuroraBitConverter.GetBytes(dataObject as AuroraString));
                         }
                         break;
                     case AuroraDataType.CResref: {
@@ -529,7 +530,7 @@ namespace AuroraIO.Source.Coders
                                 Convert.ToUInt32(complexFieldData.Count)
                             ));
 
-                            complexFieldData.AddRange(AuroraBitConverter.GetBytes(dataObject as AuroraCExoLocString));
+                            complexFieldData.AddRange(AuroraBitConverter.GetBytes(dataObject as AuroraLocalizedString));
                         }
                         break;
                     case AuroraDataType.Void: {

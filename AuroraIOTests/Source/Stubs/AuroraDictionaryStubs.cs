@@ -1,4 +1,5 @@
 ﻿using AuroraIO.Models;
+using AuroraIO.Source.Models.Base;
 using AuroraIO.Source.Models.Dictionary;
 using System;
 using System.Collections.Generic;
@@ -21,7 +22,7 @@ namespace AuroraIOTests.Source.Stubs
                 dict["field_double"] = 0.0;
                 dict["field_cexoString"] = "cexostring";
                 dict["field_resref"] = AuroraResref.make("resref");
-                dict["field_cexolocstring"] = AuroraCExoLocString.make(dict => {
+                dict["field_cexolocstring"] = AuroraLocalizedString.make(dict => {
                     dict[CExoLanguage.EnglishFemale] = "female";
                 });
                 dict["void"] = new byte[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 };

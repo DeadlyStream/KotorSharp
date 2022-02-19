@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace AuroraIO.Source.Models.Dictionary
+namespace AuroraIO.Source.Models.Base
 {
     public enum CExoLanguage
     {

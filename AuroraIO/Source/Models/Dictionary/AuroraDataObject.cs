@@ -1,4 +1,5 @@
 ﻿using AuroraIO.Source.Coders;
+using AuroraIO.Source.Models.Base;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -65,7 +66,7 @@ namespace AuroraIO.Source.Models.Dictionary {
 
         public static implicit operator AuroraDataObject(string value)
         {
-            return new AuroraCExoString(value);
+            return new AuroraString(value);
         }
 
         public static implicit operator AuroraDataObject(byte[] byteArray)
@@ -409,13 +410,13 @@ namespace AuroraIO.Source.Models.Dictionary {
         }
     }
 
-    public class AuroraCExoString : AuroraDataObject
+    public class AuroraString : AuroraDataObject
     {
         public override AuroraDataType dataType => AuroraDataType.CExoString;
 
-        public string value { get; private set; }
-
-        public AuroraCExoString(string value)
+        public CExoString value { get; private set; }
+        public int Length => value.Length;
+        public AuroraString(string value)
         {
             this.value = value;
         }
@@ -433,7 +434,7 @@ namespace AuroraIO.Source.Models.Dictionary {
         }
 
         public override bool Equals(object obj) {
-            return (obj as AuroraCExoString).value == value;
+            return (obj as AuroraString).value == value;
         }
 
         public override string ToString() {
@@ -445,10 +446,9 @@ namespace AuroraIO.Source.Models.Dictionary {
     {
         public override AuroraDataType dataType => AuroraDataType.CResref;
 
-        public string value { get; private set; }
+        public CResRef value { get; private set; }
 
-        AuroraResref(string value)
-        {
+        AuroraResref(string value) {
             this.value = value;
         }
 
@@ -479,9 +479,9 @@ namespace AuroraIO.Source.Models.Dictionary {
         }
     }
 
-    public class AuroraCExoLocString : AuroraDataObject, IEnumerable<KeyValuePair<CExoLanguage, string>> {
+    public class AuroraLocalizedString : AuroraDataObject, IEnumerable<KeyValuePair<CExoLanguage, string>> {
         public override AuroraDataType dataType => AuroraDataType.CExoLocString;
-        public Dictionary<CExoLanguage, string> dictionary { get; private set; }
+        public CExoLocString localizedString { get; private set; }
         public uint strref { get; private set; }
 
         private struct Keys
@@ -494,33 +494,33 @@ namespace AuroraIO.Source.Models.Dictionary {
         {
             get
             {
-                return dictionary[languageId];
+                return localizedString[languageId];
             } set
             {
-                dictionary[languageId] = value;
+                localizedString[languageId] = value;
             }
         }
 
-        private AuroraCExoLocString(uint strref, Dictionary<CExoLanguage, string> dictionary)
+        private AuroraLocalizedString(uint strref, CExoLocString localizedString)
         {
             this.strref = strref;
-            this.dictionary = dictionary;
+            this.localizedString = localizedString;
         }
              
-        public static AuroraCExoLocString make(uint strref, Action<Dictionary<CExoLanguage, string>> initBlock)
+        public static AuroraLocalizedString make(uint strref, Action<Dictionary<CExoLanguage, string>> initBlock)
         {
             Dictionary<CExoLanguage, string> dict = new Dictionary<CExoLanguage, string>();
             initBlock(dict);
-            return new AuroraCExoLocString(strref, dict);
+            return new AuroraLocalizedString(strref, dict);
         }
 
-        public static AuroraCExoLocString make(Action<Dictionary<CExoLanguage, string>> initBlock) {
-            return AuroraCExoLocString.make(uint.MaxValue, initBlock);
+        public static AuroraLocalizedString make(Action<Dictionary<CExoLanguage, string>> initBlock) {
+            return AuroraLocalizedString.make(uint.MaxValue, initBlock);
         }
 
-        public static AuroraCExoLocString make(uint strref)
+        public static AuroraLocalizedString make(uint strref)
         {
-            return AuroraCExoLocString.make(strref, dict => { });
+            return AuroraLocalizedString.make(strref, dict => { });
         }
 
         public override void setValueForKey(string key, string value)
@@ -528,7 +528,7 @@ namespace AuroraIO.Source.Models.Dictionary {
             switch (key)
             {
                 case Keys.Lang:
-                    dictionary[CExoLanguageFromString(key)] = value;
+                    localizedString[CExoLanguageFromString(key)] = value;
                     break;
                 case Keys.Strref:
                     this.strref = Convert.ToUInt32(value);
@@ -555,7 +555,7 @@ namespace AuroraIO.Source.Models.Dictionary {
             sb.AppendFormat("{0}value:\n", indent);
             sb.AppendFormat("{0}  strref: {1}\n", indent, (int)strref);
 
-            foreach(KeyValuePair<CExoLanguage, string> pair in dictionary)
+            foreach(KeyValuePair<CExoLanguage, string> pair in localizedString)
             {
                 sb.AppendFormat("{0}  {1}: {2}\n", indent, pair.Key.stringValue(), pair.Value);
             }
@@ -563,16 +563,16 @@ namespace AuroraIO.Source.Models.Dictionary {
         }
 
         public IEnumerator<KeyValuePair<CExoLanguage, string>> GetEnumerator() {
-            return ((IEnumerable<KeyValuePair<CExoLanguage, string>>)dictionary).GetEnumerator();
+            return ((IEnumerable<KeyValuePair<CExoLanguage, string>>)localizedString).GetEnumerator();
         }
 
         IEnumerator IEnumerable.GetEnumerator() {
-            return ((IEnumerable)dictionary).GetEnumerator();
+            return ((IEnumerable)localizedString).GetEnumerator();
         }
 
         public override bool Equals(object obj) {
-            var cexoLocString = obj as AuroraCExoLocString;
-            return cexoLocString.dictionary == dictionary && cexoLocString.strref == strref;
+            var cexoLocString = obj as AuroraLocalizedString;
+            return cexoLocString.localizedString == localizedString && cexoLocString.strref == strref;
         }
     }
 

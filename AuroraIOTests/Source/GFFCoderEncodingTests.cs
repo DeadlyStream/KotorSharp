@@ -136,7 +136,7 @@ namespace AuroraIOTests.Source {
         [TestMethod]
         public void testEncodeCExoLocString() {
             var dict = AuroraDictionary.make("GFF", dict => {
-                dict["value"] = AuroraCExoLocString.make(uint.MaxValue);
+                dict["value"] = AuroraLocalizedString.make(uint.MaxValue);
             });
 
             var newDict = coder.decode(coder.encode(dict));

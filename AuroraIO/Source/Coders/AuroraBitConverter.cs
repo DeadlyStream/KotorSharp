@@ -1,4 +1,5 @@
-﻿using AuroraIO.Source.Models.Dictionary;
+﻿using AuroraIO.Source.Models.Base;
+using AuroraIO.Source.Models.Dictionary;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,7 +47,7 @@ namespace AuroraIO.Source.Coders {
             return BitConverter.GetBytes(auroraData.value);
         }
 
-        public static byte[] GetBytes(AuroraCExoString auroraData) {
+        public static byte[] GetBytes(AuroraString auroraData) {
             ByteArray byteArray = new ByteArray();
             byteArray.AddRange(BitConverter.GetBytes((UInt32)auroraData.value.Length));
             byteArray.AddRange(Encoding.ASCII.GetBytes(auroraData.value));   
@@ -60,7 +61,7 @@ namespace AuroraIO.Source.Coders {
             return byteArray.ToArray();
         }
 
-        public static byte[] GetBytes(AuroraCExoLocString auroraData) {
+        public static byte[] GetBytes(AuroraLocalizedString auroraData) {
             ByteArray byteArray = new ByteArray();
 
             ByteArray substringArray = new ByteArray();
