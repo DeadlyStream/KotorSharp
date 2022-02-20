@@ -112,5 +112,11 @@ namespace AuroraIO.Source.Coders {
             byteArray.AddRange(BitConverter.GetBytes(auroraData.value));
             return byteArray.ToArray();
         }
+
+        public static byte[] GetBytes(CResRef resref) {
+            if (resref == null) return Encoding.ASCII.GetBytes(new string('\0', 16));
+            string value = resref;
+            return Encoding.ASCII.GetBytes(value.PadRight(16, '\0'));
+        }
     }
 }

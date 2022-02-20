@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 
 namespace AuroraIO.Source.Models.Base {
-    public class CExoString {
+    public struct CExoString {
 
         public int Length => value.Length;
 

@@ -38,19 +38,19 @@ namespace AuroraIOTests.Source.Asserts {
             return File.ReadAllText(resourceFileName(className, methodName));
         }
 
-        public static void VerifyEncoding(AuroraTable actual, [CallerFilePath] string className = "", [CallerMemberName] string methodName = "", bool record = false) {
-            Verify(new _2DACoder().encode(actual), className, methodName, record);
+        public static void VerifyEncoding(AuroraTable actual, bool record = false, [CallerFilePath] string className = "", [CallerMemberName] string methodName = "") {
+            Verify(new _2DACoder().encode(actual), record, className, methodName);
         }
 
-        public static void VerifyEncoding(AuroraDictionary actual, [CallerFilePath] string className = "", [CallerMemberName] string methodName = "", bool record = false) {
-            Verify(new GFFCoder().encode(actual), className, methodName, record);
+        public static void VerifyEncoding(AuroraDictionary actual, bool record = false, [CallerFilePath] string className = "", [CallerMemberName] string methodName = "") {
+            Verify(new GFFCoder().encode(actual), record, className, methodName);
         }
 
-        public static void Verify(ASCIIOutputProtocol actual, [CallerFilePath] string className = "", [CallerMemberName] string methodName = "", bool record = false) {
-            Verify(new ASCIICoder().encode(actual), className, methodName, record);
+        public static void Verify(ASCIIOutputProtocol actual, bool record = false, [CallerFilePath] string className = "", [CallerMemberName] string methodName = "") {
+            Verify(new ASCIICoder().encode(actual), record, className, methodName);
         }
 
-        public static void Verify(byte[] actual, [CallerFilePath] string className = "", [CallerMemberName] string methodName = "", bool record = false) {
+        public static void Verify(byte[] actual, bool record = false, [CallerFilePath] string className = "", [CallerMemberName] string methodName = "") {
             var expectedPath = testFileBaseName(className, methodName);
             var actualPath = testFileOutputName(className, methodName);
 
@@ -63,13 +63,14 @@ namespace AuroraIOTests.Source.Asserts {
                 if (!Directory.Exists(Path.GetDirectoryName(actualPath))) {
                     Directory.CreateDirectory(Path.GetDirectoryName(actualPath));
                 }
+                File.WriteAllBytes(actualPath, actual);
             }
-            File.WriteAllBytes(actualPath, actual);
+            
             var expected = File.ReadAllBytes(expectedPath);
             Assert.AreEqual(Encoding.ASCII.GetString(expected), Encoding.ASCII.GetString(actual));
         }
 
-        public static void Verify(String actual, [CallerFilePath] string className = "", [CallerMemberName] string methodName = "", bool record = false) {
+        public static void Verify(String actual, bool record = false, [CallerFilePath] string className = "", [CallerMemberName] string methodName = "") {
             var expectedPath = testFileBaseName(className, methodName);
             var actualPath = testFileOutputName(className, methodName);
 
@@ -82,8 +83,9 @@ namespace AuroraIOTests.Source.Asserts {
                 if (!Directory.Exists(Path.GetDirectoryName(actualPath))) {
                     Directory.CreateDirectory(Path.GetDirectoryName(actualPath));
                 }
+                File.WriteAllText(actualPath, actual);
             }
-            File.WriteAllText(actualPath, actual);
+            
             var expected = File.ReadAllText(expectedPath);
             Assert.AreEqual(expected, actual);
         }

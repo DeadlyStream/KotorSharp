@@ -41,6 +41,10 @@ namespace AuroraIO {
             }
             return byteArray;
         }
+
+        internal static string Truncate(this string value, int maxLength) {
+            return value.Substring(0, Math.Min(value.Length, maxLength));
+        }
     }
 
     public class ByteArray: List<byte> {
