@@ -57,7 +57,7 @@ namespace AuroraIO.Source.Models.Dictionary
             sb.AppendFormat("type: {0}\n", type);
             sb.AppendFormat("fields:\n");
 
-            foreach (KeyValuePair<string, AuroraDataObject> pair in internalDict)
+            foreach (KeyValuePair<string, AuroraDataObject> pair in internalDict.OrderBy( pair => pair.Key ))
             {
                 sb.AppendFormat("  {0}:\n", pair.Key);
                 sb.Append(pair.Value.asciiEncoding("    "));

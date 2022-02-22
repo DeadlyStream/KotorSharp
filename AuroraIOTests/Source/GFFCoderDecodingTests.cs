@@ -16,6 +16,12 @@ namespace AuroraIOTests.Source {
         GFFCoder coder = new GFFCoder();
 
         [TestMethod]
+        public void testDecodeGameFile() {
+            var file = Snapshot.DataResource();
+            Snapshot.Verify(coder.decode(file));
+        }
+
+        [TestMethod]
         public void testDecodeEmpty() {
             var file = Snapshot.DataResource();
 

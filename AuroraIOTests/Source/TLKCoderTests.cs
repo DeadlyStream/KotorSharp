@@ -9,6 +9,14 @@ namespace AuroraIOTests.Source {
         TLKCoder coder = new TLKCoder();
 
         [TestMethod]
+        public void testEncodeGameFile() {
+            var table = coder.decode(Snapshot.DataResource("testDecodeGameFile"));
+
+            var newTable = coder.decode(coder.encode(table));
+            Snapshot.Verify(newTable, true);
+        }
+
+        [TestMethod]
         public void testEncodeLanguageId() {
             var table = new TalkTable(TalkTable.LanguageID.English);
             var newTable = coder.decode(coder.encode(table));
@@ -78,6 +86,13 @@ namespace AuroraIOTests.Source {
 
             var newTable = coder.decode(coder.encode(table));
             Snapshot.Verify(newTable);
+        }
+
+        [TestMethod]
+        public void testDecodeGameFile() {
+            var file = Snapshot.DataResource();
+
+            Snapshot.Verify(coder.decode(file));
         }
 
         [TestMethod]

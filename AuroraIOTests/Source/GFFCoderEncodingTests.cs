@@ -14,6 +14,14 @@ namespace AuroraIOTests.Source {
         GFFCoder coder = new GFFCoder();
 
         [TestMethod]
+        public void testEncodeGameFile() {
+            var table = coder.decode(Snapshot.DataResource());
+
+            var newTable = coder.decode(coder.encode(table));
+            Snapshot.Verify(newTable);
+        }
+
+        [TestMethod]
         public void testEncodeEmpty() {
             var dict = AuroraDictionary.make("GFF", dict => {
 
@@ -331,16 +339,22 @@ namespace AuroraIOTests.Source {
             var dict = AuroraDictionary.make("GFF", dict => {
                 dict["field0"] = new AuroraStruct[] {
                     AuroraStruct.make(0, dict => {
-                        dict["field1"] = AuroraStruct.make(1, dict => {
-                            dict["field2"] = 100;
-                        });
+                        dict["field1"] = new AuroraStruct[] {
+                            AuroraStruct.make(1, dict => {
+                                dict["field2"] = new AuroraStruct[] {
+                                    AuroraStruct.make(2, dict => {
+                                        dict["field3"] = 100;
+                                    })
+                                };
+                            })
+                        };
                     })
                 };
-                dict["field3"] = 100;
+                dict["field4"] = 100;
             });
 
             var newDict = coder.decode(coder.encode(dict));
-            Snapshot.Verify(newDict);
+            Snapshot.Verify(newDict, true);
         }
 
         [TestMethod]

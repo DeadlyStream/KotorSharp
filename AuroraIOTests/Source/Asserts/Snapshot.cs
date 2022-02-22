@@ -30,11 +30,11 @@ namespace AuroraIOTests.Source.Asserts {
                 String.Format("{0}\\{1}_actual", Path.GetFileNameWithoutExtension(className), methodName));
         }
 
-        public static byte[] DataResource([CallerFilePath] string className = "", [CallerMemberName] string methodName = "") {
+        public static byte[] DataResource([CallerMemberName] string methodName = "", [CallerFilePath] string className = "") {
             return File.ReadAllBytes(resourceFileName(className, methodName));
         }
 
-        public static string TextResource([CallerFilePath] string className = "", [CallerMemberName] string methodName = "") {
+        public static string TextResource([CallerMemberName] string methodName = "", [CallerFilePath] string className = "") {
             return File.ReadAllText(resourceFileName(className, methodName));
         }
 
