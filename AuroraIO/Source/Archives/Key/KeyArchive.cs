@@ -1,4 +1,5 @@
-﻿using AuroraIO.Source.Models.Base;
+﻿using AuroraIO.Source.Archives;
+using AuroraIO.Source.Models.Base;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -6,8 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace AuroraIO.Collections {
-    public class KeyArchive: AuroraResourceCollection {
+namespace AuroraIO.Archives {
+    public class KeyArchive: AuroraArchive<KeyArchive.Entry> {
+        public class Entry: AuroraArchiveEntry { }
+
         private string fileVersion;
         private string fileDirectory;
 

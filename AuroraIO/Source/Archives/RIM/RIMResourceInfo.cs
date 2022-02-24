@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace AuroraIO.Collections {
+namespace AuroraIO.Archives {
     public class RIMResourceInfo {
         public int fileOffset;
         public int fileSize;

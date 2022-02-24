@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace AuroraIO.Collections {
+namespace AuroraIO.Archives {
     internal class ERFKeyListElement {
         internal AuroraResourceType resourceType;
         internal string resref;

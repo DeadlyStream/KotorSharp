@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace AuroraIO.Collections {
+namespace AuroraIO.Archives {
     public class BiffArchive {
         private Dictionary<AuroraResourceInfo, BiffVariableResourceEntry> entries = new Dictionary<AuroraResourceInfo, BiffVariableResourceEntry>();
         private Dictionary<AuroraResourceInfo, AuroraResource> pendingEntries = new Dictionary<AuroraResourceInfo, AuroraResource>();

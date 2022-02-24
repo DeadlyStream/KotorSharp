@@ -5,7 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace AuroraIO.Collections {
+namespace AuroraIO.Archives {
     public class RIMArchive: AuroraResourceCollection {
         private string filePath;
         private string fileVersion;

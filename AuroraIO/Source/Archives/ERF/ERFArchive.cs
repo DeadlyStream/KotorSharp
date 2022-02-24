@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace AuroraIO.Collections {
+namespace AuroraIO.Archives {
     public class ERFArchive: AuroraResourceCollection {
         
         private int buildDay;

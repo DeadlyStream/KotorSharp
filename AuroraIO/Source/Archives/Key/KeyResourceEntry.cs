@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace AuroraIO.Collections {
+namespace AuroraIO.Archives {
     public class KeyResourceEntry {
         public uint resId;
         private AuroraResourceType resourceType;

@@ -52,18 +52,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Source\Archives\ArchiveFile.cs" />
+    <Compile Include="Source\Archives\AuroraArchive.cs" />
     <Compile Include="Source\Coders\AuroraBitConverter.cs" />
     <Compile Include="Source\Coders\GFFCoder.cs" />
-    <Compile Include="Source\Collections\Bif\BiffArchive.cs" />
-    <Compile Include="Source\Collections\Bif\BiffVariableResourceEntry.cs" />
-    <Compile Include="Source\Collections\ERF\ERFArchive.cs" />
-    <Compile Include="Source\Collections\ERF\ERFKeyListElement.cs" />
-    <Compile Include="Source\Collections\ERF\ERFResourceInfo.cs" />
-    <Compile Include="Source\Collections\Key\KeyArchive.cs" />
-    <Compile Include="Source\Collections\Key\KeyFileEntryInfo.cs" />
-    <Compile Include="Source\Collections\Key\KeyResourceEntry.cs" />
-    <Compile Include="Source\Collections\RIM\RIMArchive.cs" />
-    <Compile Include="Source\Collections\RIM\RIMResourceInfo.cs" />
+    <Compile Include="Source\Archives\Bif\BiffArchive.cs" />
+    <Compile Include="Source\Archives\Bif\BiffVariableResourceEntry.cs" />
+    <Compile Include="Source\Archives\ERF\ERFArchive.cs" />
+    <Compile Include="Source\Archives\ERF\ERFKeyListElement.cs" />
+    <Compile Include="Source\Archives\ERF\ERFResourceInfo.cs" />
+    <Compile Include="Source\Archives\Key\KeyArchive.cs" />
+    <Compile Include="Source\Archives\Key\KeyFileEntryInfo.cs" />
+    <Compile Include="Source\Archives\Key\KeyResourceEntry.cs" />
+    <Compile Include="Source\Archives\RIM\RIMArchive.cs" />
+    <Compile Include="Source\Archives\RIM\RIMResourceInfo.cs" />
     <Compile Include="Source\Coders\AuroraCoder.cs" />
     <Compile Include="Source\Common\AuroraResourceLoader.cs" />
     <Compile Include="Source\Coders\ASCIICoder.cs" />
@@ -113,9 +115,7 @@
     <Compile Include="Source\Models\Helpers\AuroraFile.cs" />
     <Compile Include="Source\Models\Helpers\AuroraResourceLoader.cs" />
     <Compile Include="Source\Models\TLK\TalkTable.cs" />
-    <Compile Include="Source\Models\TLK\TLKTable.cs" />
     <Compile Include="Source\Coders\TLKCoder.cs" />
-    <Compile Include="Source\Models\TLK\TlkStrRefEntry.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
