@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace AuroraIO {
     internal static class Extensions {
@@ -16,6 +17,13 @@ namespace AuroraIO {
                 }
             }
             return s.ToString();
+        }
+
+        internal static string sanitize(this string value)
+        {
+            if (value == null) { return null; }
+            var regex = new Regex("[\n\r\t]*");
+            return regex.Replace(value, "");
         }
 
         internal static IndexMap<T> generateIndexMap<T>(this T[] array) {
@@ -33,7 +41,18 @@ namespace AuroraIO {
             }
             return byteArray;
         }
+
+        internal static string Truncate(this string value, int maxLength) {
+            return value.Substring(0, Math.Min(value.Length, maxLength));
+        }
     }
 
-    public class ByteArray: List<byte> { }
+    public class ByteArray: List<byte> {
+    
+        public void copyBytesToOffset(byte[] bytes, int offset) {
+            for (int i = 0; i < bytes.Length; i++) {
+                this[offset + i] = bytes[i];
+            }
+        }
+    }
 }

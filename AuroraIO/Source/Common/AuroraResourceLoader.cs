@@ -6,7 +6,6 @@ using System.Text;
 using AuroraIO.Models;
 using System.Text.RegularExpressions;
 using AuroraIO.Collections;
-using AuroraIO.Source.Models.GFF.Helpers;
 
 namespace AuroraIO {
 
@@ -16,9 +15,9 @@ namespace AuroraIO {
             switch (resInfo.resourceType) {
                 case AuroraResourceType.TwoDA:
                 //TODO: this needs to be reinstated
-                return new Array2D();//(resInfo.resref, fileArray);
+                //return new Array2D();//(resInfo.resref, fileArray);
                 case AuroraResourceType.UTI:
-                    return new GFFCoder().decode(fileArray);
+                    //return new GFFObjectCoder().decode(fileArray);
                 case AuroraResourceType.ARE:
                 case AuroraResourceType.IFO:
                 case AuroraResourceType.BIC:
@@ -40,7 +39,7 @@ namespace AuroraIO {
                 case AuroraResourceType.UTW:
                 case AuroraResourceType.PTM:
                 case AuroraResourceType.PTT:
-                    return new GFFCoder().decode(fileArray);
+                    //return new GFFObjectCoder().decode(fileArray);
                 case AuroraResourceType.UNKNOWN:
                 case AuroraResourceType.BMP:
                 case AuroraResourceType.MVE:

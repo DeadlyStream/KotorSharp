@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using AuroraIO.Models;
+﻿using AuroraIO.Models;
 
 namespace AuroraIO {
     internal static class AuroraConversionExtensions {
 
+        /*
         internal static Array2D toArray2D(this AuroraResource resource) {
             return resource.toSpecificAuroraType<Array2D>();
         }
@@ -25,6 +22,6 @@ namespace AuroraIO {
             } else {
                 return default(T);
             }
-        }
+        }*/
     }
 }

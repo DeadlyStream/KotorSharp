@@ -5,8 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using AuroraIO.Collections;
+using AuroraIO.Source.Coders;
 using AuroraIO.Source.Models.Base;
-using AuroraIO.Source.Models.GFF.Helpers;
 
 namespace AuroraIO.Models {
 
@@ -15,10 +15,7 @@ namespace AuroraIO.Models {
         public static AuroraResource loadFile(AuroraResourceInfo resInfo, byte[] fileArray) {
             switch (resInfo.resourceType) {
                 case AuroraResourceType.TwoDA:
-                //TODO: This needs to be reinstated
-                return new Array2D();//resInfo.resref, fileArray);
                 case AuroraResourceType.UTI:
-                    return new GFFCoder().decode(fileArray);
                 case AuroraResourceType.ARE:
                 case AuroraResourceType.IFO:
                 case AuroraResourceType.BIC:
@@ -39,14 +36,12 @@ namespace AuroraIO.Models {
                 case AuroraResourceType.UTW:
                 case AuroraResourceType.PTM:
                 case AuroraResourceType.PTT:
-                    return new GFFCoder().decode(fileArray);
                 case AuroraResourceType.UNKNOWN:
                 case AuroraResourceType.BMP:
                 case AuroraResourceType.MVE:
                 case AuroraResourceType.TGA:
                 case AuroraResourceType.WAV:
                 case AuroraResourceType.PLT:
-                    return new AuroraBinaryObject(resInfo, fileArray);
                 case AuroraResourceType.INI:
                 case AuroraResourceType.TXT:
                 case AuroraResourceType.NSS:
@@ -55,7 +50,6 @@ namespace AuroraIO.Models {
                 case AuroraResourceType.DFT:
                 case AuroraResourceType.LYT:
                 case AuroraResourceType.VIS:
-                    return new AuroraTextObject(resInfo, fileArray);
                 case AuroraResourceType.BMU:
                     break;
                 case AuroraResourceType.MPG:
@@ -85,7 +79,6 @@ namespace AuroraIO.Models {
                 case AuroraResourceType.MOD:
                 case AuroraResourceType.SAV:
                 case AuroraResourceType.ERF:
-                    return new ERFArchive(fileArray);
                 case AuroraResourceType.WOK:
                     break;
                 case AuroraResourceType.TLK:

@@ -1,129 +1,123 @@
-﻿using System;
+﻿using AuroraIO.Source.Coders;
+using AuroraIO.Source.Models.Base;
+using AuroraIO.Source.Models.Dictionary;
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace AuroraIO.Models {
-    public class TalkTable: AuroraResource, ICollection<TlkStrRefEntry> {
-        private List<TlkStrRefEntry> entries;
-        private string fileVersion;
-        private uint languageID;
+namespace AuroraIO.Source.Models.TLK {
+    public class TalkTable: ICollection<TalkTable.Entry>, ASCIIOutputProtocol {
 
-        public TalkTable(String filePath) {
-            byte[] fileArray = File.ReadAllBytes(filePath);
-            this.fileType = Encoding.ASCII.GetString(fileArray, 0, 4).Replace(" ", "").ToLower().toAuroraResourceType();
-            this.fileVersion = Encoding.ASCII.GetString(fileArray, 4, 4);
-            this.languageID = BitConverter.ToUInt32(fileArray, 8);
-            int stringCount = (int)BitConverter.ToUInt32(fileArray, 12);
-            int stringEntriesOffset = (int)BitConverter.ToUInt32(fileArray, 16);
-
-            int currentOffset = 20;
-            Dictionary<int, TlkStrRefEntry> entries = new Dictionary<int, TlkStrRefEntry>();
-            for (int i = 0; i < stringCount; i++) {
-                int flags = (int)BitConverter.ToUInt32(fileArray, currentOffset);
-                bool textPresent = (flags & 0x00000001) == 1;
-                bool soundResrefPresent = (flags & 0x00000010) == 1;
-                bool soundLengthPresent = (flags & 0x00000100) == 1;
-                string soundResref = Encoding.ASCII.GetString(fileArray, currentOffset + 4, 16);
-                int offsetToString = (int)BitConverter.ToUInt32(fileArray, currentOffset + 28);
-                int stringSize = (int)BitConverter.ToUInt32(fileArray, currentOffset + 32);
-
-                string stringEntry = Encoding.ASCII.GetString(fileArray, stringEntriesOffset + offsetToString, stringSize);
-                double soundLength = BitConverter.ToDouble(fileArray, currentOffset + 36);
-                entries[i] = new TlkStrRefEntry(flags, soundResref, stringEntry, soundLength);
-                currentOffset += 40;
-            }
-            this.entries = entries.Values.ToList();
+        public enum LanguageID {
+            English = 0,
+            French = 1,
+            German = 2,
+            Italian = 3,
+            Spanish = 4,
+            Polish = 5,
+            Korean = 128,
+            ChineseTraditional = 129,
+            ChineseSimplified = 130,
+            Japanese = 131
         }
 
-        public int Count {
+        public class Entry {
+            public CExoString text;
+            public CResRef soundResref;
+            public float soundLength;
+
+            public Entry(
+                string text,
+                string soundResref,
+                float soundLength
+            ) {
+                this.text = text == null ? "" : text;
+                this.soundResref = soundResref == null ? "" : soundResref;
+                this.soundLength = soundLength;
+            }
+        }
+
+        private List<Entry> entries;
+
+        public readonly LanguageID language;
+
+        public TalkTable(LanguageID language, Entry[] entries) {
+            this.language = language;
+            this.entries = new List<Entry>(entries);
+        }
+
+        public TalkTable(LanguageID language) {
+            this.language = language;
+            this.entries = new List<Entry>();
+        }
+
+        public int Count => ((ICollection<Entry>)entries).Count;
+
+        public bool IsReadOnly => ((ICollection<Entry>)entries).IsReadOnly;
+
+        public Entry this[int index] {
             get {
-                return ((ICollection<TlkStrRefEntry>)entries).Count;
+                return entries[index];
+            } set {
+                entries[index] = value;
             }
         }
 
-        public bool IsReadOnly {
-            get {
-                return ((ICollection<TlkStrRefEntry>)entries).IsReadOnly;
-            }
-        }
-
-        public TlkStrRefEntry this[int index] {
-            get {
-                return entries.ElementAt(index);
-            }
-        }
-
-        public void Add(TlkStrRefEntry item) {
-            ((ICollection<TlkStrRefEntry>)entries).Add(item);
-        }
-
-        public int addEntry(String stringEntry, string soundResRef, double soundLength) {
-            bool textPresent = stringEntry != null && stringEntry.Length > 0;
-            bool soundResrefPresent = soundResRef != null;
-            bool soundLengthPresent = soundLength != double.MaxValue;
-
-            int entryCount = entries.Count + 1;
-
-            int flags = Convert.ToInt32(textPresent)
-                & Convert.ToInt32(soundResrefPresent)
-                & Convert.ToInt32(soundLengthPresent);
-
-            entries[entryCount] = new TlkStrRefEntry(flags, soundResRef, stringEntry, soundLength);
-            return entries.Count;
+        public void Add(Entry item) {
+            ((ICollection<Entry>)entries).Add(item);
         }
 
         public void Clear() {
-            ((ICollection<TlkStrRefEntry>)entries).Clear();
+            ((ICollection<Entry>)entries).Clear();
         }
 
-        public bool Contains(TlkStrRefEntry item) {
-            return ((ICollection<TlkStrRefEntry>)entries).Contains(item);
+        public bool Contains(Entry item) {
+            return ((ICollection<Entry>)entries).Contains(item);
         }
 
-        public void CopyTo(TlkStrRefEntry[] array, int arrayIndex) {
-            ((ICollection<TlkStrRefEntry>)entries).CopyTo(array, arrayIndex);
+        public void CopyTo(Entry[] array, int arrayIndex) {
+            ((ICollection<Entry>)entries).CopyTo(array, arrayIndex);
         }
 
-        public IEnumerator<TlkStrRefEntry> GetEnumerator() {
-            return ((ICollection<TlkStrRefEntry>)entries).GetEnumerator();
+        public bool Remove(Entry item) {
+            return ((ICollection<Entry>)entries).Remove(item);
         }
 
-        public bool Remove(TlkStrRefEntry item) {
-            return ((ICollection<TlkStrRefEntry>)entries).Remove(item);
-        }
-
-        public override byte[] toBytes() {
-            ByteArray byteArray = new ByteArray();
-
-            //BuildHeader
-            byteArray.AddRange(Encoding.ASCII.GetBytes(fileType.stringValue().ToUpper().PadRight(4)));
-            byteArray.AddRange(Encoding.ASCII.GetBytes(fileVersion.PadRight(4)));
-            byteArray.AddRange(BitConverter.GetBytes(languageID));
-
-            int stringCount = entries.Count;
-            byteArray.AddRange(BitConverter.GetBytes(stringCount));
-
-            int stringEntriesOffset = 40 * entries.Count + 20;
-            byteArray.AddRange(BitConverter.GetBytes(stringEntriesOffset));
-
-            int stringOffset = 0;
-            foreach(TlkStrRefEntry entry in entries) {
-                byteArray.AddRange(entry.toBytes(stringOffset));
-                stringOffset += entry.text.ToCharArray().Length;
-            }
-
-            foreach (TlkStrRefEntry entry in entries) {
-                byteArray.AddRange(Encoding.ASCII.GetBytes(entry.text.ToCharArray()));
-            }
-
-            return byteArray.ToArray();
+        public IEnumerator<Entry> GetEnumerator() {
+            return ((IEnumerable<Entry>)entries).GetEnumerator();
         }
 
         IEnumerator IEnumerable.GetEnumerator() {
-            return ((ICollection<TlkStrRefEntry>)entries).GetEnumerator();
+            return ((IEnumerable)entries).GetEnumerator();
+        }
+
+        string ASCIIOutputProtocol.asciiEncoding(string indent) {
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendFormat("language: {0}\n", language);
+            sb.Append("entries:");
+
+            for (int i = 0; i < entries.Count; i++) {
+                TalkTable.Entry entry = entries[i];
+                sb.AppendFormat("\n  - {0}", i);
+
+                if (entry.text.Length > 0) {
+                    sb.Append("\n    text: |");
+                    sb.AppendFormat("\n      {0}", entry.text);
+                }
+
+                if (entry.soundResref.Length > 0) {
+                    sb.AppendFormat("\n    soundResref: {0}", entry.soundResref);
+                }
+
+                if(entry.soundLength > 0.0f) {
+                    sb.AppendFormat("\n    soundLength: {0}", entry.soundLength.ToString("G"));
+                }
+            }
+
+            return sb.ToString();
         }
     }
 }
