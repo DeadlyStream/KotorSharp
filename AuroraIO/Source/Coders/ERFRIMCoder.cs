@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 
 namespace AuroraIO.Source.Coders {
-    public class AuroraArchiveCoder {
+    public class ERFRIMCoder {
         public enum Format {
             Auto,
             ERF,

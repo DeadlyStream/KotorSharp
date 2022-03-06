@@ -28,21 +28,21 @@ namespace AuroraIOTests.Source {
 
         [TestMethod]
         public void testReadGameERF() {
-            var coder = new AuroraArchiveCoder();
+            var coder = new ERFRIMCoder();
             var archive = coder.decode(testGameERF());
             Snapshot.Verify(archive);
         }
 
         [TestMethod]
         public void testReadGameRIM() {
-            var coder = new AuroraArchiveCoder();
+            var coder = new ERFRIMCoder();
             var archive = coder.decode(testGameRIM());
             Snapshot.Verify(archive);
         }
 
         [TestMethod]
         public void testWriteGameERF() {
-            var coder = new AuroraArchiveCoder();
+            var coder = new ERFRIMCoder();
             var archive = coder.decode(testGameERF());
             var newArchive = coder.decode(coder.encode(archive));
             Snapshot.Verify(newArchive);
@@ -50,7 +50,7 @@ namespace AuroraIOTests.Source {
 
         [TestMethod]
         public void testWriteGameRIM() {
-            var coder = new AuroraArchiveCoder();
+            var coder = new ERFRIMCoder();
             var archive = coder.decode(testGameRIM());
             var newArchive = coder.decode(coder.encode(archive));
             Snapshot.Verify(newArchive);
@@ -86,14 +86,14 @@ namespace AuroraIOTests.Source {
 
         [TestMethod]
         public void testReadERF() {
-            var archive = AuroraArchiveFile.Load(testERFFile(), AuroraArchiveCoder.Format.ERF);
+            var archive = AuroraArchiveFile.Load(testERFFile(), ERFRIMCoder.Format.ERF);
             Snapshot.Verify(archive);
         }
 
         [TestMethod]
         public void testWriteERF() {
-            var coder = new AuroraArchiveCoder();
-            var archive = AuroraArchiveFile.Load(testERFFile(), AuroraArchiveCoder.Format.ERF);
+            var coder = new ERFRIMCoder();
+            var archive = AuroraArchiveFile.Load(testERFFile(), ERFRIMCoder.Format.ERF);
 
             var newArchive = coder.decode(coder.encode(archive));
             Snapshot.Verify(newArchive);
@@ -101,14 +101,14 @@ namespace AuroraIOTests.Source {
 
         [TestMethod]
         public void testReadRIM() {
-            var archive = AuroraArchiveFile.Load(testRIMFile(), AuroraArchiveCoder.Format.RIM);
+            var archive = AuroraArchiveFile.Load(testRIMFile(), ERFRIMCoder.Format.RIM);
             Snapshot.Verify(archive);
         }
 
         [TestMethod]
         public void testWriteRIM() {
-            var coder = new AuroraArchiveCoder();
-            var archive = AuroraArchiveFile.Load(testRIMFile(), AuroraArchiveCoder.Format.RIM);
+            var coder = new ERFRIMCoder();
+            var archive = AuroraArchiveFile.Load(testRIMFile(), ERFRIMCoder.Format.RIM);
 
             var newArchive = coder.decode(coder.encode(archive));
             Snapshot.Verify(newArchive);
