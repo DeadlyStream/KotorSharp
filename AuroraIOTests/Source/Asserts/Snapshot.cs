@@ -18,24 +18,38 @@ namespace AuroraIOTests.Source.Asserts {
                 String.Format("{0}\\{1}", Path.GetFileNameWithoutExtension(className), methodName));
         }
 
-        private static string resourceFileName(string className, string methodName) {
-            return Path.Combine(Bundle.SnapshotDirectory,
-                "Resources",
-                String.Format("{0}\\{1}", Path.GetFileNameWithoutExtension(className), methodName));
-        }
-
         static string testFileOutputName(string className,  string methodName) {
             return Path.Combine(AppDomain.CurrentDomain.BaseDirectory,
                 "Artifacts",
                 String.Format("{0}\\{1}_actual", Path.GetFileNameWithoutExtension(className), methodName));
         }
 
+        public static string OutputPath(bool recorded = false, [CallerMemberName] string methodName = "", [CallerFilePath] string className = "") {
+            if (recorded) {
+                return testFileBaseName(className, methodName);
+            } else {
+                return testFileOutputName(className, methodName);
+            }
+        }
+
+        public static string ResourceDirectory([CallerMemberName] string methodName = "", [CallerFilePath] string className = "") {
+            return Path.Combine(Bundle.SnapshotDirectory,
+                "Resources",
+                String.Format("{0}\\{1}_dir", Path.GetFileNameWithoutExtension(className), methodName));
+        }
+
+        public static string ResourcePath([CallerMemberName] string methodName = "", [CallerFilePath] string className = "") {
+            return Path.Combine(Bundle.SnapshotDirectory,
+                "Resources",
+                String.Format("{0}\\{1}", Path.GetFileNameWithoutExtension(className), methodName));
+        }
+
         public static byte[] DataResource([CallerMemberName] string methodName = "", [CallerFilePath] string className = "") {
-            return File.ReadAllBytes(resourceFileName(className, methodName));
+            return File.ReadAllBytes(ResourcePath(methodName, className));
         }
 
         public static string TextResource([CallerMemberName] string methodName = "", [CallerFilePath] string className = "") {
-            return File.ReadAllText(resourceFileName(className, methodName));
+            return File.ReadAllText(ResourcePath(methodName, className));
         }
 
         public static void VerifyEncoding(AuroraTable actual, bool record = false, [CallerFilePath] string className = "", [CallerMemberName] string methodName = "") {
@@ -47,6 +61,10 @@ namespace AuroraIOTests.Source.Asserts {
         }
 
         public static void Verify(ASCIIOutputProtocol actual, bool record = false, [CallerFilePath] string className = "", [CallerMemberName] string methodName = "") {
+            Verify(new ASCIICoder().encode(actual), record, className, methodName);
+        }
+
+        public static void Verify(ASCIIOutputProtocol[] actual, bool record = false, [CallerFilePath] string className = "", [CallerMemberName] string methodName = "") {
             Verify(new ASCIICoder().encode(actual), record, className, methodName);
         }
 

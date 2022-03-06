@@ -187,7 +187,7 @@ namespace KPatcher.Patching.Parsing {
             return installSets.ToArray();
         }
 
-        /*private static TP2daCommand[] parseEntriesFor2daList(String fileText) {
+        private static TP2daCommand[] parseEntriesFor2daList(String fileText) {
             Dictionary<string, string> _2daList = parseEntriesForTitle("2DAList", fileText);
 
             List<TP2daCommand> _2daCommands = new List<TP2daCommand>();

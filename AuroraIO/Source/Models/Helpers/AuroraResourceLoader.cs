@@ -4,12 +4,11 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
-using AuroraIO.Collections;
 using AuroraIO.Source.Coders;
 using AuroraIO.Source.Models.Base;
 
 namespace AuroraIO.Models {
-
+    /*
     public class AuroraResourceLoader {
 
         public static AuroraResource loadFile(AuroraResourceInfo resInfo, byte[] fileArray) {
@@ -291,5 +290,5 @@ namespace AuroraIO.Models {
             AuroraResourceType resourceType = extension.toAuroraResourceType();
             return loadFile(new AuroraResourceInfo(resref, resourceType), File.ReadAllBytes(path));
         }
-    }
+    }*/
 }

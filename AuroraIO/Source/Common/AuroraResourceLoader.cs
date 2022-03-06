@@ -5,14 +5,14 @@ using System.Linq;
 using System.Text;
 using AuroraIO.Models;
 using System.Text.RegularExpressions;
-using AuroraIO.Collections;
+using AuroraIO.Models.Base;
 
 namespace AuroraIO {
-
+    /*
     internal class AuroraResourceLoader {
 
         internal static AuroraResource loadFile(AuroraResourceInfo resInfo, byte[] fileArray) {
-            switch (resInfo.resourceType) {
+            switch (resInfo.resourceType.id) {
                 case AuroraResourceType.TwoDA:
                 //TODO: this needs to be reinstated
                 //return new Array2D();//(resInfo.resref, fileArray);
@@ -299,5 +299,5 @@ namespace AuroraIO {
             AuroraResourceType resourceType = extension.toAuroraResourceType();
             return AuroraResourceLoader.loadFile(new AuroraResourceInfo(resref, resourceType), File.ReadAllBytes(path));
         }
-    }
+    }*/
 }

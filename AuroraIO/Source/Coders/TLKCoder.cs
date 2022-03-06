@@ -45,41 +45,41 @@ namespace AuroraIO.Source.Models.TLK {
         }
 
         public byte[] encode(TalkTable table) {
-            ByteArray byteArray = new ByteArray();
+            Data data = new Data();
 
             //BuildHeader
-            byteArray.AddRange(Encoding.ASCII.GetBytes("TLK".ToUpper().PadRight(4)));
-            byteArray.AddRange(Encoding.ASCII.GetBytes("V3.0".PadRight(4)));
-            byteArray.AddRange(BitConverter.GetBytes((uint)table.language));
+            data.AddRange(Encoding.ASCII.GetBytes("TLK".ToUpper().PadRight(4)));
+            data.AddRange(Encoding.ASCII.GetBytes("V3.0".PadRight(4)));
+            data.AddRange(BitConverter.GetBytes((uint)table.language));
 
             int entryCount = table.Count;
-            byteArray.AddRange(BitConverter.GetBytes(entryCount));
+            data.AddRange(BitConverter.GetBytes(entryCount));
 
             int stringEntriesOffset = 40 * entryCount + 20;
-            byteArray.AddRange(BitConverter.GetBytes(stringEntriesOffset));
+            data.AddRange(BitConverter.GetBytes(stringEntriesOffset));
 
-            ByteArray stringArray = new ByteArray();
+            Data stringArray = new Data();
             foreach (TalkTable.Entry entry in table) {
                 int flags = (entry.text.Length > 0 ? 1 : 0) 
                     | (entry.soundResref.Length > 0 ? 1 : 0) << 1
                     | (entry.soundLength > 0.0f ? 1 : 0) << 2;
 
-                byteArray.AddRange(BitConverter.GetBytes(flags));
+                data.AddRange(BitConverter.GetBytes(flags));
 
-                byteArray.AddRange(AuroraBitConverter.GetBytes(entry.soundResref));
+                data.AddRange(AuroraBitConverter.GetBytes(entry.soundResref));
                 
-                byteArray.AddRange(BitConverter.GetBytes(0));
-                byteArray.AddRange(BitConverter.GetBytes(0));
-                byteArray.AddRange(BitConverter.GetBytes(stringArray.Count));
-                byteArray.AddRange(BitConverter.GetBytes(entry.text.Length));
-                byteArray.AddRange(BitConverter.GetBytes(entry.soundLength));
+                data.AddRange(BitConverter.GetBytes(0));
+                data.AddRange(BitConverter.GetBytes(0));
+                data.AddRange(BitConverter.GetBytes(stringArray.Count));
+                data.AddRange(BitConverter.GetBytes(entry.text.Length));
+                data.AddRange(BitConverter.GetBytes(entry.soundLength));
 
                 stringArray.AddRange(Encoding.ASCII.GetBytes(entry.text));
             }
 
-            byteArray.AddRange(stringArray);
+            data.AddRange(stringArray);
 
-            return byteArray.ToArray();
+            return data;
         }
     }
 }

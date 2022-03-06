@@ -48,69 +48,69 @@ namespace AuroraIO.Source.Coders {
         }
 
         public static byte[] GetBytes(AuroraString auroraData) {
-            ByteArray byteArray = new ByteArray();
-            byteArray.AddRange(BitConverter.GetBytes((UInt32)auroraData.value.Length));
-            byteArray.AddRange(Encoding.ASCII.GetBytes(auroraData.value));   
-            return byteArray.ToArray();
+            Data data = new Data();
+            data.AddRange(BitConverter.GetBytes((UInt32)auroraData.value.Length));
+            data.AddRange(Encoding.ASCII.GetBytes(auroraData.value));   
+            return data;
         }
 
         public static byte[] GetBytes(AuroraResref auroraData) {
-            ByteArray byteArray = new ByteArray();
-            byteArray.Add((byte)auroraData.value.Length);
-            byteArray.AddRange(Encoding.ASCII.GetBytes(auroraData.value));
-            return byteArray.ToArray();
+            Data data = new Data();
+            data.Add((byte)auroraData.value.Length);
+            data.AddRange(Encoding.ASCII.GetBytes(auroraData.value));
+            return data;
         }
 
         public static byte[] GetBytes(AuroraLocalizedString auroraData) {
-            ByteArray byteArray = new ByteArray();
+            Data data = new Data();
 
-            ByteArray substringArray = new ByteArray();
+            Data substringArray = new Data();
             foreach (KeyValuePair<CExoLanguage, string> tuple in auroraData) {
                 substringArray.AddRange(BitConverter.GetBytes((UInt32)tuple.Key));
                 substringArray.AddRange(BitConverter.GetBytes((UInt32)tuple.Value.Length));
                 substringArray.AddRange(Encoding.ASCII.GetBytes(tuple.Value));
             }
 
-            byteArray.AddRange(BitConverter.GetBytes((UInt32)substringArray.Count + 8));
-            byteArray.AddRange(BitConverter.GetBytes((UInt32)auroraData.strref));
-            byteArray.AddRange(BitConverter.GetBytes((UInt32)auroraData.Count()));
-            byteArray.AddRange(substringArray.ToArray());
-            return byteArray.ToArray();
+            data.AddRange(BitConverter.GetBytes((UInt32)substringArray.Count + 8));
+            data.AddRange(BitConverter.GetBytes((UInt32)auroraData.strref));
+            data.AddRange(BitConverter.GetBytes((UInt32)auroraData.Count()));
+            data.AddRange(substringArray.ToArray());
+            return data;
         }
 
         public static byte[] GetBytes(AuroraVoid auroraData) {
-            ByteArray byteArray = new ByteArray();
-            byteArray.AddRange(BitConverter.GetBytes((UInt32)auroraData.value.Length));
-            byteArray.AddRange(auroraData.value);
-            return byteArray.ToArray();
+            Data data = new Data();
+            data.AddRange(BitConverter.GetBytes((UInt32)auroraData.value.Length));
+            data.AddRange(auroraData.value);
+            return data;
         }
 
         public static byte[] GetBytes(AuroraQuaternion auroraData) {
-            ByteArray byteArray = new ByteArray();
+            Data data = new Data();
 
-            byteArray.AddRange(BitConverter.GetBytes(auroraData.w));
-            byteArray.AddRange(BitConverter.GetBytes(auroraData.x));
-            byteArray.AddRange(BitConverter.GetBytes(auroraData.y));
-            byteArray.AddRange(BitConverter.GetBytes(auroraData.z));
+            data.AddRange(BitConverter.GetBytes(auroraData.w));
+            data.AddRange(BitConverter.GetBytes(auroraData.x));
+            data.AddRange(BitConverter.GetBytes(auroraData.y));
+            data.AddRange(BitConverter.GetBytes(auroraData.z));
 
-            return byteArray.ToArray();
+            return data;
         }
 
         public static byte[] GetBytes(AuroraVector auroraData) {
-            ByteArray byteArray = new ByteArray();
+            Data data = new Data();
 
-            byteArray.AddRange(BitConverter.GetBytes(auroraData.x));
-            byteArray.AddRange(BitConverter.GetBytes(auroraData.y));
-            byteArray.AddRange(BitConverter.GetBytes(auroraData.z));
+            data.AddRange(BitConverter.GetBytes(auroraData.x));
+            data.AddRange(BitConverter.GetBytes(auroraData.y));
+            data.AddRange(BitConverter.GetBytes(auroraData.z));
 
-            return byteArray.ToArray();
+            return data;
         }
 
         public static byte[] GetBytes(AuroraStrRef auroraData) { 
-            ByteArray byteArray = new ByteArray();
-            byteArray.AddRange(BitConverter.GetBytes(4));
-            byteArray.AddRange(BitConverter.GetBytes(auroraData.value));
-            return byteArray.ToArray();
+            Data data = new Data();
+            data.AddRange(BitConverter.GetBytes(4));
+            data.AddRange(BitConverter.GetBytes(auroraData.value));
+            return data;
         }
 
         public static byte[] GetBytes(CResRef resref) {

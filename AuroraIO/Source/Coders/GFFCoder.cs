@@ -1,4 +1,5 @@
-﻿using AuroraIO.Source.Models.Base;
+﻿using AuroraIO.Models.Base;
+using AuroraIO.Source.Models.Base;
 using AuroraIO.Source.Models.Dictionary;
 using System;
 using System.Collections.Generic;
@@ -60,9 +61,9 @@ namespace AuroraIO.Source.Coders
         }
 
         public AuroraDictionary decode(byte[] byteArray) {
-            AuroraResourceType fileType = Encoding.ASCII.GetString(byteArray, 0, 4).Replace(" ", "").ToLower().toAuroraResourceType();
+            AuroraResourceType fileType = Encoding.ASCII.GetString(byteArray, 0, 4).Replace(" ", "").ToLower();
             var baseStruct = getStructAtOffset(byteArray, 0);
-            return AuroraDictionary.make(fileType.stringValue(), dict => { 
+            return AuroraDictionary.make(fileType.stringValue, dict => { 
                 foreach(KeyValuePair<string, AuroraDataObject> pair in baseStruct) {
                     dict[pair.Key] = pair.Value;
                 }
@@ -75,114 +76,114 @@ namespace AuroraIO.Source.Coders
 
             var info = processDictionary(dict);
 
-            ByteArray newByteArray = new ByteArray();
+            Data data = new Data();
             String fileVersion = "V3.2";
 
             //MARK: - Write Header
 
             //Write File Type
             string fileType = dict.type.ToUpper().PadRight(4, ' ');
-            newByteArray.AddRange(Encoding.UTF8.GetBytes(fileType));
+            data.AddRange(Encoding.UTF8.GetBytes(fileType));
 
             //Write File Version
-            newByteArray.AddRange(Encoding.ASCII.GetBytes(fileVersion));
+            data.AddRange(Encoding.ASCII.GetBytes(fileVersion));
 
             //Write Struct Starting Offset
             //Header size is always 56, and Struct Array Offset always comes directly after the header
             int structStartingOffset = 56;
-            newByteArray.AddRange(BitConverter.GetBytes(structStartingOffset));
+            data.AddRange(BitConverter.GetBytes(structStartingOffset));
 
             //Write Struct Count
             //The total count of structs in the file - this includes structs inside of fields that are struct types and list types
             UInt32 structCount = (UInt32)info.structInfoArray.Count();
-            newByteArray.AddRange(BitConverter.GetBytes(structCount));
+            data.AddRange(BitConverter.GetBytes(structCount));
 
             //MARK: - Write Field offset 
             // Structs have 12 bytes of information, thus the field array starting offset will be 12 * stuctCount
             UInt32 fieldOffset = 56 + structCount * 12;
-            newByteArray.AddRange(BitConverter.GetBytes(fieldOffset));
+            data.AddRange(BitConverter.GetBytes(fieldOffset));
 
             //MARK: - Write field count (actual count)
             UInt32 fieldCount = (UInt32)info.fieldInfoArray.Count();
-            newByteArray.AddRange(BitConverter.GetBytes(fieldCount));
+            data.AddRange(BitConverter.GetBytes(fieldCount));
 
             //MARK: - Write Label offset
             //Fields have 12 bytes of information, thus the label offset will be 12 * fieldCount
             UInt32 labelOffset = fieldOffset + fieldCount * 12;
-            newByteArray.AddRange(BitConverter.GetBytes(labelOffset));
+            data.AddRange(BitConverter.GetBytes(labelOffset));
 
             //MARK: - Write Label count
             UInt32 labelCount = (UInt32)info.labels.Count();
-            newByteArray.AddRange(BitConverter.GetBytes(labelCount));
+            data.AddRange(BitConverter.GetBytes(labelCount));
 
             //MARK: - Field data offset
             //This is the starting offset that points the beginning of the complex data heap
             UInt32 fieldDataOffset = labelOffset + labelCount * 16;
-            newByteArray.AddRange(BitConverter.GetBytes(fieldDataOffset));
+            data.AddRange(BitConverter.GetBytes(fieldDataOffset));
 
             //MARK: - FieldData length (in total bytes)
             UInt32 fieldDataCount = (UInt32)info.complexFieldData.Length;
-            newByteArray.AddRange(BitConverter.GetBytes(fieldDataCount));
+            data.AddRange(BitConverter.GetBytes(fieldDataCount));
 
             //MARK: - FieldIndices offset
 
             //A Field Index is a DWORD containing the index of the associated Field within the Field array.
             //The Field Indices Array is an array of such DWORDs.
             UInt32 fieldIndicesOffset = fieldDataOffset + fieldDataCount;
-            newByteArray.AddRange(BitConverter.GetBytes(fieldIndicesOffset));
+            data.AddRange(BitConverter.GetBytes(fieldIndicesOffset));
 
             //MARK: - Field Indices length (in bytes)
             UInt32 fieldIndicesCount = (UInt32)info.fieldIndicesArray.Length;
-            newByteArray.AddRange(BitConverter.GetBytes(fieldIndicesCount));
+            data.AddRange(BitConverter.GetBytes(fieldIndicesCount));
 
             //MARK: - List indices offset
             UInt32 listIndicesOffset = fieldIndicesOffset + fieldIndicesCount;
-            newByteArray.AddRange(BitConverter.GetBytes(listIndicesOffset));
+            data.AddRange(BitConverter.GetBytes(listIndicesOffset));
 
             //MARK: - List indices offset
             UInt32 listIndicesCount = (UInt32)info.listIndicesArray.Length;
-            newByteArray.AddRange(BitConverter.GetBytes(listIndicesCount));
+            data.AddRange(BitConverter.GetBytes(listIndicesCount));
 
             //Write Struct data
             foreach (GFFStructInfo structInfo in info.structInfoArray) {
 
                 //Convert structInfo to bytes
-                newByteArray.AddRange(BitConverter.GetBytes((UInt32)structInfo.structType));
-                newByteArray.AddRange(BitConverter.GetBytes((UInt32)structInfo.dataOrDataOffset));
-                newByteArray.AddRange(BitConverter.GetBytes(structInfo.fieldCount));
+                data.AddRange(BitConverter.GetBytes((UInt32)structInfo.structType));
+                data.AddRange(BitConverter.GetBytes((UInt32)structInfo.dataOrDataOffset));
+                data.AddRange(BitConverter.GetBytes(structInfo.fieldCount));
             }
 
             //Write Field Data
 
-            IndexMap<string> labelMap = info.labels.generateIndexMap();
+            IndexMap<string> labelMap = info.labels.ToIndexMap();
 
             foreach (GFFFieldInfo fieldInfo in info.fieldInfoArray) {
-                newByteArray.AddRange(BitConverter.GetBytes((uint)fieldInfo.fieldType));
-                newByteArray.AddRange(BitConverter.GetBytes(labelMap[fieldInfo.label]));
-                newByteArray.AddRange(BitConverter.GetBytes(fieldInfo.dataOrDataOffset));
+                data.AddRange(BitConverter.GetBytes((uint)fieldInfo.fieldType));
+                data.AddRange(BitConverter.GetBytes(labelMap[fieldInfo.label]));
+                data.AddRange(BitConverter.GetBytes(fieldInfo.dataOrDataOffset));
             }   
 
             //Write Label Array
             foreach(String label in info.labels) {
                 //Field label values must be padded to 16 length with 0's
                 String modifiedValue = label.Substring(0, Math.Min(label.Length, 16));
-                newByteArray.AddRange(ASCIIEncoding.ASCII.GetBytes(modifiedValue));
+                data.AddRange(ASCIIEncoding.ASCII.GetBytes(modifiedValue));
 
                 for (int i = modifiedValue.Length; i < 16; i++) {
-                    newByteArray.Add(0);
+                    data.Add(0);
                 }     
             }
 
             //Write Complex Field Data Block
-            newByteArray.AddRange(info.complexFieldData.ToArray());
+            data.AddRange(info.complexFieldData.ToArray());
 
             //Write FieldIndices Array
-            newByteArray.AddRange(info.fieldIndicesArray.ToArray());
+            data.AddRange(info.fieldIndicesArray.ToArray());
 
             //Write ListIndices Array
-            newByteArray.AddRange(info.listIndicesArray.ToArray());
+            data.AddRange(info.listIndicesArray.ToArray());
 
-            return newByteArray.ToArray();
+            return data;
         }
 
         AuroraStruct getStructAtOffset(byte[] fileArray, int offset) {
@@ -353,9 +354,9 @@ namespace AuroraIO.Source.Coders
             List<GFFFieldInfo> fieldArray = new List<GFFFieldInfo>();
             List<GFFStructInfo> structArray = new List<GFFStructInfo>();
             HashSet<String> labels = new HashSet<String>();
-            ByteArray complexFieldData = new ByteArray();
-            ByteArray fieldIndicesArray = new ByteArray();
-            ByteArray listIndicesArray = new ByteArray();
+            Data complexFieldData = new Data();
+            Data fieldIndicesArray = new Data();
+            Data listIndicesArray = new Data();
 
             processStruct(dictionary,
                 structArray,
@@ -379,9 +380,9 @@ namespace AuroraIO.Source.Coders
             List<GFFStructInfo> structArray,
             List<GFFFieldInfo> fieldArray,
             HashSet<String> labels,
-            ByteArray complexFieldData,
-            ByteArray fieldIndicesArray,
-            ByteArray listIndicesArray
+            Data complexFieldData,
+            Data fieldIndicesArray,
+            Data listIndicesArray
          ) {
 
             int fieldIndicesArrayStartingOffset = fieldIndicesArray.Count;

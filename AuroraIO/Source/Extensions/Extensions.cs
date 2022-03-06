@@ -26,7 +26,7 @@ namespace AuroraIO {
             return regex.Replace(value, "");
         }
 
-        internal static IndexMap<T> generateIndexMap<T>(this T[] array) {
+        internal static IndexMap<T> ToIndexMap<T>(this T[] array) {
             return new IndexMap<T>(array);
         }
 
@@ -47,12 +47,27 @@ namespace AuroraIO {
         }
     }
 
-    public class ByteArray: List<byte> {
+
+    public class Data: List<byte> {
     
         public void copyBytesToOffset(byte[] bytes, int offset) {
             for (int i = 0; i < bytes.Length; i++) {
                 this[offset + i] = bytes[i];
             }
+        }
+
+        public Data() { }
+
+        private Data(byte[] value) {
+            AddRange(value);
+        }
+
+        public static implicit operator Data(byte[] value) {
+            return new Data(value);
+        }
+
+        public static implicit operator byte[](Data data) {
+            return data.ToArray();
         }
     }
 }
