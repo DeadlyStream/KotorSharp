@@ -49,11 +49,11 @@ namespace AuroraIO.Source.Models.Table
             {
                 get
                 {
-                    return rowData[columns.generateIndexMap()[key]];
+                    return rowData[columns.ToIndexMap()[key]];
                 }
                 set
                 {
-                    var indexMap = columns.generateIndexMap();
+                    var indexMap = columns.ToIndexMap();
                     setRowAction(new SetRowData(value, indexMap[key]));
                 }
             }

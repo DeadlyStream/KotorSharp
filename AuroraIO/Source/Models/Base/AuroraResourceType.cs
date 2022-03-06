@@ -36,7 +36,7 @@ namespace AuroraIO.Models.Base {
         public static readonly AuroraResourceType IFO = new AuroraResourceType(AuroraResourceID.IFO, "IFO");
         public static readonly AuroraResourceType BIC = new AuroraResourceType(AuroraResourceID.BIC, "BIC");
         public static readonly AuroraResourceType WOK = new AuroraResourceType(AuroraResourceID.WOK, "WOK");
-        public static readonly AuroraResourceType TwoDA = new AuroraResourceType(AuroraResourceID.TwoDA, "TwoDA");
+        public static readonly AuroraResourceType TwoDA = new AuroraResourceType(AuroraResourceID.TwoDA, "2DA");
         public static readonly AuroraResourceType TLK = new AuroraResourceType(AuroraResourceID.TLK, "TLK");
         public static readonly AuroraResourceType TXI = new AuroraResourceType(AuroraResourceID.TXI, "TXI");
         public static readonly AuroraResourceType GIT = new AuroraResourceType(AuroraResourceID.GIT, "GIT");
@@ -160,13 +160,12 @@ namespace AuroraIO.Models.Base {
         public static readonly AuroraResourceType BIF = new AuroraResourceType(AuroraResourceID.BIF, "BIF");
         public static readonly AuroraResourceType KEY = new AuroraResourceType(AuroraResourceID.KEY, "KEY");
 
-
         public readonly AuroraResourceID id;
         public readonly string stringValue;
 
         public AuroraResourceType(AuroraResourceID id, string value) : this() {
             this.id = id;
-            this.stringValue = value;
+            this.stringValue = value.ToLower();
         }
 
         public static implicit operator AuroraResourceType(int id) {
@@ -325,7 +324,8 @@ namespace AuroraIO.Models.Base {
             }
         }
 
-        public static implicit operator AuroraResourceType(string value) {
+        public static implicit operator AuroraResourceType(string stringValue) {
+            var value = stringValue.ToUpper();
             if ("BMP" == value) return AuroraResourceType.BMP;
             if ("MVE" == value) return AuroraResourceType.MVE;
             if ("TGA" == value) return AuroraResourceType.TGA;

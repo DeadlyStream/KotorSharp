@@ -11,5 +11,9 @@ namespace AuroraIO.Source.Coders {
         public String encode(ASCIIOutputProtocol obj) {
             return obj.asciiEncoding("");
         }
+
+        public String encode(ASCIIOutputProtocol[] array) {
+            return String.Join("", array.Select(value => value.asciiEncoding("")));
+        }
     }
 }

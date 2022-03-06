@@ -30,8 +30,8 @@ namespace AuroraIO {
         //                                                { "KTGameVerIndex", GFFFieldType.INT }
         //                                            };
 
-        public ItemBlueprintObject(AuroraResourceType fileType) {
-        }
+        //public ItemBlueprintObject(AuroraResourceType fileType) {
+        //}
 
         public void addProperty(ItemBlueprintPropertyInfo info) {
         }

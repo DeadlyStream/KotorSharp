@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 
 namespace AuroraIO.Source.Coders {
+    /*
     public abstract class AuroraCoder<T> where T: AuroraResource {
 
         public T decodeFileAtPath(String filePath) {
@@ -27,5 +28,5 @@ namespace AuroraIO.Source.Coders {
     public class AuroraDecodeException : Exception {
         public AuroraDecodeException(string message) : base(message) {
         }
-    }
+    }*/
 }

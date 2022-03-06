@@ -120,7 +120,7 @@ namespace AuroraIO.Source.Coders {
 
         public byte[] encode(AuroraTable obj)
         {
-            ByteArray newFileArray = new ByteArray();
+            Data newFileArray = new Data();
 
             //AddHeader
             newFileArray.AddRange(Encoding.ASCII.GetBytes(HeaderValue));
