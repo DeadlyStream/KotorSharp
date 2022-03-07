@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 
 namespace AuroraIO.Source.Archives.BIFKey {
-    public class BIFArchive: ASCIIOutputProtocol {
+    public class BIFArchive: ASCIIEncodingProtocol {
 
         private class ResourceEntry {
 

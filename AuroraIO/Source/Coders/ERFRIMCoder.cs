@@ -17,7 +17,7 @@ namespace AuroraIO.Source.Coders {
             RIM
         }
 
-        public AuroraArchive decode(byte[] data) {
+        public AuroraArchive decode(Data data) {
             AuroraArchive.Format fileType = Encoding.ASCII.GetString(data, 0, 4).Trim();
             if (fileType == AuroraArchive.Format.RIM) {
                 return decodeRIM(data);
@@ -134,7 +134,7 @@ namespace AuroraIO.Source.Coders {
             return new AuroraArchive(fileType, fileMap, descriptionStrRef, localizedString);
         }
 
-        public byte[] encode(AuroraArchive archive, Format format = Format.Auto) {
+        public Data encode(AuroraArchive archive, Format format = Format.Auto) {
             if (archive.format == AuroraArchive.Format.RIM) {
                 return encodeRIM(archive);
             } else {

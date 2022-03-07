@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 
 namespace AuroraIO.Source.Coders {
-    public interface ASCIIOutputProtocol {
+    public interface ASCIIEncodingProtocol {
         string asciiEncoding(string indent = "");
     }
     public class ASCIICoder {
-        public String encode(ASCIIOutputProtocol obj) {
+        public String encode(ASCIIEncodingProtocol obj) {
             return obj.asciiEncoding("");
         }
 
-        public String encode(ASCIIOutputProtocol[] array) {
+        public String encode(ASCIIEncodingProtocol[] array) {
             return String.Join("", array.Select(value => value.asciiEncoding("")));
         }
     }

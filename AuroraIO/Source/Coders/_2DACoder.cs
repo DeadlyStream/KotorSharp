@@ -16,7 +16,7 @@ namespace AuroraIO.Source.Coders {
         protected const String NullTerm = "****";
         protected const int HeaderLength = 9;
 
-        public AuroraTable decode(byte[] byteArray) {
+        public AuroraTable decode(Data data) {
 
             int i = HeaderLength;
             char c = TabCharacter;
@@ -29,7 +29,7 @@ namespace AuroraIO.Source.Coders {
 
             while (c != NullCharacter)
             {
-                c = (char)byteArray[i++];
+                c = (char)data[i++];
                 //Break the loop
                 if (c == NullCharacter)
                 {
@@ -55,7 +55,7 @@ namespace AuroraIO.Source.Coders {
             ///
 
             //Get the length
-            int numberOfRows = (int)BitConverter.ToUInt32(byteArray, i);
+            int numberOfRows = (int)BitConverter.ToUInt32(data, i);
 
             string[][] rows = new string[numberOfRows][];
             i += 4;
@@ -63,7 +63,7 @@ namespace AuroraIO.Source.Coders {
             int tabCount = 0;
             while (tabCount < numberOfRows)
             {
-                c = (char)byteArray[i++];
+                c = (char)data[i++];
                 //The strings here are always row numbers, I'm essentially bypassing all of this info
                 if (c == TabCharacter)
                 {
@@ -98,9 +98,9 @@ namespace AuroraIO.Source.Coders {
                     rowValues = new String[numberOfColumns];
                 }
 
-                UInt16 offsetToString = BitConverter.ToUInt16(byteArray, i + RowPointerOffset);
+                UInt16 offsetToString = BitConverter.ToUInt16(data, i + RowPointerOffset);
                 int offsetInArray = offsetToString + StringDataOffset;
-                String stringValue = Encoding.ASCII.GetNullTerminatedString(byteArray, offsetInArray);
+                String stringValue = Encoding.ASCII.GetNullTerminatedString(data, offsetInArray);
                 if (stringValue.Length == 0)
                 {
                     stringValue = NullTerm;
@@ -118,7 +118,7 @@ namespace AuroraIO.Source.Coders {
             return new AuroraTable(columnNames.ToArray(), rows);
         }
 
-        public byte[] encode(AuroraTable obj)
+        public Data encode(AuroraTable obj)
         {
             Data newFileArray = new Data();
 

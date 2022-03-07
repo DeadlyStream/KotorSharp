@@ -7,7 +7,7 @@ using System.Text;
 
 namespace AuroraIO.Source.Models.Dictionary
 {
-    public class AuroraDictionary : AuroraStructType, ASCIIOutputProtocol, SetKeyValueInterface {
+    public class AuroraDictionary : AuroraStructType, ASCIIEncodingProtocol, SetKeyValueInterface {
         public string type { get; private set; }
         public uint structType => uint.MaxValue;
 

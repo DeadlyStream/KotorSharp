@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 
 namespace AuroraIO.Source.Archives.ERFRIM {
-    public class AuroraArchive: IEnumerable<AuroraFile>, ASCIIOutputProtocol {
+    public class AuroraArchive: IEnumerable<AuroraFile>, ASCIIEncodingProtocol {
         public struct Format {
             public static Format ERF = "ERF";
             public static Format HAK = "HAK";

@@ -48,7 +48,7 @@ namespace AuroraIO.Source.Archives {
         }
     }
 
-    public class AuroraFile: ASCIIOutputProtocol {
+    public class AuroraFile: ASCIIEncodingProtocol {
         public AuroraResourceName name;
         public byte[] data;
 

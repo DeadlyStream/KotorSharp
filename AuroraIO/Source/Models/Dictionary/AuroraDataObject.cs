@@ -8,7 +8,7 @@ using System.Text;
 
 namespace AuroraIO.Source.Models.Dictionary {
 
-    public abstract class AuroraDataObject: SetKeyValueInterface, ASCIIOutputProtocol {
+    public abstract class AuroraDataObject: SetKeyValueInterface, ASCIIEncodingProtocol {
         public abstract AuroraDataType dataType { get; }
 
         public abstract string asciiEncoding(string indent = "");

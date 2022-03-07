@@ -61,7 +61,7 @@
     <Compile Include="Source\Archives\ERFRIM\AuroraArchiveFile.cs" />
     <Compile Include="Source\Coders\AuroraBitConverter.cs" />
     <Compile Include="Source\Coders\GFFCoder.cs" />
-    <Compile Include="Source\Coders\AuroraCoder.cs" />
+    <Compile Include="Source\Coders\Data.cs" />
     <Compile Include="Source\Coders\SSFCoder.cs" />
     <Compile Include="Source\Common\AuroraResourceLoader.cs" />
     <Compile Include="Source\Coders\ASCIICoder.cs" />

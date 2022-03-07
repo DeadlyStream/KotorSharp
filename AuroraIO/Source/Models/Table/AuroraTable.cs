@@ -6,7 +6,7 @@ using System.Text;
 
 namespace AuroraIO.Source.Models.Table
 {
-    public class AuroraTable: ASCIIOutputProtocol {
+    public class AuroraTable: ASCIIEncodingProtocol {
 
         public class Row
         {

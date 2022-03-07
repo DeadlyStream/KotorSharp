@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 
 namespace AuroraIO.Source.Models.TLK {
-    public class TalkTable: ICollection<TalkTable.Entry>, ASCIIOutputProtocol {
+    public class TalkTable: ICollection<TalkTable.Entry>, ASCIIEncodingProtocol {
 
         public enum LanguageID {
             English = 0,
@@ -93,7 +93,7 @@ namespace AuroraIO.Source.Models.TLK {
             return ((IEnumerable)entries).GetEnumerator();
         }
 
-        string ASCIIOutputProtocol.asciiEncoding(string indent) {
+        string ASCIIEncodingProtocol.asciiEncoding(string indent) {
             StringBuilder sb = new StringBuilder();
 
             sb.AppendFormat("language: {0}\n", language);

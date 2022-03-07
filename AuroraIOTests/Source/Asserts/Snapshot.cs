@@ -60,11 +60,11 @@ namespace AuroraIOTests.Source.Asserts {
             Verify(new GFFCoder().encode(actual), record, className, methodName);
         }
 
-        public static void Verify(ASCIIOutputProtocol actual, bool record = false, [CallerFilePath] string className = "", [CallerMemberName] string methodName = "") {
+        public static void Verify(ASCIIEncodingProtocol actual, bool record = false, [CallerFilePath] string className = "", [CallerMemberName] string methodName = "") {
             Verify(new ASCIICoder().encode(actual), record, className, methodName);
         }
 
-        public static void Verify(ASCIIOutputProtocol[] actual, bool record = false, [CallerFilePath] string className = "", [CallerMemberName] string methodName = "") {
+        public static void Verify(ASCIIEncodingProtocol[] actual, bool record = false, [CallerFilePath] string className = "", [CallerMemberName] string methodName = "") {
             Verify(new ASCIICoder().encode(actual), record, className, methodName);
         }
 

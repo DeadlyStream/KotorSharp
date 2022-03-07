@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 
 namespace AuroraIO.Source.Archives.BIFKey {
-    public class BIFKeyTable: ASCIIOutputProtocol {
+    public class BIFKeyTable: ASCIIEncodingProtocol {
 
         private Dictionary<string, BIFArchive> archiveMap = new Dictionary<string, BIFArchive>();
 

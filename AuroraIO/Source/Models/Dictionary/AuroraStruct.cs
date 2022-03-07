@@ -8,7 +8,7 @@ using System.Text;
 
 namespace AuroraIO.Source.Models.Dictionary
 {
-    public class AuroraStruct: AuroraDataObject, AuroraStructType, ASCIIOutputProtocol {
+    public class AuroraStruct: AuroraDataObject, AuroraStructType, ASCIIEncodingProtocol {
 
         public override AuroraDataType dataType => AuroraDataType.Struct;
 

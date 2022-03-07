@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 
 namespace AuroraIO.Source.Models.Sound {
-    public class AuroraSoundSet: IEnumerable<uint>, ASCIIOutputProtocol {
+    public class AuroraSoundSet: IEnumerable<uint>, ASCIIEncodingProtocol {
 
         public enum Entry {
             BattleCry1 = 0,
