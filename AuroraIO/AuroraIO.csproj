@@ -57,7 +57,7 @@
     <Compile Include="Source\Archives\BIFKey\BIFKeyFile.cs" />
     <Compile Include="Source\Archives\BIFKey\BIFKeyTable.cs" />
     <Compile Include="Source\Archives\ERFRIM\AuroraArchive.cs" />
-    <Compile Include="Source\Coders\AuroraArchiveCoder.cs" />
+    <Compile Include="Source\Coders\ERFRIMCoder.cs" />
     <Compile Include="Source\Archives\ERFRIM\AuroraArchiveFile.cs" />
     <Compile Include="Source\Coders\AuroraBitConverter.cs" />
     <Compile Include="Source\Coders\GFFCoder.cs" />

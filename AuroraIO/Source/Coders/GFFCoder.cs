@@ -38,7 +38,7 @@ namespace AuroraIO.Source.Coders
         class GFFBuildInfo {
             public GFFStructInfo[] structInfoArray;
             public GFFFieldInfo[] fieldInfoArray;
-            public string[] labels;
+            public CResRef[] labels;
             public byte[] complexFieldData;
             public byte[] fieldIndicesArray;
             public byte[] listIndicesArray;
@@ -46,7 +46,7 @@ namespace AuroraIO.Source.Coders
             public GFFBuildInfo(
                 GFFStructInfo[] structInfoArray,
                 GFFFieldInfo[] fieldInfoArray,
-                string[] labels,
+                CResRef[] labels,
                 byte[] complexFieldData,
                 byte[] fieldIndicesArray,
                 byte[] listIndicesArray
@@ -64,7 +64,7 @@ namespace AuroraIO.Source.Coders
             AuroraResourceType fileType = Encoding.ASCII.GetString(byteArray, 0, 4).Replace(" ", "").ToLower();
             var baseStruct = getStructAtOffset(byteArray, 0);
             return AuroraDictionary.make(fileType.stringValue, dict => { 
-                foreach(KeyValuePair<string, AuroraDataObject> pair in baseStruct) {
+                foreach(KeyValuePair<CResRef, AuroraDataObject> pair in baseStruct) {
                     dict[pair.Key] = pair.Value;
                 }
             });
@@ -155,7 +155,7 @@ namespace AuroraIO.Source.Coders
 
             //Write Field Data
 
-            IndexMap<string> labelMap = info.labels.ToIndexMap();
+            IndexMap<CResRef> labelMap = info.labels.ToIndexMap();
 
             foreach (GFFFieldInfo fieldInfo in info.fieldInfoArray) {
                 data.AddRange(BitConverter.GetBytes((uint)fieldInfo.fieldType));
@@ -164,14 +164,8 @@ namespace AuroraIO.Source.Coders
             }   
 
             //Write Label Array
-            foreach(String label in info.labels) {
-                //Field label values must be padded to 16 length with 0's
-                String modifiedValue = label.Substring(0, Math.Min(label.Length, 16));
-                data.AddRange(ASCIIEncoding.ASCII.GetBytes(modifiedValue));
-
-                for (int i = modifiedValue.Length; i < 16; i++) {
-                    data.Add(0);
-                }     
+            foreach(CResRef label in info.labels) {
+                data.AddRange(AuroraBitConverter.GetBytes(label));
             }
 
             //Write Complex Field Data Block
@@ -195,7 +189,7 @@ namespace AuroraIO.Source.Coders
             UInt32 structFieldCount = BitConverter.ToUInt32(fileArray, startingOffset + 8);
             if (structFieldCount == 1) {
                 //Look into field Array
-                KeyValuePair<String, AuroraDataObject> field = getFieldAtOffset(fileArray, (int)dataOrDataOffset * 12);
+                KeyValuePair<CResRef, AuroraDataObject> field = getFieldAtOffset(fileArray, (int)dataOrDataOffset * 12);
                 return AuroraStruct.make(structType, dict => {
                     dict[field.Key] = field.Value;
                 });
@@ -205,7 +199,7 @@ namespace AuroraIO.Source.Coders
                     UInt32 fieldIndexOffset = dataOrDataOffset;
                     for (int j = 0; j < structFieldCount; j++) {
                         UInt32 startingIndex = BitConverter.ToUInt32(fileArray, (int)fieldIndexOffset + (int)fieldIndicesOffset);
-                        KeyValuePair<String, AuroraDataObject> fieldPair = getFieldAtOffset(fileArray, (int)startingIndex * 12);
+                        KeyValuePair<CResRef, AuroraDataObject> fieldPair = getFieldAtOffset(fileArray, (int)startingIndex * 12);
                         dict[fieldPair.Key] = fieldPair.Value;
                         fieldIndexOffset += 4;
                     }
@@ -213,7 +207,7 @@ namespace AuroraIO.Source.Coders
             }
         }
 
-        KeyValuePair<String, AuroraDataObject> getFieldAtOffset(byte[] fileArray, int offset) {
+        KeyValuePair<CResRef, AuroraDataObject> getFieldAtOffset(byte[] fileArray, int offset) {
             UInt32 fieldOffset = BitConverter.ToUInt32(fileArray, 16);
             UInt32 labelOffset = BitConverter.ToUInt32(fileArray, 24);
             UInt32 labelCount = BitConverter.ToUInt32(fileArray, 28);
@@ -227,7 +221,7 @@ namespace AuroraIO.Source.Coders
             int startOffset = (int)fieldOffset + offset;
             AuroraDataType fieldType = (AuroraDataType)BitConverter.ToUInt32(fileArray, startOffset);
             UInt32 labelIndex = BitConverter.ToUInt32(fileArray, startOffset + 4);
-            String label = Encoding.ASCII.GetString(fileArray, (int)labelOffset + (int)(labelIndex * 16), 16).Replace("\0", "");
+            CResRef label = Encoding.ASCII.GetString(fileArray, (int)labelOffset + (int)(labelIndex * 16), 16);
             UInt32 dataOrDataOffset = BitConverter.ToUInt32(fileArray, startOffset + 8);
 
             //Complex only which is an offset into the field data array
@@ -346,14 +340,14 @@ namespace AuroraIO.Source.Coders
                     dataObject = childStructs;
                     break;
             }
-            return new KeyValuePair<string, AuroraDataObject>(label, dataObject);
+            return new KeyValuePair<CResRef, AuroraDataObject>(label, dataObject);
         }
 
         private GFFBuildInfo processDictionary(AuroraDictionary dictionary) {
            
             List<GFFFieldInfo> fieldArray = new List<GFFFieldInfo>();
             List<GFFStructInfo> structArray = new List<GFFStructInfo>();
-            HashSet<String> labels = new HashSet<String>();
+            HashSet<CResRef> labels = new HashSet<CResRef>();
             Data complexFieldData = new Data();
             Data fieldIndicesArray = new Data();
             Data listIndicesArray = new Data();
@@ -379,7 +373,7 @@ namespace AuroraIO.Source.Coders
             AuroraStructType baseStruct,
             List<GFFStructInfo> structArray,
             List<GFFFieldInfo> fieldArray,
-            HashSet<String> labels,
+            HashSet<CResRef> labels,
             Data complexFieldData,
             Data fieldIndicesArray,
             Data listIndicesArray
@@ -404,7 +398,7 @@ namespace AuroraIO.Source.Coders
             
             List<int> localFieldIndices = new List<int>();
 
-            foreach (KeyValuePair<string, AuroraDataObject> pair in baseStruct.OrderBy(pair => pair.Key)) {
+            foreach (KeyValuePair<CResRef, AuroraDataObject> pair in baseStruct.OrderBy(pair => pair.Key)) {
                 //The field's index only has to be added to the fieldIndicesArray if it's part of a struct that has > 1 field
 
                 labels.Add(pair.Key);

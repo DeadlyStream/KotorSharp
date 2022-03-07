@@ -1,4 +1,5 @@
 ﻿using AuroraIO.Source.Coders;
+using AuroraIO.Source.Models.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,22 +11,22 @@ namespace AuroraIO.Source.Models.Dictionary
         public string type { get; private set; }
         public uint structType => uint.MaxValue;
 
-        private Dictionary<string, AuroraDataObject> internalDict = new Dictionary<string, AuroraDataObject>();
+        private Dictionary<CResRef, AuroraDataObject> internalDict = new Dictionary<CResRef, AuroraDataObject>();
 
-        AuroraDictionary(String type, Dictionary<string, AuroraDataObject> dictionary)
+        AuroraDictionary(String type, Dictionary<CResRef, AuroraDataObject> dictionary)
         {
             this.type = type;
             internalDict = dictionary;
         }
 
-        public static AuroraDictionary make(string type, Action<Dictionary<string, AuroraDataObject>> initBlock)
+        public static AuroraDictionary make(string type, Action<Dictionary<CResRef, AuroraDataObject>> initBlock)
         {
-            Dictionary<string, AuroraDataObject> dict = new Dictionary<string, AuroraDataObject>();
+            Dictionary<CResRef, AuroraDataObject> dict = new Dictionary<CResRef, AuroraDataObject>();
             initBlock(dict);
             return new AuroraDictionary(type, dict);
         }
 
-        public static AuroraDictionary make(Action<Dictionary<string, AuroraDataObject>> initBlock)
+        public static AuroraDictionary make(Action<Dictionary<CResRef, AuroraDataObject>> initBlock)
         {
             return AuroraDictionary.make("gff", initBlock);
         }
@@ -39,7 +40,7 @@ namespace AuroraIO.Source.Models.Dictionary
 
             internalDict[thisKey].setValueForKey(newKey, value);
         }
-        public AuroraDataObject this[String key]
+        public AuroraDataObject this[CResRef key]
         {
             get
             {
@@ -57,7 +58,7 @@ namespace AuroraIO.Source.Models.Dictionary
             sb.AppendFormat("type: {0}\n", type);
             sb.AppendFormat("fields:\n");
 
-            foreach (KeyValuePair<string, AuroraDataObject> pair in internalDict.OrderBy( pair => pair.Key ))
+            foreach (KeyValuePair<CResRef, AuroraDataObject> pair in internalDict.OrderBy( pair => pair.Key ))
             {
                 sb.AppendFormat("  {0}:\n", pair.Key);
                 sb.Append(pair.Value.asciiEncoding("    "));
@@ -65,7 +66,7 @@ namespace AuroraIO.Source.Models.Dictionary
             return sb.ToString();
         }
 
-        public IEnumerator<KeyValuePair<string, AuroraDataObject>> GetEnumerator()
+        public IEnumerator<KeyValuePair<CResRef, AuroraDataObject>> GetEnumerator()
         {
             return internalDict.GetEnumerator();
         }

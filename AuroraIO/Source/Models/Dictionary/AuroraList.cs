@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AuroraIO.Source.Models.Base;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -52,7 +53,7 @@ namespace AuroraIO.Source.Models.Dictionary
                 sb.AppendFormat("{0}  - struct:\n", indent);
                 sb.AppendFormat("{0}    id: {1}\n", indent, arStruct.id);
                 sb.AppendFormat("{0}    fields:\n", indent);
-                foreach (KeyValuePair<string, AuroraDataObject> pair in arStruct)
+                foreach (KeyValuePair<CResRef, AuroraDataObject> pair in arStruct)
                 {
                     sb.AppendFormat("{0}      {1}:\n", indent, pair.Key);
                     sb.Append(pair.Value.asciiEncoding(String.Format("{0}        ", indent)));

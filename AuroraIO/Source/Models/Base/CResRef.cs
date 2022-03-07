@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 
 namespace AuroraIO.Source.Models.Base {
-    public struct CResRef {
+    public struct CResRef: IComparable {
 
         public int Length => value.Length;
 
@@ -23,6 +23,15 @@ namespace AuroraIO.Source.Models.Base {
 
         public override string ToString() {
             return value;
+        }
+
+        public int CompareTo(object obj) {
+            if (obj is CResRef) {
+                CResRef other = (CResRef)obj;
+                return value.CompareTo(other.value);
+            } else {
+                return 1;
+            }
         }
     }
 }
