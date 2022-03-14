@@ -13,6 +13,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace KPatcher.Patching.Parsing {
+    /*
     public static class TSLPatcherModParsingExtensions {
 
         static class Constants {
@@ -156,7 +157,7 @@ namespace KPatcher.Patching.Parsing {
             ModFileInstallSet[] installCommands = parser.parseEntriesForInstallList(fileText);
 
             return installCommands;
-/*            TP2daCommand[] _2daCommands = parseEntriesFor2daList(fileText);
+            TP2daCommand[] _2daCommands = parseEntriesFor2daList(fileText);
             TPGFFCommandSet[] gffCommands = parseEntriesForGFFList(fileText);
             TPCompileCommand[] scriptCompileCommands = parseEntriesForScriptList(fileText);
             TPSSFCommand[] ssfCommands = parseEntriesForSSFList(fileText);
@@ -168,7 +169,7 @@ namespace KPatcher.Patching.Parsing {
                 _2daCommands,
                 gffCommands,
                 scriptCompileCommands,
-                ssfCommands);*/
+                ssfCommands)
         }
 
         private static Dictionary<string, string> parseEntriesForTLKList(this ModParser parser, string fileText) {
@@ -433,6 +434,6 @@ namespace KPatcher.Patching.Parsing {
                 shortenedText = shortenedText.Remove(0, termMatch.Length);
             }
             return map;
-        }*/
-    }
+        }
+    }*/
 }

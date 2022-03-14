@@ -44,7 +44,7 @@ namespace AuroraIO.Source.Archives.BIFKey {
             return sb.ToString();
         }
 
-        public AuroraFile extract(string fileName) {
+        public AuroraFileEntry extract(string fileName) {
             if (!isLoaded) Load();
 
             int variableResourceCount = (int)BitConverter.ToUInt32(stream.ReadAtOffset(8, 4), 0);
@@ -66,14 +66,14 @@ namespace AuroraIO.Source.Archives.BIFKey {
                     stream.Seek(fileDataOffset, SeekOrigin.Begin);
                     stream.Read(filedata, 0, fileDataSize);
 
-                    return new AuroraFile(fileName, filedata);
+                    return new AuroraFileEntry(fileName, filedata);
                 }
             }
 
             return null;
         }
 
-        public AuroraFile[] extractAll() {
+        public AuroraFileEntry[] extractAll() {
             if (!isLoaded) Load();
 
             int variableResourceCount = (int)BitConverter.ToUInt32(stream.ReadAtOffset(8, 4), 0);
@@ -99,7 +99,7 @@ namespace AuroraIO.Source.Archives.BIFKey {
             return fileMap.ToDictionary(pair => pair.Key, pair => {
                 return loadedFiles[pair.Value];
             }).Select(pair => {
-                return new AuroraFile(pair.Key, pair.Value);
+                return new AuroraFileEntry(pair.Key, pair.Value);
             }).ToArray();
         }
 

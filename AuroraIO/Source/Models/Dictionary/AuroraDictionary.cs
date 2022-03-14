@@ -1,4 +1,5 @@
-﻿using AuroraIO.Source.Coders;
+﻿using AuroraIO.Models.Base;
+using AuroraIO.Source.Coders;
 using AuroraIO.Source.Models.Base;
 using System;
 using System.Collections.Generic;
@@ -7,7 +8,7 @@ using System.Text;
 
 namespace AuroraIO.Source.Models.Dictionary
 {
-    public class AuroraDictionary : AuroraStructType, ASCIIEncodingProtocol, SetKeyValueInterface {
+    public class AuroraDictionary : AuroraStructType, ASCIIEncodingProtocol {
         public string type { get; private set; }
         public uint structType => uint.MaxValue;
 
@@ -40,7 +41,7 @@ namespace AuroraIO.Source.Models.Dictionary
 
             internalDict[thisKey].setValueForKey(newKey, value);
         }
-        public AuroraDataObject this[CResRef key]
+        public AuroraDataObject this[String key]
         {
             get
             {

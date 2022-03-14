@@ -52,7 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Source\Archives\AuroraFile.cs" />
+    <Compile Include="Source\Archives\AuroraFileEntry.cs" />
     <Compile Include="Source\Archives\BIFKey\BIFArchive.cs" />
     <Compile Include="Source\Archives\BIFKey\BIFKeyFile.cs" />
     <Compile Include="Source\Archives\BIFKey\BIFKeyTable.cs" />
@@ -63,7 +63,6 @@
     <Compile Include="Source\Coders\GFFCoder.cs" />
     <Compile Include="Source\Coders\Data.cs" />
     <Compile Include="Source\Coders\SSFCoder.cs" />
-    <Compile Include="Source\Common\AuroraResourceLoader.cs" />
     <Compile Include="Source\Coders\ASCIICoder.cs" />
     <Compile Include="Source\Extensions\FileStreamExtensions.cs" />
     <Compile Include="Source\Extensions\Extensions.cs" />

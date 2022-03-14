@@ -60,7 +60,7 @@ namespace AuroraIOTests.Source {
         [TestMethod]
         public void testAddEntry() {
             var archive = AuroraArchiveFile.Load(testERFFile());
-            var file = new AuroraFile("existingFile3.txt", Encoding.ASCII.GetBytes("This is an added file"));
+            var file = new AuroraFileEntry("existingFile3.txt", Encoding.ASCII.GetBytes("This is an added file"));
             archive.Add(file);
 
             Snapshot.Verify(archive);

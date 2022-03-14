@@ -1,15 +1,14 @@
 ﻿using AuroraIO.Source.Coders;
-using AuroraIO.Source.Models.Dictionary;
-using AuroraIO.Source.Models.Table;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Reflection;
+using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace AuroraIOTests.Source.Asserts {
+namespace KPatcherTests.Source {
     public static class Snapshot {
 
         static string testFileBaseName(string className, string methodName) {
@@ -18,7 +17,7 @@ namespace AuroraIOTests.Source.Asserts {
                 String.Format("{0}\\{1}", Path.GetFileNameWithoutExtension(className), methodName));
         }
 
-        static string testFileOutputName(string className,  string methodName) {
+        static string testFileOutputName(string className, string methodName) {
             return Path.Combine(AppDomain.CurrentDomain.BaseDirectory,
                 "Artifacts",
                 String.Format("{0}\\{1}_actual", Path.GetFileNameWithoutExtension(className), methodName));
@@ -60,24 +59,12 @@ namespace AuroraIOTests.Source.Asserts {
             Verify(new ASCIICoder().encode(actual), record, className, methodName);
         }
 
-        public static void Verify(byte[] actual, bool record = false, [CallerFilePath] string className = "", [CallerMemberName] string methodName = "") {
-            var expectedPath = testFileBaseName(className, methodName);
-            var actualPath = testFileOutputName(className, methodName);
+        public static void VerifyDirectory(string path, bool record = false, [CallerFilePath] string className = "", [CallerMemberName] string methodName = "") {
+            string[] allFiles = Directory.GetFiles(path, "*.*", SearchOption.AllDirectories).Select(filePath => {
+                return Path.GetRelativePath(path, filePath);
+            }).ToArray();
 
-            if (record) {
-                if (!Directory.Exists(Path.GetDirectoryName(expectedPath))) {
-                    Directory.CreateDirectory(Path.GetDirectoryName(expectedPath));
-                }
-                File.WriteAllBytes(expectedPath, actual);
-            } else {
-                if (!Directory.Exists(Path.GetDirectoryName(actualPath))) {
-                    Directory.CreateDirectory(Path.GetDirectoryName(actualPath));
-                }
-                File.WriteAllBytes(actualPath, actual);
-            }
-            
-            var expected = File.ReadAllBytes(expectedPath);
-            Assert.AreEqual(Encoding.ASCII.GetString(expected), Encoding.ASCII.GetString(actual));
+            Verify(String.Join('\n', allFiles), record, className, methodName);
         }
 
         public static void Verify(String actual, bool record = false, [CallerFilePath] string className = "", [CallerMemberName] string methodName = "") {
@@ -95,7 +82,7 @@ namespace AuroraIOTests.Source.Asserts {
                 }
                 File.WriteAllText(actualPath, actual);
             }
-            
+
             var expected = File.ReadAllText(expectedPath);
             Assert.AreEqual(expected, actual);
         }

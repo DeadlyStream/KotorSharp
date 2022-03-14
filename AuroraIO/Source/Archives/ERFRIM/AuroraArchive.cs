@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 
 namespace AuroraIO.Source.Archives.ERFRIM {
-    public class AuroraArchive: IEnumerable<AuroraFile>, ASCIIEncodingProtocol {
+    public class AuroraArchive: IEnumerable<AuroraFileEntry>, ASCIIEncodingProtocol {
         public struct Format {
             public static Format ERF = "ERF";
             public static Format HAK = "HAK";
@@ -35,10 +35,10 @@ namespace AuroraIO.Source.Archives.ERFRIM {
         }
 
         public class Entry {
-            public AuroraFile file;
+            public AuroraFileEntry file;
             Action deleteBlock;
             Action<byte[]> updateEntryBlock;
-            internal Entry(AuroraFile file, Action<byte[]> updateEntryBlock, Action deleteBlock) {
+            internal Entry(AuroraFileEntry file, Action<byte[]> updateEntryBlock, Action deleteBlock) {
                 this.file = file;
                 this.deleteBlock = deleteBlock;
                 this.updateEntryBlock = updateEntryBlock;
@@ -69,13 +69,13 @@ namespace AuroraIO.Source.Archives.ERFRIM {
         private Dictionary<AuroraResourceName, byte[]> fileMap = new Dictionary<AuroraResourceName, byte[]>();
         public readonly Format format;
 
-        public Entry Add(AuroraFile file) {
+        public Entry Add(AuroraFileEntry file) {
             fileMap[file.name] = file.data;
             return Get(file.name);
         }
 
         public Entry Get(string key) {
-            AuroraFile file = new AuroraFile(key, fileMap[key]);
+            AuroraFileEntry file = new AuroraFileEntry(key, fileMap[key]);
             return new Entry(file, (newData) => {
                 fileMap[file.name] = newData;
             },() => {
@@ -114,10 +114,10 @@ namespace AuroraIO.Source.Archives.ERFRIM {
             return sb.ToString();
         }
 
-        private List<AuroraFile> files => fileMap.Select(pair => new AuroraFile(pair.Key, pair.Value)).ToList();
+        private List<AuroraFileEntry> files => fileMap.Select(pair => new AuroraFileEntry(pair.Key, pair.Value)).ToList();
 
-        public IEnumerator<AuroraFile> GetEnumerator() {
-            return ((IEnumerable<AuroraFile>)files).GetEnumerator();
+        public IEnumerator<AuroraFileEntry> GetEnumerator() {
+            return ((IEnumerable<AuroraFileEntry>)files).GetEnumerator();
         }
 
         IEnumerator IEnumerable.GetEnumerator() {

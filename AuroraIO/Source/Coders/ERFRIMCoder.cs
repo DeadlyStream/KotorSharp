@@ -164,7 +164,7 @@ namespace AuroraIO.Source.Coders {
 
             Data fileHeap = new Data();
             int index = 0;
-            foreach (AuroraFile file in archive) {
+            foreach (AuroraFileEntry file in archive) {
                 data.AddRange(AuroraBitConverter.GetBytes(file.name.resref));
                 data.AddRange(BitConverter.GetBytes((uint)file.name.resourceType.id));
                 data.AddRange(BitConverter.GetBytes((uint)index++));
@@ -236,7 +236,7 @@ namespace AuroraIO.Source.Coders {
             //Write Key List
 
             uint resID = 0;
-            foreach (AuroraFile file in archive) {
+            foreach (AuroraFileEntry file in archive) {
                 data.AddRange(AuroraBitConverter.GetBytes(file.name.resref));
                 data.AddRange(BitConverter.GetBytes(resID++));
                 data.AddRange(BitConverter.GetBytes((UInt16)file.name.resourceType.id));
@@ -246,7 +246,7 @@ namespace AuroraIO.Source.Coders {
             //Write Resource List
             Data resourceHeap = new Data();
             int startingResHeapOffset = (entryCount * 8) + resourceListOffset;
-            foreach (AuroraFile file in archive) {
+            foreach (AuroraFileEntry file in archive) {
                 int offset = resourceHeap.Count + startingResHeapOffset;
                 data.AddRange(BitConverter.GetBytes((uint)offset));
                 data.AddRange(BitConverter.GetBytes((uint)file.data.Length));

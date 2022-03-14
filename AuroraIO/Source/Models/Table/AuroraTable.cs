@@ -1,4 +1,6 @@
-﻿using AuroraIO.Source.Coders;
+﻿using AuroraIO.Models.Base;
+using AuroraIO.Source.Coders;
+using AuroraIO.Source.Models.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;

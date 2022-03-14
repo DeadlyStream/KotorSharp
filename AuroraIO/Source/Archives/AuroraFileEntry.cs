@@ -48,16 +48,16 @@ namespace AuroraIO.Source.Archives {
         }
     }
 
-    public class AuroraFile: ASCIIEncodingProtocol {
+    public class AuroraFileEntry: ASCIIEncodingProtocol {
         public AuroraResourceName name;
         public byte[] data;
 
-        public AuroraFile(string name, byte[] data) {
+        public AuroraFileEntry(string name, byte[] data) {
             this.name = name;
             this.data = data;
         }
 
-        public AuroraFile(AuroraResourceName name, byte[] data) {
+        public AuroraFileEntry(AuroraResourceName name, byte[] data) {
             this.name = name;
             this.data = data;
         }
