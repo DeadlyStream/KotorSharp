@@ -12,7 +12,7 @@ namespace AuroraIO.Source.Models.Dictionary {
         public abstract AuroraDataType dataType { get; }
 
         public abstract string asciiEncoding(string indent = "");
-        public abstract void setValueForKey(string key, string value);
+        public abstract void setValueForKey(KeyPath keyPath, string value);
 
         public static implicit operator AuroraDataObject(Int32 value)
         {
@@ -101,7 +101,7 @@ namespace AuroraIO.Source.Models.Dictionary {
             this.value = value;
         }
 
-        public override void setValueForKey(string key, string value)
+        public override void setValueForKey(KeyPath keyPath, string value)
         {
             this.value = Convert.ToByte(value);
         }
@@ -132,7 +132,7 @@ namespace AuroraIO.Source.Models.Dictionary {
         {
             this.value = value;
         }
-        public override void setValueForKey(string key, string value)
+        public override void setValueForKey(KeyPath keyPath, string value)
         {
             this.value = Convert.ToChar(value);
         }
@@ -165,9 +165,13 @@ namespace AuroraIO.Source.Models.Dictionary {
             this.value = value;
         }
 
-        public override void setValueForKey(string key, string value)
+        public override void setValueForKey(KeyPath keyPath, string value)
         {
-            this.value = Convert.ToUInt16(value);
+            try {
+                this.value = Convert.ToUInt16(value);
+            } catch(Exception e) {
+                Console.WriteLine(e.Message);
+            }
         }
 
         public override string asciiEncoding(string indent = "")
@@ -198,7 +202,7 @@ namespace AuroraIO.Source.Models.Dictionary {
             this.value = value;
         }
 
-        public override void setValueForKey(string key, string value)
+        public override void setValueForKey(KeyPath keyPath, string value)
         {
             this.value = Convert.ToInt16(value);
         }
@@ -231,7 +235,7 @@ namespace AuroraIO.Source.Models.Dictionary {
             this.value = value;
         }
 
-        public override void setValueForKey(string key, string value)
+        public override void setValueForKey(KeyPath keyPath, string value)
         {
             this.value = Convert.ToUInt32(value);
         }
@@ -263,7 +267,7 @@ namespace AuroraIO.Source.Models.Dictionary {
         {
             this.value = value;
         }
-        public override void setValueForKey(string key, string value)
+        public override void setValueForKey(KeyPath keyPath, string value)
         {
             this.value = Convert.ToInt32(value);
         }
@@ -294,7 +298,7 @@ namespace AuroraIO.Source.Models.Dictionary {
         {
             this.value = value;
         }
-        public override void setValueForKey(string key, string value)
+        public override void setValueForKey(KeyPath keyPath, string value)
         {
             this.value = Convert.ToUInt64(value);
         }
@@ -325,7 +329,7 @@ namespace AuroraIO.Source.Models.Dictionary {
         {
             this.value = value;
         }
-        public override void setValueForKey(string key, string value)
+        public override void setValueForKey(KeyPath keyPath, string value)
         {
             this.value = Convert.ToInt64(value);
         }
@@ -357,7 +361,7 @@ namespace AuroraIO.Source.Models.Dictionary {
         {
             this.value = value;
         }
-        public override void setValueForKey(string key, string value)
+        public override void setValueForKey(KeyPath keyPath, string value)
         {
             this.value = Convert.ToSingle(value);
         }
@@ -388,7 +392,7 @@ namespace AuroraIO.Source.Models.Dictionary {
         {
             this.value = value;
         }
-        public override void setValueForKey(string key, string value)
+        public override void setValueForKey(KeyPath keyPath, string value)
         {
             this.value = Convert.ToDouble(value);
         }
@@ -420,7 +424,7 @@ namespace AuroraIO.Source.Models.Dictionary {
         {
             this.value = value;
         }
-        public override void setValueForKey(string key, string value)
+        public override void setValueForKey(KeyPath keyPath, string value)
         {
             this.value = value;
         }
@@ -457,7 +461,7 @@ namespace AuroraIO.Source.Models.Dictionary {
             return new AuroraResref(value.Substring(0, Math.Min(value.Count(), 16)));
         }
 
-        public override void setValueForKey(string key, string value)
+        public override void setValueForKey(KeyPath keyPath, string value)
         {
             this.value = value.Substring(0, Math.Min(value.Count(), 16));
         }
@@ -523,12 +527,12 @@ namespace AuroraIO.Source.Models.Dictionary {
             return AuroraLocalizedString.make(strref, dict => { });
         }
 
-        public override void setValueForKey(string key, string value)
+        public override void setValueForKey(KeyPath keyPath, string value)
         {
-            switch (key)
+            switch (keyPath)
             {
                 case Keys.Lang:
-                    localizedString[CExoLanguageFromString(key)] = value;
+                    localizedString[CExoLanguageFromString(keyPath)] = value;
                     break;
                 case Keys.Strref:
                     this.strref = Convert.ToUInt32(value);
@@ -587,7 +591,7 @@ namespace AuroraIO.Source.Models.Dictionary {
             this.value = value;
         }
 
-        public override void setValueForKey(string key, string value)
+        public override void setValueForKey(KeyPath keyPath, string value)
         {
             this.value = Enumerable.Range(0, value.Length)
                     .Where(x => x % 2 == 0)
@@ -628,7 +632,7 @@ namespace AuroraIO.Source.Models.Dictionary {
             this.w = w;
         }
 
-        public override void setValueForKey(string key, string value)
+        public override void setValueForKey(KeyPath keyPath, string value)
         {
             string[] values = value.Split('|');
             this.w = Convert.ToSingle(values.ElementAtOrDefault(0));
@@ -676,7 +680,7 @@ namespace AuroraIO.Source.Models.Dictionary {
             this.y = y;
             this.z = z;
         }
-        public override void setValueForKey(string key, string value)
+        public override void setValueForKey(KeyPath keyPath, string value)
         {
             string[] values = value.Split('|');
             this.x = Convert.ToSingle(values.ElementAtOrDefault(0));
@@ -723,7 +727,7 @@ namespace AuroraIO.Source.Models.Dictionary {
             return new AuroraStrRef(id);
         }
 
-        public override void setValueForKey(string key, string value)
+        public override void setValueForKey(KeyPath keyPath, string value)
         {
             this.value = Convert.ToUInt64(value);
         }

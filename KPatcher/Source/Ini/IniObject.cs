@@ -7,10 +7,10 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace KPatcher.Source.Ini {
-    internal class IniObject: IDictionary<string, IniSection> {
+    public class IniObject: IDictionary<string, IniSection> {
         private Dictionary<string, IniSection> internalDict = new Dictionary<string, IniSection>();
 
-        public IniSection this[string key] { get => ((IDictionary<string, IniSection>)internalDict)[key]; set => ((IDictionary<string, IniSection>)internalDict)[key] = value; }
+        public IniSection this[string key] { get => internalDict.ContainsKey(key) ? internalDict[key] : new IniSection(); set => internalDict[key] = value; }
 
         public ICollection<string> Keys => ((IDictionary<string, IniSection>)internalDict).Keys;
 

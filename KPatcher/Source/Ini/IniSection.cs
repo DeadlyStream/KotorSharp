@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace KPatcher.Source.Ini {
-    internal class IniSection: IDictionary<string, string> {
+    public class IniSection: IDictionary<string, string> {
         private Dictionary<string, string> values = new Dictionary<string, string>();
 
         public IniSection() {}

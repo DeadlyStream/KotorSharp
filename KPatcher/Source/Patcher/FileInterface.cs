@@ -12,7 +12,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace KPatcher.Source.Patcher {
-    internal abstract class FileInterface {
+    public abstract class FileInterface {
+
+        public abstract bool FileExists(string filePath);
         public abstract byte[] Read(string filePath);
 
         public abstract void Write(string filePath, byte[] bytes, bool overwrite = false);
@@ -64,7 +66,12 @@ namespace KPatcher.Source.Patcher {
         }
     }
 
-    internal class DefaultFileInterface : FileInterface {
+    public class DefaultFileInterface : FileInterface {
+
+        public override bool FileExists(string filePath) {
+            return File.Exists(filePath);
+        }
+
         public override byte[] Read(string filePath) {
             return File.ReadAllBytes(filePath);
         }
@@ -78,9 +85,7 @@ namespace KPatcher.Source.Patcher {
         }
 
         public override void WriteText(string filePath, string text, bool overwrite = false) {
-            if (overwrite) {
-                File.WriteAllText(filePath, text);
-            }  
+            File.WriteAllText(filePath, text);  
         }
 
         public override string ReadText(string filePath) {
@@ -88,8 +93,16 @@ namespace KPatcher.Source.Patcher {
         }
     }
 
-    internal class VirtualFileInterface: FileInterface {
+    public class VirtualFileInterface: FileInterface, ASCIIEncodingProtocol {
         public Dictionary<string, byte[]> fileMap = new Dictionary<string, byte[]>();
+
+        public override bool FileExists(string filePath) {
+            if (fileMap.ContainsKey(filePath)) {
+                return true;
+            } else {
+                return File.Exists(filePath);
+            }
+        }
         public override byte[] Read(string filePath) {
             if (fileMap.ContainsKey(filePath)) {
                 return fileMap[filePath];
@@ -112,6 +125,17 @@ namespace KPatcher.Source.Patcher {
 
         public override void WriteText(string filePath, string text, bool overwrite = false) {
             File.WriteAllText(filePath, text);
+        }
+
+        public string asciiEncoding(string indent = "") {
+            StringBuilder sb = new StringBuilder();
+
+            foreach (var pair in fileMap) {
+                sb.AppendFormat("-\n");
+                sb.AppendFormat("  path: {0}\n", pair.Key);
+                sb.AppendFormat("  data: {0}\n", pair.Value);
+            }
+            return sb.ToString();
         }
     }
 }

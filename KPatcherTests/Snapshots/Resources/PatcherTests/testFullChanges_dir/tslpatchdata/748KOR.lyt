@@ -1,0 +1,9 @@
+#MAXLAYOUT ASCII
+filedependancy 748KOR.max
+beginlayout
+   roomcount 1
+      748KORa 0.0 0.0 0.0
+   trackcount 0
+   obstaclecount 0
+   doorhookcount 0
+donelayout

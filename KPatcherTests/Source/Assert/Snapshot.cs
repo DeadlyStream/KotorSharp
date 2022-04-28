@@ -31,6 +31,20 @@ namespace KPatcherTests.Source {
             }
         }
 
+        public static string PatchDataDirectory([CallerMemberName] string methodName = "", [CallerFilePath] string className = "") {
+            return Path.Combine(Bundle.SnapshotDirectory,
+                "Resources",
+                String.Format("{0}\\{1}_dir", Path.GetFileNameWithoutExtension(className), methodName),
+                "tslpatchdata",
+                "changes.ini");
+        }
+
+        public static string RootGameDirectory([CallerMemberName] string methodName = "", [CallerFilePath] string className = "") {
+            return Path.Combine(Bundle.SnapshotDirectory,
+                "Resources",
+                "gameRoot");
+        }
+
         public static string ResourceDirectory([CallerMemberName] string methodName = "", [CallerFilePath] string className = "") {
             return Path.Combine(Bundle.SnapshotDirectory,
                 "Resources",

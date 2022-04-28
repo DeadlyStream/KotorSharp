@@ -4,4 +4,4 @@ using KPatcher.Source.Patcher;
 
 Console.WriteLine("Hello, World!");
 
-Patcher.Run("tslpatchdata/changes.ini", "gamedir", 0, false);
+Patcher.Run("tslpatchdata/changes.ini", "gamedir", new DefaultFileInterface(), 0);

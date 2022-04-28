@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace KPatcher.Source.Patcher {
-    internal class TokenRegistry: IDictionary<string, string> {
+    public class TokenRegistry: IDictionary<string, string> {
         private Dictionary<string, string> internalDict = new Dictionary<string, string>();
 
         public string this[string key] { get => ((IDictionary<string, string>)internalDict)[key]; set => ((IDictionary<string, string>)internalDict)[key] = value; }

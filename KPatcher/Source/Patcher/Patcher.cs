@@ -4,22 +4,26 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using AuroraIO.Source.Archives;
+using AuroraIO.Source.Coders;
+using AuroraIO.Source.Models.Dictionary;
 using AuroraIO.Source.Models.TLK;
 using KPatcher.Source.Extensions;
 using KPatcher.Source.Ini;
 
 namespace KPatcher.Source.Patcher {
-    internal class Patcher {
+    public class Patcher {
         public struct PatchInfo {
-            public string patchDataPath;
-            public string gameRootDirectory;
-            public TokenRegistry tokenRegistry;
-            public IniObject changesIni;
-            public PatchInfo(string patchDataPath,
+            internal string patchDataPath;
+            internal string gameRootDirectory;
+            internal TokenRegistry tokenRegistry;
+            internal IniObject changesIni;
+            internal PatchInfo(
+                string patchDataPath,
                 string gameRootDirectory,
                 TokenRegistry tokenRegistry,
                 IniObject changesIni
-                ) {
+            ) {
                 this.patchDataPath = patchDataPath;
                 this.gameRootDirectory = gameRootDirectory;
                 this.tokenRegistry = tokenRegistry;
@@ -27,9 +31,10 @@ namespace KPatcher.Source.Patcher {
             }
         }
 
-        public static void Run(string changesPath, string gameDirectory, int logLevel, bool dryRun) {
-
-            var baseDir = AppDomain.CurrentDomain.BaseDirectory;
+        public static void Run(string changesPath,
+            string gameDirectory,
+            FileInterface fileInterface,
+            int logLevel = 0) {
 
             var changesIni = new IniParser().parse(changesPath);
 
@@ -39,18 +44,16 @@ namespace KPatcher.Source.Patcher {
                 new TokenRegistry(),
                 changesIni);
 
-            FileInterface fileInterface = new VirtualFileInterface();
-
             ProcessTLKList(patchInfo, fileInterface);
-            ProcessInstallList(patchInfo, fileInterface);
             Process2DAList(patchInfo, fileInterface);
+            ProcessInstallList(patchInfo, fileInterface); 
             ProcessGFFList(patchInfo, fileInterface);
             ProcessCompileList(patchInfo, fileInterface);
             ProcessSSFList(patchInfo, fileInterface);
             return;
         }
 
-        private static void ProcessTLKList(PatchInfo patchInfo, FileInterface fileInterface) {
+        public static void ProcessTLKList(PatchInfo patchInfo, FileInterface fileInterface) {
             var appendTLK = fileInterface.ReadTLK(Path.Combine(patchInfo.patchDataPath, "append.tlk"));
             var dialogTLK = fileInterface.ReadTLK(Path.Combine(patchInfo.gameRootDirectory, "dialog.tlk"));
 
@@ -64,35 +67,58 @@ namespace KPatcher.Source.Patcher {
             foreach (var pair in patchInfo.changesIni["InstallList"]) {
                 string directory = pair.Value;
                 Console.WriteLine(String.Format("Installing {0}", pair.Value));
-                if (Regex.IsMatch(directory, @"\.(mod|hak|rim|erf|sav)$")) {
-                    var archiveFilePath = Path.Combine(patchInfo.gameRootDirectory, directory);
-                    var archive = fileInterface.ReadArchive(archiveFilePath);
-                    InstallPatcher.ProcessArchiveInstall(archive, patchInfo.changesIni[pair.Key], patchInfo);
-                    fileInterface.WriteArchive(archiveFilePath, archive);
+
+                if (isArchive(directory)) {
+                    try {
+                        var archiveFilePath = Path.Combine(patchInfo.gameRootDirectory, directory);
+                        var archive = fileInterface.ReadArchive(archiveFilePath);
+
+                        foreach (var fileCommandPair in patchInfo.changesIni[pair.Key]) {
+                            try {
+                                bool overwrite = pair.Key.Contains("Replace") ? true : false;
+                                var file = fileInterface.Read(Path.Combine(patchInfo.patchDataPath, fileCommandPair.Value));
+                                archive.Add(new AuroraFileEntry(fileCommandPair.Value, file));
+                            } catch (Exception e) {
+                                Console.WriteLine(e.Message);
+                            }
+                        }
+
+                        fileInterface.WriteArchive(archiveFilePath, archive);
+                    } catch (Exception e) {
+                        Console.WriteLine(e.Message);
+                    }
                 } else {
                     foreach(var fileCommandPair in patchInfo.changesIni[pair.Key]) {
-                        bool overwrite = pair.Key.Contains("Replace") ? true : false;
-                        fileInterface.Copy(
-                            Path.Combine(patchInfo.patchDataPath, fileCommandPair.Value),
-                            Path.Combine(patchInfo.gameRootDirectory, directory, fileCommandPair.Value),
-                            overwrite
-                        );
+                        try {
+                            bool overwrite = pair.Key.Contains("Replace") ? true : false;
+                            fileInterface.Copy(
+                                Path.Combine(patchInfo.patchDataPath, fileCommandPair.Value),
+                                Path.Combine(patchInfo.gameRootDirectory, directory, fileCommandPair.Value),
+                                overwrite
+                            );
+                        } catch (Exception e) {
+                            Console.WriteLine(e.Message);
+                        }
                     }
                 }
             }
         }
 
         public static void Process2DAList(PatchInfo patchInfo, FileInterface fileInterface) {
-            foreach (var pair in patchInfo.changesIni["2DAList"]) {
-                Console.WriteLine(String.Format("Patching {0}", pair.Value));
-                var table = fileInterface.Read2DA(Path.Combine(patchInfo.patchDataPath, pair.Value));
-                foreach (var rowPair in patchInfo.changesIni[pair.Value]) {
-                    if (Regex.IsMatch(rowPair.Key, @"ChangeRow")) {
-                        _2DAPatcher.ProcessChangeRow(table, patchInfo.changesIni[rowPair.Value], patchInfo);
-                    } else if (Regex.IsMatch(rowPair.Key, @"AddRow")) {
-                        _2DAPatcher.ProcessAddRow(table, patchInfo.changesIni[rowPair.Value], patchInfo);
+            foreach (var _2daFilePair in patchInfo.changesIni["2DAList"]) {
+                Console.WriteLine(String.Format("Patching {0}", _2daFilePair.Value));
+                var table = fileInterface.Read2DA(Path.Combine(patchInfo.patchDataPath, _2daFilePair.Value));
+
+                foreach (var rowInstructionPair in patchInfo.changesIni[_2daFilePair.Value]) {
+                    var rowValuePairs = patchInfo.changesIni[rowInstructionPair.Value];
+                    if (Regex.IsMatch(rowInstructionPair.Key, @"ChangeRow")) {
+                        _2DAPatcher.ProcessChangeRow(table, rowValuePairs, patchInfo);
+                    } else if (Regex.IsMatch(rowInstructionPair.Key, @"AddRow")) {
+                        _2DAPatcher.ProcessAddRow(table, rowValuePairs, patchInfo);
                     }
-                } 
+                }
+
+                fileInterface.Write2DA(Path.Combine(patchInfo.gameRootDirectory, "override", _2daFilePair.Value), table);
             }
         }
 
@@ -100,20 +126,38 @@ namespace KPatcher.Source.Patcher {
             foreach (var pair in patchInfo.changesIni["GFFList"]) {
 
                 Console.WriteLine(String.Format("Patching {0}", pair.Value));
-                var dict = fileInterface.ReadGFF(Path.Combine(patchInfo.patchDataPath, pair.Value));
+                try {
+                    var changePairs = patchInfo.changesIni[pair.Value];
+                    var destination = changePairs.ContainsKey("!Destination") ? changePairs["!Destination"] : "override";
+                    var replaceFile = changePairs.ContainsKey("!ReplaceFile") ? changePairs["!ReplaceFile"] == "1" : false;
 
-                var changePairs = patchInfo.changesIni[pair.Value];
+                    if (isArchive(destination)) {
+                        var archiveFilePath = Path.Combine(patchInfo.gameRootDirectory, destination);
+                        var archive = fileInterface.ReadArchive(archiveFilePath);
+                        var dict = new GFFCoder().decode(archive.Get(pair.Value).file.data);
 
-                foreach (var rowPair in changePairs) {
-                    if (Regex.IsMatch(rowPair.Key, @"AddField")) {
-                        GFFPatcher.ProcessAddField(dict, patchInfo.changesIni[rowPair.Value], patchInfo.tokenRegistry);
-                    } else if (Regex.IsMatch(rowPair.Key, @"!Destination")) {
-                        GFFPatcher.ProcessSetKeyPath(dict, rowPair.Key, rowPair.Value, patchInfo.tokenRegistry);
-                    }   
+                        GFFPatcher.ProcessGFF(dict, changePairs, patchInfo);
+
+                        fileInterface.WriteArchive(archiveFilePath, archive);
+                    } else {
+
+                        var filePath = Path.Combine(patchInfo.gameRootDirectory, destination, pair.Value);
+                        var sourceFilePath = Path.Combine(patchInfo.patchDataPath, pair.Value);
+                        if (!fileInterface.FileExists(filePath)) {
+                            fileInterface.Copy(sourceFilePath, filePath);
+                        }
+
+                        AuroraDictionary dict = fileInterface.ReadGFF(filePath);
+
+                        GFFPatcher.ProcessGFF(dict, changePairs, patchInfo);
+
+                        fileInterface.WriteGFF(filePath, dict);
+                    }
+                 
+                    //Write file
+                } catch (Exception e) {
+                    Console.WriteLine(e.Message);
                 }
-
-                var destination = changePairs.ContainsKey("!Destination") ? changePairs["!Destination"] : "override";
-                //Write file
             }
         }
 
@@ -125,13 +169,24 @@ namespace KPatcher.Source.Patcher {
 
                 NSSPatcher.ProcessScriptSource(nssScriptSource, patchInfo);
 
-                var destinationDirectory = "Override";
+                var destination = "Override";
                 patchInfo.changesIni.SafeGetKey(pair.Value, (fileSection) => {
                     fileSection.SafeGetKey("!Destination", (value) => {
-                        destinationDirectory = value;
+                        destination = value;
                     });
                 });
-                fileInterface.WriteText(Path.Combine(patchInfo.gameRootDirectory, destinationDirectory, pair.Value), nssScriptSource, overwrite);
+
+                if (isArchive(destination)) {
+                    var archiveFilePath = Path.Combine(patchInfo.gameRootDirectory, destination);
+                    var archive = fileInterface.ReadArchive(archiveFilePath);
+                    archive.Add(new AuroraFileEntry(pair.Value, Encoding.ASCII.GetBytes(nssScriptSource)));
+
+                    fileInterface.WriteArchive(archiveFilePath, archive);
+                } else {
+                    var directoryFilePath = Path.Combine(patchInfo.gameRootDirectory, destination, pair.Value);
+
+                    fileInterface.WriteText(directoryFilePath, nssScriptSource, overwrite);
+                }
             }
         }
 
@@ -147,6 +202,10 @@ namespace KPatcher.Source.Patcher {
 
                 fileInterface.WriteSSF(Path.Combine(patchInfo.gameRootDirectory, pair.Value), soundSet, overwrite);
             }
+        }
+
+        public static bool isArchive(string directory) {
+            return Regex.IsMatch(directory, @"\.(mod|hak|rim|erf|sav)$");
         }
     }
 }

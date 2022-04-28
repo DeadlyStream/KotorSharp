@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AuroraIO\AuroraIO.csproj" />
+    <ProjectReference Include="..\KPatcher\KPatcher.csproj" />
   </ItemGroup>
 
 </Project>

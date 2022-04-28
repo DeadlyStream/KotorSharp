@@ -53,7 +53,7 @@ namespace AuroraIO.Source.Models.Dictionary
             return new AuroraStruct(id);
         }
 
-        public override void setValueForKey(string key, string value)
+        public override void setValueForKey(KeyPath keyPath, string value)
         {
             List<string> components = value.Split('\\').ToList();
             components.RemoveAt(0);

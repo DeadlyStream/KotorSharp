@@ -32,14 +32,9 @@ namespace AuroraIO.Source.Models.Dictionary
             return AuroraDictionary.make("gff", initBlock);
         }
 
-        public void setValueForKey(string key, string value)
-        {
-            List<string> components = value.Split('\\').ToList();
-            components.RemoveAt(0);
-            string thisKey = components.First();
-            string newKey = String.Join("\\", components);
-
-            internalDict[thisKey].setValueForKey(newKey, value);
+        public void setValueForKey(KeyPath keyPath, string value) {
+            string thisKey = keyPath.Pop();
+            internalDict[thisKey].setValueForKey(keyPath, value);
         }
         public AuroraDataObject this[String key]
         {
