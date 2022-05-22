@@ -2,6 +2,6 @@
 using KPatcher.Source;
 using KPatcher.Source.Patcher;
 
-Console.WriteLine("Hello, World!");
+Console.WriteLine("Running KPatcher Directly is not yet supported. Please run the KPatcherTests suite");
 
-Patcher.Run("tslpatchdata/changes.ini", "gamedir", new DefaultFileInterface(), 0);
+//Patcher.Run("tslpatchdata/changes.ini", "gamedir", new DefaultFileInterface(), 0);

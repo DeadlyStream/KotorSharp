@@ -15,14 +15,12 @@ namespace KPatcherTests.Source {
     public class PatcherTests {
 
         [TestMethod]
-        public void testTLKChanges() {
+        public void testRunPatcher() {
             VirtualFileInterface fileInterface = new VirtualFileInterface();
 
             Patcher.Run(Snapshot.PatchDataDirectory(), Snapshot.RootGameDirectory(), fileInterface, 0);
 
-            var dialogTLKPath = Path.Combine(Snapshot.RootGameDirectory(), "dialog.tlk");
-            var dialogTLK = fileInterface.ReadTLK(dialogTLKPath);
-            Snapshot.Verify(dialogTLK);
+            Snapshot.Verify(fileInterface, true);
         }
     }
 }
