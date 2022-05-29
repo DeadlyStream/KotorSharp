@@ -18,22 +18,33 @@ namespace KPatcher.Source.Patcher {
             internal string gameRootDirectory;
             internal TokenRegistry tokenRegistry;
             internal IniObject changesIni;
+            internal DateTime date;
             internal PatchInfo(
                 string patchDataPath,
                 string gameRootDirectory,
                 TokenRegistry tokenRegistry,
-                IniObject changesIni
+                IniObject changesIni,
+                DateTime date
             ) {
                 this.patchDataPath = patchDataPath;
                 this.gameRootDirectory = gameRootDirectory;
                 this.tokenRegistry = tokenRegistry;
                 this.changesIni = changesIni;
+                this.date = date;
             }
         }
 
         public static void Run(string changesPath,
             string gameDirectory,
             FileInterface fileInterface,
+            int logLevel = 0) {
+            Run(changesPath, gameDirectory, fileInterface, DateTime.Now, logLevel);
+        }
+
+        public static void Run(string changesPath,
+            string gameDirectory,
+            FileInterface fileInterface,
+            DateTime date,
             int logLevel = 0) {
 
             var changesIni = new IniParser().parse(changesPath);
@@ -42,7 +53,8 @@ namespace KPatcher.Source.Patcher {
                 Path.GetDirectoryName(changesPath),
                 gameDirectory,
                 new TokenRegistry(),
-                changesIni);
+                changesIni,
+                date);
 
             ProcessTLKList(patchInfo, fileInterface);
             Process2DAList(patchInfo, fileInterface);
@@ -55,12 +67,19 @@ namespace KPatcher.Source.Patcher {
 
         public static void ProcessTLKList(PatchInfo patchInfo, FileInterface fileInterface) {
             var appendTLK = fileInterface.ReadTLK(Path.Combine(patchInfo.patchDataPath, "append.tlk"));
-            var dialogTLK = fileInterface.ReadTLK(Path.Combine(patchInfo.gameRootDirectory, "dialog.tlk"));
+            var dialogTLKPath = Path.Combine(patchInfo.gameRootDirectory, "dialog.tlk");
+            var dialogTLK = fileInterface.ReadTLK(dialogTLKPath);
+            var backupDialogTLKPath = Path.Combine(
+                patchInfo.gameRootDirectory,
+                "backup",
+                patchInfo.date.ToString("MMddyyyyHmmss"),
+                "dialog.tlk");
+            fileInterface.Copy(dialogTLKPath, backupDialogTLKPath);
 
             Console.WriteLine("Appending dialog.tlk");
             TLKPatcher.Process(patchInfo.changesIni["TLKList"], dialogTLK, appendTLK, patchInfo.tokenRegistry);
 
-            fileInterface.WriteTLK(Path.Combine(patchInfo.gameRootDirectory, "dialog.tlk"), dialogTLK);
+            fileInterface.WriteTLK(dialogTLKPath, dialogTLK);
         }
 
         public static void ProcessInstallList(PatchInfo patchInfo, FileInterface fileInterface) {

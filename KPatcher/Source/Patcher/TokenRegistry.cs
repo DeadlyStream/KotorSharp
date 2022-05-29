@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AuroraIO.Source.Coders;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
@@ -7,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace KPatcher.Source.Patcher {
-    public class TokenRegistry: IDictionary<string, string> {
+    public class TokenRegistry : IDictionary<string, string>, ASCIIEncodingProtocol {
         private Dictionary<string, string> internalDict = new Dictionary<string, string>();
 
         public string this[string key] { get => ((IDictionary<string, string>)internalDict)[key]; set => ((IDictionary<string, string>)internalDict)[key] = value; }
@@ -26,6 +27,15 @@ namespace KPatcher.Source.Patcher {
 
         public void Add(KeyValuePair<string, string> item) {
             ((ICollection<KeyValuePair<string, string>>)internalDict).Add(item);
+        }
+
+        public string asciiEncoding(string indent = "") {
+            StringBuilder sb = new StringBuilder();
+            foreach(var pair in internalDict) {
+                sb.AppendFormat("- {0}: {1}\n", pair.Key, pair.Value);
+            }
+            
+            return sb.ToString();
         }
 
         public void Clear() {

@@ -8,6 +8,7 @@ using KPatcher.Source.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -130,10 +131,12 @@ namespace KPatcher.Source.Patcher {
         public string asciiEncoding(string indent = "") {
             StringBuilder sb = new StringBuilder();
 
+            var sha = new SHA512Managed();
+
             foreach (var pair in fileMap) {
                 sb.AppendFormat("-\n");
-                sb.AppendFormat("  path: {0}\n", pair.Key);
-                sb.AppendFormat("  data: {0}\n", pair.Value);
+                sb.AppendFormat("  path: {0}\n", Path.GetRelativePath(Bundle.ProjectDirectory, pair.Key));
+                sb.AppendFormat("  data: {0}\n", Convert.ToBase64String(sha.ComputeHash(pair.Value)));
             }
             return sb.ToString();
         }

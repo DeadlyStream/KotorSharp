@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using static KPatcher.Source.Patcher.Patcher;
 
 namespace KPatcher.Source.Patcher {
-    internal static class TLKPatcher {
+    public static class TLKPatcher {
         public static void Process(Dictionary<string, string> values, TalkTable dialogTLK, TalkTable appendTLK, TokenRegistry tokenRegistry) {
             foreach(var pair in values) {
                 var entry = appendTLK[int.Parse(pair.Value)];

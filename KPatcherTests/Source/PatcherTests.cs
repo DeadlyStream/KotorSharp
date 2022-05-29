@@ -22,5 +22,16 @@ namespace KPatcherTests.Source {
 
             Snapshot.Verify(fileInterface, true);
         }
+
+        [TestMethod]
+        public void testTLKChanges() { 
+            VirtualFileInterface fileInterface = new VirtualFileInterface();
+
+            var date = new DateTime(2003, 7, 15);
+
+            Patcher.Run(Snapshot.PatchDataDirectory(), Snapshot.RootGameDirectory(), fileInterface, date);
+
+            Snapshot.Verify(fileInterface);
+        }
     }
 }
