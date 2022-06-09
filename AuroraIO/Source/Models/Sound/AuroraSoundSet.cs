@@ -5,9 +5,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using YAMLEncoding;
 
 namespace AuroraIO.Source.Models.Sound {
-    public class AuroraSoundSet: IEnumerable<uint>, ASCIIEncodingProtocol {
+    public class AuroraSoundSet: IEnumerable<uint>, YAMLEncodingProtocol {
 
         public enum Entry {
             BattleCry1 = 0,

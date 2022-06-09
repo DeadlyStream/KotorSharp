@@ -5,10 +5,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using YAMLEncoding;
 
 namespace AuroraIO.Source.Models.Dictionary {
 
-    public abstract class AuroraDataObject: SetKeyValueInterface, ASCIIEncodingProtocol {
+    public abstract class AuroraDataObject: SetKeyValueInterface, YAMLEncodingProtocol {
         public abstract AuroraDataType dataType { get; }
 
         public abstract string asciiEncoding(string indent = "");

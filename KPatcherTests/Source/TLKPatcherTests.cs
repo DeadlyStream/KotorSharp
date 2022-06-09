@@ -1,11 +1,13 @@
 ﻿using AuroraIO.Source.Models.TLK;
 using KPatcher.Source.Patcher;
+using KSnapshot;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using YAMLEncoding;
 
 namespace KPatcherTests.Source {
 

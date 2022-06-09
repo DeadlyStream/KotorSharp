@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using static KPatcher.Source.Patcher.Patcher;
+using YAMLEncoding;
+using KSnapshot;
 
 namespace KPatcherTests.Source {
 

@@ -1,6 +1,6 @@
 ﻿using AuroraIO.Source.Coders;
 using AuroraIO.Source.Models.Dictionary;
-using AuroraIOTests.Source.Asserts;
+using KSnapshot;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;

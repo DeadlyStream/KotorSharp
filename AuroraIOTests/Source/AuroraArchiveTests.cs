@@ -1,15 +1,16 @@
 ﻿using AuroraIO.Source.Archives;
 using AuroraIO.Source.Archives.ERFRIM;
 using AuroraIO.Source.Coders;
-using AuroraIOTests.Source.Asserts;
+using KSnapshot;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Text;
+using YAMLEncoding;
 
 namespace AuroraIOTests.Source {
     [TestClass]
     public class AuroraArchiveTests {
 
-        ASCIICoder coder = new ASCIICoder();
+        YAMLCoder coder = new YAMLCoder();
         string testERFFile() {
             return Snapshot.ResourcePath();
         }

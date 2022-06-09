@@ -6,9 +6,10 @@ using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using YAMLEncoding;
 
 namespace KPatcher.Source.Patcher {
-    public class TokenRegistry : IDictionary<string, string>, ASCIIEncodingProtocol {
+    public class TokenRegistry : IDictionary<string, string>, YAMLEncodingProtocol {
         private Dictionary<string, string> internalDict = new Dictionary<string, string>();
 
         public string this[string key] { get => ((IDictionary<string, string>)internalDict)[key]; set => ((IDictionary<string, string>)internalDict)[key] = value; }

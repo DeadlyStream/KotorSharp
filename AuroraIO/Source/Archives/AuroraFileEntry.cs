@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using YAMLEncoding;
 
 namespace AuroraIO.Source.Archives {
     public class AuroraResourceName {
@@ -48,7 +49,7 @@ namespace AuroraIO.Source.Archives {
         }
     }
 
-    public class AuroraFileEntry: ASCIIEncodingProtocol {
+    public class AuroraFileEntry: YAMLEncodingProtocol {
         public AuroraResourceName name;
         public byte[] data;
 

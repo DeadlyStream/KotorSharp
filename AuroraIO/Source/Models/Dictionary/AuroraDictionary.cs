@@ -5,10 +5,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using YAMLEncoding;
 
 namespace AuroraIO.Source.Models.Dictionary
 {
-    public class AuroraDictionary : AuroraStructType, ASCIIEncodingProtocol {
+    public class AuroraDictionary : AuroraStructType, YAMLEncodingProtocol {
         public string type { get; private set; }
         public uint structType => uint.MaxValue;
 

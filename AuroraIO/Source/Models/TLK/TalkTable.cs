@@ -1,14 +1,12 @@
-﻿using AuroraIO.Source.Coders;
+﻿
 using AuroraIO.Source.Models.Base;
-using AuroraIO.Source.Models.Dictionary;
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
+using YAMLEncoding;
 
 namespace AuroraIO.Source.Models.TLK {
-    public class TalkTable: ICollection<TalkTable.Entry>, ASCIIEncodingProtocol {
+    public class TalkTable: ICollection<TalkTable.Entry>, YAMLEncodingProtocol {
 
         public enum LanguageID {
             English = 0,
@@ -93,7 +91,7 @@ namespace AuroraIO.Source.Models.TLK {
             return ((IEnumerable)entries).GetEnumerator();
         }
 
-        string ASCIIEncodingProtocol.asciiEncoding(string indent) {
+        string YAMLEncodingProtocol.asciiEncoding(string indent) {
             StringBuilder sb = new StringBuilder();
 
             sb.AppendFormat("language: {0}\n", language);

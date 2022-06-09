@@ -1,17 +1,18 @@
 ﻿using AuroraIO.Source.Archives.BIFKey;
 using AuroraIO.Source.Coders;
-using AuroraIOTests.Source.Asserts;
+using KSnapshot;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using YAMLEncoding;
 
 namespace AuroraIOTests.Source {
 
     [TestClass]
     public class BIFKeyTests {
 
-        ASCIICoder coder = new ASCIICoder();
+        YAMLCoder coder = new YAMLCoder();
 
         public BIFKeyTable testKeyFile() {
             return BIFKeyFile.Read(Snapshot.ResourcePath());

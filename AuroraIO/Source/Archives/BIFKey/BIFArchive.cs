@@ -6,9 +6,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using YAMLEncoding;
 
 namespace AuroraIO.Source.Archives.BIFKey {
-    public class BIFArchive: ASCIIEncodingProtocol {
+    public class BIFArchive: YAMLEncodingProtocol {
 
         private class ResourceEntry {
 
