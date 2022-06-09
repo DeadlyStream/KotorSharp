@@ -3,9 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using YAMLEncoding;
 
 namespace AuroraIO.Source.Archives.BIFKey {
-    public class BIFKeyTable: ASCIIEncodingProtocol {
+    public class BIFKeyTable: YAMLEncodingProtocol {
 
         private Dictionary<string, BIFArchive> archiveMap = new Dictionary<string, BIFArchive>();
 

@@ -11,6 +11,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using YAMLEncoding;
 
 namespace KPatcher.Source.Patcher {
     public abstract class FileInterface {
@@ -94,7 +95,7 @@ namespace KPatcher.Source.Patcher {
         }
     }
 
-    public class VirtualFileInterface: FileInterface, ASCIIEncodingProtocol {
+    public class VirtualFileInterface: FileInterface, YAMLEncodingProtocol {
         public Dictionary<string, byte[]> fileMap = new Dictionary<string, byte[]>();
 
         public override bool FileExists(string filePath) {

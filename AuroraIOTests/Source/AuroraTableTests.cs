@@ -1,6 +1,6 @@
 ﻿using AuroraIOTests.Properties;
-using AuroraIOTests.Source.Asserts;
 using AuroraIOTests.Source.Stubs;
+using KSnapshot;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using System.Reflection;

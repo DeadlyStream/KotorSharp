@@ -5,10 +5,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using YAMLEncoding;
 
 namespace AuroraIO.Source.Models.Table
 {
-    public class AuroraTable: ASCIIEncodingProtocol {
+    public class AuroraTable: YAMLEncodingProtocol {
 
         public class Row
         {

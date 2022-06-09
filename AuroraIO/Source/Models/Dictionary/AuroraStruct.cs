@@ -5,10 +5,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using YAMLEncoding;
 
 namespace AuroraIO.Source.Models.Dictionary
 {
-    public class AuroraStruct: AuroraDataObject, AuroraStructType, ASCIIEncodingProtocol {
+    public class AuroraStruct: AuroraDataObject, AuroraStructType, YAMLEncodingProtocol {
 
         public override AuroraDataType dataType => AuroraDataType.Struct;
 

@@ -1,5 +1,5 @@
 ﻿using AuroraIO.Source.Models.Sound;
-using AuroraIOTests.Source.Asserts;
+using KSnapshot;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;

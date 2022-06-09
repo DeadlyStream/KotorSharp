@@ -5,9 +5,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using YAMLEncoding;
 
 namespace AuroraIO.Source.Archives.ERFRIM {
-    public class AuroraArchive: IEnumerable<AuroraFileEntry>, ASCIIEncodingProtocol {
+    public class AuroraArchive: IEnumerable<AuroraFileEntry>, YAMLEncodingProtocol {
         public struct Format {
             public static Format ERF = "ERF";
             public static Format HAK = "HAK";
