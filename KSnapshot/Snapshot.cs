@@ -53,8 +53,7 @@ namespace KSnapshot {
             return Path.Combine(KSEnvironment.Bundle.SnapshotDirectory,
                 "Resources",
                 String.Format("{0}\\{1}_dir", Path.GetFileNameWithoutExtension(className), methodName),
-                "tslpatchdata",
-                "changes.ini");
+                "tslpatchdata");
         }
 
         public static string RootGameDirectory([CallerMemberName] string methodName = "", [CallerFilePath] string className = "") {

@@ -16,24 +16,53 @@ namespace KPatcherTests.Source {
     [TestClass]
     public class PatcherTests {
 
-        [TestMethod]
-        public void testRunPatcher() {
-            VirtualFileInterface fileInterface = new VirtualFileInterface();
+        //[TestMethod]
+        //public void testRunPatcher() {
+        //    VirtualFileInterface fileInterface = new VirtualFileInterface();
+        //    var patchDataDirectory = Snapshot.PatchDataDirectory();
+        //    var changesIniPath = Path.Combine(patchDataDirectory, "changes.ini");
+        //    var rootGameDirectory = Snapshot.RootGameDirectory();
 
-            Patcher.Run(Snapshot.PatchDataDirectory(), Snapshot.RootGameDirectory(), fileInterface, 0);
+        //    fileInterface.LoadDirectory(patchDataDirectory);
+            
 
-            Snapshot.Verify(fileInterface, true);
-        }
+        //    Patcher.Run(changesIniPath, rootGameDirectory, fileInterface, 0);
+
+        //    Snapshot.Verify(fileInterface, true);
+        //}
 
         [TestMethod]
         public void testTLKChanges() { 
             VirtualFileInterface fileInterface = new VirtualFileInterface();
 
+            var patchDataDirectory = Snapshot.PatchDataDirectory();
+            var changesIniPath = Path.Combine(patchDataDirectory, "changes.ini");
+            var rootGameDirectory = Snapshot.RootGameDirectory();
+
+            fileInterface.LoadDirectory(patchDataDirectory);
+            fileInterface.LoadFile(Path.Combine(rootGameDirectory, "dialog.tlk"));
+
+            Patcher.Run(changesIniPath, rootGameDirectory, fileInterface, 0);
+
+            Snapshot.Verify(fileInterface, true);
+        }
+
+        [TestMethod]
+        public void testInstallChanges() {
+            VirtualFileInterface fileInterface = new VirtualFileInterface();
+
             var date = new DateTime(2003, 7, 15);
 
-            Patcher.Run(Snapshot.PatchDataDirectory(), Snapshot.RootGameDirectory(), fileInterface, date);
+            var patchDataDirectory = Snapshot.PatchDataDirectory();
+            var changesIniPath = Path.Combine(patchDataDirectory, "changes.ini");
+            var rootGameDirectory = Snapshot.RootGameDirectory();
 
-            Snapshot.Verify(fileInterface);
+            fileInterface.LoadDirectory(patchDataDirectory);
+            fileInterface.LoadDirectory(rootGameDirectory);
+
+            Patcher.Run(changesIniPath, rootGameDirectory, fileInterface, date);
+
+            Snapshot.Verify(fileInterface, true);
         }
     }
 }
