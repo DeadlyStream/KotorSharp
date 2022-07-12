@@ -126,9 +126,9 @@ namespace KPatcher.Source.Patcher {
                 foreach (var rowInstructionPair in patchInfo.changesIni[_2daFilePair.Value]) {
                     var rowValuePairs = patchInfo.changesIni[rowInstructionPair.Value];
                     if (Regex.IsMatch(rowInstructionPair.Key, @"ChangeRow")) {
-                        _2DAPatcher.ProcessChangeRow(table, rowValuePairs, patchInfo);
+                        _2DAPatcher.ProcessChangeRow(table, rowValuePairs, patchInfo.tokenRegistry);
                     } else if (Regex.IsMatch(rowInstructionPair.Key, @"AddRow")) {
-                        _2DAPatcher.ProcessAddRow(table, rowValuePairs, patchInfo);
+                        _2DAPatcher.ProcessAddRow(table, rowValuePairs, patchInfo.tokenRegistry);
                     }
                 }
 

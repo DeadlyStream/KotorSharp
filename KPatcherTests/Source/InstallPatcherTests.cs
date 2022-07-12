@@ -40,7 +40,7 @@ namespace KPatcherTests.Source {
 
             InstallPatcher.ProcessDirectoryInstall(directory, sourceDirectory, values, fileInterface);
 
-            Snapshot.Verify(fileInterface, true);
+            Snapshot.Verify(fileInterface);
         }
     }
 }

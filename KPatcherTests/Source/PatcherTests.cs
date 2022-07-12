@@ -44,7 +44,7 @@ namespace KPatcherTests.Source {
 
             Patcher.Run(changesIniPath, rootGameDirectory, fileInterface, 0);
 
-            Snapshot.Verify(fileInterface, true);
+            Snapshot.Verify(fileInterface);
         }
 
         [TestMethod]
@@ -62,7 +62,25 @@ namespace KPatcherTests.Source {
 
             Patcher.Run(changesIniPath, rootGameDirectory, fileInterface, date);
 
-            Snapshot.Verify(fileInterface, true);
+            Snapshot.Verify(fileInterface);
+        }
+
+        [TestMethod]
+        public void testInstall2daChanges() {
+            VirtualFileInterface fileInterface = new VirtualFileInterface();
+
+            var date = new DateTime(2003, 7, 15);
+
+            var patchDataDirectory = Snapshot.PatchDataDirectory();
+            var changesIniPath = Path.Combine(patchDataDirectory, "changes.ini");
+            var rootGameDirectory = Snapshot.RootGameDirectory();
+
+            fileInterface.LoadDirectory(patchDataDirectory);
+            fileInterface.LoadDirectory(rootGameDirectory);
+
+            Patcher.Run(changesIniPath, rootGameDirectory, fileInterface, date);
+
+            Snapshot.Verify(fileInterface);
         }
     }
 }
