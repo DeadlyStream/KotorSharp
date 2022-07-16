@@ -6,7 +6,9 @@ using AuroraIO.Source.Models.Table;
 using AuroraIO.Source.Models.TLK;
 using KPatcher.Source.Extensions;
 using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -33,6 +35,13 @@ namespace KPatcher.Source.Patcher {
 
         public void WriteTLK(string filePath, TalkTable tlk, bool overwrite = false) {
             Write(filePath, new TLKCoder().encode(tlk), overwrite);
+        }
+
+        public void ExtractArchiveToDirectory(string sourceFilePath, string destinationFilePath) {
+            var archive = ReadArchive(sourceFilePath);
+            foreach (var entry in archive) {
+                Write(Path.Combine(destinationFilePath, entry.name), entry.data, true);
+            }
         }
 
         public AuroraArchive ReadArchive(string filePath) {
@@ -95,38 +104,51 @@ namespace KPatcher.Source.Patcher {
         }
     }
 
-    public class VirtualFileInterface: FileInterface, YAMLEncodingProtocol {
-        public Dictionary<string, byte[]> fileMap = new Dictionary<string, byte[]>();
+    public class VirtualFileInterface: FileInterface, YAMLEncodingProtocol, IDictionary<string, byte[]> {
+        private Dictionary<string, byte[]> fileMap = new Dictionary<string, byte[]>();
 
-        public override bool FileExists(string filePath) {
-            if (fileMap.ContainsKey(filePath)) {
-                return true;
-            } else {
-                return File.Exists(filePath);
+        public ICollection<string> Keys => fileMap.Keys;
+
+        public ICollection<byte[]> Values => fileMap.Values;
+
+        public int Count => fileMap.Count;
+
+        public bool IsReadOnly => ((ICollection<KeyValuePair<string, byte[]>>)fileMap).IsReadOnly;
+
+        public byte[] this[string key] { get => fileMap[key.ToLower()]; set => fileMap[key.ToLower()] = value; }
+
+        public void LoadDirectory(string directory, bool overwrite = false) {
+            foreach (var filePath in Directory.GetFiles(directory)) {
+                LoadFile(filePath, overwrite);
             }
         }
+
+        public void LoadFile(string file, bool overwrite = false) {
+            Write(file, File.ReadAllBytes(file), overwrite);
+        }
+
+        public override bool FileExists(string filePath) {
+            var key = filePath;
+            return ContainsKey(key);
+        }
         public override byte[] Read(string filePath) {
-            if (fileMap.ContainsKey(filePath)) {
-                return fileMap[filePath];
-            } else {
-                return File.ReadAllBytes(filePath);
-            }
+            return this[filePath];
         }
 
         public override void Write(string filePath, byte[] bytes, bool overwrite = false) {
-            fileMap[filePath] = bytes;
+            this[filePath] = bytes;
         }
 
         public override void Copy(string source, string destination, bool overwrite = false) {
-            fileMap[destination] = Read(source);
+            this[destination] = Read(source);
         }
 
         public override string ReadText(string filePath) {
-            return File.ReadAllText(filePath);
+            return Encoding.ASCII.GetString(Read(filePath));
         }
 
         public override void WriteText(string filePath, string text, bool overwrite = false) {
-            File.WriteAllText(filePath, text);
+            Write(filePath, Encoding.ASCII.GetBytes(text), overwrite);
         }
 
         public string asciiEncoding(string indent = "") {
@@ -134,12 +156,58 @@ namespace KPatcher.Source.Patcher {
 
             var sha = new SHA512Managed();
 
-            foreach (var pair in fileMap) {
+            var executingDirectory = Directory.GetCurrentDirectory();
+
+            foreach (var pair in this) {
                 sb.AppendFormat("-\n");
-                sb.AppendFormat("  path: {0}\n", Path.GetRelativePath(Bundle.ProjectDirectory, pair.Key));
+                sb.AppendFormat("  path: {0}\n", Path.GetRelativePath(executingDirectory, pair.Key));
                 sb.AppendFormat("  data: {0}\n", Convert.ToBase64String(sha.ComputeHash(pair.Value)));
             }
             return sb.ToString();
+        }
+
+        public void Add(string key, byte[] value) {
+            fileMap.Add(key, value);
+        }
+
+        public bool ContainsKey(string key) {
+            return fileMap.ContainsKey(key);
+        }
+
+        public bool Remove(string key) {
+            return fileMap.Remove(key);
+        }
+
+        public bool TryGetValue(string key, [MaybeNullWhen(false)] out byte[] value) {
+            return fileMap.TryGetValue(key, out value);
+        }
+
+        public void Add(KeyValuePair<string, byte[]> item) {
+            ((ICollection<KeyValuePair<string, byte[]>>)fileMap).Add(item);
+        }
+
+        public void Clear() {
+            ((ICollection<KeyValuePair<string, byte[]>>)fileMap).Clear();
+        }
+
+        public bool Contains(KeyValuePair<string, byte[]> item) {
+            return ((ICollection<KeyValuePair<string, byte[]>>)fileMap).Contains(item);
+        }
+
+        public void CopyTo(KeyValuePair<string, byte[]>[] array, int arrayIndex) {
+            ((ICollection<KeyValuePair<string, byte[]>>)fileMap).CopyTo(array, arrayIndex);
+        }
+
+        public bool Remove(KeyValuePair<string, byte[]> item) {
+            return ((ICollection<KeyValuePair<string, byte[]>>)fileMap).Remove(item);
+        }
+
+        public IEnumerator<KeyValuePair<string, byte[]>> GetEnumerator() {
+            return ((IEnumerable<KeyValuePair<string, byte[]>>)fileMap).GetEnumerator();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator() {
+            return ((IEnumerable)fileMap).GetEnumerator();
         }
     }
 }

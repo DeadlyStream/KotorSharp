@@ -16,18 +16,55 @@ namespace KPatcherTests.Source {
     [TestClass]
     public class PatcherTests {
 
-        string RootGameDirectory = GameRoot.Directory;
         ResourceBundle resources = ResourceBundle.GetCurrent();
 
         [TestMethod]
         public void testTLKChanges() { 
             VirtualFileInterface fileInterface = new VirtualFileInterface();
 
+            var patchDataDirectory = "tlk_tslpatchdata";
+            var changesIniPath = resources.GetFilePath(Path.Combine(patchDataDirectory, "changes.ini"));
+
+            fileInterface.LoadDirectory(resources.GetDirectory(patchDataDirectory));
+            fileInterface.LoadDirectory(GameRoot.Directory);
+
+            Patcher.Run(changesIniPath, GameRoot.Directory, fileInterface, 0);
+
+            Snapshot.Verify(fileInterface, true);
+        }
+
+        [TestMethod]
+        public void testInstallChanges() {
+            VirtualFileInterface fileInterface = new VirtualFileInterface();
+
             var date = new DateTime(2003, 7, 15);
 
-            Patcher.Run(resources.GetFilePath("tlk_tslpatchdata\\changes.ini"), RootGameDirectory, fileInterface, date);
+            var patchDataDirectory = "install_tslpatchdata";
+            var changesIniPath = resources.GetFilePath(Path.Combine(patchDataDirectory, "changes.ini"));
 
-            Snapshot.Verify(fileInterface);
+            fileInterface.LoadDirectory(resources.GetDirectory(patchDataDirectory));
+            fileInterface.LoadDirectory(GameRoot.Directory);
+
+            Patcher.Run(changesIniPath, GameRoot.Directory, fileInterface, date);
+
+            Snapshot.Verify(fileInterface, true);
+        }
+
+        [TestMethod]
+        public void testInstall2daChanges() {
+            VirtualFileInterface fileInterface = new VirtualFileInterface();
+
+            var date = new DateTime(2003, 7, 15);
+
+            var patchDataDirectory = "2da_tslpatchdata";
+            var changesIniPath = resources.GetFilePath(Path.Combine(patchDataDirectory, "changes.ini"));
+
+            fileInterface.LoadDirectory(resources.GetDirectory(patchDataDirectory));
+            fileInterface.LoadDirectory(GameRoot.Directory);
+
+            Patcher.Run(changesIniPath, GameRoot.Directory, fileInterface, date);
+
+            Snapshot.Verify(fileInterface, true);
         }
     }
 }

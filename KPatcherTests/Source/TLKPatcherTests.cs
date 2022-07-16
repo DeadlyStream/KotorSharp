@@ -29,7 +29,7 @@ namespace KPatcherTests.Source {
 
             TokenRegistry tokenRegistry = new TokenRegistry();
 
-            TLKPatcher.Process(dict, dialogTLK, appendTLK, new TokenRegistry());
+            TLKPatcher.Process(dict, dialogTLK, appendTLK, tokenRegistry);
 
             Snapshot.Verify(dialogTLK);
         }
