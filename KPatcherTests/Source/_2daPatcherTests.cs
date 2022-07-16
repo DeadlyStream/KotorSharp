@@ -12,14 +12,17 @@ using System.Threading.Tasks;
 namespace KPatcherTests.Source {
     [TestClass]
     public class _2daPatcherTests {
+
+        ResourceBundle resources = ResourceBundle.GetCurrent();
+
         [TestMethod]
         public void testAddRow() {
-            var tableData = Snapshot.DataResource();
+            var tableData = resources.GetFileBytes("heads.2da");
             var table = new _2DACoder().decode(tableData);
 
             var values = new Dictionary<string, string>();
 
-            values["label"] = "NewRow";
+            values["head"] = "NewRow";
 
             _2DAPatcher.ProcessAddRow(table, values, new TokenRegistry());
 
@@ -28,13 +31,13 @@ namespace KPatcherTests.Source {
 
         [TestMethod]
         public void testChangeRow() {
-            var tableData = Snapshot.DataResource();
+            var tableData = resources.GetFileBytes("heads.2da");
             var table = new _2DACoder().decode(tableData);
 
             var values = new Dictionary<string, string>();
 
             values["RowIndex"] = "10";
-            values["label"] = "Modified_Row";
+            values["head"] = "Modified_Row";
 
             _2DAPatcher.ProcessChangeRow(table, values, new TokenRegistry());
 
@@ -43,7 +46,7 @@ namespace KPatcherTests.Source {
 
         [TestMethod]
         public void testStoreRowIndexInTokenRegistry() {
-            var tableData = Snapshot.DataResource();
+            var tableData = resources.GetFileBytes("heads.2da");
             var table = new _2DACoder().decode(tableData);
 
             var values = new Dictionary<string, string>();
@@ -58,7 +61,7 @@ namespace KPatcherTests.Source {
 
         [TestMethod]
         public void testSetValueFromTokenRegistry() {
-            var tableData = Snapshot.DataResource();
+            var tableData = resources.GetFileBytes("heads.2da");
             var table = new _2DACoder().decode(tableData);
             var tokenRegistry = new TokenRegistry();
 
@@ -66,8 +69,8 @@ namespace KPatcherTests.Source {
 
             tokenRegistry["2DAMEMORY0"] = "25";
             values["RowIndex"] = "10";
-            values["label"] = "Modified_Row";
-            values["normalhead"] = "2DAMEMORY0";
+            values["head"] = "Modified_Row";
+            values["alttexture"] = "2DAMEMORY0";
 
             _2DAPatcher.ProcessChangeRow(table, values, tokenRegistry);
 

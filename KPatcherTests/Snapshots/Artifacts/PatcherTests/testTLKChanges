@@ -1,6 +1,15 @@
 -
-  path: ..\..\KPatcherTests\Snapshots\Resources\GameRoot\backup\0715200300000\dialog.tlk
-  data: B1ucnwBDiDBVoegikxOv2Lp5+mYKeZqU7bhVaQh3t5Wa5bA49YZF+/PzTgts1Xm99KmiQnTKhuT9ePXBsTrHsg==
+  path: ..\..\..\snapshots\resources\patchertests\tlk_tslpatchdata\append.tlk
+  data: xoHwfB5bBGUhqewUPuVFWF10tCYfQJoVnhpeQwsylc/BxgjaovN3A0BFpYw+jXNsuUOpxA475xz6z5sxCnV5xQ==
 -
-  path: ..\..\KPatcherTests\Snapshots\Resources\GameRoot\dialog.tlk
+  path: ..\..\..\snapshots\resources\patchertests\tlk_tslpatchdata\changes.ini
+  data: 2At+Mx8ko8zxivgl7ioumTH5+9rZRuo9rsGg+dnWoq2MpYNtB9oIOocDpgj0TpPP/zkDiPcW3VxdHg3h6SuIIQ==
+-
+  path: ..\..\..\snapshots\resources\patchertests\tlk_tslpatchdata\info.rtf
+  data: UaoC7aqC2SbYAggh1xD/Z3M4gtugEPq+CStu+6+tIxkKpr1pgfbXULkJVCH3GVeZ0v3kVUqu6jU6HLWVQNY8/w==
+-
+  path: ..\..\..\snapshots\resources\gameroot\dialog.tlk
   data: mJJjg+Xv/O5Ihyj4Y6JkNNTZwt+jyTtBnFc1O5OipKglLsGIEKT+II+6OcrCvI4H39SbaFCdQu4+YbkJwDQ7FA==
+-
+  path: ..\..\..\snapshots\resources\gameroot\backup\07162022130621\dialog.tlk
+  data: B1ucnwBDiDBVoegikxOv2Lp5+mYKeZqU7bhVaQh3t5Wa5bA49YZF+/PzTgts1Xm99KmiQnTKhuT9ePXBsTrHsg==

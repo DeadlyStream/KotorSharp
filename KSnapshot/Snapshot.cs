@@ -74,52 +74,12 @@ namespace KSnapshot {
                 methodName);
         }
 
-        public static string PatchDataDirectory([CallerMemberName] string methodName = "", [CallerFilePath] string className = "") {
-            return Path.Combine(KSEnvironment.Bundle.SnapshotDirectory,
-                "Resources",
-                String.Format("{0}\\{1}", Path.GetFileNameWithoutExtension(className), methodName),
-                "tslpatchdata",
-                "changes.ini");
-        }
-
-        public static string RootGameDirectory([CallerMemberName] string methodName = "", [CallerFilePath] string className = "") {
-            return Path.Combine(KSEnvironment.Bundle.SnapshotDirectory,
-                "Resources",
-                "gameRoot");
-        }
-
-        public static string ResourceDirectory([CallerMemberName] string methodName = "", [CallerFilePath] string className = "") {
-            return Path.Combine(KSEnvironment.Bundle.SnapshotDirectory,
-                "Resources",
-                String.Format("{0}\\{1}", Path.GetFileNameWithoutExtension(className), methodName));
-        }
-
-        public static string ResourcePath(String fileName, [CallerMemberName] string methodName = "", [CallerFilePath] string className = "") {
-            return Path.Combine(ResourceDirectory(methodName, className), fileName);
-        }
-
-        public static byte[] DataResource([CallerMemberName] string methodName = "", [CallerFilePath] string className = "") {
-            return File.ReadAllBytes(ResourcePath("dataResource", methodName, className));
-        }
-
-        public static string TextResource([CallerMemberName] string methodName = "", [CallerFilePath] string className = "") {
-            return File.ReadAllText(ResourcePath(methodName, className));
-        }
-
         public static void Verify(YAMLEncodingProtocol actual, bool record = false, [CallerFilePath] string className = "", [CallerMemberName] string methodName = "") {
             Verify(new YAMLCoder().encode(actual), record, className, methodName);
         }
 
         public static void Verify(YAMLEncodingProtocol[] actual, bool record = false, [CallerFilePath] string className = "", [CallerMemberName] string methodName = "") {
             Verify(new YAMLCoder().encode(actual), record, className, methodName);
-        }
-
-        public static void VerifyDirectory(string path, bool record = false, [CallerFilePath] string className = "", [CallerMemberName] string methodName = "") {
-            string[] allFiles = Directory.GetFiles(path, "*.*", SearchOption.AllDirectories).Select(filePath => {
-                return Path.GetFullPath(filePath);
-            }).ToArray();
-
-            Verify(String.Join("\n", allFiles), record, className, methodName);
         }
 
         public static void Verify(String actual, bool record = false, [CallerFilePath] string className = "", [CallerMemberName] string methodName = "") {            

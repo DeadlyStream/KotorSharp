@@ -16,23 +16,21 @@ namespace KPatcherTests.Source {
     [TestClass]
     public class PatcherTests {
 
-        string RootGameDirectory = GameRoot.Directory;
         ResourceBundle resources = ResourceBundle.GetCurrent();
 
         [TestMethod]
         public void testTLKChanges() { 
             VirtualFileInterface fileInterface = new VirtualFileInterface();
 
-            var patchDataDirectory = Snapshot.PatchDataDirectory();
-            var changesIniPath = Path.Combine(patchDataDirectory, "changes.ini");
-            var rootGameDirectory = Snapshot.RootGameDirectory();
+            var patchDataDirectory = "tlk_tslpatchdata";
+            var changesIniPath = resources.GetFilePath(Path.Combine(patchDataDirectory, "changes.ini"));
 
-            fileInterface.LoadDirectory(patchDataDirectory);
-            fileInterface.LoadFile(Path.Combine(rootGameDirectory, "dialog.tlk"));
+            fileInterface.LoadDirectory(resources.GetDirectory(patchDataDirectory));
+            fileInterface.LoadDirectory(GameRoot.Directory);
 
-            Patcher.Run(changesIniPath, rootGameDirectory, fileInterface, 0);
+            Patcher.Run(changesIniPath, GameRoot.Directory, fileInterface, 0);
 
-            Snapshot.Verify(fileInterface);
+            Snapshot.Verify(fileInterface, true);
         }
 
         [TestMethod]
@@ -41,16 +39,15 @@ namespace KPatcherTests.Source {
 
             var date = new DateTime(2003, 7, 15);
 
-            var patchDataDirectory = Snapshot.PatchDataDirectory();
-            var changesIniPath = Path.Combine(patchDataDirectory, "changes.ini");
-            var rootGameDirectory = Snapshot.RootGameDirectory();
+            var patchDataDirectory = "install_tslpatchdata";
+            var changesIniPath = resources.GetFilePath(Path.Combine(patchDataDirectory, "changes.ini"));
 
-            fileInterface.LoadDirectory(patchDataDirectory);
-            fileInterface.LoadDirectory(rootGameDirectory);
+            fileInterface.LoadDirectory(resources.GetDirectory(patchDataDirectory));
+            fileInterface.LoadDirectory(GameRoot.Directory);
 
-            Patcher.Run(changesIniPath, rootGameDirectory, fileInterface, date);
+            Patcher.Run(changesIniPath, GameRoot.Directory, fileInterface, date);
 
-            Snapshot.Verify(fileInterface);
+            Snapshot.Verify(fileInterface, true);
         }
 
         [TestMethod]
@@ -59,16 +56,15 @@ namespace KPatcherTests.Source {
 
             var date = new DateTime(2003, 7, 15);
 
-            var patchDataDirectory = Snapshot.PatchDataDirectory();
-            var changesIniPath = Path.Combine(patchDataDirectory, "changes.ini");
-            var rootGameDirectory = Snapshot.RootGameDirectory();
+            var patchDataDirectory = "2da_tslpatchdata";
+            var changesIniPath = resources.GetFilePath(Path.Combine(patchDataDirectory, "changes.ini"));
 
-            fileInterface.LoadDirectory(patchDataDirectory);
-            fileInterface.LoadDirectory(rootGameDirectory);
+            fileInterface.LoadDirectory(resources.GetDirectory(patchDataDirectory));
+            fileInterface.LoadDirectory(GameRoot.Directory);
 
-            Patcher.Run(changesIniPath, rootGameDirectory, fileInterface, date);
+            Patcher.Run(changesIniPath, GameRoot.Directory, fileInterface, date);
 
-            Snapshot.Verify(fileInterface);
+            Snapshot.Verify(fileInterface, true);
         }
     }
 }

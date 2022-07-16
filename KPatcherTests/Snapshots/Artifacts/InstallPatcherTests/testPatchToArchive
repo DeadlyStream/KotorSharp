@@ -12,4 +12,4 @@ files:
     value: This is a test file
   -
     name: testfile.txt
-    value: this is a test file
+    value: This is a test file
