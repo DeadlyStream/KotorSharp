@@ -4,6 +4,7 @@ using KSnapshot;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using YAMLEncoding;
 
@@ -12,10 +13,10 @@ namespace AuroraIOTests.Source {
     [TestClass]
     public class BIFKeyTests {
 
-        YAMLCoder coder = new YAMLCoder();
+        ResourceBundle resources = ResourceBundle.GetCurrent();
 
         public BIFKeyTable testKeyFile() {
-            return BIFKeyFile.Read(Snapshot.ResourcePath("dataResource"));
+            return BIFKeyFile.Read(Path.Combine(resources.Directory, "chitin.key"));
         }
 
         [TestMethod]

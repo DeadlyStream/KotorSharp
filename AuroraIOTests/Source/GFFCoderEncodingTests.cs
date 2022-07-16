@@ -10,12 +10,14 @@ using System.Text;
 namespace AuroraIOTests.Source {
     [TestClass]
     public class GFFCoderEncodingTests {
+        ResourceBundle resources = ResourceBundle.GetCurrent();
 
         GFFCoder coder = new GFFCoder();
 
         [TestMethod]
         public void testEncodeGameFile() {
-            var table = coder.decode(Snapshot.DataResource());
+            var file = resources.GetFileBytes("kreia.dlg");
+            var table = coder.decode(file);
 
             var newTable = coder.decode(coder.encode(table));
             Snapshot.Verify(newTable);

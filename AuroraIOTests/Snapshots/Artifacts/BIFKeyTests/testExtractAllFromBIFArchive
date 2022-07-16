@@ -1,0 +1,1272 @@
+-
+  name: acbonus.2da
+  size: 1568
+-
+  name: aiscripts.2da
+  size: 185
+-
+  name: aliensound.2da
+  size: 17268
+-
+  name: alienvo.2da
+  size: 13948
+-
+  name: ambientmusic.2da
+  size: 2052
+-
+  name: ambientsound.2da
+  size: 3113
+-
+  name: ammunitiontypes.2da
+  size: 583
+-
+  name: animations.2da
+  size: 33492
+-
+  name: appearance.2da
+  size: 148884
+-
+  name: appearancesndset.2da
+  size: 821
+-
+  name: autobalance.2da
+  size: 350
+-
+  name: baseitems.2da
+  size: 17948
+-
+  name: bindablekeys.2da
+  size: 3258
+-
+  name: bodybag.2da
+  size: 307
+-
+  name: camerastyle.2da
+  size: 750
+-
+  name: capart.2da
+  size: 458
+-
+  name: chemicalcreate.2da
+  size: 1947
+-
+  name: classes.2da
+  size: 2210
+-
+  name: classpowergain.2da
+  size: 1339
+-
+  name: cls_atk_1.2da
+  size: 401
+-
+  name: cls_atk_2.2da
+  size: 364
+-
+  name: cls_atk_3.2da
+  size: 393
+-
+  name: cls_spgn_jedi.2da
+  size: 1306
+-
+  name: cls_st_cm_drd.2da
+  size: 731
+-
+  name: cls_st_ex_drd.2da
+  size: 731
+-
+  name: cls_st_jedi_c.2da
+  size: 729
+-
+  name: cls_st_jedi_g.2da
+  size: 729
+-
+  name: cls_st_jedi_s.2da
+  size: 729
+-
+  name: cls_st_jmaster.2da
+  size: 731
+-
+  name: cls_st_jwatch.2da
+  size: 729
+-
+  name: cls_st_jweapmas.2da
+  size: 729
+-
+  name: cls_st_minion.2da
+  size: 729
+-
+  name: cls_st_scndrl.2da
+  size: 731
+-
+  name: cls_st_scout.2da
+  size: 729
+-
+  name: cls_st_sithass.2da
+  size: 731
+-
+  name: cls_st_sithlord.2da
+  size: 731
+-
+  name: cls_st_sithmar.2da
+  size: 731
+-
+  name: cls_st_soldier.2da
+  size: 731
+-
+  name: cls_st_techspec.2da
+  size: 731
+-
+  name: combatanimations.2da
+  size: 8663
+-
+  name: comptypes.2da
+  size: 89
+-
+  name: creaturesize.2da
+  size: 139
+-
+  name: creaturespeed.2da
+  size: 428
+-
+  name: credits.2da
+  size: 459
+-
+  name: crtemplates.2da
+  size: 176
+-
+  name: cursors.2da
+  size: 364
+-
+  name: damagehitvisual.2da
+  size: 266
+-
+  name: debugvariables.2da
+  size: 415
+-
+  name: dialoganimations.2da
+  size: 8798
+-
+  name: difficultyopt.2da
+  size: 130
+-
+  name: diffsettings.2da
+  size: 253
+-
+  name: disease.2da
+  size: 1102
+-
+  name: doortypes.2da
+  size: 3707
+-
+  name: droiddischarge.2da
+  size: 487
+-
+  name: effecticon.2da
+  size: 6975
+-
+  name: emotion.2da
+  size: 738
+-
+  name: encdifficulty.2da
+  size: 147
+-
+  name: environment.2da
+  size: 3412
+-
+  name: excitedduration.2da
+  size: 79
+-
+  name: exptable.2da
+  size: 861
+-
+  name: facialanim.2da
+  size: 246
+-
+  name: feat.2da
+  size: 63055
+-
+  name: featgain.2da
+  size: 3645
+-
+  name: feedbacktext.2da
+  size: 87
+-
+  name: footstepsounds.2da
+  size: 1740
+-
+  name: forceadjust.2da
+  size: 138
+-
+  name: forceshields.2da
+  size: 1808
+-
+  name: formations.2da
+  size: 448
+-
+  name: fractionalcr.2da
+  size: 160
+-
+  name: gameeffects.2da
+  size: 2613
+-
+  name: gamespyrooms.2da
+  size: 292
+-
+  name: gamma.2da
+  size: 101
+-
+  name: gender.2da
+  size: 189
+-
+  name: genericdoors.2da
+  size: 6543
+-
+  name: globalcat.2da
+  size: 25601
+-
+  name: grenadesnd.2da
+  size: 419
+-
+  name: guisounds.2da
+  size: 676
+-
+  name: heads.2da
+  size: 6726
+-
+  name: hen_companion.2da
+  size: 273
+-
+  name: hen_familiar.2da
+  size: 276
+-
+  name: influence.2da
+  size: 337
+-
+  name: inventorysnds.2da
+  size: 1120
+-
+  name: iprp_abilities.2da
+  size: 148
+-
+  name: iprp_acmodtype.2da
+  size: 130
+-
+  name: iprp_aligngrp.2da
+  size: 145
+-
+  name: iprp_alignment.2da
+  size: 109
+-
+  name: iprp_ammocost.2da
+  size: 540
+-
+  name: iprp_ammotype.2da
+  size: 89
+-
+  name: iprp_amount.2da
+  size: 87
+-
+  name: iprp_attribcost.2da
+  size: 660
+-
+  name: iprp_base1.2da
+  size: 32
+-
+  name: iprp_bladecost.2da
+  size: 127
+-
+  name: iprp_bonuscost.2da
+  size: 223
+-
+  name: iprp_chargecost.2da
+  size: 649
+-
+  name: iprp_color.2da
+  size: 118
+-
+  name: iprp_combatdam.2da
+  size: 87
+-
+  name: iprp_costtable.2da
+  size: 959
+-
+  name: iprp_damagecost.2da
+  size: 494
+-
+  name: iprp_damagetype.2da
+  size: 333
+-
+  name: iprp_damvulcost.2da
+  size: 224
+-
+  name: iprp_feats.2da
+  size: 555
+-
+  name: iprp_immuncost.2da
+  size: 322
+-
+  name: iprp_immunity.2da
+  size: 269
+-
+  name: iprp_lightcost.2da
+  size: 197
+-
+  name: iprp_meleecost.2da
+  size: 161
+-
+  name: iprp_monstcost.2da
+  size: 1428
+-
+  name: iprp_monsterdam.2da
+  size: 245
+-
+  name: iprp_monsterhit.2da
+  size: 287
+-
+  name: iprp_neg10cost.2da
+  size: 362
+-
+  name: iprp_neg5cost.2da
+  size: 208
+-
+  name: iprp_onhit.2da
+  size: 339
+-
+  name: iprp_onhitcost.2da
+  size: 240
+-
+  name: iprp_onhitdc.2da
+  size: 114
+-
+  name: iprp_onhitdur.2da
+  size: 236
+-
+  name: iprp_paramtable.2da
+  size: 426
+-
+  name: iprp_pc.2da
+  size: 391
+-
+  name: iprp_poison.2da
+  size: 147
+-
+  name: iprp_protection.2da
+  size: 156
+-
+  name: iprp_redcost.2da
+  size: 190
+-
+  name: iprp_resistcost.2da
+  size: 257
+-
+  name: iprp_saveelement.2da
+  size: 452
+-
+  name: iprp_savingthrow.2da
+  size: 98
+-
+  name: iprp_slotscost.2da
+  size: 27
+-
+  name: iprp_soakcost.2da
+  size: 221
+-
+  name: iprp_spellcost.2da
+  size: 5460
+-
+  name: iprp_spelllvcost.2da
+  size: 222
+-
+  name: iprp_spelllvlimm.2da
+  size: 206
+-
+  name: iprp_spells.2da
+  size: 15123
+-
+  name: iprp_spellshl.2da
+  size: 230
+-
+  name: iprp_srcost.2da
+  size: 396
+-
+  name: iprp_staminacost.2da
+  size: 32
+-
+  name: iprp_terraintype.2da
+  size: 27
+-
+  name: iprp_trapcost.2da
+  size: 252
+-
+  name: iprp_traps.2da
+  size: 109
+-
+  name: iprp_trapsize.2da
+  size: 80
+-
+  name: iprp_walk.2da
+  size: 68
+-
+  name: iprp_weightcost.2da
+  size: 182
+-
+  name: iprp_weightinc.2da
+  size: 177
+-
+  name: itemcreate.2da
+  size: 6792
+-
+  name: itemcreatemira.2da
+  size: 6952
+-
+  name: itempropdef.2da
+  size: 3219
+-
+  name: itemprops.2da
+  size: 5933
+-
+  name: itemvalue.2da
+  size: 906
+-
+  name: itmwizammo.2da
+  size: 1043
+-
+  name: itmwizarmor.2da
+  size: 1370
+-
+  name: itmwizhelmet.2da
+  size: 1353
+-
+  name: itmwizmelee.2da
+  size: 960
+-
+  name: itmwizpotion.2da
+  size: 898
+-
+  name: itmwizranged.2da
+  size: 925
+-
+  name: itmwizrods.2da
+  size: 947
+-
+  name: itmwizscroll.2da
+  size: 890
+-
+  name: itmwizstaves.2da
+  size: 1352
+-
+  name: itmwizthrow.2da
+  size: 971
+-
+  name: itmwiztrap.2da
+  size: 844
+-
+  name: itmwizwands.2da
+  size: 900
+-
+  name: keymap.2da
+  size: 6892
+-
+  name: lightcolor.2da
+  size: 1246
+-
+  name: loadhints.2da
+  size: 326
+-
+  name: loadscreenhints.2da
+  size: 953
+-
+  name: loadscreens.2da
+  size: 2372
+-
+  name: loadstoryhints.2da
+  size: 1545
+-
+  name: masterfeats.2da
+  size: 139
+-
+  name: metamagic.2da
+  size: 187
+-
+  name: minglobalrim.2da
+  size: 67
+-
+  name: modulesave.2da
+  size: 2942
+-
+  name: movies.2da
+  size: 1698
+-
+  name: musictable.2da
+  size: 1376
+-
+  name: namefilter.2da
+  size: 474
+-
+  name: npc.2da
+  size: 253
+-
+  name: nwconfig.2da
+  size: 514
+-
+  name: nwconfig2.2da
+  size: 297
+-
+  name: packages.2da
+  size: 719
+-
+  name: packeqbarb1.2da
+  size: 102
+-
+  name: packeqbarb3.2da
+  size: 134
+-
+  name: packeqbarb4.2da
+  size: 86
+-
+  name: packeqbarb5.2da
+  size: 102
+-
+  name: packeqbard1.2da
+  size: 220
+-
+  name: packeqcler1.2da
+  size: 118
+-
+  name: packeqcler2.2da
+  size: 118
+-
+  name: packeqcler3.2da
+  size: 118
+-
+  name: packeqcler4.2da
+  size: 118
+-
+  name: packeqcler5.2da
+  size: 118
+-
+  name: packeqcmdrd1.2da
+  size: 27
+-
+  name: packeqdruid1.2da
+  size: 102
+-
+  name: packeqexdrd1.2da
+  size: 27
+-
+  name: packeqfight1.2da
+  size: 102
+-
+  name: packeqfight2.2da
+  size: 134
+-
+  name: packeqjedic1.2da
+  size: 27
+-
+  name: packeqjedig1.2da
+  size: 27
+-
+  name: packeqjedis1.2da
+  size: 27
+-
+  name: packeqmonk1.2da
+  size: 102
+-
+  name: packeqmonk2.2da
+  size: 118
+-
+  name: packeqmonk4.2da
+  size: 102
+-
+  name: packeqmonk5.2da
+  size: 118
+-
+  name: packeqpala1.2da
+  size: 117
+-
+  name: packeqpala2.2da
+  size: 133
+-
+  name: packeqpala3.2da
+  size: 149
+-
+  name: packeqrang1.2da
+  size: 150
+-
+  name: packeqrang2.2da
+  size: 150
+-
+  name: packeqrang3.2da
+  size: 150
+-
+  name: packeqrang4.2da
+  size: 138
+-
+  name: packeqrang5.2da
+  size: 150
+-
+  name: packeqrog1.2da
+  size: 155
+-
+  name: packeqrog2.2da
+  size: 155
+-
+  name: packeqrog3.2da
+  size: 155
+-
+  name: packeqrog5.2da
+  size: 155
+-
+  name: packeqscdrl1.2da
+  size: 120
+-
+  name: packeqscout1.2da
+  size: 123
+-
+  name: packeqsoldr1.2da
+  size: 101
+-
+  name: packeqsor1.2da
+  size: 220
+-
+  name: packeqwiz1.2da
+  size: 220
+-
+  name: packftbarb1.2da
+  size: 4124
+-
+  name: packftbarb2.2da
+  size: 4124
+-
+  name: packftbarb3.2da
+  size: 4124
+-
+  name: packftbarb4.2da
+  size: 4124
+-
+  name: packftbarb5.2da
+  size: 4146
+-
+  name: packftbard1.2da
+  size: 2545
+-
+  name: packftbard2.2da
+  size: 2545
+-
+  name: packftbard3.2da
+  size: 2545
+-
+  name: packftbard4.2da
+  size: 2545
+-
+  name: packftbard5.2da
+  size: 2545
+-
+  name: packftcler1.2da
+  size: 2545
+-
+  name: packftcler2.2da
+  size: 2545
+-
+  name: packftcler3.2da
+  size: 2545
+-
+  name: packftcler4.2da
+  size: 2545
+-
+  name: packftcler5.2da
+  size: 2545
+-
+  name: packftcmdrd1.2da
+  size: 1262
+-
+  name: packftdruid1.2da
+  size: 2545
+-
+  name: packftdruid2.2da
+  size: 2545
+-
+  name: packftdruid3.2da
+  size: 2545
+-
+  name: packftdruid4.2da
+  size: 2545
+-
+  name: packftdruid5.2da
+  size: 2545
+-
+  name: packftexdrd1.2da
+  size: 1262
+-
+  name: packftfight1.2da
+  size: 4124
+-
+  name: packftfight2.2da
+  size: 4124
+-
+  name: packftfight3.2da
+  size: 4124
+-
+  name: packftfight4.2da
+  size: 4145
+-
+  name: packftfight5.2da
+  size: 4124
+-
+  name: packftjedic1.2da
+  size: 1262
+-
+  name: packftjedig1.2da
+  size: 1262
+-
+  name: packftjedis1.2da
+  size: 1262
+-
+  name: packftmonk1.2da
+  size: 4105
+-
+  name: packftmonk2.2da
+  size: 4105
+-
+  name: packftmonk3.2da
+  size: 4105
+-
+  name: packftmonk4.2da
+  size: 4105
+-
+  name: packftmonk5.2da
+  size: 4059
+-
+  name: packftpala1.2da
+  size: 4124
+-
+  name: packftpala2.2da
+  size: 4124
+-
+  name: packftpala3.2da
+  size: 4124
+-
+  name: packftpala4.2da
+  size: 4124
+-
+  name: packftrang1.2da
+  size: 4232
+-
+  name: packftrang2.2da
+  size: 4232
+-
+  name: packftrang3.2da
+  size: 4237
+-
+  name: packftrang4.2da
+  size: 4240
+-
+  name: packftrang5.2da
+  size: 4240
+-
+  name: packftrog1.2da
+  size: 4227
+-
+  name: packftrog2.2da
+  size: 4227
+-
+  name: packftrog3.2da
+  size: 4225
+-
+  name: packftrog5.2da
+  size: 4227
+-
+  name: packftscdrl1.2da
+  size: 1262
+-
+  name: packftscout1.2da
+  size: 1262
+-
+  name: packftsoldr1.2da
+  size: 1262
+-
+  name: packftwiz1.2da
+  size: 2545
+-
+  name: packftwiz2.2da
+  size: 2545
+-
+  name: packftwiz3.2da
+  size: 2545
+-
+  name: packftwiz4.2da
+  size: 2545
+-
+  name: packftwiz5.2da
+  size: 2545
+-
+  name: packftwiz6.2da
+  size: 2545
+-
+  name: packftwiz7.2da
+  size: 2545
+-
+  name: packftwiz8.2da
+  size: 2545
+-
+  name: packftwiz9.2da
+  size: 2545
+-
+  name: packskbarb1.2da
+  size: 158
+-
+  name: packskbarb2.2da
+  size: 158
+-
+  name: packskbarb3.2da
+  size: 163
+-
+  name: packskbarb4.2da
+  size: 158
+-
+  name: packskbarb5.2da
+  size: 158
+-
+  name: packskbard1.2da
+  size: 351
+-
+  name: packskbard2.2da
+  size: 351
+-
+  name: packskbard3.2da
+  size: 351
+-
+  name: packskbard4.2da
+  size: 351
+-
+  name: packskbard5.2da
+  size: 351
+-
+  name: packskcler1.2da
+  size: 257
+-
+  name: packskcler2.2da
+  size: 257
+-
+  name: packskcler3.2da
+  size: 257
+-
+  name: packskcler4.2da
+  size: 257
+-
+  name: packskcler5.2da
+  size: 257
+-
+  name: packskcmdrd1.2da
+  size: 161
+-
+  name: packskdruid1.2da
+  size: 257
+-
+  name: packskdruid2.2da
+  size: 257
+-
+  name: packskdruid3.2da
+  size: 257
+-
+  name: packskdruid4.2da
+  size: 257
+-
+  name: packskdruid5.2da
+  size: 257
+-
+  name: packskexdrd1.2da
+  size: 161
+-
+  name: packskfight1.2da
+  size: 171
+-
+  name: packskfight2.2da
+  size: 171
+-
+  name: packskfight3.2da
+  size: 171
+-
+  name: packskfight5.2da
+  size: 171
+-
+  name: packskjedic1.2da
+  size: 161
+-
+  name: packskjedig1.2da
+  size: 161
+-
+  name: packskjedis1.2da
+  size: 161
+-
+  name: packskmonk1.2da
+  size: 134
+-
+  name: packskpala1.2da
+  size: 120
+-
+  name: packskpala4.2da
+  size: 120
+-
+  name: packskrang1.2da
+  size: 139
+-
+  name: packskrang2.2da
+  size: 139
+-
+  name: packskrang3.2da
+  size: 157
+-
+  name: packskrog1.2da
+  size: 233
+-
+  name: packskrog2.2da
+  size: 233
+-
+  name: packskrog3.2da
+  size: 233
+-
+  name: packskrog4.2da
+  size: 224
+-
+  name: packskrog5.2da
+  size: 233
+-
+  name: packskscdrl1.2da
+  size: 161
+-
+  name: packskscout1.2da
+  size: 161
+-
+  name: packsksoldr1.2da
+  size: 161
+-
+  name: packskwiz1.2da
+  size: 182
+-
+  name: packspbar1.2da
+  size: 1594
+-
+  name: packspwiz1.2da
+  size: 3502
+-
+  name: packspwiz2.2da
+  size: 1290
+-
+  name: packspwiz3.2da
+  size: 1243
+-
+  name: packspwiz4.2da
+  size: 1285
+-
+  name: packspwiz5.2da
+  size: 1278
+-
+  name: packspwiz6.2da
+  size: 1257
+-
+  name: packspwiz7.2da
+  size: 1251
+-
+  name: packspwiz8.2da
+  size: 1266
+-
+  name: packspwiz9.2da
+  size: 1126
+-
+  name: parts_belt.2da
+  size: 194
+-
+  name: parts_bicep.2da
+  size: 192
+-
+  name: parts_chest.2da
+  size: 453
+-
+  name: parts_foot.2da
+  size: 146
+-
+  name: parts_forearm.2da
+  size: 248
+-
+  name: parts_hand.2da
+  size: 119
+-
+  name: parts_legs.2da
+  size: 189
+-
+  name: parts_neck.2da
+  size: 107
+-
+  name: parts_pelvis.2da
+  size: 341
+-
+  name: parts_shin.2da
+  size: 201
+-
+  name: parts_shoulder.2da
+  size: 257
+-
+  name: pazaakdecks.2da
+  size: 825
+-
+  name: phenotype.2da
+  size: 66
+-
+  name: placeableobjsnds.2da
+  size: 4709
+-
+  name: placeables.2da
+  size: 25836
+-
+  name: placeabletypes.2da
+  size: 193
+-
+  name: planetary.2da
+  size: 1141
+-
+  name: plot.2da
+  size: 2815
+-
+  name: poison.2da
+  size: 949
+-
+  name: polymorph.2da
+  size: 261
+-
+  name: portraits.2da
+  size: 4221
+-
+  name: postproc.2da
+  size: 231
+-
+  name: pregen.2da
+  size: 706
+-
+  name: prioritygroups.2da
+  size: 1536
+-
+  name: pvpsettings.2da
+  size: 100
+-
+  name: race_feat_dwarf.2da
+  size: 220
+-
+  name: race_feat_elf.2da
+  size: 246
+-
+  name: race_feat_gnome.2da
+  size: 253
+-
+  name: race_feat_half.2da
+  size: 165
+-
+  name: race_feat_hfelf.2da
+  size: 174
+-
+  name: race_feat_hforc.2da
+  size: 57
+-
+  name: race_feat_human.2da
+  size: 58
+-
+  name: racialtypes.2da
+  size: 642
+-
+  name: ranges.2da
+  size: 625
+-
+  name: regeneration.2da
+  size: 220
+-
+  name: regeneration_e3.2da
+  size: 221
+-
+  name: removefxondeath.2da
+  size: 79
+-
+  name: repadjust.2da
+  size: 246
+-
+  name: replacetexture.2da
+  size: 54
+-
+  name: repute.2da
+  size: 1704
+-
+  name: resistancecost.2da
+  size: 21
+-
+  name: restduration.2da
+  size: 1331
+-
+  name: rrf_nss.2da
+  size: 470
+-
+  name: rrf_wav.2da
+  size: 724
+-
+  name: rumble.2da
+  size: 2154
+-
+  name: skills.2da
+  size: 1575
+-
+  name: skillvsitemcost.2da
+  size: 940
+-
+  name: soundcatfilters.2da
+  size: 258
+-
+  name: sounddefaultspos.2da
+  size: 171
+-
+  name: sounddefaultstim.2da
+  size: 274
+-
+  name: soundeax.2da
+  size: 409
+-
+  name: soundgain.2da
+  size: 379
+-
+  name: soundprovider.2da
+  size: 248
+-
+  name: soundset.2da
+  size: 2712
+-
+  name: soundsettype.2da
+  size: 102
+-
+  name: soundtypes.2da
+  size: 104
+-
+  name: spells.2da
+  size: 49125
+-
+  name: spellschools.2da
+  size: 297
+-
+  name: statescripts.2da
+  size: 1088
+-
+  name: stringtokens.2da
+  size: 4446
+-
+  name: subrace.2da
+  size: 101
+-
+  name: surfacemat.2da
+  size: 779
+-
+  name: swingsounds.2da
+  size: 266
+-
+  name: swoopupgrade.2da
+  size: 559
+-
+  name: tailmodel.2da
+  size: 111
+-
+  name: tcn01doors.2da
+  size: 81
+-
+  name: tcn01_edge.2da
+  size: 706
+-
+  name: tdc01_edge.2da
+  size: 387
+-
+  name: tde01_edge.2da
+  size: 389
+-
+  name: tdm01_edge.2da
+  size: 422
+-
+  name: tds01_edge.2da
+  size: 384
+-
+  name: texpacks.2da
+  size: 240
+-
+  name: tic01_edge.2da
+  size: 514
+-
+  name: tilecolor.2da
+  size: 315
+-
+  name: tin01doors.2da
+  size: 81
+-
+  name: tin01_edge.2da
+  size: 444
+-
+  name: tms01_edge.2da
+  size: 196
+-
+  name: traps.2da
+  size: 2151
+-
+  name: treasurescale.2da
+  size: 133
+-
+  name: ttf01_edge.2da
+  size: 396
+-
+  name: ttr01doors.2da
+  size: 81
+-
+  name: ttr01_edge.2da
+  size: 608
+-
+  name: tutitemcreate.2da
+  size: 281
+-
+  name: tutorial.2da
+  size: 3649
+-
+  name: upcrystals.2da
+  size: 1087
+-
+  name: upgrade.2da
+  size: 9780
+-
+  name: upgradetypes.2da
+  size: 231
+-
+  name: vfx_fire_forget.2da
+  size: 415
+-
+  name: vfx_persistent.2da
+  size: 599
+-
+  name: videoeffects.2da
+  size: 1259
+-
+  name: videoquality.2da
+  size: 331
+-
+  name: visemes.2da
+  size: 295
+-
+  name: visualeffects.2da
+  size: 17312
+-
+  name: waypoint.2da
+  size: 155
+-
+  name: weapondischarge.2da
+  size: 3435
+-
+  name: weaponsounds.2da
+  size: 1019
+-
+  name: wingmodel.2da
+  size: 84
+-
+  name: xpbaseconst.2da
+  size: 331
+-
+  name: xptable.2da
+  size: 5794

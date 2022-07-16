@@ -1,0 +1,14 @@
+type: gff
+fields:
+  field0:
+    type: cexostring
+    value: string0
+  field1:
+    type: cexostring
+    value: string1
+  field2:
+    type: byte
+    value: 2
+  field3:
+    type: byte
+    value: 3

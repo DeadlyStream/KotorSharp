@@ -1,0 +1,8 @@
+language: English
+entries:
+  - 0
+    text: |
+      Bad StrRef
+  - 1
+    text: |
+      Bad StrRef

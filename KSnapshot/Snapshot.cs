@@ -27,18 +27,18 @@ namespace KSnapshot {
 
     public class ResourceBundle {
 
-        private string TestCaseDirectory;
+        public readonly string Directory;
 
-        public byte[] GetFileBytes(string fileName, [CallerMemberName] string methodName = "") {
-            return File.ReadAllBytes(GetFilePath(fileName, methodName));
+        public byte[] GetFileBytes(string fileName) {
+            return File.ReadAllBytes(GetFilePath(fileName));
         }
 
-        public string GetFileText(string fileName, [CallerMemberName] string methodName = "") {
-            return File.ReadAllText(GetFilePath(fileName, methodName)); 
+        public string GetFileText(string fileName) {
+            return File.ReadAllText(GetFilePath(fileName)); 
         }
 
-        private string GetFilePath(string fileName, string methodName) {
-            return Path.Combine(TestCaseDirectory, methodName, fileName);
+        private string GetFilePath(string fileName) {
+            return Path.Combine(Directory, fileName);
         }
 
         public static ResourceBundle GetCurrent([CallerFilePath] string fileName = "") {
@@ -46,7 +46,7 @@ namespace KSnapshot {
         }
 
         private ResourceBundle(string directory) {
-            TestCaseDirectory = Path.Combine(KSEnvironment.Bundle.SnapshotDirectory, "Resources", directory);
+            Directory = Path.Combine(KSEnvironment.Bundle.SnapshotDirectory, "Resources", directory);
         }
     }
 
@@ -59,7 +59,8 @@ namespace KSnapshot {
         static string expectedSnapshotFilePath(string className, string methodName) {
             return Path.Combine(KSEnvironment.Bundle.SnapshotDirectory,
                 "Artifacts",
-                String.Format("{0}\\{1}\\expected", Path.GetFileNameWithoutExtension(className), methodName));
+                Path.GetFileNameWithoutExtension(className),
+                methodName);
         }
 
         static string snapshotOutputDIrectory(string className, string methodName) {

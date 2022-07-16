@@ -1,0 +1,6 @@
+type: gff
+fields:
+  value:
+    type: cexolocstring
+    value:
+      strref: -1

@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="bin\**" />
+    <EmbeddedResource Remove="bin\**" />
+    <None Remove="bin\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Resources\portraits.2da" />
   </ItemGroup>
 
@@ -24,13 +30,6 @@
 
   <ItemGroup>
     <EmbeddedResource Include="Resources\portraits.2da" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="bin\Debug\netcoreapp3.1\Artifacts\_2DACoderTests_testAddRow" />
-    <None Include="bin\Debug\netcoreapp3.1\Artifacts\_2DACoderTests_testClearValue" />
-    <None Include="bin\Debug\netcoreapp3.1\Artifacts\_2DACoderTests_testModifyColumnName" />
-    <None Include="bin\Debug\netcoreapp3.1\Artifacts\_2DACoderTests_testModifyValue" />
   </ItemGroup>
 
   <ItemGroup>

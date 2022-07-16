@@ -10,66 +10,56 @@ namespace AuroraIOTests.Source {
     [TestClass]
     public class AuroraArchiveTests {
 
-        YAMLCoder coder = new YAMLCoder();
-        string testERFFile() {
-            return Snapshot.ResourcePath("dataResource");
-        }
+        // coder = new YAMLCoder();
+        ERFRIMCoder coder = new ERFRIMCoder();
 
-        string testRIMFile() {
-            return Snapshot.ResourcePath("dataResource");
-        }
-
-        byte[] testGameERF() {
-            return Snapshot.DataResource();
-        }
-
-        byte[] testGameRIM() {
-            return Snapshot.DataResource();
-        }
+        ResourceBundle resources = ResourceBundle.GetCurrent();
 
         [TestMethod]
         public void testReadGameERF() {
-            var coder = new ERFRIMCoder();
-            var archive = coder.decode(testGameERF());
-            Snapshot.Verify(archive);
+            var file = resources.GetFileBytes("001EBO_dlg.erf");
+            var archive = coder.decode(file);
+            Snapshot.Verify(archive, true);
         }
 
         [TestMethod]
         public void testReadGameRIM() {
-            var coder = new ERFRIMCoder();
-            var archive = coder.decode(testGameRIM());
-            Snapshot.Verify(archive);
+            var file = resources.GetFileBytes("001EBO.rim");
+            var archive = coder.decode(file);
+            Snapshot.Verify(archive, true);
         }
 
         [TestMethod]
         public void testWriteGameERF() {
-            var coder = new ERFRIMCoder();
-            var archive = coder.decode(testGameERF());
+            var file = resources.GetFileBytes("001EBO_dlg.erf");
+            var archive = coder.decode(file);
             var newArchive = coder.decode(coder.encode(archive));
-            Snapshot.Verify(newArchive);
+            Snapshot.Verify(newArchive, true);
         }
 
         [TestMethod]
         public void testWriteGameRIM() {
-            var coder = new ERFRIMCoder();
-            var archive = coder.decode(testGameRIM());
+            var file = resources.GetFileBytes("001EBO.rim");
+            
+            var archive = coder.decode(file);
             var newArchive = coder.decode(coder.encode(archive));
-            Snapshot.Verify(newArchive);
+            Snapshot.Verify(newArchive, true);
         }
 
 
         [TestMethod]
         public void testAddEntry() {
-            var archive = AuroraArchiveFile.Load(testERFFile());
-            var file = new AuroraFileEntry("existingFile3.txt", Encoding.ASCII.GetBytes("This is an added file"));
-            archive.Add(file);
+            var archive = coder.decode(resources.GetFileBytes("test.erf"));
+            var fileName = "existingFile3.txt";
+            var fileEntry = new AuroraFileEntry(fileName, resources.GetFileBytes(fileName));
+            archive.Add(fileEntry);
 
             Snapshot.Verify(archive);
         }
 
         [TestMethod]
         public void testRemoveEntry() {
-            var archive = AuroraArchiveFile.Load(testERFFile());
+            var archive = coder.decode(resources.GetFileBytes("test.erf"));
             archive.Get("existingFile0.txt").Delete();
 
             Snapshot.Verify(archive);
@@ -77,7 +67,7 @@ namespace AuroraIOTests.Source {
 
         [TestMethod]
         public void testModifyEntry() {
-            var archive = AuroraArchiveFile.Load(testERFFile());
+            var archive = coder.decode(resources.GetFileBytes("test.erf"));
             archive.Get("existingFile0.txt").Update((data) => {
                 return Encoding.ASCII.GetBytes("This is a modified file");
             });
@@ -87,14 +77,13 @@ namespace AuroraIOTests.Source {
 
         [TestMethod]
         public void testReadERF() {
-            var archive = AuroraArchiveFile.Load(testERFFile(), ERFRIMCoder.Format.ERF);
+            var archive = coder.decode(resources.GetFileBytes("test.erf"));
             Snapshot.Verify(archive);
         }
 
         [TestMethod]
         public void testWriteERF() {
-            var coder = new ERFRIMCoder();
-            var archive = AuroraArchiveFile.Load(testERFFile(), ERFRIMCoder.Format.ERF);
+            var archive = coder.decode(resources.GetFileBytes("test.erf"));
 
             var newArchive = coder.decode(coder.encode(archive));
             Snapshot.Verify(newArchive);
@@ -102,14 +91,13 @@ namespace AuroraIOTests.Source {
 
         [TestMethod]
         public void testReadRIM() {
-            var archive = AuroraArchiveFile.Load(testRIMFile(), ERFRIMCoder.Format.RIM);
+            var archive = coder.decode(resources.GetFileBytes("test.rim"));
             Snapshot.Verify(archive);
         }
 
         [TestMethod]
         public void testWriteRIM() {
-            var coder = new ERFRIMCoder();
-            var archive = AuroraArchiveFile.Load(testRIMFile(), ERFRIMCoder.Format.RIM);
+            var archive = coder.decode(resources.GetFileBytes("test.rim"));
 
             var newArchive = coder.decode(coder.encode(archive));
             Snapshot.Verify(newArchive);
