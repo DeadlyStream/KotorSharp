@@ -15,7 +15,7 @@ namespace AuroraIOTests.Source {
         YAMLCoder coder = new YAMLCoder();
 
         public BIFKeyTable testKeyFile() {
-            return BIFKeyFile.Read(Snapshot.ResourcePath());
+            return BIFKeyFile.Read(Snapshot.ResourcePath("dataResource"));
         }
 
         [TestMethod]

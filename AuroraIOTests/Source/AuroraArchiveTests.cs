@@ -12,11 +12,11 @@ namespace AuroraIOTests.Source {
 
         YAMLCoder coder = new YAMLCoder();
         string testERFFile() {
-            return Snapshot.ResourcePath();
+            return Snapshot.ResourcePath("dataResource");
         }
 
         string testRIMFile() {
-            return Snapshot.ResourcePath();
+            return Snapshot.ResourcePath("dataResource");
         }
 
         byte[] testGameERF() {
