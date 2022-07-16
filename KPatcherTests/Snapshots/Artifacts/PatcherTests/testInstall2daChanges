@@ -1,0 +1,84 @@
+-
+  path: ..\..\..\snapshots\resources\patchertests\testinstall2dachanges_dir\tslpatchdata\changes.ini
+  data: sCW4jDO49B4U8XErGkL0mQleP5AqxVA2FPHC3KtpqaEO+k/NKRaJAd/kn/hBLe7jlp/2RUZ6WRHnhWcX8KrY4g==
+-
+  path: ..\..\..\snapshots\resources\patchertests\testinstall2dachanges_dir\tslpatchdata\info.rtf
+  data: UaoC7aqC2SbYAggh1xD/Z3M4gtugEPq+CStu+6+tIxkKpr1pgfbXULkJVCH3GVeZ0v3kVUqu6jU6HLWVQNY8/w==
+-
+  path: ..\..\..\snapshots\resources\gameroot\binkw32.dll
+  data: akj2zpYaSirXrcg+v7+BRmG+oMsCGLD4KbL5EzFlvFPfi5M95gCFw/dYaQ69p5URikbXiQDmt1IG3tGnY5JTog==
+-
+  path: ..\..\..\snapshots\resources\gameroot\bootstrap_kpatcher_tests.bat
+  data: dC20YS1czTNBdRtEVmev8aBiLZB7qDm826CxbIwpOahOJVrH/5KHQyUnFcvYf0YcQcGt9hUibDZD0JR3ENsk1w==
+-
+  path: ..\..\..\snapshots\resources\gameroot\chitin.key
+  data: tjmpzI/jBAa1Hz/ajwyzzmn7T7O/vp1fR1YdSoHyYpPsnTCvYWuV4q37TS5VgXIHkNhoSJop/va6ijFdwNrLkA==
+-
+  path: ..\..\..\snapshots\resources\gameroot\dialog.tlk
+  data: fiyIIhkDBFGjG3qdLrZluxgLIAOvGLOqFHGVqGogzglzPNYomZKINLjGkJEJQ7tbq5qpLsWqpSp9ZhC19eHCew==
+-
+  path: ..\..\..\snapshots\resources\gameroot\gog.ico
+  data: R1acKj5b15HFlCPjGr+zd3rPWgpTqLMXAIQyQBA0nCpg5uFPlFOQ6fJW/rMPq+jFBJcSPTk/e2QI3I9L82LctQ==
+-
+  path: ..\..\..\snapshots\resources\gameroot\goggame-1421404581.hashdb
+  data: ijiwDnMt2nuKcIduD9eosoGivO53ezXvtyAzwiVL+tz2aBsogOqxSwUzN1RzZcI35oDk/p6L7RmD/SWX42aI3Q==
+-
+  path: ..\..\..\snapshots\resources\gameroot\goggame-1421404581.ico
+  data: qEpOhsXn119R0b3cC4a1//ng6BWEeuyQEYZwOGhtoJ/kNi6Q8T9FH9BS7d7J/1lF9k4ZANizXtGrJd8AQnEveQ==
+-
+  path: ..\..\..\snapshots\resources\gameroot\goggame-1421404581.info
+  data: cK5opgscd9B0Qsj21sZBofVhxJVsTISdyNUIc9hQrV1J1fwgGR7CZrpZ/6mmw5jLqQjtLp+eISwj6F192nCnsw==
+-
+  path: ..\..\..\snapshots\resources\gameroot\goggame-1421404581.script
+  data: 4O9Bv+L/ifU1hFt59RoUXnOsR3SgZDAfi/bRoj+oBr2OIJaLDoS4vffKzNg/fHM18u5fK8l9DhXiTGGsUsbagg==
+-
+  path: ..\..\..\snapshots\resources\gameroot\goggame-galaxyfilelist.ini
+  data: GLPHdnf1hbptflQqvmkTnx4of23FeWXgywsXK5Cv2pWj2/FJsBxjNvRUSJEFGfZlC7JAoUfN18/S7GEjnbpx6Q==
+-
+  path: ..\..\..\snapshots\resources\gameroot\goglog.ini
+  data: XX3vn/b1gJKVJpHZKXUpYRYIfuFgKN1D4ZUId5j9yWCOxmKPFcg5x3e+IS1Ij1frwnvXUgPE00K78ekqaFubRg==
+-
+  path: ..\..\..\snapshots\resources\gameroot\launch star wars - knights of the old republic ii.lnk
+  data: QdaOQ9vvNGdoggsZqoYK21V9Rb4Ht0mnTLVsdftDHLw0FWTZuk8Vl2ZLF2Q+kf1pS5deHaYn63zBFsVlOXMvgw==
+-
+  path: ..\..\..\snapshots\resources\gameroot\manual.pdf
+  data: gJ31IUOwZFrMml1nW8iw+Y3X6ONyGTkU5t+o/+ldi/diU3c7w2PKbW9tdZegbul3GqOyS0xFr1qV2x0QnEM4eQ==
+-
+  path: ..\..\..\snapshots\resources\gameroot\mss32.dll
+  data: jBBcFPSRFLzpEsLsCgdl+L5Juhkj7QsYFW2/ZJGQF1F3vB3IUSpA5/H053fdgX7PpLBqqEWjIdSJFwhAV4temA==
+-
+  path: ..\..\..\snapshots\resources\gameroot\patchw32.dll
+  data: kEcl68B3dDPaJOt+kxg7Iq8o82DYjrnjVOT9hp7jUCcI7wEDlHLa9tSxhi1wI+vkfNdcrFckN376yZh1gECNZA==
+-
+  path: ..\..\..\snapshots\resources\gameroot\reference card.pdf
+  data: cunc3ALCWwmDBq1u0DblhNKE7GIyGX86CMbBF5SL/ZMhCDMRyS8/RcfgDem6YMdCqsV6xQx3P0W0sOg8TkVHTQ==
+-
+  path: ..\..\..\snapshots\resources\gameroot\support.ico
+  data: ohIOjflDSzFAakFgy6TwBqJZkMsMElfBDBoGujFN8osZOr9xg7l41vUWV3v6TF1onHdZnVGngzYBpVOndQhnvw==
+-
+  path: ..\..\..\snapshots\resources\gameroot\swconfig.exe
+  data: veZUZL2NSs3HE47uwXzCQAfPp4DfrdrXd9X9AjA1bvCc9vd1v736YZRFyl+Kx1/BvQUEjPJASMTDpapDsqeqVA==
+-
+  path: ..\..\..\snapshots\resources\gameroot\swkotor2.exe
+  data: YYCJ6ZCd/sZZYAmCLkdz4RF94+NwH5c1E684KmgZCqul+NXq/4MYj3r8XU3yW4y2LUYe7SCZI3mTwui1RqoBhA==
+-
+  path: ..\..\..\snapshots\resources\gameroot\swkotor2.ini
+  data: inJQBdIfSOIQjcex7UPItiOAOQ9YgZDVoMXllj7Q+xl2P65p9/2f37+z0aji0qK/28dpwFW+MqTNzSbBPy+fUg==
+-
+  path: ..\..\..\snapshots\resources\gameroot\swplayer.ini
+  data: JKcOu1/VDMAQlwsk1P4MnQlVgq+TX9/JkxibAIKrkZiUKqbm14GKtfmKZjVGBI5PGoVXunK8fwXFn1534N3InQ==
+-
+  path: ..\..\..\snapshots\resources\gameroot\unins000.dat
+  data: VZAf8j9G3BawzFl8F0KkZ7dSFgx6mYo3It6vwN+N/yu5UjcpGqlce9G1FtMSKKrWiFhoaYxy7T8ZQKlxy6lCUA==
+-
+  path: ..\..\..\snapshots\resources\gameroot\unins000.exe
+  data: wHnxZ0+AC7z+l9leWWMUup90vH+HQz3t5NqRl4ybqbHwsipLaQoHFxmDxGrDXlI6Ut8UMHL3ACeZFCed4TOVfQ==
+-
+  path: ..\..\..\snapshots\resources\gameroot\unins000.ini
+  data: 6wsju/8fegcjuhs9oY0y+x2AcgBcYz2cKsW8qSEQRjzF7wM6Xv7/CDm3DPV/MEtTIpXCz5pn2eNoQ6z9lpkOHg==
+-
+  path: ..\..\..\snapshots\resources\gameroot\unins000.msg
+  data: TwVrjGnAZ0unJUULtiQmJTifIwQ6Rq2VxkUok9oC4TSfYGeh4Z6GyBgoZ7CLjnjamL7fAtLJTDqmR7RextpW4A==
+-
+  path: ..\..\..\snapshots\resources\gameroot\update1_0b.txt
+  data: SWqQKwjELKPYX5CZ+82uLmbONxm9WaGVXOAO+ddhPiMsNWeK7usFPRypYb3tyBlM/y5UESxtyPrxo8XJxZunWw==

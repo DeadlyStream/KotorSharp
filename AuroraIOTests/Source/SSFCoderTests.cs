@@ -11,39 +11,34 @@ namespace AuroraIOTests.Source {
     [TestClass]
     public class SSFCoderTests {
 
+        ResourceBundle resources = ResourceBundle.GetCurrent();
+
         SSFCoder coder = new SSFCoder();
 
-        Data gameFile() {
-            return Snapshot.DataResource();
-        }
-
-        Data emptyFile() {
-            return Snapshot.DataResource();
-        }
 
         [TestMethod]
         public void testEncodeEmpty() {
-            var data = emptyFile();
+            var data = resources.GetFileBytes("empty.ssf");
             var newData = coder.encode(coder.decode(data));
             Snapshot.Verify(coder.decode(newData));
         }
 
         [TestMethod]
         public void testEncodeGameFile() {
-            var data = gameFile();
+            var data = resources.GetFileBytes("gameFile.ssf");
             var newData = coder.encode(coder.decode(data));
             Snapshot.Verify(coder.decode(newData));
         }
 
         [TestMethod]
         public void testDecodeEmpty() {
-            var data = emptyFile();
+            var data = resources.GetFileBytes("empty.ssf");
             Snapshot.Verify(coder.decode(data));
         }
 
         [TestMethod]
         public void testDecodeGameFile() {
-            var data = gameFile();
+            var data = resources.GetFileBytes("gameFile.ssf");
             Snapshot.Verify(coder.decode(data));
         }
     }

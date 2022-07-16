@@ -62,7 +62,7 @@ namespace AuroraIOTests.Source
                 dict["field_strref"] = AuroraStrRef.make(0);
             });
 
-            Snapshot.Verify(dict, true);
+            Snapshot.Verify(dict);
         }
 
         [TestMethod]

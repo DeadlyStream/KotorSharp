@@ -6,14 +6,16 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace AuroraIOTests.Source {
     [TestClass]
     public class TLKCoderTests {
+
+        ResourceBundle resources = ResourceBundle.GetCurrent();
         TLKCoder coder = new TLKCoder();
 
         [TestMethod]
         public void testEncodeGameFile() {
-            var table = coder.decode(Snapshot.DataResource("testDecodeGameFile"));
+            var table = coder.decode(resources.GetFileBytes("gameFile.tlk"));
 
             var newTable = coder.decode(coder.encode(table));
-            Snapshot.Verify(newTable, true);
+            Snapshot.Verify(newTable);
         }
 
         [TestMethod]
@@ -90,34 +92,34 @@ namespace AuroraIOTests.Source {
 
         [TestMethod]
         public void testDecodeGameFile() {
-            var file = Snapshot.DataResource();
+            var file = resources.GetFileBytes("gameFile.tlk");
 
             Snapshot.Verify(coder.decode(file));
         }
 
         [TestMethod]
         public void testDecodeEntryWithText() {
-            var file = Snapshot.DataResource();
+            var file = resources.GetFileBytes("textEntry.tlk");
 
             Snapshot.Verify(coder.decode(file));
         }
 
         [TestMethod]
         public void testDecodeEntryWithSoundResref() {
-            var file = Snapshot.DataResource();
+            var file = resources.GetFileBytes("soundResref.tlk");
 
             Snapshot.Verify(coder.decode(file));
         }
 
         [TestMethod]
         public void testDecodeEntryWithSoundLength() {
-            var file = Snapshot.DataResource();
+            var file = resources.GetFileBytes("soundLength.tlk");
             Snapshot.Verify(coder.decode(file));
         }
 
         [TestMethod]
         public void testDecodeMultipleEntries() {
-            var file = Snapshot.DataResource();
+            var file = resources.GetFileBytes("multipleEntries.tlk");
             Snapshot.Verify(coder.decode(file));
         }
     }

@@ -1,0 +1,5 @@
+type: gff
+fields:
+  value:
+    type: short
+    value: 100

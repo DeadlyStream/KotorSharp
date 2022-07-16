@@ -1,0 +1,38 @@
+type: gff
+fields:
+  field0:
+    type: list
+    value:
+      - struct:
+        id: 0
+        fields:
+          field0-item:
+            type: byte
+            value: 0
+  field1:
+    type: list
+    value:
+      - struct:
+        id: 0
+        fields:
+          field1-item:
+            type: byte
+            value: 1
+  field2:
+    type: list
+    value:
+      - struct:
+        id: 0
+        fields:
+          field2-item:
+            type: byte
+            value: 2
+  field3:
+    type: list
+    value:
+      - struct:
+        id: 0
+        fields:
+          field3-item:
+            type: byte
+            value: 3

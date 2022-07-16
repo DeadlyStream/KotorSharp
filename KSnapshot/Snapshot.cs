@@ -12,6 +12,7 @@ namespace KSnapshot {
 
         internal readonly string ProjectDirectory;
         internal readonly string SnapshotDirectory;
+        internal readonly string OutputDirectory;
 
         public static Bundle current([CallerFilePath] string className = "") {
             return new Bundle(className);
@@ -20,7 +21,37 @@ namespace KSnapshot {
         Bundle([CallerFilePath] string className = "") {
             ProjectDirectory = Path.GetDirectoryName(className);
             SnapshotDirectory = Path.Combine(ProjectDirectory, "Snapshots");
-        } 
+            OutputDirectory = AppDomain.CurrentDomain.BaseDirectory;
+        }
+    }
+
+    public class ResourceBundle {
+
+        public readonly string Directory;
+
+        public byte[] GetFileBytes(string fileName) {
+            return File.ReadAllBytes(GetFilePath(fileName));
+        }
+
+        public string GetFileText(string fileName) {
+            return File.ReadAllText(GetFilePath(fileName)); 
+        }
+
+        public string GetDirectory(string directory) {
+            return Path.Combine(Directory, directory);
+        }
+
+        public string GetFilePath(string fileName) {
+            return Path.Combine(Directory, fileName);
+        }
+
+        public static ResourceBundle GetCurrent([CallerFilePath] string fileName = "") {
+            return new ResourceBundle(Path.GetFileNameWithoutExtension(fileName));
+        }
+
+        private ResourceBundle(string directory) {
+            Directory = Path.Combine(KSEnvironment.Bundle.SnapshotDirectory, "Resources", directory);
+        }
     }
 
     public class KSEnvironment {
@@ -29,31 +60,26 @@ namespace KSnapshot {
 
     public static class Snapshot {
 
-        static string testFileBaseName(string className, string methodName) {
+        static string expectedSnapshotFilePath(string className, string methodName) {
             return Path.Combine(KSEnvironment.Bundle.SnapshotDirectory,
                 "Artifacts",
-                String.Format("{0}\\{1}", Path.GetFileNameWithoutExtension(className), methodName));
+                Path.GetFileNameWithoutExtension(className),
+                methodName);
         }
 
-        static string testFileOutputName(string className, string methodName) {
-            return Path.Combine(KSEnvironment.Bundle.SnapshotDirectory,
+        static string snapshotOutputDIrectory(string className, string methodName) {
+            return Path.Combine(KSEnvironment.Bundle.OutputDirectory,
                 "Artifacts",
-                String.Format("{0}\\{1}_actual", Path.GetFileNameWithoutExtension(className), methodName));
-        }
-
-        public static string OutputPath(bool recorded = false, [CallerMemberName] string methodName = "", [CallerFilePath] string className = "") {
-            if (recorded) {
-                return testFileBaseName(className, methodName);
-            } else {
-                return testFileOutputName(className, methodName);
-            }
+                Path.GetFileNameWithoutExtension(className),
+                methodName);
         }
 
         public static string PatchDataDirectory([CallerMemberName] string methodName = "", [CallerFilePath] string className = "") {
             return Path.Combine(KSEnvironment.Bundle.SnapshotDirectory,
                 "Resources",
-                String.Format("{0}\\{1}_dir", Path.GetFileNameWithoutExtension(className), methodName),
-                "tslpatchdata");
+                String.Format("{0}\\{1}", Path.GetFileNameWithoutExtension(className), methodName),
+                "tslpatchdata",
+                "changes.ini");
         }
 
         public static string RootGameDirectory([CallerMemberName] string methodName = "", [CallerFilePath] string className = "") {
@@ -65,17 +91,15 @@ namespace KSnapshot {
         public static string ResourceDirectory([CallerMemberName] string methodName = "", [CallerFilePath] string className = "") {
             return Path.Combine(KSEnvironment.Bundle.SnapshotDirectory,
                 "Resources",
-                String.Format("{0}\\{1}_dir", Path.GetFileNameWithoutExtension(className), methodName));
-        }
-
-        public static string ResourcePath([CallerMemberName] string methodName = "", [CallerFilePath] string className = "") {
-            return Path.Combine(KSEnvironment.Bundle.SnapshotDirectory,
-                "Resources",
                 String.Format("{0}\\{1}", Path.GetFileNameWithoutExtension(className), methodName));
         }
 
+        public static string ResourcePath(String fileName, [CallerMemberName] string methodName = "", [CallerFilePath] string className = "") {
+            return Path.Combine(ResourceDirectory(methodName, className), fileName);
+        }
+
         public static byte[] DataResource([CallerMemberName] string methodName = "", [CallerFilePath] string className = "") {
-            return File.ReadAllBytes(ResourcePath(methodName, className));
+            return File.ReadAllBytes(ResourcePath("dataResource", methodName, className));
         }
 
         public static string TextResource([CallerMemberName] string methodName = "", [CallerFilePath] string className = "") {
@@ -98,9 +122,8 @@ namespace KSnapshot {
             Verify(String.Join("\n", allFiles), record, className, methodName);
         }
 
-        public static void Verify(String actual, bool record = false, [CallerFilePath] string className = "", [CallerMemberName] string methodName = "") {
-            var expectedPath = testFileBaseName(className, methodName);
-            var actualPath = testFileOutputName(className, methodName);
+        public static void Verify(String actual, bool record = false, [CallerFilePath] string className = "", [CallerMemberName] string methodName = "") {            
+            var expectedPath = expectedSnapshotFilePath(className, methodName);
 
             if (record) {
                 if (!Directory.Exists(Path.GetDirectoryName(expectedPath))) {
@@ -108,34 +131,36 @@ namespace KSnapshot {
                 }
                 File.WriteAllText(expectedPath, actual);
             } else {
-                if (!Directory.Exists(Path.GetDirectoryName(actualPath))) {
-                    Directory.CreateDirectory(Path.GetDirectoryName(actualPath));
+                var expectedCleaned = File.ReadAllText(expectedPath).ReplaceLineEndings();
+                var actualCleaned = actual.ReplaceLineEndings();
+
+                var outputDirectory = snapshotOutputDIrectory(className, methodName);
+                var expectedOutputPath = Path.Combine(outputDirectory, "expected");
+                var actualOutputPath = Path.Combine(outputDirectory, "actual");
+
+                if (expectedCleaned.Equals(actualCleaned)) {
+                    Assert.IsTrue(true);
+
+                    if (Directory.Exists(Path.GetDirectoryName(expectedOutputPath)))
+                        Directory.Delete(Path.GetDirectoryName(expectedOutputPath), true);
+                    if (Directory.Exists(Path.GetDirectoryName(actualOutputPath)))
+                        Directory.Delete(Path.GetDirectoryName(actualOutputPath), true);
+                    if (File.Exists(expectedOutputPath))
+                        File.Delete(expectedOutputPath);
+                } else {
+                    if (!Directory.Exists(Path.GetDirectoryName(expectedOutputPath)))
+                        Directory.CreateDirectory(Path.GetDirectoryName(expectedOutputPath));
+                    if (!Directory.Exists(Path.GetDirectoryName(actualOutputPath)))
+                        Directory.CreateDirectory(Path.GetDirectoryName(actualOutputPath));
+
+                    if (File.Exists(actualOutputPath))
+                        File.Delete(actualOutputPath);
+
+                    File.Copy(expectedPath, expectedOutputPath, true);
+                    File.WriteAllText(actualOutputPath, actualCleaned);
+                    Assert.Fail(String.Format("Snapshots did not match, see expected vs. actual at {0}", Path.GetDirectoryName(outputDirectory)));
                 }
-                File.WriteAllText(actualPath, actual);
             }
-
-            var expected = File.ReadAllText(expectedPath);
-            Assert.AreEqual(expected, actual);
-        }
-
-        public static void Verify(byte[] actual, bool record = false, [CallerFilePath] string className = "", [CallerMemberName] string methodName = "") {
-            var expectedPath = testFileBaseName(className, methodName);
-            var actualPath = testFileOutputName(className, methodName);
-
-            if (record) {
-                if (!Directory.Exists(Path.GetDirectoryName(expectedPath))) {
-                    Directory.CreateDirectory(Path.GetDirectoryName(expectedPath));
-                }
-                File.WriteAllBytes(expectedPath, actual);
-            } else {
-                if (!Directory.Exists(Path.GetDirectoryName(actualPath))) {
-                    Directory.CreateDirectory(Path.GetDirectoryName(actualPath));
-                }
-                File.WriteAllBytes(actualPath, actual);
-            }
-
-            var expected = File.ReadAllBytes(expectedPath);
-            Assert.AreEqual(Encoding.ASCII.GetString(expected), Encoding.ASCII.GetString(actual));
         }
     }
 }

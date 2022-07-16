@@ -1,0 +1,17 @@
+type: gff
+fields:
+  level0:
+    type: list
+    value:
+      - struct:
+        id: 0
+        fields:
+          level1:
+            type: list
+            value:
+              - struct:
+                id: 0
+                fields:
+                  level2:
+                    type: list
+                    value:

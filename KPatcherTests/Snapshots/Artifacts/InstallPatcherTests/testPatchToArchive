@@ -1,0 +1,15 @@
+format: ERF
+descriptionStrRef: 4294967295
+files:
+  -
+    name: existingfile0.txt
+    value: This is a test file
+  -
+    name: existingfile1.txt
+    value: This is a test file
+  -
+    name: existingfile2.txt
+    value: This is a test file
+  -
+    name: testfile.txt
+    value: this is a test file

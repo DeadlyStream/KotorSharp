@@ -1,0 +1,5 @@
+type: gff
+fields:
+  value:
+    type: double
+    value: 100

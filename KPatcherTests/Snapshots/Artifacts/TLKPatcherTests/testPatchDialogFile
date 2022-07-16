@@ -1,0 +1,10 @@
+language: English
+entries:
+  - 0
+    text: |
+      Text1
+    soundResref: resref1
+  - 1
+    text: |
+      Text2
+    soundResref: resref2

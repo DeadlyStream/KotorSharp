@@ -16,20 +16,8 @@ namespace KPatcherTests.Source {
     [TestClass]
     public class PatcherTests {
 
-        //[TestMethod]
-        //public void testRunPatcher() {
-        //    VirtualFileInterface fileInterface = new VirtualFileInterface();
-        //    var patchDataDirectory = Snapshot.PatchDataDirectory();
-        //    var changesIniPath = Path.Combine(patchDataDirectory, "changes.ini");
-        //    var rootGameDirectory = Snapshot.RootGameDirectory();
-
-        //    fileInterface.LoadDirectory(patchDataDirectory);
-            
-
-        //    Patcher.Run(changesIniPath, rootGameDirectory, fileInterface, 0);
-
-        //    Snapshot.Verify(fileInterface, true);
-        //}
+        string RootGameDirectory = GameRoot.Directory;
+        ResourceBundle resources = ResourceBundle.GetCurrent();
 
         [TestMethod]
         public void testTLKChanges() { 

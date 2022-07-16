@@ -1,0 +1,13 @@
+type: gff
+fields:
+  field0:
+    type: struct
+    value:
+      id: 0
+      fields:
+        field1:
+          type: int
+          value: 100
+  field2:
+    type: int
+    value: 100

@@ -1,0 +1,7 @@
+language: English
+entries:
+  - 0
+    text: |
+      This is a test string
+    soundResref: s_sound_000
+    soundLength: 2
