@@ -356,7 +356,7 @@ namespace AuroraIOTests.Source {
             });
 
             var newDict = coder.decode(coder.encode(dict));
-            Snapshot.Verify(newDict, true);
+            Snapshot.Verify(newDict);
         }
 
         [TestMethod]

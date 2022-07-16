@@ -19,14 +19,14 @@ namespace AuroraIOTests.Source {
         public void testReadGameERF() {
             var file = resources.GetFileBytes("001EBO_dlg.erf");
             var archive = coder.decode(file);
-            Snapshot.Verify(archive, true);
+            Snapshot.Verify(archive);
         }
 
         [TestMethod]
         public void testReadGameRIM() {
             var file = resources.GetFileBytes("001EBO.rim");
             var archive = coder.decode(file);
-            Snapshot.Verify(archive, true);
+            Snapshot.Verify(archive);
         }
 
         [TestMethod]
@@ -34,7 +34,7 @@ namespace AuroraIOTests.Source {
             var file = resources.GetFileBytes("001EBO_dlg.erf");
             var archive = coder.decode(file);
             var newArchive = coder.decode(coder.encode(archive));
-            Snapshot.Verify(newArchive, true);
+            Snapshot.Verify(newArchive);
         }
 
         [TestMethod]
@@ -43,7 +43,7 @@ namespace AuroraIOTests.Source {
             
             var archive = coder.decode(file);
             var newArchive = coder.decode(coder.encode(archive));
-            Snapshot.Verify(newArchive, true);
+            Snapshot.Verify(newArchive);
         }
 
 

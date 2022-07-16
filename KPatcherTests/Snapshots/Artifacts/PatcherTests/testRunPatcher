@@ -1,0 +1,2046 @@
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\backup\07142022223615\dialog.tlk
+  data: fiyIIhkDBFGjG3qdLrZluxgLIAOvGLOqFHGVqGogzglzPNYomZKINLjGkJEJQ7tbq5qpLsWqpSp9ZhC19eHCew==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\dialog.tlk
+  data: mJJjg+Xv/O5Ihyj4Y6JkNNTZwt+jyTtBnFc1O5OipKglLsGIEKT+II+6OcrCvI4H39SbaFCdQu4+YbkJwDQ7FA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\override\heads.2da
+  data: H6NkhnWr0W5zRO03TTTTYn1YZ3g81EEyFKleWHXhgU8U5scaX9xLF/3iD0wuWquIkS2kfYrP0EYbd5lCkF5KXQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\override\appearance.2da
+  data: wBDTLVEQwvybmjnBOSe3UXd9eWr3/CxE7cuWICAtG3YK7oYImakXhjIMMqm8FoNX1/vCqe41Ka/W1GUSOxvzFg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\override\spells.2da
+  data: x34z2M+v+q7bSmetUtExBPvcujCOAebZKTE5k/5FXEcjmBR5bpzDooIBdFyG8PPaGqsddZpLQzO9fCFnMaSFPw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\override\feat.2da
+  data: IWpNBHvifhPe3bbeU9PX93Tge0yJ/ZfRNNJlpn6+oouitvFhLajKfbbVYBhRD/QTX9s4uAuA9VLVMqPY3oZHYw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\override\globalcat.2da
+  data: O8PJooF2VwkORstKHU37lyh3sg7dNP2XY34nHkB2g16K+Mtwa/dxTZBjzlpf+jpt7iU08fzJKkiYmXstQ4Rd7w==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\override\genericdoors.2da
+  data: jgXUdcKwKhFDiHQZexgdNKK5HTA1jqGXT9i8RsOawTo1H3hWDEbDWAktq6a4UKDtGdwmQDkHa66P2FMC5Ycufw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\override\upgrade.2da
+  data: 1cUH3TOyMCnz098EDgIVGrKyalFvmrJztw9p/6TEgVE2n2VUe5C4V5JIsMWQyLF/JuWJtAUa66fnQFvbfTGCcw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\override\placeables.2da
+  data: X+XoztzfaVk/kV1DvWw2xFUeo6VGEIOwILaYNz6VxUU7YeGWfGYJCvfvFfic1c7BSUYx3/Kp58zs+DLAnJzQeA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Modules\701KOR.mod
+  data: jlFnNgNstKxo0lAtGl2SN/GJyKD36V2a0qJndlkKSmbhs9iKzNvOR3BToCdfxkhZSx0R7Y2JTTJKQiTO0pbPBA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Modules\740KOR.mod
+  data: jnUceXPXxFvDpVz9kszTGB8IEzzP9V5jcQs+Fo/PhIQMevMdOETkTazFVoCpXiDqACSx7BSDK4BYP0pdpe6Kqw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Modules\745KOR.mod
+  data: ddbpAdjGxH5ktUL7vqX8j5jxvSEoClLIf6R9SIgM7TrgM7WzfKsCi6cmY039SxXJ5Ehwo9q//FMmn++31hkuXg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Modules\746KOR.mod
+  data: y44XKuP9HWxwOJNFuP8SZoL6X1nTZf2ebibcXE/+TnbYFf6Wp4I+WBbrPZUWRRAzPoURC8GMy8dl+nAJqBHsAA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Modules\747KOR.mod
+  data: NM7BbVlTqAZie473Ounu4f/yUzkzat/PybmRvR5P6thgMU6o+ZsQRAQMozwPK4s1tvox/w4QiaU8gGhU49lPVA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Modules\748KOR.mod
+  data: ejTaVppONQhmyA9dHScTLvQyaPpA2+CRUMeXWtt7GyAt6Wqfa5HcQqSAx6iNwZVYEozguwWQ4RhGzOVKpeXxLA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Modules\749KOR.mod
+  data: ej7xM7zqF2+XACImPQBWCZT9JZJjVizXqoaMUd1bmYobFJ48bLIVxIpg4CPVnhhkpMGd53g55cTDLCMHYi9G8A==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Modules\750KOR.mod
+  data: TADj7pxrFQp7YgKfgW+k98lyIZ2EStTIMmi+2YrCugjUY+yr81tYphMFNYyanv3Fb8RN2ZZNrPMIY3DaaGEjgw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Modules\910DAG.mod
+  data: tWReJNEb0J8mTL8Wt9aOb1kwN0Wtin2CvSYW/9utosmtKhdT+KhLFXAFyME5Jq3gGXxOhJrcpTQp4JlOPYo4tQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Modules\743KOR.mod
+  data: YVgYGJEHrIWMC9IobMfMEtEWKEoho6/m35scaj6WYc9+1v/o1oAxabpr55MZRbkMTwE4+lKMHg0E1FROFv3Hjw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Modules\741KOR.mod
+  data: pYi2bpwPChmHKh4laDNqmW2uGX19YW90L6zuOP3Dz6rJQjfIF1D0Weq91Om9gGHfntIQDGOCLX9m4ZjuiCv9CA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\bell\740bell001.wav
+  data: 95Ppl5sk0DVhY5lAPX1dPlgP6eipFRTA6YifVxtJUaYe/Sq/WOAhC85fLQuLvcAxYUJmmowI7ahxLIFQl1Wfig==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\bell\740bell002.wav
+  data: wGHZBlkHsoUWZH22iOXDj1krrdGdoHUnyGiOaEwemoBCM0fxC+NhGxfjpXwippW3w1daA9NSEufpTjcUyjSZ6Q==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\bell\740bell003.wav
+  data: OlV9XeYfywZpBmvtJQO6JWHl01rWPOmn8x1pAZXUkRnF/1O+KWdPTRHKvPpKfFGLPCXlo5yi21trSIGgs1qx+Q==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\bell\740bell004.wav
+  data: /2oHmOul5sD9d1ekjO8lpNEqmKKybPRdRKIxhBceoVPbcROSxybjAjNQyy5DUmog713BG3+B7IHa1PP+RQz3XQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\bell\740bell005.wav
+  data: wCYg8GcfAnNNmUHSJCK+5IQup5blP373TWJi1GMDT2QZ1bzU/Mtu+K10phrGa1BZkusToYP2RqxrdkHsZ4GXIA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\bell\740bell006.wav
+  data: a5kUMEfqzqQQV+ZZzU0u2S6Im+bTCZ76LcdQQhGK1Ep9K92UydUmm10UbCsdLHK00H5xInedHvBagz52uu0NGw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\bell\740bell007.wav
+  data: Q7TLyPd0+F2h2GJ4QHf2oLhviv+USaozdUyyWECV3yOlARVN3qHVBFtcjQUe5F542HuKHvRlvFGQ/IHLTcNN6w==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\bell\740bell008.wav
+  data: +l0oF5UKTj3QnlO6FgX/YDboGix2CGr1p2wbhag9SSBs2JpqHdbXJssbhPKvdLfTrXgJirvNsnOd+FyLEtjVUA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\bell\740bell009.wav
+  data: 5ccKIDD1anwnOnRT8PBod9ztBdbJXGfMNJtRO+j+G61WGVxckyKN1F2buxAvgckrGK92EKMC18JXZRsNJKf7Qw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\bell\740bell010.wav
+  data: DCljKslAlwkgMSnbKoUjoLfDqsvQsgcXTDqOiOFKsI8jrXgGvmgI1ZXxOkZWYf3Y3Xz14sjMok316AOsBLg2sg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\bell\740bell011.wav
+  data: 3ARueH2CMeb8wdkv/mNs4kN/38eTdF5Za/vbfvX7uIVUC8v5OYLZRbm/lsM9d+aqi/bqR3SJOUURK466kHvVTQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\bell\740bell012.wav
+  data: OTTTrodzLt0A7+WPjEFAJu6pDk9c8eoi+cAxJ1tujINe6+rsihLmdct8hfHh2pnL2SyfSlvmrGfGSdJib+HHaA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\bell\740bell013.wav
+  data: VraXLELon3+xeBl4WhXQLeT3qRXHwd16O7G2Pst5afRP7BSN44ixb/OpG5hbX/HAOoXm0aoVE7dyMQDwpTbSCw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\bell\740bell014.wav
+  data: wJIJ1XVHL6xhhKJirDm68s2gCFoi0k9cxuXmmz3z4bgvrRE9QqurKAwFev2D+Nfowr8rSH742dg4oR5wgO6B2g==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\bell\740bell015.wav
+  data: La+KqvUe6Vgm9N6hJIKuTgL0xcnkbe3Yay+wK/OGg7rINCiRS7hbF6VLao7lk8uJpUZutdE3UsDX8sCKWhJ5CQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\bell\740bell016.wav
+  data: uM1BeLxL6hz7/yR9eIqpHn5S4US9v0/m3eCc+rG+i8lyOup+nzpC3uu/IduSCBdX1CBYbQXA/U2QWFCOtWTL4g==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\bell\740bell017.wav
+  data: cPLpsDjBjUWvcYAAuDSxmJemhQXDrMrFAwGuu++q4qdWbjaFRsWsifbEcUHYR1RPke6MBx72keRDVpMKVL7D2w==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\bell\740bell018.wav
+  data: CpQWhDCyTbWo9tlIoHvJJuDxVchX+3JxqJ0Nrb3A2nlfaY0QME8SHYdGM0L2OAWKtAoiztwp2W1h1MeOA58IuA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\bell\740bell019.wav
+  data: Fs+3G6IUkSSeVXyiStHfqqmDleZfQEJPC+jYLrJAA8d0qW+FU1HKGFoqVLQzHdgoHdisBAGWaUohKDp1m5SQDA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\bell\740bell020.wav
+  data: Emqwcz/FPK3GaEvTm4UXXOcvd14Tr8bnLZ5Fomc9qjnoN1VK7yUU4lQFIMIreQbLhTsjNAdHUEM7CFnQ1TLoug==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\bell\740bell021.wav
+  data: YcDhpJzPXrfpMxqZwuu+gBUdTjsqcTGpL7APcLfJ4oSBcd7NRt/x/Jp9x/EufpXcjzbU/S/KjLb+slBHHtqQDg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\bell\740bell022.wav
+  data: rUx71wf5th6Pu9P2I1UeLrtYljAvshi0ZC7UR/gZ64VitERB01c0JyZ+cKTpzhGl9tr0CdbinmP+x3Gk29f/NA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\bell\740bell023.wav
+  data: oRSco7J4tK9U1tMYiv5r48aqAYIEUtQFNKmQThHBznZZjMvAoA4nCPe2Kv9BqiRgitFOUNqd55uzmS0CCGESVw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\bell\740bell024.wav
+  data: lm6OBNPFyaJU9qnyFJlzNUnXeDO2iJ0Qwrje7Zm/5Vx3QAPIvdaxZOvTm8K54ZQWymZJzOcUjAlNFL8pyGTkjw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\bell\740bell025.wav
+  data: PWiaiMFQy7si+3wGvRlyEpcqZjZooXGNWTOyZ6lrVpcRK6tEjSsAjRsBoROij+nY1OKY0pJ8iBH8mCBAWwnEjQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\bell\740bell026.wav
+  data: UH+zbLr1VexcMmvW+Ql3mZbv86z4311Q9ZpJ8H5KpDsBAVrYwkXR8eKoDpeK8UfHufwGAbQ7JCyIsRQeUJcXSQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\bell\740bell027.wav
+  data: 6LAaSH+QDVOYzaNwMsxt151c/L+Lj98J0y5OqwprRZ+uA/H4fl5Nzo7TWUHk8yqwc6du5aENGO/gRofCtFCW+A==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\bell\740bell028.wav
+  data: HImHoFbOjgIh2dSwGk+yP/BXghECB0w5l7R87SYJ+A/yfr4lXc2a5IdjB5k0okT33e5i6mO9a283dFBmytB5GA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\bell\740bell029.wav
+  data: eGSMJKBHGGVSpuduEy1zw9KGGxLyiG551MNqkFYgNukKsFxfUN9odlepzyH3s0amqS+Y8uIETqbXVl/UUATnWw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\bell\740bell030.wav
+  data: uI7lmH4rPquh6+IDo4cSISd/8exhWpRuWt4KJ8ZvVJehlAzPmoIlFHKWbDUkfiOFMPP6WD/wgE16Eytelyxwvg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\fang\740fang001.mp3
+  data: FABUtBPwn8utk6sWf32pHgXOtJg/0PvkVS0lk6u365zCZuBCrHlLSUb5ATno9SBdQ5KJIAfiUNbwEks3K4RgFg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\fang\740fang002.mp3
+  data: 7iNfriuTjzyo9Cj64Vw41dUOS0PjAOeChEVINzghpdYdETCLOlmsGOrt7ENtpXxFeF6aatop5RjjB9al5Cq+Fg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\fang\740fang003.mp3
+  data: xJBaUhvMxv7KtxTFZOoOcK7wfUq6xEU/ckvmFOW67UmjegvUXKpyBW0r7tpjtW6p4gRwbfkoQz0lY54MxnDpnQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\fang\740fang004.mp3
+  data: o9rWvLsTPBnWG9KjIA9jYFRFMPKfkW/hA9/Q08CjabwSJoHqph18VooBvrRNW1MOph1e1GWhBvWxjwfuyXpBCg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\fang\740fang005.mp3
+  data: jaHnaFDBruwCnUYwmrCwU7s9pcO3OSDYfkLUHLoVx8mTckeNZAn51bm6hSflxb9SDBDEU5XZXnUiR0vqjR0kyA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\fang\740fang006.mp3
+  data: 4RCwus+GqJEHtyEZppzwe0S3zia0uNHdNVnIhNdSgeB+p4awMGdKd0L9vRQLE6SdP3LrW1xZyUtODkW2dqEKgQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\fang\740fang007.mp3
+  data: 3Je+8p690gh5OP7+GqtrwWf6rgQpzmJBJf/GGJmcfyjZd0LVEHYtZrxuV0fWLo6+DW2ap56A2wEQnQaXDgQcig==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\fang\740fang008.mp3
+  data: /LpXkLcJF4m+MdWFEfq94JonzBbCkamhdKadNA2F14Uy3+U15488znw4MXusMUK78jL6V01ZsVVDma6ukFjFUA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\fore\740fore001.wav
+  data: 4NB0D24AOeCm4owGmyQ/mbBUITIf184MZBrmn7mHqYrIP2d1XqWxcaL8L2lM76ZWTDEsEgIm9fz7EfNoPythvQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\jolee\740jolee001.wav
+  data: 0fmoRxE7VViKpu8R90076pj/z7DYsIZ+8vEI7SpPHmtypksCdunBQ49MJLYoqrMil/vFI8WnejWS3hpfzPRQRQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\jolee\740jolee002.wav
+  data: akAOEmxesmf/rsfzoIOzHJwX81SYsLhjDtx3+lY0+Z7bxKcaaLqBfc3IymE3+LlxmxIskukKLqzi2DV4sIfiUA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\jolee\740jolee003.wav
+  data: e/GqYCfLyNm87sudig4ensV16UjSDqDi3PKGjNKO6ZwZsRiUgpLSwCfk+/BXFUW84Q69iTl2LrRutEfxNJHlfg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\jolee\740jolee004.wav
+  data: VdWJ7lwse+pWWeTab+y7mhyM8ZSInLqF8I7NjsxCddTdVRMiGlyxAr0V2B3WXQdnyseP8CKYj5LHqDFBD7bQng==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\jolee\740jolee005.wav
+  data: 4Cj6nPr49cKNxUkeTtR4GwG7Aukp9z/nxGegsuq7PolICWTNqcfMae2v9nuAr3Qhv+PbczBR2jIyzXKx0x7JPA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\jolee\740jolee006.wav
+  data: SYnrWbSxfMmyxgo4tixzNpAcDB8tpjmcsdZRFt56aJHOb2QKJYE6bWQfFjQ3OkTxKsIA/zlpxbRITMwPPzdHug==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\jolee\740jolee007.wav
+  data: ADD2JvETNmLTgWXRBDjmEzbaawWzvCEg7nAGinDZAq/VI0525oUhO65owVuN1l1SVzqr7VpNHiZp/Cs+y+Af0w==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\jolee\740jolee008.wav
+  data: jqnFgAAb19i8cK6rWS8UIUqybaw96Vm+jtQoPx0v8PV9zk+xXFu0bnqyLv8oQH96OGWQbF27etvh109nEHj/Jw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\jolee\740jolee009.wav
+  data: aiJZiSAed8bO6B6GEa6BuEmi/cZYJZKG62bOvJGR0PqJ+meiYcW4ajHgANKBIJsV40EmnwaNUibo+8mOrJ6c/Q==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\jolee\740jolee010.wav
+  data: Xy0QTzdXZr3/Mq8cgcVzzqw/caNfok4Gj4R2OKLUBOLM5En9F7i7cUXIMUuPDKu9NsU7gldLIUJZEsnMtNujnQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\jolee\740jolee011.wav
+  data: ZDecog+goqEwCPXv2b2zxWBmPKJ4DUoT6QM34Yx9yuSD9SyUEgwVeTOjkH0lHqVI3fd1Qfbg94Qn87Tp5Q8vGg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\jolee\740jolee012.wav
+  data: PcDlw3RSVJtqXTnKX+qv9mg/1aJ9dHPSkQS3acfUBg752FMze9MTZzOzSZwKHWakzDDkxZUmPFIFRe2Hi9dXuA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\jolee\740jolee013.wav
+  data: WsiGPvqBiIttvdnx9rcWxGIMePTGfmcl6rbtGqw3GknJAceRzePwWF/UteRK7jlbFPp6iZGesgLAxfYa1cOpCA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\jolee\740jolee014.wav
+  data: y9vDu7Al6hLndaz7aHYb+vhKgDuHjoVrIgNB3vExChE5XMVW4O7keaKn1z3pgJxAHgP55xlLO/Z7qOTfm9vSaA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\jolee\740jolee015.wav
+  data: nHLS+5cKfTpKuaFumf+A4jToDf3IStrU62rcyllD4RQ/ty5dcUJQdGcyS4osbrkH9GmE6fx8oUFke5zPAoBJmg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\jolee\740jolee016.wav
+  data: uD2lpgdY40eqqyS2k68i67chAwGWYiUoKGpHznOZ8u4y5DL/uhat+yNqlvwdUoqo6bJuIzl7OsmtO1G50C2z8A==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\jolee\740jolee017.wav
+  data: iTUIyMuoQwtSNQYAy9HVX4dmvP98ZVr0Xp1eKOwmLVKC1yZG6X+SJX2Feo5E7wTxrUS6KlTiDBVVnCaHESpL0A==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\jolee\740jolee018.wav
+  data: scuFd4wKeARAKow6Viueh5Q+mUMeCGpi4jFxqEIwX6HHo+euX/AO0S1BhQ9M+Uxeg7fOUwFmq4oo24h1ojPybQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\jolee\740jolee019.wav
+  data: ZPDRGBlQvsN2SGLOyIW6rCgW6GdryGOZIIzdUq/oD4Schbk++dUK5qYouFMcx9YZzf+qtCUrZloiyCZqRWDOQQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\jolee\740jolee020.wav
+  data: RGHMwF8d0f1XA3hHH9qd6ojYzQaqQ/FMvnRCNOb9OMgrTFkWsU7EJm+yyXVN0XRYbdxQKxQFgZZRcJZ9uyrhBg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\kaz\740kaz001.mp3
+  data: nZNm7EH2gKesaeCfjszRkFLm/d5mDjLdBJ2b9pw0I1SVcEfjHqPVcTpX1XP9eGKdB1eitTZURzPfpcCg7gkHVQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\kaz\740kaz002.mp3
+  data: 21xCdiedvRuEACiobrUMFPPffIiTh3/ioaGoytk2gv5cQn5kcGWG0tKx94Ucp99nGYMsK9mZ2zoTFfvOlbCBHA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\740\kaz\740kaz003.mp3
+  data: 0PEDUbvMIqTEWX84AX/xmrlQ9+cJnW2uL27JmmYhNA/DxN0YrG54TSN7oqC/hg+tBz8ygSMp0DUCu3yF8mQaGQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\cleric\745cleric001.wav
+  data: 3ieazhvPxtWondTQW0Yj4xqwBNs95m7TqK2StKsPNoPIL9m97lk8PhQvBP/YIByhxWgGXt59B5K3BfAuxBPU/g==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\cleric\745cleric002.wav
+  data: 1Jl5f4Pc2UBMbStbljxHKtMubFPB4ZUr5BFob10TfnZyk2dRQkpMO67D9B3jqcpit1ksI481JKTnO+11J6yLOw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\Grunt\745Grunt001.wav
+  data: WIgEwPPAuqNk1KRY/JA3z3WpVxCCi7HixvGQ+SBEUXPBHy3f9eGdsC+D2+Qz3rFqTNncoe3ux8xFcfc5PqfweA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\Grunt\745Grunt002.wav
+  data: VGq0vH2nipYUNUpduyvijj80vaDOAjVEk128TNic8AybP01RUuiTwzm0zxpohDzn1uFtTR2moJkAdEhiKIKgaw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\jawa\745jawa001.mp3
+  data: TuMwjs7uZrMSlM9KRzbriwGaldL4QMyUYHVJC5K3uwvm80RqIzyinz9C+jWCv9qI/RoIOyNB+Ua2YrHtL3HVRA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\jawa\745jawa002.mp3
+  data: CKipQ43+7TRqUk3MSe/unKNazAw8vr5vWSZjjk/Q3QvU/UkNH6WveQ3CR8/ke52CZbAhDlUu3MmaSawsHgwGqw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\jawa\745jawa003.mp3
+  data: DskintVqDf8Y4q+VpFryNUZ03NgpAdw0Mfomy9hHVpzWsAf52MkLEvH3+Uo8s+aHzlDNPblf42xnKQ382/eYSw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\jawa\745jawa004.mp3
+  data: HaKmAjkaNy6F9QuHJdK+fdlyf2dSS/EqrzEy5tzL/XBpmKNOfRRIU9MFcnruT/N2DHHVxslB+Ay55WGI+0Bfqg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\jawa\745jawa005.wav
+  data: RN/7K6iyV+xc6FQftygvf4gcRXPt9KTs5cMs1y2d50w5kvdgXWvavbpB/qAmtsy5DyoG5lCeDhKc9KulhNf6bQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\jawa\745jawa006.wav
+  data: 5dnH0hxO+znyEXMUso4a/2RcT3w86PUZhlzdmYUlA7bfRXLDRbk2pu1m95ir3j0gGg6YDLakn2gIvs/A2iNmig==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\jawa\745jawa007.wav
+  data: +E5yxOhyuGUNNgra5JD3cceWKw8qD4HKT8XrbdIqPyNZ9HVlz3OGFdbhmAOCiAHxHQdZgevZUgcWgyGoiJg0Hg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\jawa\745jawa008.wav
+  data: XN419pW3LSWkNdN8AUB8fsOegpnVSb9PW8Z0L81z3qRwBbCi6S5auR1zFeBLevYacWhlF6eupQi+71FwyFXJ9A==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\jawa\745jawa009.mp3
+  data: 4WCcOFRi7vOL0gtja6SwEeakIh7FAYZwC3voPvWuE3hwQ7osHq9WFwU5IOeowmI+hcQcJ4IsKKoj7uFORteg2A==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\jawa\745jawa010.mp3
+  data: mR6Fksl1V53LrreUviZw/ttiZNfQ6wAVdTFDjMEpp+feRiDRJd1inBHEaME4SmSEoXZsTo6L95I2BjkCpeGRjw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\jawa\745jawa011.mp3
+  data: LUWbJUWTULLzGGPTnn9gShiX/DbiOtJ6JF1t0oVS3o3yMbELTsJ/d/24wYbB7l2Nb7/jqGImUjkh0P7AUIBNqA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\jolee\745jolee001.wav
+  data: N6Gf2FkO9dGvlDNi/ShLf8cyByumVKJdN+hflgh5VgU29b+zbmrhbZf0KX3Q6a9RsLZbzrXUji8IMh99r8vkZQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\jolee\745jolee002.wav
+  data: vLHhvKvNgX6Pp3+BVz+CUBwyeKEwHW6MjoeQnkm5G4CUXqSr8v0vR0vRSpu8U52DLQqwaV0tb7NRBB2vkAEb+A==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\jolee\745jolee003.wav
+  data: k19caLzffWUB2eY2Cvxa1aH7Mf7OXyMIRAe+YW5mAnorx2/Qn9C4yLa3pJdooKxIypnRZcqR2GPtV2JghmPB3g==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\jolee\745jolee004.wav
+  data: 1/vFIJggbobPMMFiuNtzvPdZlcQH9UVI/PUqgqIeSphB+wmpKKTXnWFltPY69kzmWRvVrLi+OmUZiFEW3Llsnw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\jolee\745jolee005.wav
+  data: IA+IZjOcx7RB0fd1nadzvbNc2nJHfRGr9E5yxEU95qRsKsXfu8bBmVuG287owe6w/SZVXkNK5KOwcdU7gSboHA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\jolee\745jolee006.wav
+  data: eAybyPtunJaMMyBiSqFdnACBn9xqRWia+fQDXoBePRKPehyTg+KWmweIHAmJT2It3ksOus4AcpLJhIEpnjuyPA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\jolee\745jolee007.wav
+  data: xmBjo65z0II7xySJWSl7zx6gjDkUAbIk6V8WJi/iWHqMl64St3CIVRi12dZokTabwg1p0vAZUlQpreR8Rin/Gg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\jolee\745jolee008.wav
+  data: HCK69ElTQB8wtJ11hlQq1lkTrqoBGDyBS8td9fH/1DmkwVQ6Y1Evhek2ZjOhfglfsNyy7vbZfAswRyBGRsfMcw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\jolee\745jolee009.wav
+  data: wPFg2xLRpWVnDsrhjsU2bIIKIDFwNhIoCiuU7NcnQtPtb6XiV2oBXtbmQQ9ujzFxqc0Y38vaap3tSXffdAYqnw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\jolee\745jolee010.wav
+  data: wAhE+URIJIuixEGCpga56vIZg55jDEG0bSGjSZJYGy0n5skyoJH7tC60UYjxB94aQKlOil4mmsj4L3yvs+KJXg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\jolee\745jolee011.wav
+  data: hLIIR/+b+GD/EdMTnwPjvmmbwOU6eAQrdIIWl9L0wROm+mTmMkUYeMcznZUi1kWY25Y97UKPMc5KGFD11Mrrnw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\jolee\745jolee012.wav
+  data: VthNXmzDU4L8pqnEKYqjmv8QPgVmqt1cUCrQzJ1h+TUEv7ilwAZxtRHeINDNWzR4DYDm/RTOWZqG959f2Ji7xQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\kaz\745kaz001.mp3
+  data: 8dXlOQCLjKlJ5qbK9x/ehiByqgdS8h2Rq1HNfG3VBF8Qvnf1mCXHOESHXsjPOgp6KiK2r1KG9xALGGdRyDIThA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\kaz\745kaz002.mp3
+  data: a+E9a2EAbIuOYkCPqMxlZ4+xk1cbeph1vNCsA3UW8XYanrEpA4P9B9rIu5Hfcv8UGbYPTscRs/WHqtXXtWLz5Q==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\kaz\745kaz003.mp3
+  data: DSmgyR3SfR0XbY/CAAEbTV0ejYdGogOav/U0XghNLQnOJevqbMbiSKc5P6zfZ0fwV/OPBFZ1JkTwQ1iYrSwF6Q==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\kaz\745kaz004.mp3
+  data: s1CrSt13ErCarZNvDKDfvc6QmDo2ab3et7XSaDkNGieGEA/OIgQP6tvX6KVl4TULRw5ob4REmLT819RVnSGA0g==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\kaz\745kaz005.mp3
+  data: yBZJjz0Bv/DePvdFXu5NzE84uZ915+tl16cINbpwv37++q+zGkRuxe8ngBDCNW/RHoj5EuYj0I5gSOGNmRhtgA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\kaz\745kaz006.mp3
+  data: Pu7XIMil6MLxIyYiuySVlRP5ZaTsqAp3BQtBgYD4DE7aMrIS7wX9E2GU5Q814zuHjpiJEViStdd0SCT3k4HWMQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\kaz\745kaz007.mp3
+  data: d+a1LFNTOnFdK2mgiyLoqhB1O5JtVbBw43eouuXWuaSwaRE3IayBCssvQdpeefhRVN9vXHsy/VIiax1Y3e9Y/w==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\kaz\745kaz008.mp3
+  data: tEy4Oy/HkPeOFHw45lSzB0gA80RtbP3cVy67Gtkon6edYhYEFw5Q04ELIUWUPN2XAZ6GXtEVs3ClV1GxNjeeBA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\kaz\745kaz009.mp3
+  data: Nt881N4TFiVkzSYR5DK4vC3uKeH3ysl5Exqav0JbFZYJZ2xtWtmL881S7N2HcSOSxtp2H3EmcR39CljJ1ChStA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\kaz\745kaz010.mp3
+  data: eVjjRHmPPLj67PTbuKqcZJKpcwStCVS3m3aVOZNLCtruZ7rybqUUdNm+PWiOKClP5GMN18nS1Lwd3c42nBSMMg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\kaz\745kaz011.mp3
+  data: Y8UxW7fi2U1iOFpuhesn/Gl39Rj0XPtAQzDnBNKDAHAJ8/HFrUpOlZ96MoJg1+hAFPYB143OUK7mYBdRCOBFDg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\kaz\745kaz012.mp3
+  data: 10WGFIyhjwbwvqymrqX/in+gDr4XF5JDm9PjUWDqsM/0RyNnasdNtXQOn3/WUgL36iHJA55s/0dMzuilH2BtUw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\kaz\745kaz013.mp3
+  data: oiACDl45+nmJsSleEqVhJ1VLxZTC15zJSWXCb4xP7MbNcy/hWoHaBelMxwL3XhuwT5OqQtaUgEYldUytqiZP4A==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\kaz\745kaz014.mp3
+  data: u5r+ePXP3ECrUcLvJaPYdpH6FnME1VmJHVK9oBXLQzDUm6jLdEbwr7NKw3gn7l//bOrphh/ep0zInJWL15fE2w==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\kaz\745kaz015.mp3
+  data: uIFU+QQI+c215LGog2a46f1lhvracXya1FJJk/k/Oy7WdCwe0JYFYHu3rkpxygEcWb2h5TYC8cj05E+qb/4ykQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\loqi\745loqi001.mp3
+  data: S1K8tIOaDy+Xmyhbz7s2lOCAtE7BtolILlHXwOFEggq+HommmpFgHcclUe8VNK3S5NCrViLSyCvK/oSwCQuU7A==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\loqi\745loqi002.mp3
+  data: ciGGNQmeWAPeJCWZnw3FsZVlN7IHgggNTG8IlrLqngHEw67Oyu6OaWdarkIYLBJRGVHZsRCXHvwxiFmAi7J19g==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\loqi\745loqi003.mp3
+  data: LHyNUYGi/eaufoDxgOgPYx7cfzIczjjkPGKxcY+MaXpsXck4vi7gfBuq6/7N5zCdY7bPiFM31/libgWIvB+mKQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\loqi\745loqi004.mp3
+  data: gX5eWJTzqjt5u0QU0vGl4vjbI9gL1AATISjCGzus0tgD8ENY1+qQZB/dfLAD5GDGNkdsd+3eCt/2qrM2cxdW3w==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\loqi\745loqi005.mp3
+  data: /eC5UO+/+wvbpfpjH9RROCbLVaLzyRgkmUBWBY8cSmsfs9SSM/QLQjNrHm4NDK77wi8a+t/8OR9xXxd/EtZ3Ng==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\loqi\745loqi006.mp3
+  data: 4UoRqVtN0kqmdNKnqig+K8KrYGE/WGnJHpCVx8c4wSJpJqQEfMjgipM4wMOA2TNmRNNUKdAJQY8Y8tiz/SY6Qg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\loqi\745loqi007.mp3
+  data: gs8duwZi8kQe2uGbWkZIlgt4IFAf9ati//gd1EmDKAOlp2dtxI3SQH+2yB7fjzwgaWi2u/MwJmC4a2NFRmhTcg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\loqi\745loqi008.mp3
+  data: IVioo84BRPX08AuDajClY1eDz1fYc3zcfI/ilw4hTaXVKKCzdAhJk0aS/c0OmxIvKR2KRCEsdXu7QggIsW2zPg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\loqi\745loqi009.mp3
+  data: cxLWF6kzCnzhRZdzdLMHRUN4dkitML6rLIhAi4aQ0+SsSdb8wGzmUoA7pUhR42H75ne7tF1BwhEEW9TUEuextw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\loqi\745loqi010.mp3
+  data: hbkuUu89/Om4BqhYfxEk8b6aCQJD6s6YiTfvu8sCP0qsTas/lXPacbomyrv45XX7iiljvWvtQTN+ud7IejACRg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\loqi\745loqi011.mp3
+  data: lywJRi0YuaBuMDkQm5ESxq4qCtTGWLrH4nSkwQa/ecuoW2TIYdDsU274X7X6XtWCsaKTCij39wY3cOq6m52ziw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\loqi\745loqi012.mp3
+  data: RkzKliGEaNjM6e5HOi3Pgcr+YaQwHz37F5fuiM/GumWVgiEYhf8SclImirTxwZzggjjJuBa7cn6k00ZqoiNEdg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\mand\745mand001.wav
+  data: M+jMp9CjenKlO8B9zvyeemJISjebBs2tFFNoS7fNyHEwT+TDSdAmeDkb41T/pD++u6F5HvMSabW3y+g3Sjz2VA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\mand\745mand002.wav
+  data: Yt5d8tO3hi+j/Ng+ryxKdDJP6S5NKf90X97cCs0tgM1gKmPQLxKl++KG1eGu+IxfT1ZR1E0FeQ4EBjfzBzoptg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\mand\745mand003.wav
+  data: NVWhuUF/ZBGsV8KBSpral2EhFcO3d1DNkqqDXb0u3N79FcJL0o8EgZdJt98qqYYdkhLy+2PN8l6ARzg4gajHbA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\sion\745sion001.wav
+  data: UplFogSKoOsHxCENM23DBtjGwDkEWKCIG2W6oNAe5AwQdDhn0MCd6pm2bvSpRAI8IJA2iK5wvbRMPV8POrpN2Q==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\sion\745sion002.wav
+  data: WR9R/Um+t5Niw0d4qAOEXT+FRdMivFgtYXWZjFDgQjo+DhPoGXQaxFgV9k0xrnNYKnxRcb/uMP5Stui2nzUq8w==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\sion\745sion003.wav
+  data: oTOiw0oFUUOzjt5SC1ARswtNN1ejo0YPFOrV7mJ3r4sscUTywxD82GP2/rkJw2kjcF3JquazIlkGWyEjA6OM1A==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\sion\745sion004.wav
+  data: YO9B1pooZ+gzGPTXRERDFEzX22HAnyFNxdhyyOHmwUvyfM/Y0+f5QQtAalOOhRQenqH4CZQ5+wuNYtJ/P+XzUw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\vala\745vala001.wav
+  data: Nkesq/cScnA7Coz/QumPvLmbkDfndDWz1npSQOQxuXck/5CdPWQatFh93O5KQQqOJYhHbCKoL7WxY60uQl7Jzg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\vala\745vala002.mp3
+  data: ZgddXscqPhi8REI4dQ3sdu88zJm8zwOVpYt+CAJWIfkw4vjb+yzvuiArayX4nMRdAxPu1J9aRoAvWV+2nuSd9Q==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\vala\745vala003.mp3
+  data: Rx+Q71i8tObSbjQsz4Sr5TuMPYxSzRFvsI5OKDRD7Hi+t03AtP8W3NdhCo02zOsh3/o1lYW4ljFUUnquswbSmA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\vala\745vala004.mp3
+  data: 5uTYs4gcK1NFbwZRjmbYKCmkfhcs+5xDT52kDccxkLfz7N7b5T5Motmsb/e0eOP0esjkp9ikYVqMCFnFHviZbg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\vala\745vala005.mp3
+  data: +8b3rlfBflVA8nD2Q8ObzfcldI8GEsLqsHicmg3Ll+BBNOE2ToNfqvCPKqGodf0umcdR7JJcl2YGdjaRpLwlVA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\vala\745vala006.mp3
+  data: h/acAaCwlcB/SdfK4Fsudagjj8RtC85nvi2PMR/dSrtXBD9KGLfzIB8viwoMNscz2SaHcZtTJK3aAngJdLpN/g==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\vala\745vala007.mp3
+  data: Na087OIXrGmHgP7X4dkv6g1pPuqojgB01OLmL0KHa7PgYld0opGA6BXzEtGq1yFPqoJ+OvpRoaRm9ceI9/CJew==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\vala\745vala008.mp3
+  data: Vki7DrfHGqozvW6YbQLpJWeV/GuBM8FJfLevGQoh8AZ8RwEKNIxMdxcK1lwyqmJv+eMO+9QAmzUWKf40EQya3Q==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\vala\745vala009.mp3
+  data: iMJc6Gho6EGe/fV3BG83QeuS3DMMwe/IPNObDviICDwsBZdPnrPw6i2pAAzuMNWwMZyrZbN4P4hHyO6faPQLtA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\vala\745vala010.mp3
+  data: bZZLTOs7jhLIfkCRoMYXXGk9UkV2pWQ/nm6x9+yQate25T4G8NBh7It62kQ4uxBhd/zmxiXi0iwZKKxVwoWdaQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\vala\745vala011.mp3
+  data: 9Enn1QdIiXoW7Vo4ndeuhLiuE+RH2/mVe3XnWJi1+8RzUNVh4phA6k+rUZLQkXzx2lZESWkJpVgk+tmVSVyI+Q==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\vala\745vala012.mp3
+  data: GTiwP4qKxBXJQZKtsAXC2+GhQdAWqX7ESS1oLdFAtqKugjvF8UUzBez27ab69yuGbL+YOAOz7gGPkdzjP4rNYw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\vala\745vala013.mp3
+  data: MMHBOikWMOff3aF9/dmtxcaOIeh/c1+fOf6QijzSYev4cHU6vMKqTL35jg5IxXTKoLFh0HOCIukGZUncxQoNbw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\vala\745vala014.mp3
+  data: yIqvM8iOdlAWF0UM6NkNPaZRg+1ZPeQj4ZxCpj/kjtxE/lf1BYcUI+VFGRivX4iua78zRX6PdtJb12TUGgghVQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\vala\745vala015.mp3
+  data: CutUaegrYvHEVPYn8sT+AKFRuURJUXUcOXleqZa/agr3apb8UX0J4TKsoyub4daXY3cR3kmfDLFmLwLyvbXnSA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\vala\745vala016.mp3
+  data: f8HoKXuhMKVD/94mZrU7qEc0FE2oaoBRKtTBBBF/hYPgDc6wyVqprjo1CQw5Gk+fUiWEBT0eTLF33Y9i1NMkgA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\vala\745vala017.mp3
+  data: IzE1sKiIDU+dNEQJlwYgqwTuMPNlwe0b3osG7+NXqK9jZ7a85Cy+be7KSBwMRGlyZ8kpkDAhY61MS40NFyiwxg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\vala\745vala018.mp3
+  data: ORvPGWmWNObV92QeA04jzz0yltbSo2gGnqfnbRqr/U2JOIW/QR1L36QbYLofJjfEDaWp0TvrLYj097s90tt1Xg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\vala\745vala019.mp3
+  data: sD3bJfcwu4fUEHt2QgnjxzVVcoiWRbFeZAKQ8mt6fORHmoge4YJvsfGr8+0eitNGFLDHHEQ0iLfzbRfF1sMrIg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\vala\745vala020.mp3
+  data: lQWwcG03qjK1htPcE522mZe0P66HZywZL9ajNnJq1579ik7Uh7BiyDJ4F4XPFW1KIyyvwAHnujgdywEk+MAILA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\vala\745vala021.mp3
+  data: smkzj8dCFVc4PZHSEykYWRw3QxfyKqh2XL/mj2RITs2VvLZHbi5ADgou+/dFRcJ5UB2Dr73H3jFGc+1rFM5HJw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\746\jolee\746jolee001.wav
+  data: B6IU8qODU5XFop3zycJdoY7rXX4hbbXypNA3inwCSCH0OJrS25cMR39MxLsA5ASHsqi8rhzOJBP/hrGBFYm1Ug==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\746\jolee\746jolee002.wav
+  data: jiYzUkULAgblUH9IrzMUgww8wxTh/uUo+5+5fCrzvZ9JXohB+Zye6Aiqbes9gXLBi273CxPRBK72j8pORo4cMw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\746\jolee\746jolee003.wav
+  data: jGoq7hPqqhLfIZ64Ljg3MRu8iyYt2snYBI2sbr/StxvBzn2+vtSP46n8V2Z24jB2AP6KQrOPboEsprRS/Km92g==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\746\jolee\746jolee004.wav
+  data: roXfWpazOEm+oW0s0+DJoQJoNQVwidQAhL/E+p73aweSIIAxxEVJOxBhfbQTZZnBn1fvND6jcYbZghp8Zlpsew==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\746\jolee\746jolee005.wav
+  data: ZlWwVeUpLDLn4hzoqstdwFG5ZOP/o6N7buPyTwUdZHfCHuWYHEPZwcL/9ecSgBJ+jndFV6HwQXYb1pIzk9qDJg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\746\jolee\746jolee006.wav
+  data: SXeK+5yUjGR2O/1sGxcAE3sIcb0dD5KzteBv1MuDS6urHsJTBSXXcYTUFWiaWzDacZt+g27h19B4TS2AudWFzw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\748\slave\748slave001.wav
+  data: Tana2qeWUmjpQxGIAV1kQnKANp/YeUO0ZsgwnPxLz/oxI0wg/1TWSf11EaCwaTj4wUwMcZ/LDG7VcKav3VLOzA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\748\slave\748slave002.wav
+  data: ulP2g0NdqhRvrjkhy950sRAvOYkksKqZXzFgxdUObZGqqV/b+EsFKiFX4r4Kx2pwZ7SOWzSkhRf53vjrsqkHig==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\750\thulsa\750thulsa001.wav
+  data: eJcDI9sUcUm3jdMETKEJfvLpxWOpsNysYvUfA/N6My5H9vj8Cd6PIKCUE30z4nIZoFTliWUQkDicUidVxX5PPw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\750\thulsa\750thulsa002.wav
+  data: Sl+XYp5/6wnYSV/KW/JLilLYzKIkUnIPeLz+lLJwZ4qJxNOlaIj1JfK8aOFT7DduPDA/45kaF9a/zsEoE836hA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\750\thulsa\750thulsa003.wav
+  data: ETfiZftjJCrxHrWasPuQRcuNPejbIP1v94KWtEsiut2Fn2yVnLrWXjmgTd78EAOIaAE8lQ8ymnRSVMJRo4x9WA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\750\thulsa\750thulsa004.wav
+  data: X45p6Doe/fcHZHtEdjj5DI7dlSCBKTtcMEQ/CQhNhWTgzC/ewcz8SlQKbalS+yCH4zA58mgZhF1LwU0He1G6iA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\750\thulsa\750thulsa005.wav
+  data: VyGaVyXB2hqEPHA+jNHVcznlF+OWYTr+410oGM7M+vUhqvAVV7ZEPD951553iIVrD9v4wT/ruw4G6yj3VV4rvw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\910\arden\910arden001.wav
+  data: bNk2pvRHlG+TD7wNSasMbPUDTKrIc9eWAFUWiPdwBJ/CXwenXzlVYDW0u8b/LZ5f92gO33g7T5zzfhVtuVjHZw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\910\arden\910arden002.wav
+  data: Nq4NDaRYAfzkYdzB6rg7egdfYwuusYDsm5yYmaxIk3mlMBigeLckjnfsBCOHMJB19dym1Vliqubv5gFuYPm5Jw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\910\arden\910arden003.wav
+  data: CD27LUWjb8EVEuKP/Zvga8sW4Mquy0T6UjSIpAXOxJggZC4GfebDEijhGcicPdCIEDElFP5geJmgDrbTfP7g4w==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\910\malak\910malak001.wav
+  data: UfAJ++DOWqZRtwrqPhQd0beipNyH/e7jJYRpzdBCVBHF/XQFUY85ChVCoFVN7ezfTiWAjD1tIGsBJ7ZKIONgRw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\910\revan\910revan001.wav
+  data: +m6Q5gl9tsFs1GQ5LZxmAOq5ATwWxT/3aUxHA0bUGf/EwlDcafnn3gHlrNa8fQkiuPXt1tsygIQ7SuHQ42viDQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\910\sion\910sion001.wav
+  data: jHo4JfUuSGO9qb7cN0n07/KSi4IVEgyCS7meELfkVKAgM248BYbLI6JRVcJO/vPzv82vbzeflnjNAFhYWthS0w==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\global.jrl
+  data: RTV5hS1lh19sL0db5tSWCB+nEDYGXTwBxOHnDRC8RQh1g5fHPKNtRwzzAMZaJ5F1TEizqLk24LTXL035vMQ4TA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\740KOR.lyt
+  data: mMldLaJp0+gsyPeIarpqN9bCa/Tx6q3wwBKxt8P6w3e+JuqKMpvYj5SZAW6Yi1y4vOnvosIArx5AATwXONxtRg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KOR.lyt
+  data: sPHifOmnMM1pHqPEw7LUXehSSy6fWIkpjtbr5z/XMC+V+lM2nZTJpQWD3ur+68SDFeMqfTp8i8bHyiq0MfzdVA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\746KOR.lyt
+  data: SU6njbuARRHMOyScGBeKrV0yMjSWH+ILN32y6OKcrghTaUWfj8sZ5btz70Jfo6bKnqXAXZJEPHlNVs+vP6S80A==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\747KOR.lyt
+  data: pi1cO4Bydq0dQHBQg+NVbficQtGOR5JfVohf/F7aOLLUYmaPaol4isyzn/oLLRKPAx8tSn0U/nd0eOGMimxGSQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\748KOR.lyt
+  data: I/rklC1amq203dBC2+hIYL2VRe9z9P7nZ4FpT4lb9BzdxiRTOSdOi+rHQJpjfwVaxQW1YwkUHdmjzSR1YUbdFw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\750KOR.lyt
+  data: zErnVC7U50o/o9zmdJpA+PXPDw9XnBo9NBON3lOH/I050EQDpe1+YjJ5N8htBh3qqpORbjSA7pE5h0X8Jzt++Q==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\910DAG.lyt
+  data: NgerQlN3u1Q1q2dsbl7GTXLCCgkljXduV9SRbadNhH8Y0ALwtwQC/RjnnzUATJ1kBkt4U7qw6S+HKcXezmMJeA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\740KORa.mdl
+  data: 9AlMekuI+d94NhmE33uI1YvYRqKYzIWvijoimQuA3o+hA9LhE6zf2lQvLK/X0ogcq6S+0FsVgBFWHSxOAzZ3Cw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\740KORb.mdl
+  data: M2aJxzcpWMsOqunNvnu3Bx7BESHj7pls50TIuDu8M/HPYe1fIO44+TVm+/lyJj/lOu9lxx0rAJ9KXMih5yk2jg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\740KORc.mdl
+  data: nmMnc1mkGgQWoSyQ2o2B5rwNl8jWWlDNfve9yvlYpSz4mt9Cf5TD6+hShjP9IIpeIFU29DirMH/eRqfT9RuxpQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\740KORd.mdl
+  data: omUrGvPF54leL6bFCKL2Kq0XYGq85gBE1motqnTTLnjui/ZD1kAkil4KqNG8jX/yEcggAQjXMrbp/qbyA5EqwQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\740KORe.mdl
+  data: dRao+g9qlOp8Tjx2sKTPt21gsLX5snPnBB2Dr3PezbYaZrxwLv6D8Lup1tc7x0mun+yg5GkPjSX2Eksy58H2Qg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\740KORf.mdl
+  data: 84WMQ0RzHvQOE8m3DISccR1L7hXkJ7two84wNRwswguaoxuKH6EPo5pfjk0k46NHSrdYAF3p/f0roWlfiC/ZGw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\740KORg.mdl
+  data: Ca5dAIM5hntZdHY4uU2X62kfGbpz+ZGC1PS1Uq2L+dsauXDIVvZlBxTCcSp/GCN+lQcxcdBOmmhuhPxuqncF3A==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\740KORh.mdl
+  data: ZZSq8gliNdtnbliik+YjVY1taKpTipeOjYzisjr8C7nMkhwMStv8qVxKfH8BAMFzNUncFyhgp+OErAj8wwv+0A==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\740KORi.mdl
+  data: h0V+jLB9FZ0/xu1b7nmuQhWGUUfPvtK97nmn9UrztasuQd2Q26ZbePOVWBRCgZHc6blGafT2rf8B8S+EiuiwfQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\740KORj.mdl
+  data: cxVNHN7LpJYc07ohLOQJvkATo1UWNczy63Mr32EqOTrTftikaQYzqa7o37X6OFddOw8ipAEpFkJXbL5Q7mCwlg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORa.mdl
+  data: LRwEA/CUffNW3aRJ14fwSQkfvsK62chc/LjeF5z4L4MfVfuhwVWdf22QNpr4PXoysYUUZip7902TF+PR5CC0uQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORb.mdl
+  data: ZsKaX/IjGZE7Hgg78vG6cZngM7uWPWSRgjkleYfcEN+IAwEAcH/ZZ2lHx/8TTbFLLcv2djahjHWpmXL/Khnjuw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORc.mdl
+  data: QdcCsh5jyCxnW2/hSYl+Vi3Gtez2nSHPkveey+FHC7UbuP40ov525oFRoQ/yoNprDABMCzsYYa4cwqAgjpyRjA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORd.mdl
+  data: e85V8KESD+/OgELUJ4U65vqcpVMUF+GEqc5/aUOryuZSCba+ZNIXDNnBU+M7CRxJZtUCQcBK2/k7RIYxGqhvMQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORe.mdl
+  data: f6KUGDJfZ9LKmO3T9zQnL4yzifzrZY1yjDPWe6D2gjLE4u2GUXVzMUiIi7Hvnn/qiTjitAFWQosVbfajdAT8lQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORf.mdl
+  data: DmBXi7wBd/SBaZVm+QHEu70sSiq4r/x9UhcBoVmK+TibqLufyIKI6FGjI8RhJl+JnsJoT0+qGlzmc3WluUrH2A==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORg.mdl
+  data: TZibonW1UjL9y3otMTvrZLvxKCOwowVRXXB4nmbOjIx4jQAQn0l7nP6LbMV1A2aWlqUHU24WntnFZumMFb8RdQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORh.mdl
+  data: fC21KfSFUG67vBIkFhveG/oHtEQWjAjqzc1njuoDAYHIcfs5PFMlVTNqRSGlYbwToCMGZGHfMxSleDoOILraeA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORi.mdl
+  data: CH+OJLOhThg30k33Rs2qR1cvzOjaAqJb6kfZazoIw6rhnvLtAwbHVxKnyyRee7rFpEiqmrzRwAMCaha9otsyCw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORj.mdl
+  data: DX00ggAafZl9oap5Z252+fBXCa8EfsbH9hEzlhcRrCJ0I01t0D5/QJD4BNS+n5ri+Nrr/vmjaoMeU25trd/f5Q==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORk.mdl
+  data: DOA4ox+7n7UbzO8gs2Pnp0Nn5RhhxI+mafNsQ3iyYiNySQ5tEzxGq7YnLlzs+hunnXzMgI6k495oT4CN9/yUwQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORl.mdl
+  data: 5GygK6iodzPXKZu9gdtUEnEuWuEMSfqXcu/BFgQsr0VJfOXwoYXbBXSWx0WNcTG4SWwu21R9CI675MAKxUsxBw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORm.mdl
+  data: g3Y8+uF6UjqXW7RYG45raB3stWuIo+6cMfxNLS5ZCAGnGWlNj6UykOMr38MFw0eR2o5evFNKTXF7kNb25Ubqcg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORn.mdl
+  data: 0XwdAbv7oCVCgeOJMJEDqhB8v/1WsI/C6PEZCbG/nFQL0KlyRLgZ5bacxELMIOibm9NRwsYx+o8MwmqTixiMCQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORo.mdl
+  data: zAkkLeb7LgH2/OcJiTWfEoNXa7H/ZRcgfIDlRzQVYTqYXFMXNYqxXfH0ApyCKKZPxShzrO3QjypLRI64VmCULw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORp.mdl
+  data: LE4YllUFfnyRksAkLmv3ltghWKZwgEx8C1zUmrqGmVAP5kMm4C2DLsPs/J1sfED/LhBSUID5Y+9kWwYzhtwULA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORq.mdl
+  data: 6Au5tbAi6cMui6A3WWGnN9CiFOORwJ9+hCEH5t6sOrmWeL5HwHZMDYxUeBF5fpOtLHpD+/q2JvCQj9JdL6EGnA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORr.mdl
+  data: hiZYF+hN5lmq8+uVx/gQaDxw9c02etnN9oDWvIm1jTYlPbjpVQ8uD9V8vnNSyp+I9FbjUfQASqzHpWND6fZ+bw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORs.mdl
+  data: HJU0zjOhtBFe2DFqMX3kqa9ZtwidDnaGV6HwgfADeZ7uKQI99IzTbWbgr2JEsJsZaySTTQvYe8pjhYFE3kYw8g==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORt.mdl
+  data: 2aUFHFB9ENdy5x9qUO0iQUNbH1Tk1npdHqOIQfkpD5xdh0a+29G6xj9A1qlpmp7qV3Ctvfzud/y+xkosLEg11Q==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORu.mdl
+  data: 642Os/QQCNAqBlaqHlMNb0srCnUB+h9+lBrotD9IPMAXCNL3BphmAvCVCzPrVWBTnmEYRt4IDIOx6IQEBSWt9A==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORv.mdl
+  data: JhQZM1OYpcM+5EFuOviz0DbAGHCQ0WaQOF2JVF5aMqqzd+JoREDRa8IvNFR2Fk/INIDDtT/kVpMSWrpKfL1tGQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORw.mdl
+  data: TrmPa9X/uXbBwgR2B3ABNV2U/WGLuSdrcgZ0/Nxfa2+XTNcxbngErYa+2a6MamVkWwEBNB5zA1AXsT51XYO9pw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORx.mdl
+  data: 6KZ7VGQAF1dHDuFmyVUZWr8JrCY92oRf+NuOHDI/g9gFNhu0MtS9oB5TDlIBJUBR3bBBUHg54ogJpOJd/lpffQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORy.mdl
+  data: hknWaq0IeaH20LRwy6R1eBWx2+XGK2PZsRCmUEriLeZy9MCRHrFNvSr//tykvGI5bGmtj2c2x9k9TZLIFpEmZA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORz.mdl
+  data: cznUOpPImcTlqJyUVric4KoKfd8x3oOeVJ0VBUSLZN3qs6J9h0b/N9auAHKypUzjrLGMnbYJbWZUV/SuhTFKvg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORzz.mdl
+  data: Z1aQuB7Ah9XQUxUSeATt/7K1iJufyGbT/VBnVzOdFaeDjM71m7Sb0aBVuK293ATh52skuLUqDZq9oXFhXGD5aw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\746KORa.mdl
+  data: hiPS6iJEKndeKpI6YbtyWa+JHTtRSnSW25URNMykfGotZU9isbRjkldtb2h/d3O/WHcsBo42HGdXjNEOZLl2sg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\746KORsb.mdl
+  data: eZjpoSNQ0O5YGN3nXVRs1zzsN1ySnJDESA7CdZs2SKYfOxum+0rDnRk7pZ43OJmU7nEYHodG0JtkQlaBwNS8WQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\747KOR12.mdl
+  data: tZzIhsIZt2T0CdLQLLIWmiuehFNsW2OJq20qDsWO4xdEVOe9N133UXJ7CTqFxQRriRm35OIYcAB1UynFLSbvxA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\747KOR14.mdl
+  data: /PsQ8NwitY6KquPYAsPKFYEr2ru4O20zfnRNLLZGAUR9Dcm3h4DjW742B48oJku9poBSGhPPxLtV9N2c/rfruQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\747KOR15.mdl
+  data: KyaCu0FNfGQtEebzc5rany68MJPuXKHvcOMDxNZnvHBdfHgfJVphGKi1Y3Bu/1adJmQRXs4vLTPfAd/mqBSInw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\747KOR16.mdl
+  data: Ng1K948uyL7K/+rXmDBKTKLdtd6WSKdug/bXCWYpHXHVS24ZHfeXqJbImMUUQ5Ex1DaSCI5hKn4sqhksAqS/aQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\747KOR17.mdl
+  data: Pxvujo/ELH6ddZabCzzBr8KpRwa8rxLPWsWEWbK6iij21qb4BfFONFhVukeMBLhU7vExI2Blr5aYuoFQ2zkXTQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\748KORa.mdl
+  data: CnSH08ZkTuB7n1f8QT34Ncn2FrHi9pmQBhAqUxHWoGC+HYuEsEynQuOL/UII1ZZvwBbchKgCJlxcuemmQaxNug==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\750KORa.mdl
+  data: gwecgKJ3NObTlNLiT71EC1HNvgACzfffDTMaG1M5locqEJoFhHFQ2nmkM5qoIE64D3Ibp+w8aLT9/iix4avlBQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\910DAG1.mdl
+  data: EtQLaPkNqHIiNSLjMuSSLB0sTvgsyrCMUhBq2AjiSQEm1v3Lty2VM2m5gO518v06/lu2pEwqDzo3fUcepolprg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\910DAGf.mdl
+  data: 0shG+wTjP1u5tq/f+LZTqMbwrYo/IWCUVVL/0peRdB9w+yW/Cs0eLglmjNhO4SK1zjAeT9vFdPYWM6cz8/OcdA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\910DAGl.mdl
+  data: GXwrSfHZwgZDNk1Yuywmtioue+WjnglYl/p0DpSKMD2CVgmRGsTfkta4Gdl+ej8JCoK+MauRO8FjQsK7PaJzxg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\910DAGo.mdl
+  data: 59PWHB1GNwt2+7O7t6sdYHSp1GN07FOxZWDQdm74voIXnA98aluDJ1HoSD2wLpqnjYpmc6r08A9C62B3fZ+Riw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\910DAGy.mdl
+  data: mpofoE5Hl6G0VpiV08PxKLdsJhIQCdNq7MFHumsY+a+/EUxwBuhc5bZh+Rr9A7qR5UirZkaHSvLPaOEW+cPqBQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\910DAGz.mdl
+  data: LyGzap3XTFePnBwl6qRafCNAOC9dBCA59tueKMWTH9Ot7iv0tS2q45ndc9jkSwOblk1cgpEMZR/hhUQAieYzAQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DOR_INVIS01.mdl
+  data: lgLqcnNWzsKBV+Dl91Cos/qcHT+oGUau5zvzTHHQXfR/2uz4IlV22Me/cyQAS9GRezPTn+3ly713+cpxzvECTg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DOR_KOR15.mdl
+  data: n+s5i+TLz8gaak4qPxr17uHsGMEzHoqY6+xfzZKGGfv9EuLpoAhh7Tmkn3k2k6lxal1gIgpie4yGn8ObOKKlfQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\I_Mask_255.mdl
+  data: RGoGfDlyb2LIVcwI12mqZGvBT3WobWvWJyQw6mfCAAU2yPCedssP0SsdFTl0wgHBK72KJUDMObAgQ2izgGA8Qw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\n_ezerarden.mdl
+  data: Wo22JNrBn6eD33vnuMyLeufL8PwaMSESbsPiDUgVxs5eCR4vEhdnYR3aE4ooanN81f2QCR6MD3gErOH7295O/Q==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\n_jawajedi.mdl
+  data: PN03mw0ZhJpzuMEAbxK7+reP1hb19fwa2V8k5bD4/w0V+kVcHyYm7RKvshtmhwoHh/6RkiaEf7V88hyrwGy/SQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\n_jediboy.mdl
+  data: wDJBZ63en7rnAImu05qPTbtN0KJzU/kb8G6YCnA4Gp6x/9sc1yRpML7ZuPW9SQ5mQ8pOfvrqF3RloWIaFc8c+w==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\n_jediboy_robes.mdl
+  data: GGi6L7KiZSy3NlS4Xt6LHmeJvSn707c6/tkHTmXcSvQIGbARoBZwmSba0YYfW361YokUAKamMnyRZ3ks5JZLbA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\n_joleeb.mdl
+  data: LHik/n2TXrGvFTXnuwr/J3SM247LVThmMZ+4jWqgsDudsgNfJ22xfrMXMaSU4/6cBO/C03Rb6CnBSqdMjuqigw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\n_morbidh.mdl
+  data: sYFk4h9k0sZ4PTwLTomCkO8ZxYCdPoi6E/414QV4k9qHLWR9Z+P+7ZSzktx85kAMP7aHOZZ8MXGSkDz6vVmOUQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\n_quarren02.mdl
+  data: oV+Wxafwd+hq9iDX+FI588yDLeLfHAs7fOFbf5n7TE13vUspIqmTXbqbTfQxLsLkYUyeVUHXa/8eRJ9Zayj9dA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\n_raynor.mdl
+  data: YvjiX1lYeElBEbMJCLD5G6Pfgpqr8zH0W5F9+R4MFEsPLvhlxulVYY+ytNRmH5YBadti9bl7mexNAhg6OKi9Yw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\n_weeq02.mdl
+  data: QIy0d/TjcNu+wjuiVSQ+zeDZZqVwmVa3utWrSPTYd/kt+XEsjos4gHH4oupmyYMsnXYtTqV8tTRNcYNO/K8YsQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\plc_dbleruin.mdl
+  data: hJ8AKrvOOSCNj3k5qHn2FrG+HH7yIWfJQLapz95mGvuBQgL3H14f8rBjaNG4TRnrg33aEXD0IryqTCjo1AJShA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\plc_holoctr.mdl
+  data: dg4BTcAv2h6HIEFfxZZ1z22n4FZFifxLpZFbAUxUqT0KMOG/bGpaZ/BOVIHejxWcbmQ5adFJu2hx4ILIp2LIAA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\PLC_jawastat.mdl
+  data: Hdeofb2laBYOt/BlqeO7f8EZ1huJq7cn/bxNfP2c7avM0BYw2F1Osgh9g6Ege+mW2AR6Ss80N4TR2/u0jSnfTA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\plc_koltank2.mdl
+  data: z4yU1oRbf9cJzu+yV9TEbvW9KqtspbB+quXhfwyT1qRarr1dMicCgDMJQL8IkQjRhh9boiaAKDI2tz/lqRuTmQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\plc_napsack.mdl
+  data: z7EnFy4pv5L/twStmdVZxnA9teBPmF0NlwzOQgit9flS8IkLSg/eGzIfm3aiSQWggB4H4bfjSEuxIdCsQ76GpA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\plc_pedestal.mdl
+  data: N1IsY65T/10suaOO1LD+bcv2aQnFudW04FQgKzhOBOQMJcxL0DPgYMvlEEr4My01xsS2r+hsIrvoi4P3m3uEgQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\plc_sglmon.mdl
+  data: hpApLCVBnUEAlXhFp3os7uvDWxTa0MCJJNWh2n7K6bIdr8LlqNeUi+HifBhOOeYVTcD8bWD6l8THq1B9bguPLQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\plc_tallmon.mdl
+  data: TKsNtuBnGdUWO6x3uefQR7Sbp++FjrL4Si3M8S0h5y1+iahuoNXtz8WxNkQDC1znE9J2yW8K1aHk7woMXbrBbQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\plc_tgholo.mdl
+  data: gIoli9b46HnFu15qywoxiSNzbUp0YVWQciWD+frNA6+iw9uV5/ag5145tm7FwlLeFPGiXJzbfXcf4OWE28VQtw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\plc_tmbstat.mdl
+  data: BKdN4LIt9mdHVMerfygNJWdEolCoFQdefWVmYi8tz4xGta+/Or4fwsTEo1dwayuPNLPNcNOI9USpo1YrcYxVVA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\plc_valstat01.mdl
+  data: y1cE69PgTsV1vkekgbn6iHCZRxl1lUIJxl2VzmvunloeRV7xg+6WIST7WmrzVKZ7hLXJQzMIvq+ttP3hiKMbGg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\plc_valstat02.mdl
+  data: SWKE8yQrfVtrzgw0EtlxTprJC2/55CqDZYCeelKGn7i+3EWyLm+D16l19BHZvQP/5h6Ql/rmiQY5RmxFz3P93Q==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\plc_valstat03.mdl
+  data: Ggi/eij4VC6t+0KnfiJvkP/6D60Ri8XyscfJPqqm7m0TW1gXQ9Z98rC4nvKHGjJwPoax8nJLQPdKa0x4YDyxHQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\740KORa.mdx
+  data: cvG7qlRq7DMIu5qdlUtPotEVksxBH8CU/wi5R6nuxK2pBdd3nK6SchV9gNvDpJJQ29IlHrTQLCle+ssnytgU2w==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\740KORb.mdx
+  data: xAAqxS1wFildXgdYZgYStKQf+NHv4xkva6kRg9lVrGXrR/ymW1X1vpSEskv+5ULGlSlmggWGNBNjsu2zuks/eQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\740KORc.mdx
+  data: zotl/xg98ThfFNRPCEeoYSi9h2PJFVCTcH9Vy+qkhdfmbLhHyGVaFmGgxSDLLK7uT0r7eKczfNtMGaPUrpYx9g==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\740KORd.mdx
+  data: iljIlS1s2dRxZVH1yhZOlroeFQsoCUvvS1R75Aw/zL8nAbBC+Hu6xCTM6GT/Xtvcgy/oZr/xC9nq+WDSLFUUrg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\740KORe.mdx
+  data: TgVaL442BFcVfWuKkaY8hKm97d/ujAX59gU2WOWBvNB07h6fS6zJfYFR6AuDA/Nudjb5YliseKlaVAmnzg6QCQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\740KORf.mdx
+  data: KGy7GsVQsU9zeLRccMNlcAM0/ObY0M4562+Wv5ihaOE41de62JLKkVeCWhbRe+wsOb1xi5eh1JiJReofjFdOWQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\740KORg.mdx
+  data: 9rTj5pvPvVrLQAiQpnHm8zMt0GeMfNt1sTWo72Mnu58d+lrW6bJC5s1qpPkX+wyPSsfkcZi3qInt3fVycFzu8w==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\740KORh.mdx
+  data: OG5T/9Y46Sxjz9ahiY4D3dfeQPuxzaJg+ItvzAKlV6nYwL7KuRO4dcnrkcH+LZpQiPVillBO9zZpNlH6sWCSNw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\740KORi.mdx
+  data: 52JG30ZIhG1vZqOawDGNfdzwg4QIJ5JZWU7t2LcSnqBfPZ08eXsdYJRUEjuFZm7tee+tT+8GhmywppmiMtWCyA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\740KORj.mdx
+  data: PoPIkl7SyIvEPF/c7gxAZdycVQhLQZg1DVBv/H7FBbnOkeKQ7ir/h2HXOmyvHQWfCwEIbJ/gwW7WBjeCgn46Qw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORa.mdx
+  data: 99cGVq9gneMDbtVORwBHG9A4dCTApkYmKUHZEBW34jawbneeNtKX0Jhn6qRIDb7KPSSP4J1GPCOK/KxlfJ0Teg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORb.mdx
+  data: 2kBdNKQ+tOIQFRS43CQwZbXm4sxrW/Jr8AbhA8Ofpv/58Ae+IWkAMMRdXFm5u0VnrBg+G1duqF/iiBQ0fN5ANw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORc.mdx
+  data: UX07bEXV9wX7Hsfj7h/6yWoNZP3aoOB6YYyH5lOExTARyPJCSSrSY3MuoHP/xWnoPoe/45NyGPxn78JBfLxeYg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORd.mdx
+  data: b43n5UEhHOpOzgtX0c4qf30vm8kR2O1RVXsZkl3+XIqCe54oSGP1dZ6eGhI15+s3MxkKWKz5POiJegiKV2jgVw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORe.mdx
+  data: gcDnD02H4HpH8B0A+PlR8LQY6PslMq21FDuA43jHsQ96fjsvEwQDyprmow99B/V5/dcjrAHKC+aVum+L2Tecbg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORf.mdx
+  data: esaj34KsHro9ogauxx9+snNwPsFyqnEOc0WFcl6d+q2R9fr2vgy20gFaIIo6ABmwIcNL5tq7lgJK7mQQ1irsLg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORg.mdx
+  data: G2NZUs3Ndzxo0Y7iXTrYSzCRwlDShfEZCvv5VmrxdUXAh2RwikwYrtQzAHvu5wKySSH8r7wYMsAnZPIzod5XdQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORh.mdx
+  data: lVrnJF8Ikbq5hxCLAHOPGiCLMU+covqhneqJ5nWUttjcvg8wnt8Unhd079VZdcQIjtqgeExMSsJyxr6tWlJE9w==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORi.mdx
+  data: M/sFmTfRX62dXNY4B4VaRj44qisdlehPEojNT6bmH3vganeXaBk79rOS1oMwO406zpOWGYnU+KneDpkQ3/vu4w==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORj.mdx
+  data: wuqqcSXZU0EzIddtUy4mKiPSJpBMNBZLAPQXBJZ9JK707ejKJ7nGAzhsuilaApBxe9QbPLOm97sEbZbMhmY4aA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORk.mdx
+  data: 1m+2h+hgKPVFYhviJf9p8EdP5vo3P3eS/EkujJefYY+ulpTuNev8c01qLAmRCs8Wv0zxiG4mKOpnODjBLJNC/w==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORl.mdx
+  data: cmMGRZ6B5F4dq9mwd6nVKrTVdvWOUJvbA63AyknVghmKvp0POokslUoemDdFEr/pBNL3fe1bMTZLzldrVRa3Lw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORm.mdx
+  data: CtEAoD6UWxpdRtbCbRLu26LVaGlinQxRF4K7cnjFD9YreYM5aQq7TcLrhR1fTTgIWTxNLx01zjq4bWK68oNqQg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORn.mdx
+  data: OXAZ/Zivhin5hd9mn8qHGFT/NqMjSAeP++xnCc3lZMIWjLMZKm495qaj4jtMy37GDriM3cOdykAkoXSOxeziLw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORo.mdx
+  data: gLg6miaGkYTI4chKFOdx6QNmnZwxPhe38rOY/CJAKlPxPN6hS/Towyw9dNpAzHCW+rbcRQlHOFRJXgYGxzwnUg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORp.mdx
+  data: bmTU8Eo077vfxtG1Dbtf+hCIpmqvym7Dy3X4jp6QKjRDTkLmnBmBKFCkFe2Vw9zQFj3wDroAmCkWjiSrOepgQg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORq.mdx
+  data: rOsdHoeZjaMySBG3esy+GCJvtebWpx+o/ps6JaLibJNyBevcsLIo6A4w39ezeTldY5Q3k0KMlKNp2Wq/09+xKA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORr.mdx
+  data: KkBdtfXI8dmYl/A6WYJh2uzRf93gpDXScMuvU15XkBJ7tdvcvsu64LidmqwoIDcw0p93LotKN2U7i6f36aqb8g==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORs.mdx
+  data: LIAayAVeFe0v2BsZPkD8FLX6VLjuWEYsDqqir75zSnjpHXO9HLsXJibC9EGKuRL3kihhGOcYXW+D5vFdFd9pDg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORt.mdx
+  data: og7s4em3PUhRyZxVeN5vQpr+lcK4wozLFiPS9i916JNSwbTVFb6Nj4KGPZyJf3tfTpUFEyficRPTkRhlfsBA7A==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORu.mdx
+  data: wrb64jQRz8WJPSr4Z87h9ED9zYJRXj0MDEM2039Sc20mDHplJ/mexRckmJw+SPpKCFQLEEJrOTyaeD4911eNlA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORv.mdx
+  data: i0jzjtUZNyTWaJIWtVJuTmq4oT9ciJpJ7yN66wdCDzkF9EKf7XZrgxodOgN1kT4OtKbiGPJLNgIVD+UqPk7vQw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORw.mdx
+  data: otNZKz7Ym/3VEq/aI/FFnpFI0O6OIF8YVqJUePKc5dSyCRFFMKI7JxaYKdxVFngPeeTEKcj2yWzuU0J8iKV9oQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORx.mdx
+  data: gGxBZ24i7b+UaAW9rq/nZcawe+LHRGoDYtKvZ/ChYKIg15dLaHg8aNnD2kATBXnA4hzrAJY9fyPKNMNMxjtljg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORy.mdx
+  data: ac4JC/7GZzxMxBoLN/5sfvGa+IW81AYV1AUW805+8vRqsOFaKBG9hJ/7//xSwA7lV2o6qNTc4SjrxxlpZzBDCA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORz.mdx
+  data: VqVvD+kLYF7fU3N2NFsbbLSQLvPt3dtxoJIe7stwKNsHMpvEZjL7JvBT5H2GSQ9CGkDRIJv+ljM4LC7nF1NV/w==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORzz.mdx
+  data: 336UISpRtgpkNRNyeS5yDfpGVDpPX5wIxRHH8hTzQxMIYr20nxvq+fVIPmCYs+gGuxpRpE7eNnW8JVMDFQh3dQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\746KORa.mdx
+  data: GLl/D167BfLVkI++C4OBxuu7qQ27nBVadnDd7/hO1CHJmrFdhzs6sgXnQqIDdv8IgFeuEVvvoXkjMaZKMQ4fjA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\746KORsb.mdx
+  data: n++lKyLNIS1IgKnepV/C0lCWCmmsRRzA1V0hYPLEmi4uksMKvdVu9oAzblGeS9djl+XAZtlai3nr0+OS+NIsng==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\747KOR12.mdx
+  data: GZnAbTuZdsX9EAM0NLIy6mg/ljzQiYjga9wzEwJLiAzHHcIs65KjB34lEAiyBp9dMDxpF6acBIX40z1nnUsy5w==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\747KOR14.mdx
+  data: MSCw2ZvFSD/pko83FNqL9sdvS4E14/ce4PHlY6u4IKYgGu+Ze14x3vTWMeYnP0ctAFNXtKr9MpmeQc16/qdORg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\747KOR15.mdx
+  data: +FZcjDzbU2DqUyEdLzX2hWYcDfXDELn+LK5hrx/1/SuJ6+mTKR0iKkFsyIYbNye14JBVg3sj2tYV5ltrxjE/Kg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\747KOR16.mdx
+  data: EIRFcXad0T3FN6Awb9v6I9sg2XZkuT1MRAmeWl/5i+2h4LLzuDI4PNKT1yaFqt3IvF7qSAQijdS4yO+prK3p3g==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\747KOR17.mdx
+  data: 2ypiTqJmwxbgETS09ifyn+CaBVoQer0MayVyUbxI97VUlSKbThVZMZw9ophQDgd8wdq0Aafb/wqj4gZdPjJNtA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\748KORa.mdx
+  data: TJDmzLFDqxfqjZhJBtN4KBpiMTKiDN8mK6/mgzs/P1qzIbUjq+dF6/qetE6G38XKXCl9Whx9F5fv9Gslw8LATw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\750KORa.mdx
+  data: sNCbU3hKjXStHXWM5Y0JQ0z20YwG5cL9ROZtAmjnqL3KYeFmn9uQmSKq7KjrwfGSvwAbJzXFPy7Jc1KAQi2LIw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\910DAG1.mdx
+  data: faW1ca9kQPCJoh9CZld/U52GbanIIRYAk/G1yplZD/t70pcAwgsIlZMzsb6Tm+2ojyf1HccP60nnx8T31I7hhQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\910DAGf.mdx
+  data: g1+TN/2pvhwwJHBgARR+a0IGXXj3XrozSQ1H/7jugubl5vklK029M62ysVUd1SI1Yx0wzoMHVaYNZItU99hvrQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\910DAGl.mdx
+  data: MD5j4MT9W2fPIrTxQWrKAWMoVHzDaX7AFG3SnWCs38TICKyGcxrHoJMkEdPscoKeLGdiJUu5B4JJJmbAFbWDjw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\910DAGo.mdx
+  data: XdHYVD1Vv5r9Zlhj67nS707IJ65/YqI+Uoq3UjYl7oafsLe8VufJGgWMyfa6smg3e8924tvTs4gUHk9xMB+kfg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\910DAGy.mdx
+  data: pErKdLJsisMLtUt7N7dVZK3FJrtO5KfyC065smDIvwt6Jut0nQdwTQ2RXUUF/sIv+t1EG7Mmq/wqLTZJhnzUSg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\910DAGz.mdx
+  data: ObFlLQJmAomVEwcqG5rvKiZ9dx+yLcXJNuE8Kz9BGp6INtgssIW49SPJVgkULN5BvLvJDowpsHqGnOwAkrb2Yw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DOR_INVIS01.mdx
+  data: Ouliq2L7oyzh2FveD70wo8dh05Q7Pd+/yngCRubIAXWkNk0CMRHzKdZCm4DnFdNgBLc19ax7+wYSyhS+rDbqfQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DOR_KOR15.mdx
+  data: etWQcZdvh8sMblugswQqkyE9ZFQF+dJ456TQWf2FTUTHA21U3Mgsm2+RjxpPb1P5b8xN76yZ+ZTl4VGX4+J0UA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\I_Mask_255.mdx
+  data: 1VKSxfQ9Von2XAwQpDh1pl/miVDLJ8VK4Xj6Gb9B/Q9DOPKV/KldtHNr28FYb8n24QurZFYG3zEU7bj48COdUQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\n_ezerarden.mdx
+  data: sgvXOhR1S84gusSRq5iUZDvWaFkaozOdlQBxy/1Gz1NDcRe093pn42Y7ui99wDqPflheqqMm/aKl7fr4myLdig==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\n_jawajedi.mdx
+  data: lybOhK5xK/ZpsaY0LoWibNe0ZsUJVAob/RyE3ChH2lv/uHLPBOl8o1bKHQOqZc0OWsx0YdRdlSlvd8Pt2u7awQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\n_jediboy.mdx
+  data: BKM9Ycqai4NNjR7cDSF1ePLyN/IUyJ9aekFIPA+UTjs7Gh/ejYOoC8qU9jZkJ7fmSG48VaJG3SKBR69EOtW+jQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\n_jediboy_robes.mdx
+  data: gucVYpIUpYca2RTCFX6um20DRMzZ+Oe8l5R0WZMJfFm8DPE7aL1Zc4lKu2rsubeCi8NS7F3X0D6AiIkEZvzGdQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\n_joleeb.mdx
+  data: dn38T5VKkHhqZHvoTJUJ3PuqOJYHkx4idQveUCQ4Smd1XVNUkZ69mLr2TCq+KkUMa/gPNOanC4IF3wNcyiFzAw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\n_morbidh.mdx
+  data: zkkqmioL+MVyqta5sGHcZsMkY9tVWy9Cx8y61c6APdnLzdcZ8rHpMyR0CD1EncCpQdmLTNAz6+kRI6sFfjyUmA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\n_quarren02.mdx
+  data: B/Iht49b59gh2oYMrtslWAVdN+VknOKsfQ8/s1jtyZ2kokGDSnzTcFKw/ljMWQEe5AFUIjHdo3mOQswcSwJ2aQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\n_raynor.mdx
+  data: RfvZhpk88lew/eIVBwEPuLoqIrhG6T7NpsZ9eoG1mlHo6KSg2MPnLp/5HbHTRUlvhCrRaN/dPTNhnq+sw1j5Yg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\n_weeq02.mdx
+  data: zOfR7Z9fkttvnXYZwJGZkiweFbfY/DfsKmy4oUAXWAWWTGfNFkqw3zVBqveNJ6qCgY8Z4OSMlqRhORmsSN1QAA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\plc_dbleruin.mdx
+  data: S7KNufi9YVpcofBpkSOhfyAeW+DqwZO71r8JjlwcbBuF8298b5CewydAY0VUBghonR2N1EUGNe9/itBJkuTVgw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\plc_holoctr.mdx
+  data: ARwZP42v4kDnjSGz83U/uFoOqQ/OteF674RUbaRuTBbYsfBU72jRyjOnYpDugVFqyVmtqUQ4WwzGI3YJNZwWvw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\PLC_jawastat.mdx
+  data: sfLLpoMpQ5eKdCpd9/SLLup+G30cRWXgtKK49y6/tDDiKek88wol/FdsJtfO6rzzHlLv/goDTIr0ZenOIOpo3g==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\plc_napsack.mdx
+  data: 1bO8obFCUTMJxUwrWOeERaUSVCMQ654K3KPBFAJ4NhJxwVzyxIu+JMKNYA9ZUyfhD/8l7lHRQb2Oq70l5FbPGw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\plc_pedestal.mdx
+  data: 20+/+307QeTvbIMmVDddOiUX/vFi2JqG63wLBOR9tu5hV1wPKPdrgGipJVEAn/ZdOFoUiSRSK4++XzDq/CQXGA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\plc_sglmon.mdx
+  data: K2gfKaHv5gEAhqGYkuDlaBA1kpOmHGPcgoOM8LI5ebTvKBJmYV7R0yfpAeBGWDLv6xo/2uFTb2i6SRzzwyaHxA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\plc_tallmon.mdx
+  data: AqFDCQEgcYVvuEZDiA2k80s3aP7Ie4nAjkcf5YXLHMenWeISLTxawCaY7f85GifXdsRc88k1eTO9Ro9f5svlaA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\plc_tgholo.mdx
+  data: 9NL3mlpFuWQP2COKm4+oSXdgzSzziI0ilxLPHSQRUP6PXnlpVqbUxeTyLEYWT4ud5APmSjgjmMd9Ka1cm1bNXg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\plc_tmbstat.mdx
+  data: R/AuYe8Qd2ardVZCyYwKQDOKLfYsjqI3gzSHGxfs4HnnGnEOZaRrl1m/rhWCaNs5aw4YTtpTsdzLnfhwFMnHBQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\plc_valstat01.mdx
+  data: aKLAD0dbgSBu4LsuoP/MbPuxAoPBeXXBICTItG1jDbGX0RnTD3ZnL8FwI2qA7TOBEBqzcz2LyqVu7JKWPpPrtw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\plc_valstat02.mdx
+  data: yy6/mXBhFNgQCh93GSvAH1D2rg99IWNvcc/XnmTfgEe33+idu3nKySZhziI0fDcrJZ/r6PvbLfPqUnuzPSbdaA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\plc_valstat03.mdx
+  data: yRQB+Qdprm3K0o0YScM5R1VeeK7TIXPEyqitMQwiQrdNHV5fCxbYPokWMl8DYJ+Yal7HZJmKoLVFI8LgzBLnqA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\hb_sithghost.ncs
+  data: mCHe3oPAknmKfYgw2OrJwEtNuQWqpvYNBRbdB82laRL+VMXVqvUPpJzF3GzbTPFi6c8OTMxClymsd2UCLgPviw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\jett_hb2.ncs
+  data: RowzR/LeCHbXrU9NwFe+oIi81GHYJrdaSY4FOtRzb3ojFLIPVQSJnTWkmV1nOB+YFXpzF6yyWgPmfQaUHGZgbA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\plc_dbleruin.pwk
+  data: BdEiTFosYYUG/asT/YetgIX8go4rEMS0a9gYRpX1mmDcL8z8LXVez1U40HSuscMwbceNt/IpOT2TC0WQykKHRA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\plc_holoctr.pwk
+  data: XiauLOiQujT2PRp3fS2wLzCHqPU5DdRVO5278Fy3LYkEF9gy2MevIFSjJOv74IaXujyDERJXeIVD/ocvjAtk0w==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\plc_jawastat.pwk
+  data: ImBVGuW8HQMGpHHs0J9fj5Tp4U/V9ya7JPOZTT+yHT5Erg+5IbkTeQ4sTPQb5z6Nzcq96qw9gbGurb0lt+gZWA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\plc_pedestal.pwk
+  data: YDWlnKaD85ttzwphP2GFcLicxYDX9UPMAuN77S9YPyPx4U3Vsv57esuaiA6e6wnjRYqcg4dyjnmwokWmfuo/Pg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\plc_sglmon.pwk
+  data: ee3In648urp51VVsWra4EcAcW4206Qap4hgRv8l4JYd3MRWoDSJJjwCWgcsUK7wmH7MbMQKDjL7noqjdcE6YRA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\plc_tallmon.pwk
+  data: suXSS72pSpDk1O7UnjZhRB4uTZh2xXCLzmQJxxmnfB1ecM2Q3TW2ir+5O8iYoBAdIgbYElcIJGl5ZW2XD5VIsw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\plc_tgholo.pwk
+  data: VEliknnwuQU3QqXKpakoR4/sblGJ4pp2LrQG2WCdu5Aqcc9oodDGWSi3LaYeKoBncsUcR9AmZHa86vtHaT6sHw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\plc_tmbstat.pwk
+  data: Hswwgrxl8nLIxolPTIcLgsnQsiswMRL2zs+MIiwr9uM1egHpKhudP1spY++jz/hVima9llkkwW5W9TWNI3cGFg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\plc_valstat01.pwk
+  data: 5TUXXl+4VZdm+M5yoO24vTHbH4gAwIU4uGkBi0hXlzGboudjo0j2McVn6kMqHfBkz2ugYq0d2+vh+zvlCH3T9g==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\plc_valstat02.pwk
+  data: jZaPytJ5Jp3h2l5xD6Jb1kg7HLywvQqKdW4322FNkJlB3+EneeZCAVm2OZhsRkL8WNY5n2zPR0G+HQ+y8RWfAg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\plc_valstat03.pwk
+  data: DhVrzVUlBRncDjCKOO8o/AH9kbJ5Yx6GsKsQhsAKs8y8/l5IKlushBDLGs78AHbel3tcfZXfAs99X/J1g1czPA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\n_darthloqi.utc
+  data: Rtdh7qr7vdCaP7Au1eCNVXsRqXW+Voyity2bah86m8KNfr8LHNpyTPOQGKglnwGswdPZwXb2hUIz9Ay83f6YtA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\n_jetpuppet.utc
+  data: Nn63wjhuQIOJZkPpLltoAGV2po0sydVQMsbH+4dUzy6fPl9t5Bkm4oT8god2+2Xg4URji8akZ+3JFDtmRhMc8g==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\n_kazius.utc
+  data: 4CAcM/1PXjImlDfN0cMEDyGkt6hgLVmgLrzhSW5Njd1r0Ea23qSK8CNUZseHBPsAtczhuIxIcguGg5FcCCw+TQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\n_sithghost.utc
+  data: NysFaF4McqVhB6ga5X968lEnd0foYDk8TPw9qRd3Kro9SQW/ED35q13l8pKnRY1QSTiMPALUwQ4HbjHKMTTnxQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\n_sithsabers.utc
+  data: //SspXiEsoCIh/eV4G5w1DCs0fIuKpjKcloCopsso2LhODUM14yXLK1Uga61XItwIwVmWEEAOxfZ7vUhlFwL6w==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\n_sithsent.utc
+  data: OFVYKZyv7z4CYPKgBT2ZSseYiaX8GNT3dS2vK3NXtPoywqN+ncFdNIUyQ4X41a82tODyntpbNyD4GTQLReAyHw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\plc_bigstatue.utp
+  data: E7sSOw2oCfpVgxEUjtfub5O6bKzd137qCFTGrESm0FmWXKV/7RjnnDj7zfKzV069xFcKevyAcUy82XguOtJ8yg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\plc_bigstatue02.utp
+  data: 1UgU5Jzb+11gqCEJJk5bSePzDFTNi6rlkluwloRhJkLajWwcFrAKrzuzA2kUiVoOpgspSqILEsJUWpvC4Gg3IQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\plc_dbleruin.utp
+  data: xVyIBgK+uEYdPPh6O2nsb+X1IEmeDFdEbYUrkSV2IK+9KfaTHQhm4iHLtRkmBn6c4uBJnIItqY5XOu87wvXZlQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\plc_ritualped.utp
+  data: fVpF98Ufuhr5H2tJddVZDsTUT20MowmCHS+RV6hhJGA8aAtITxV3qFg/gRtTsZU6S5CXh+QnPaebO8za6K/Cag==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\plc_sglmon.utp
+  data: vJfo7w8fFYEexNss4w5P334qo+f6vNP+Yl1++hK312hDBZZJCiC7JScWSNaiPWuauoKFzE+WMWxDeM2kgfV74w==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\plc_tallmon.utp
+  data: 5hdY8IpAWq4OD6oIpt/zODikCJVplQh9hlhGN7Idh64LkdSQasifhmsezv1UNWjUDtA4jeWwhmlIqN1SXxHHVQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\plc_valstat01.utp
+  data: MtbSjajC4Cf/6od5D1UmKHWoVRdRagxcQNivhqxUd9I4ZwdErO/FJt9HZWIZ5avqMHNkOb7TkMlx9IyFpMKs3A==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\plc_valstat02.utp
+  data: uXVLDlJDLxgPPYB7E+CQbAVrN6PEVIDR7A8kmgdoQu69D0oLJWd5Ozb7EhbIDEys01hcs56ibYD3HHUSwqX2WA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\plc_valstat03.utp
+  data: EpjBacdoSwnXVk6Dd4ygzhOr4w44iafERj/BjDqRAPHHNaEnUMYqDPpxj1tvW85sLqOVKASPYhoEjLSjgQVs/w==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\740KOR.vis
+  data: AEidGIuFF1s/uvwY0daC7JWuJQiiU5chHI4AM68JPP+4bIxs35ke81/KlnFlc59JRZj+jUifhtEwv+EUhOIt1A==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KOR.vis
+  data: Syt354elGU3E54AeVMqCVmwR5HGq8dMijr45ZjyuVC8rN1wIkBcNYTWNX1IYZ6HMJ2ch3OPifIgysDrw49+xeg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\746KOR.vis
+  data: kQPCzmyaDKwkJL4ruUkXQTTGMvgZr7RjPQPNwde9FteMBb0xnhLyx8VyqgkNRKg//4yjsbuqk0y/oF3I7bi8Ag==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\747KOR.vis
+  data: e5hiJPqhVMEWZat8EJ0O9DsxJR6R18WcT+FRx5DEBm3cTXB+Vks1TAS5njej+EZ+09iSgHwLnNryKW7Ivn9kNA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\748KOR.vis
+  data: 8K0Pm3GQeUUtmO3WNVA+t3yL2APCbvZcs/6V1UhF8q9Dt2J9jCe3zS21lafrd7sO+GTnvhwPjLhhuG/Sm4yeMA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\750KOR.vis
+  data: gYeS8bXeT/wVgLTKisF1yAQ/kcGpDH3JgkcOyZCvXJ9ot6xAbh7Ls78hmd7rjduw+k2dvGimaw3NGS38L0Yfsw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\910DAG.vis
+  data: VuV9urlRX1apbnBgeCRVVx/Vv/3FShU+n9U8Zs7FQMGjhDWz1/Z7R6taPsAUC2q9PncVywxXGfNS2fgFO3/dVw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\740kora_lm0.tga
+  data: dqWkcYEvW/SmmgNoX5i0AqC4f0qXh6ugCHYK2yqDBPfiaGfZKqzrN3Z5yz0S7sYRyyP/mqiJohIp4Fd69sHSnA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\740kori_lm0.tga
+  data: BXeuFtYZ6iTbvO3emGjp09we6gsAtB8N9EG2O6Nk+y23iyL2WZ1FdZkP8lgmIlS4frnJEm/d32lkPUwEq+8c6A==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORd_lm0.tga
+  data: 7xhw8L+WcYd2Yp7T2UfelkzSQdXxJHwkgB0G/KVXdZRqVQhVJlV26GJkpD4cU3+F26MVaLXY3MNYAtxxnftMBw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORd_lm1.tga
+  data: q7HQgO8mCyrWYOGV+0/U3frkPLXJfqLVQJqM4c6Mr+NxAsouK1mCzzg6AjhNsyHPHoMZj6kHIRvMGKW7T7T6Jw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\746kora_lm0.tga
+  data: zVkpZIrs9F3i7vJ2YKlw7CWmdwTWjkDFP5W6TF6NZHLm6BI/aRZ3MvRIgZcK+uwrri4PP89rk46KLIUimhcWpw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\746kora_lm1.tga
+  data: hlLO1C7IxaoujK8IAcXW4fji30RewYKdYOGYRp9gIk2zpNN36PeDr8QnixeP+XGSPLwr28cDmswv8GVd10ZV+Q==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\746kora_lm2.tga
+  data: /wKhrGcMnFGLe6Ku/ltEZHt9rxJRW6neAHJzODg9PNr5SyuCts34EKK8crKiXx27qfbhCbO1MAKronHee1QwLg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\910DAG1_lm0.tga
+  data: hKtdT4D8pe3XyRff2squ8YHul8TxzFIOFjcJw+G/nB43pF35HvljXrl/UCgnsWZYWFObPQf6kmacMSAMrykTEg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\910DAG1_lm1.tga
+  data: 6an44YLaZGfKnc21pYyDg68uaoOoubwNZ542/Jean+7/591z+h3578+QmD8SyH2dxjvyULGbZV0F9L1Cpve71Q==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\910DAGf_lm0.tga
+  data: S/jNXLuDSTJO8CrQ3IK7s/D898cgYsJ7IkAaP7eJIzfKSaQvrDz9WQzoIHK8LokXSMUQI+KIkzO4iSIjLty2yQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\910DAGf_lm1.tga
+  data: hKtdT4D8pe3XyRff2squ8YHul8TxzFIOFjcJw+G/nB43pF35HvljXrl/UCgnsWZYWFObPQf6kmacMSAMrykTEg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\910DAGf_lm2.tga
+  data: 6an44YLaZGfKnc21pYyDg68uaoOoubwNZ542/Jean+7/591z+h3578+QmD8SyH2dxjvyULGbZV0F9L1Cpve71Q==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\910DAGo_lm1.tga
+  data: aG5ggRxZTX88gfIgeww+h6YnZzdtS0mc5E50kE7nQWxbsqPUnXL+V5cgZSV8l8CqfTEVtHXuGyphHEXcmWSuPQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\910DAGo_lm2.tga
+  data: skx9dXv81t1laUXZ0Jn/862KOnb/yj7UXFErSJd1ta8ejxD7vtH32NjLfB8gX5SdXJq8FSLWEODpFxGR0Rn2nA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\910DAGo_lm3.tga
+  data: oNUd8mP80Nh0ksAyUS1lsDmTOwxXoYmTZq4gqCA9Mp12BuCJrUwwikB6OF5ai0oHszgdvCj9416PfcEWUU7R8g==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\910DAGo_lm4.tga
+  data: J9uHCynPVH2lE79kbRVHIG1Oba2ErngG4PXwZLU33jJW/VdNq8vm76CDhHnq/3Ujl2IKSMXEHQw2XgHEo3mA/A==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\910DAGy_lm0.tga
+  data: hKtdT4D8pe3XyRff2squ8YHul8TxzFIOFjcJw+G/nB43pF35HvljXrl/UCgnsWZYWFObPQf6kmacMSAMrykTEg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\910DAGy_lm1.tga
+  data: 6an44YLaZGfKnc21pYyDg68uaoOoubwNZ542/Jean+7/591z+h3578+QmD8SyH2dxjvyULGbZV0F9L1Cpve71Q==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\910DAGy_lm2.tga
+  data: 6an44YLaZGfKnc21pYyDg68uaoOoubwNZ542/Jean+7/591z+h3578+QmD8SyH2dxjvyULGbZV0F9L1Cpve71Q==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\910DAGz_lm0.tga
+  data: hKtdT4D8pe3XyRff2squ8YHul8TxzFIOFjcJw+G/nB43pF35HvljXrl/UCgnsWZYWFObPQf6kmacMSAMrykTEg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\910DAGz_lm1.tga
+  data: 6an44YLaZGfKnc21pYyDg68uaoOoubwNZ542/Jean+7/591z+h3578+QmD8SyH2dxjvyULGbZV0F9L1Cpve71Q==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_bdrp.tga
+  data: shWNsmykJCKWK2Z82boB6bTfVVnYCfuc7Hh61zkNsx/BhNazoezEHHsVIFIAl6qcEfXZmUTgpYXwa7f1ErstqA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_dor10.tga
+  data: +Zu+aeb62ayXJQXI0WvPmk9aHjwkfh8alBJrgsJDu3AhhUMH0Gl1FgtjoBTFAxbDd9dUFjF748GSUoa79adqCQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_dor14.tga
+  data: +Zu+aeb62ayXJQXI0WvPmk9aHjwkfh8alBJrgsJDu3AhhUMH0Gl1FgtjoBTFAxbDd9dUFjF748GSUoa79adqCQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_fl01.tga
+  data: jnQXkV/gLLTA6io+z7qf0vVmqp5g6qO891okjzckHN/9329ceMmY4OcZSckhHDUqYEmtkB1DAYMbzuH522h/Tw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_fl02.tga
+  data: lo2PNMdp3bnQN0mr5uvsNSEk8I+23NqFksR3M9AZ/+rPDILSnYC6QyXL288fqZx+R1CUT9CkJIeWrVrqcuHxXg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_fl03.tga
+  data: jnQXkV/gLLTA6io+z7qf0vVmqp5g6qO891okjzckHN/9329ceMmY4OcZSckhHDUqYEmtkB1DAYMbzuH522h/Tw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_fl04.tga
+  data: jnQXkV/gLLTA6io+z7qf0vVmqp5g6qO891okjzckHN/9329ceMmY4OcZSckhHDUqYEmtkB1DAYMbzuH522h/Tw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_fl05.tga
+  data: mIN2UXYGqw3thFsMVO/ijTnbJjcX/LmBJC9slR4TJK+VpOJY/AbVFQF1uCSUGkEwUdnbRKOH9Ecm29csxLC32w==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_fl06.tga
+  data: mIN2UXYGqw3thFsMVO/ijTnbJjcX/LmBJC9slR4TJK+VpOJY/AbVFQF1uCSUGkEwUdnbRKOH9Ecm29csxLC32w==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_fl07.tga
+  data: jnQXkV/gLLTA6io+z7qf0vVmqp5g6qO891okjzckHN/9329ceMmY4OcZSckhHDUqYEmtkB1DAYMbzuH522h/Tw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_fl08.tga
+  data: lo2PNMdp3bnQN0mr5uvsNSEk8I+23NqFksR3M9AZ/+rPDILSnYC6QyXL288fqZx+R1CUT9CkJIeWrVrqcuHxXg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_fl09.tga
+  data: jnQXkV/gLLTA6io+z7qf0vVmqp5g6qO891okjzckHN/9329ceMmY4OcZSckhHDUqYEmtkB1DAYMbzuH522h/Tw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_HBms3.tga
+  data: jnQXkV/gLLTA6io+z7qf0vVmqp5g6qO891okjzckHN/9329ceMmY4OcZSckhHDUqYEmtkB1DAYMbzuH522h/Tw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_HCl1.tga
+  data: jnQXkV/gLLTA6io+z7qf0vVmqp5g6qO891okjzckHN/9329ceMmY4OcZSckhHDUqYEmtkB1DAYMbzuH522h/Tw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_HCl1NA.tga
+  data: jnQXkV/gLLTA6io+z7qf0vVmqp5g6qO891okjzckHN/9329ceMmY4OcZSckhHDUqYEmtkB1DAYMbzuH522h/Tw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_HCl2.tga
+  data: lo2PNMdp3bnQN0mr5uvsNSEk8I+23NqFksR3M9AZ/+rPDILSnYC6QyXL288fqZx+R1CUT9CkJIeWrVrqcuHxXg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_hcl3.tga
+  data: CVsfnZiBwBsa0QPxfKPdgsI3Hq9ufRHyo4ZpH/gv8Z0mQilhq3PQijFCjRq/PUnaqOpOcBJ/FH8Ogl6cfH51QQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_hl1.tga
+  data: oCviZPkBKU6XTRVA1JFw+BQ90QDNLFmNH/cUhrfWfojjmzWCl/meaxMkEMk/QHJ18v8zN27AA7BQ22pak+IWjQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_HW1.tga
+  data: jnQXkV/gLLTA6io+z7qf0vVmqp5g6qO891okjzckHN/9329ceMmY4OcZSckhHDUqYEmtkB1DAYMbzuH522h/Tw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_hw1_na.tga
+  data: CVsfnZiBwBsa0QPxfKPdgsI3Hq9ufRHyo4ZpH/gv8Z0mQilhq3PQijFCjRq/PUnaqOpOcBJ/FH8Ogl6cfH51QQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_hw3.tga
+  data: 3DCcqCP0eI1nrJnzv8p6r2p09Vagbe4UrQQlLD4+ajky9KBsZ2q83H+CvrA1aFc7JOJ8D8xDmDOetoJwVyNvMQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_HW4.tga
+  data: jnQXkV/gLLTA6io+z7qf0vVmqp5g6qO891okjzckHN/9329ceMmY4OcZSckhHDUqYEmtkB1DAYMbzuH522h/Tw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_hw8.tga
+  data: 3DCcqCP0eI1nrJnzv8p6r2p09Vagbe4UrQQlLD4+ajky9KBsZ2q83H+CvrA1aFc7JOJ8D8xDmDOetoJwVyNvMQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_HW9.tga
+  data: jnQXkV/gLLTA6io+z7qf0vVmqp5g6qO891okjzckHN/9329ceMmY4OcZSckhHDUqYEmtkB1DAYMbzuH522h/Tw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_hw10.tga
+  data: 3DCcqCP0eI1nrJnzv8p6r2p09Vagbe4UrQQlLD4+ajky9KBsZ2q83H+CvrA1aFc7JOJ8D8xDmDOetoJwVyNvMQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_lt03.tga
+  data: oCviZPkBKU6XTRVA1JFw+BQ90QDNLFmNH/cUhrfWfojjmzWCl/meaxMkEMk/QHJ18v8zN27AA7BQ22pak+IWjQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_nshtl.tga
+  data: MvFkEm8G9yl8W+k8L7we5oZW42XnYopG68l0wSLpKGCCEg1/E8PNJLm+ImHA2TcvcpSkZ4VoHb4H3OpDJiNGkQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_plan.tga
+  data: 4Rk81u7iIgEl/XpVrjnV9TBNtcZAgPdu6j+TrzJR+pA1U+Ak/PMUWD3fX+BrJSmIjU2RiYsI5kLgQOHa8vwqfw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_sstn.tga
+  data: CVsfnZiBwBsa0QPxfKPdgsI3Hq9ufRHyo4ZpH/gv8Z0mQilhq3PQijFCjRq/PUnaqOpOcBJ/FH8Ogl6cfH51QQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_sstn2.tga
+  data: CVsfnZiBwBsa0QPxfKPdgsI3Hq9ufRHyo4ZpH/gv8Z0mQilhq3PQijFCjRq/PUnaqOpOcBJ/FH8Ogl6cfH51QQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_sstn3.tga
+  data: CVsfnZiBwBsa0QPxfKPdgsI3Hq9ufRHyo4ZpH/gv8Z0mQilhq3PQijFCjRq/PUnaqOpOcBJ/FH8Ogl6cfH51QQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_sstn4.tga
+  data: CVsfnZiBwBsa0QPxfKPdgsI3Hq9ufRHyo4ZpH/gv8Z0mQilhq3PQijFCjRq/PUnaqOpOcBJ/FH8Ogl6cfH51QQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_sstn5.tga
+  data: CVsfnZiBwBsa0QPxfKPdgsI3Hq9ufRHyo4ZpH/gv8Z0mQilhq3PQijFCjRq/PUnaqOpOcBJ/FH8Ogl6cfH51QQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_sstn6.tga
+  data: CVsfnZiBwBsa0QPxfKPdgsI3Hq9ufRHyo4ZpH/gv8Z0mQilhq3PQijFCjRq/PUnaqOpOcBJ/FH8Ogl6cfH51QQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_stars.tga
+  data: PZGNW9PTDhM28up7bhy+Je+1Xxe2vzVfkKuQlWZqQ07KCwUTcIq49UunxRZjJUszOGsB8IrhHoGpI5j929zKOA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_stl1.tga
+  data: UBV4Z/pu1TN3DWUw//gv2FbCv+dqKqKKTx7MRVEGTLrXMW8GGZFID5eakEfTWnjI1tii9HnZO+q0eHo6fCLmrw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_stl2.tga
+  data: CVsfnZiBwBsa0QPxfKPdgsI3Hq9ufRHyo4ZpH/gv8Z0mQilhq3PQijFCjRq/PUnaqOpOcBJ/FH8Ogl6cfH51QQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_stl4.tga
+  data: CVsfnZiBwBsa0QPxfKPdgsI3Hq9ufRHyo4ZpH/gv8Z0mQilhq3PQijFCjRq/PUnaqOpOcBJ/FH8Ogl6cfH51QQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_stl7.tga
+  data: CVsfnZiBwBsa0QPxfKPdgsI3Hq9ufRHyo4ZpH/gv8Z0mQilhq3PQijFCjRq/PUnaqOpOcBJ/FH8Ogl6cfH51QQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_stsf.tga
+  data: aawlHqiXNlKalyzruloAGH95EJjhNmm8y4Lp0/cdsJt3YNk0vW6S/mbvQUPtAdRt9dhsuvGlXn9+THNWkhHEOA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_tr01.tga
+  data: pE6pfElyboKrL83ACZtBv6uaJd2iGbKH6rmruNQITSbmcwwpCCpL1oPtfmeeROrtBW6b9s8KvaceB2AMDqvmWw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_tr02.tga
+  data: mIN2UXYGqw3thFsMVO/ijTnbJjcX/LmBJC9slR4TJK+VpOJY/AbVFQF1uCSUGkEwUdnbRKOH9Ecm29csxLC32w==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_tr03.tga
+  data: 3DCcqCP0eI1nrJnzv8p6r2p09Vagbe4UrQQlLD4+ajky9KBsZ2q83H+CvrA1aFc7JOJ8D8xDmDOetoJwVyNvMQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_tr04.tga
+  data: 3DCcqCP0eI1nrJnzv8p6r2p09Vagbe4UrQQlLD4+ajky9KBsZ2q83H+CvrA1aFc7JOJ8D8xDmDOetoJwVyNvMQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_tr05.tga
+  data: 3DCcqCP0eI1nrJnzv8p6r2p09Vagbe4UrQQlLD4+ajky9KBsZ2q83H+CvrA1aFc7JOJ8D8xDmDOetoJwVyNvMQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_tr06.tga
+  data: 3DCcqCP0eI1nrJnzv8p6r2p09Vagbe4UrQQlLD4+ajky9KBsZ2q83H+CvrA1aFc7JOJ8D8xDmDOetoJwVyNvMQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_tr07.tga
+  data: 3DCcqCP0eI1nrJnzv8p6r2p09Vagbe4UrQQlLD4+ajky9KBsZ2q83H+CvrA1aFc7JOJ8D8xDmDOetoJwVyNvMQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_tr08.tga
+  data: kdvtqeaHZto2suzkW+gTPm1zxiZYLyQu6BySGZhrjwL7H1rDKGM8O2KOm4aeMiVvwNhZZx2G4nne+iIvQ7Ix7g==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_wl01.tga
+  data: 3DCcqCP0eI1nrJnzv8p6r2p09Vagbe4UrQQlLD4+ajky9KBsZ2q83H+CvrA1aFc7JOJ8D8xDmDOetoJwVyNvMQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_wl02.tga
+  data: 3DCcqCP0eI1nrJnzv8p6r2p09Vagbe4UrQQlLD4+ajky9KBsZ2q83H+CvrA1aFc7JOJ8D8xDmDOetoJwVyNvMQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_wl03.tga
+  data: 3DCcqCP0eI1nrJnzv8p6r2p09Vagbe4UrQQlLD4+ajky9KBsZ2q83H+CvrA1aFc7JOJ8D8xDmDOetoJwVyNvMQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_wl04.tga
+  data: 3DCcqCP0eI1nrJnzv8p6r2p09Vagbe4UrQQlLD4+ajky9KBsZ2q83H+CvrA1aFc7JOJ8D8xDmDOetoJwVyNvMQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_wl05.tga
+  data: 3DCcqCP0eI1nrJnzv8p6r2p09Vagbe4UrQQlLD4+ajky9KBsZ2q83H+CvrA1aFc7JOJ8D8xDmDOetoJwVyNvMQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_wl06.tga
+  data: 3DCcqCP0eI1nrJnzv8p6r2p09Vagbe4UrQQlLD4+ajky9KBsZ2q83H+CvrA1aFc7JOJ8D8xDmDOetoJwVyNvMQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_wl07.tga
+  data: 3DCcqCP0eI1nrJnzv8p6r2p09Vagbe4UrQQlLD4+ajky9KBsZ2q83H+CvrA1aFc7JOJ8D8xDmDOetoJwVyNvMQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_wl08.tga
+  data: 3DCcqCP0eI1nrJnzv8p6r2p09Vagbe4UrQQlLD4+ajky9KBsZ2q83H+CvrA1aFc7JOJ8D8xDmDOetoJwVyNvMQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_wl09.tga
+  data: 3DCcqCP0eI1nrJnzv8p6r2p09Vagbe4UrQQlLD4+ajky9KBsZ2q83H+CvrA1aFc7JOJ8D8xDmDOetoJwVyNvMQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_wl10.tga
+  data: 3DCcqCP0eI1nrJnzv8p6r2p09Vagbe4UrQQlLD4+ajky9KBsZ2q83H+CvrA1aFc7JOJ8D8xDmDOetoJwVyNvMQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_wl11.tga
+  data: kdvtqeaHZto2suzkW+gTPm1zxiZYLyQu6BySGZhrjwL7H1rDKGM8O2KOm4aeMiVvwNhZZx2G4nne+iIvQ7Ix7g==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_wl12.tga
+  data: 3DCcqCP0eI1nrJnzv8p6r2p09Vagbe4UrQQlLD4+ajky9KBsZ2q83H+CvrA1aFc7JOJ8D8xDmDOetoJwVyNvMQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_wl13.tga
+  data: CVsfnZiBwBsa0QPxfKPdgsI3Hq9ufRHyo4ZpH/gv8Z0mQilhq3PQijFCjRq/PUnaqOpOcBJ/FH8Ogl6cfH51QQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_wl14.tga
+  data: CVsfnZiBwBsa0QPxfKPdgsI3Hq9ufRHyo4ZpH/gv8Z0mQilhq3PQijFCjRq/PUnaqOpOcBJ/FH8Ogl6cfH51QQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_wn01.tga
+  data: CVsfnZiBwBsa0QPxfKPdgsI3Hq9ufRHyo4ZpH/gv8Z0mQilhq3PQijFCjRq/PUnaqOpOcBJ/FH8Ogl6cfH51QQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DAG_Wn03.tga
+  data: CVsfnZiBwBsa0QPxfKPdgsI3Hq9ufRHyo4ZpH/gv8Z0mQilhq3PQijFCjRq/PUnaqOpOcBJ/FH8Ogl6cfH51QQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DXN_Mt01.tga
+  data: KMAWiYW12TA2ZMMHH3c0BCTf4S/ZG+fjrzK3lCwIXo/ElE7dH9nATRBTYhz4FWyo4nCHzyxH4SiKv8UThZE/BQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DXN_Mt03.tga
+  data: AXR/7vxAHwyUQGQR/n5V9j44Wz64YRjOIeCsnkzOPiONmZsCMw/oaIl0XwXW/k7qzw9+SqySCadq5A97uDum+w==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DXN_Mt04.tga
+  data: Dr0xb2D22wbEB+5NPqg9PeH9J59BUHZjk0MVQxMdfHxSzrH1EL2NrIKg4xPHayX1ClFL6u4MLHzQDB0JTM4YDw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DXN_Mt05.tga
+  data: MWBnYDqr/X11Gf1rGz/OdUiIL2xdO/EUJAf7UWCp+Cx01vekZRQ0dHqorxaenrbnnAEMe/WkW34xML9I/rjJ6A==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\DXN_Tr02.tga
+  data: wX2smzXgsEdsyHIJXjMPFHHOy+2crAgqZNizfBavvhdStE5Z7ZOxXLxb+1/unK4cGbmaZDpzZoj9i37LGxlkVA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\i_Mask_255.tga
+  data: dkboEwQFWKG13MkofOTM6XxTUTv9ukvc67BZS1w+XRQu56M1AiF5Ax87WCDZW2Y6XPLrEQ0Ryf+ht7nQnGxRaA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\if_forcegrab.tga
+  data: FT1vHlcKBtU3WbQcuo/Boc2PMNCUPbAohcW4/qoSvY1KTHXXbjxdSRVuhBjtz8N5MjLFDyytYANjhVUZjZXhYg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\if_sithlife.tga
+  data: Otw/8G72IkKc6AXQ6Xb6vYRahbBlmWeBjRgOgtJJDhNaGgI9qNyifyX5yNCRb/xB108VCoysh+mKK0ted9WJjQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\if_sithres01.tga
+  data: VbtlH5e+5SOdb9M/fr07DQ+2ieglD2UJRf3FrnM+g9h3rmRrzPqpIfPYCzOkclPhjBGyZkefAIW2YRMFsXnLGg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\if_sithsabers.tga
+  data: cBUgHzRJhSL/020tfUYfiDdLV+7KQjjr9k7c2xGJqMOTcl52R+AbLS4D1sSACO+3nyyJVVYEgRBb9xp7JKAoKw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\ii_Mask_255.tga
+  data: sfE/BZu9xeW+2R4zjKI7CEBwThqoq5wP8/dp9FzY0bw4tEuQ8wFdSiYDhRIQC1bZcwLNDBrfXIfAJT71awj86A==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\iw_SbrCrstl_089.tga
+  data: OZgy5vit0Wkl9p1YXsyfF/+mba4KPSt7c7MjaRPSCTJgupBp2TxvjYULe/s1nSmptzEFM0i6R6NFz7m4Zet+Zw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_bed2.tga
+  data: 7eNiChAERfwo3Kimy9lO+9QyQzrSUKPOuKKtkl/JyenXlAS8IScH0SIo13sr8EOkhhEobQLMmzYkUE/95uvbuQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_blst.tga
+  data: 5C3atxB+pnRudsDfgMdm33nWjRle+1iXTbl4hnKWCpWr0KwnuseXwPXFcqBx+359e/YDR+DfglFMs2vTvl/+yw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_ca01.tga
+  data: +SO4RsGe9F4Shz2dilgbygeuFxWlx1LRtYNhjdWeNL6vcRkCR2LRzYIMBN4E45JUnkj/9QGnoMh9O7Cofl20MQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_ca02.tga
+  data: 3w5T4537dm0PjuYSmakjRIj2u6qQfspWoCal7q6TQeTWyTg0pCk7UO7L4eu5E5huarCvCHWU/uxuWWKm+V9qUw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_ca03.tga
+  data: QH2p0oNHNWLwuTIlvi4uSqfS+sE3ivfXRae46SQ+dCCbaXBGrKftiQRHMFTB2LvWPM9eivLpfP1/hAPCwTV5Wg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_ca04.tga
+  data: 8G7YbQaTjS8Y93OEigq9dB6LsiVCTvT1AVVKundsISAYaQ+1nBQbXuEpO+dpvkNdOzZYiwZb49tHrBfmKbbhGQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_ca05.tga
+  data: 10UmQ51vEMopblhYzQpZI+sKy0+qGkHA8vJzv9f/rNbo7gBr41dB442lBb0gXsO7a3pv8YjM/jIGLXv7I1W0Iw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_cdr.tga
+  data: NAz0cDBdbw3gTrrefDI0dYXf3hsBvcFCafEBWhewUzry1g9Pnoa+Zo+oeJKiUUD47pvaL/yefsmmHX9XVeNvdA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_clif02.tga
+  data: 32tA1CuUB9kePeXsMnAnW3jcsJGIpT/EKiUxWQ4rNdyR3k5k6CY8+rS5ahWFiGe966UrdXLYzTgQQ7AeFj6Qgw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_clif03.tga
+  data: 1q2EnZDmWZxv/LZH03F/7OldO4Fufh/uIasT7mt43fAbGUhEI2pd97hf5m3S0ud9jviTWbxsUHO/++Tt270Y1A==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_cloud.tga
+  data: UiudZck1DjEn/KKal6sb98hoM/tCBLBJ4gGVS2J7yxF5VNmvnnKKXHpXtIgHw894vOgVu8wcoXDLQeReOdQpAw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_d_flr01.tga
+  data: QH2p0oNHNWLwuTIlvi4uSqfS+sE3ivfXRae46SQ+dCCbaXBGrKftiQRHMFTB2LvWPM9eivLpfP1/hAPCwTV5Wg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_d_flr02.tga
+  data: pE6pfElyboKrL83ACZtBv6uaJd2iGbKH6rmruNQITSbmcwwpCCpL1oPtfmeeROrtBW6b9s8KvaceB2AMDqvmWw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_d_flr03.tga
+  data: jnQXkV/gLLTA6io+z7qf0vVmqp5g6qO891okjzckHN/9329ceMmY4OcZSckhHDUqYEmtkB1DAYMbzuH522h/Tw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_d_lit01.tga
+  data: pE6pfElyboKrL83ACZtBv6uaJd2iGbKH6rmruNQITSbmcwwpCCpL1oPtfmeeROrtBW6b9s8KvaceB2AMDqvmWw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_d_trim01.tga
+  data: 10UmQ51vEMopblhYzQpZI+sKy0+qGkHA8vJzv9f/rNbo7gBr41dB442lBb0gXsO7a3pv8YjM/jIGLXv7I1W0Iw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_d_wl01.tga
+  data: 8G7YbQaTjS8Y93OEigq9dB6LsiVCTvT1AVVKundsISAYaQ+1nBQbXuEpO+dpvkNdOzZYiwZb49tHrBfmKbbhGQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_d_wl02.tga
+  data: 3DCcqCP0eI1nrJnzv8p6r2p09Vagbe4UrQQlLD4+ajky9KBsZ2q83H+CvrA1aFc7JOJ8D8xDmDOetoJwVyNvMQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_d_wl_o.tga
+  data: S2PZC5Ubx//e2knfZI6p0tn1q02HJaEhHMm5QaufoScVj7BVUjRWV8ZtoCSo4zO8LribamBcwqUHbtZKMPdxLA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_flr01.tga
+  data: mcryUkbDAK2AzDhxREKFqoB4lcnnhUwELr1u/2J0n50KyWK4IfR8CjnJVFqn71lxkLXlfhx45RTGFvCC3nh2Ng==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_flr02.tga
+  data: Ggb38Bhj0hKhwWgd6bux6sNxzcMxeUlK50eoK+JltgU322j/hwBDHh6H/JKbFl+8uBvZ0Kis9EwGQIwToOdLvg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_flr05.tga
+  data: DZN3iBihNk3YtKLb3rXE0ARoHrZVnN+UDnaLduI+5qog8/UhMKrr4OcPP5tDPCNudpWnbTHdxMfkdE9YSE3dkQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_flricon02.tga
+  data: cWdFrleefKb2W955tEtGuGjHQc5uFfahvdcLwcZ+0cXp17YFd+9SfrYMWI3sV0dgzvLey1yRZZ1QZ4zAlr6VRA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_grnd01.tga
+  data: DZN3iBihNk3YtKLb3rXE0ARoHrZVnN+UDnaLduI+5qog8/UhMKrr4OcPP5tDPCNudpWnbTHdxMfkdE9YSE3dkQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_gtbeams.tga
+  data: aZfgpKqb8lBel0VERw2GzPJlZmi9WTnyuI8r3EtNzq3U58q+y16VC2jBSs35HJLsqe/7t+5M5TdFCU9QHhgRag==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_lt02.tga
+  data: j9wOqqKV0W5IAEaBxu1JwEiW+rqTUjtK/YsG94rob+sAW+grB5NAlueiYE60dkNR7TC66Rm2Tfd9ltzl+frD0A==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_orn.tga
+  data: yyoESFn9gCZmGEFWv1r5yMdcBi+UzJSHnsprMggZPGeF/MEh+iQNyeRZOIoJX+c2rmkQrZbtAqhT1DJOeLY9zQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_rk1.tga
+  data: tYXDaDLASM4Kbn1bWMkTu15D2WExWULeqQ89tpzeI2qBfRaBhINd7+19YUO2LLzQfFdnpPaYnjxPjna7KbJSNg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_rock.tga
+  data: 1q2EnZDmWZxv/LZH03F/7OldO4Fufh/uIasT7mt43fAbGUhEI2pd97hf5m3S0ud9jviTWbxsUHO/++Tt270Y1A==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_rock04.tga
+  data: FhkEejgXLr4sIvxUbhwmxwFUlQ0rShpcalXLz80SO4rBvNUtODLNRrN0DDjER5iAi8hZgdvCf2AVFsZ4y0/TcA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_rocks.tga
+  data: VBu86aH7/NQaUr2JB+e1SFRqziQi4AtzY6fXZi8odCMVcDf7SsCF6eMNZsjvdImXSVsrK/frnwJw82tp2iFnzg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_sk1.tga
+  data: 10UmQ51vEMopblhYzQpZI+sKy0+qGkHA8vJzv9f/rNbo7gBr41dB442lBb0gXsO7a3pv8YjM/jIGLXv7I1W0Iw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_sky01.tga
+  data: IE1W+OQCPmK2CPyazeZfLcNxBFFOYW0xtAIgVDiSgdohMIcIwaeHnPB4yKF8m8a6J8Yx3oJ5qx+Yn3M19bvJAQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_sky02.tga
+  data: HZRqG67SofU4R61Xpq/Pb4sdVhkSWpG+rGHh2bXEMF+VrYXEs5qjyGiKfqEAMZvLdvwOAWKoI4hHkX57uWG2jQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_sky03.tga
+  data: scrztPLjeODbGnzmZbeBvXDoeX69kBXbX4VtXuoMw/b23BLS4aeIHT5pm76rJAOHzh6+ZnreEyDtLSQJdZF78Q==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_sky04.tga
+  data: Y5ZPHnvDG7R7qGHLON1zZ4pRxQco/nf/nkhZ8rYPGfWVXN1vPm+hmoUeCHrnlf8EFAEwThmHlWMoLkcwFL3TeQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_sky05.tga
+  data: UiudZck1DjEn/KKal6sb98hoM/tCBLBJ4gGVS2J7yxF5VNmvnnKKXHpXtIgHw894vOgVu8wcoXDLQeReOdQpAw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_smtrm01.tga
+  data: IpHOjH+i3y1fYsNmaAgf+hjIOiDRxPJ4c44srpSQ8WfKFYDJ7U2jf/9T6to+TkFtl//1WxMwdwEU+A7VQOOzVw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_smtrm02.tga
+  data: A7xMAfMn7la+QNfNrRDWamVsNUoAIevMP08l4JoEmbm6Vr3YZGyI4oYbz/PFyESgxmJgL9pGvemMZ9IRngNhHA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_tb01.tga
+  data: kYN8Eo2g7NKoXHAy1Xafz/oDujB0bKRYyqDvk/XAwjjt6PUjfGNwChYQ1arp7fYGWHAo2coXBwjGyHcawcfXuw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_tk01.tga
+  data: gPmdF9JH6wt38Ic4iiLV+ylcBoEcaGvc4CPDg5ccWPSZuzqHc8o1C0KyueQX14F8rhi44caOLDXJbSCb4L8Gbg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_tmbflr01.tga
+  data: pE6pfElyboKrL83ACZtBv6uaJd2iGbKH6rmruNQITSbmcwwpCCpL1oPtfmeeROrtBW6b9s8KvaceB2AMDqvmWw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_tmbflr02.tga
+  data: mIN2UXYGqw3thFsMVO/ijTnbJjcX/LmBJC9slR4TJK+VpOJY/AbVFQF1uCSUGkEwUdnbRKOH9Ecm29csxLC32w==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_tmbtrm01.tga
+  data: nk0oA4Ayz6IVS2ybp/ZDXot9eN1Q64ICL6muIRvJ81e9RrjJAF2RCuKWEQRnerlK8Lx0Vq61Dur6/53hH85UnQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_tmbtrm02.tga
+  data: aQRitahKo0aQreWXfbR8v71DtC/R95zrAxxWySzPpOdkXBAOzAA1uMyUos3POMXb7vCD++ykfIMVMhxgpqU7Og==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_tr01.tga
+  data: ZanhABsb1nGimSNPAeUgIYTpOZSeBC/suj4wgmTdIjB+owxrfjp+eRLu9C7vBZgv3cdift6pEo+Bstzv66EqbA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_trim01.tga
+  data: biUMMffZC1MiBoQBUyajsp/Q+bBGSn/6DeRf719qasjGxRMm1+7XaIryAHw1v1elAcH6xCCfLOH3pFc427yhKQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_trim02.tga
+  data: vRvE7t+C6bzfgaDLbB3y6FoKwJEOIrOUFIMm0YKNFXcEcrk/JmeBYMg7Ynh7N3C+qxPE3bhByEwh/tOHta2EvA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_twal01.tga
+  data: SABg4vDu8n4srQc/mwVpz/stuPMCGWyDslGgyQ/SnyxVUvJ6KgqEMIwFRs6njjW7LZL4dJCzeF2zbW+XV9Fb/A==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_twal02.tga
+  data: 3DCcqCP0eI1nrJnzv8p6r2p09Vagbe4UrQQlLD4+ajky9KBsZ2q83H+CvrA1aFc7JOJ8D8xDmDOetoJwVyNvMQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_wal06.tga
+  data: 7jxfs8C+1hq8cCy2QXiUZyfGkgDdRiKBvnWM8h143fF84+rg8KbaY4qbmLRExsVS9lgpd4z/lE85fMePjX/kaQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_wal07a.tga
+  data: +wHire5CM2ovi9yFXlTd0BEwetVMUFM/O4znfhO5EzWqkTE3YCM2kpEZ/mXvJJfax6vD4F9PkrRVldCM5VHJ+g==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_wal08.tga
+  data: jUaMp2MKDYUHh1SZIXzHdJ4QiHP4G7O+DFn9Kq9EsWiC9WSt8lmamY5F9qEGGlUgrTAsvAG2+wgR4SPb3WuqpQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\KOR_wal09.tga
+  data: RZpNy2ir0aA5jQcUllhqL3NJFBWCME2j+L486XaT23jlKyLggfH24Dyh9+7Je4RDW1pvDZOXnxmGLvkEbiKCVQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\lbl_map740KOR.tga
+  data: eImPv8H6tf9xJPHk8gTgxhBkouqgMBgg0ugeB4H3z5dzKHLVnzZFUoYOODMaJ46hE6Hcw307ldrauL0XHvj3jw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\lbl_map745KOR.tga
+  data: s0WgWSAYu31XhYQE7snZRhz3rlowdBemjCClu4QNzPOaIrFqyi7M7I6qDbRWL6CAf4Fxz4IcyZzo5PSs6P1s0g==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\lbl_map749KOR.tga
+  data: fj4jhh6pp1DM062lSK/+WBDwAayGzqnunEcQleSAB3o5bTiNkttZoT+o5xIwCuOGuTrHM/qUsjAUJRGE+Bytng==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\lbl_map750KOR.tga
+  data: fj4jhh6pp1DM062lSK/+WBDwAayGzqnunEcQleSAB3o5bTiNkttZoT+o5xIwCuOGuTrHM/qUsjAUJRGE+Bytng==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\M36_rock.tga
+  data: C6Uo5mX3iGSQB6v51zPRohxgllYOKt4VMciB6GaKeh1A2i1reWkOIArc5xI2xgPJgwJCbFTS50R2TYL4Tzj5LQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\M36_rockTrim.tga
+  data: XC2sjv6vU7OuUv3lJERIfO1vXFpQFZPbSdmeGjsnFE9rsxK6s3FQzqQCsD5oRnDJqoHfrIXonVHvGzWa/xNCDw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\M36_rockwall2.tga
+  data: kHEaeMDDGZObjmwiT/yf0nSGHi6+wrmQSODs7fNAqPNYUSvSxGASoFiTHDBsMjkS4dDjRGp16NuE0Ktv9iTw4A==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\MAL_molt2.tga
+  data: u1E3KYEtQnIcPgXF+5w2p2lt1Grow4x26hjFw3AbCXeHoEf7eGvl2fJC69auGLBpPJshpTEdmjvwWlUFak9qdw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\MAL_Wall03.tga
+  data: P6/pyRU0xWzbJemzunc/+HHO8zUoWwJJjo/GPeKGIj4vPdi43/poVCJ4u5o2bFGAzoZjf8iTfsKhEdw4DBiMTw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\N__morbid_h.tga
+  data: Hym6m7Fk25cmSq9eHayl/ZkvaFP3lVP/DMJxX19oZuA5bcTh3vn6jqKBEMl0tQCVRuOMBJu9+EFgseFver4Rkw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\n_darkcounm01.tga
+  data: 8Gd5Rw656dmJaOv2xP8ibtwLCnsySbXKtD+U3wFhSbpo2ddudjOGDj1EhWHUudFFIsnl6Ot7KK5kYzQN1D11xg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\n_darkjawa01.tga
+  data: Up+dDBIPRrkKfzWKPnABFnS3V7vX2uDZaW6lz1CiQZxXI27KIwlOddum6PMljDn+efKyjnHWkG7Z1c6mycBLBw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\N_DarkJediM71.tga
+  data: cincwrh/7SSgg3D3pymk3hXKloRa5ne/rc9HjbBT/6r2LxmumI/9wrqhgjeTY+8/+kF14AvTzaRuSDlCllVIpg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\N_DarthLoqi01.tga
+  data: S26NyD3cI/T82alt7T4//OCg9gbnIjaPjJ8Iznytmg28JuPEkP8wwClTX8h7/iL4I+YjDPCZ94i+UhTZSCNeUw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\n_darthpox01.tga
+  data: awkpjv51gSwA3LEnYZckf2tz8YDMYDMtR1FrEZKtk8OUGSu3pnByGibx36RUnYpPyVYjz9zGGxMpih5+BDptpA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\N_DarthPoxH.tga
+  data: K6PSf2246xNDQQTGahdSxIaEqJN9t/d+48yFBPraWSKhbgX/03KsZtLI2f4UBU+3KyN3Tu+q1h0U22bONlCl4w==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\N_EzerArden01_H.tga
+  data: mGIjOKwTobFnxOCA79QbuOolLGv4fTnTAIBnvdX8kTRiVgUNz8pn5WZYJpbIEm/4/pyAV/z5gsL13RYavUfb3A==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\n_jettdark01.tga
+  data: zMXFqNtZo8d0vUOKLlvodJLSF36g40oo+VVICfkR1aJFRU7HvyER+JnyQUOLrHEo40R4BUMZucr5wyUAJGPxLQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\N_jettdarkH.tga
+  data: kpRRsrEGVLIGvkYJNjJnITeXSlaCij7taWpf2oQ2LDg2oqaltem8A+BQtf0E4F+XQ/n6UC1lVkxq9sXNhU6SOQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\n_joleebindo1.tga
+  data: 7y5pJWrNon6VEEHXEKxWmN/n7uiilR9esT3yXU9dC/R6bneHqdOsgxjE3GYx1Pj3YyDXwDJ6tgaLyuy9F9ELKA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\N_Kazius.tga
+  data: iFDUzmUlxvchVISJNNtAKQGH+0Kg2ZR+tbc/XinJbhYQC8XPX0jqD5/pJCq4okPLnJPxBd2PbQTHUT0puXeZSQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\N_OndSoldsith01.tga
+  data: bA186md+Vm7Y1s7aPP5sN5GHtlbgsztJHtyqNmvhDkE4fKB2lQ+uMaLJAtNxEf9tZVwZk4qi+dENjGwpPCZykA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\N_QarrenB02.tga
+  data: kw0CC43F+5NoK3Ri4LZRHLXVc5ybCbmDq2ArmGpqSH3dcOWWAvMRAjG+0B9vHB5siCS1u45JtHUqVKX2ld4NGA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\N_QuarrenH02.tga
+  data: qsXitmkXb855OdkEBemd/2TY/wxjxHl7RI5wS8lKNLvgIvV1eOoSXdZ00a7R6IvL5LmeV9+i3gl5eZ5Eqq6l3g==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\n_raynor01.tga
+  data: nzQdW/xqlYslmsoMSGuLjxZaaWMgYrsTUZqOXtdENYSnmT0XGvIZFygzA/pVNOPq2+cxgnUHweNutNqV2hdgvQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\N_SithSent01.tga
+  data: aDdIIYKBNYC8Sldd3c1tXiTtR1pQ6rXGbFJAo5R1TCGq5q3D4p3n4QkZIgnys1P0CsDSsZoqSQpv4wHMz1JRvA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\N_sithsentH.tga
+  data: Q/o6XVVVl0FueVfQOeBz7+SA7WU/LIF9xv0mmnRERwniIznVfqMGNHlVLhkNSCsF2IdSHm9oeQYhkCSpb32SBQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\n_tmbstat01.tga
+  data: cincwrh/7SSgg3D3pymk3hXKloRa5ne/rc9HjbBT/6r2LxmumI/9wrqhgjeTY+8/+kF14AvTzaRuSDlCllVIpg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\N_WeeqB02.tga
+  data: FAnRuo2U1UFeBjUje83gu7W8tEZ+FTvg6F41qS/BiO9XLxno60EzOajbluiHdRdEpSFW2tvfREGwbkhTvX0BwQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\NAR_mat.tga
+  data: rWmel7p6TbO6BZq5JX1zz6L+TmsBzdDItK6/Lk5rWv2iVq1YUgkszIOjIr3d29cjj2GvjKDFubZ0tJcf3BA94g==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\OND_blst.tga
+  data: 70FSOF3rZ8b15ypDYWnz7QQHJkJ0FLIxMTE5DVhy4ZemQ7+Z1Z9IqIYa1UES7mjgf29d3cPdFwZ5jW7G1LNLkQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\p_joleeh1.tga
+  data: jVfzowTzrroDeW3sLDkNSmceqLS+/EQPsXFExgPXTYHa2T13G7E4P34Y01AmL+uPuuHLYUC8XYDgzH3YodKZlg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\PFBN39.tga
+  data: hItF0bSNQ9mT8fKVSKA1EOkpmnl9KlQ8Up18bMweF01g/bKRu7pkn4dx0NaRCH2ZqAwC7N1RAOkPYPjlBXhznw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\PLC_carpet.tga
+  data: yYkzvPBJw47QDmvb7ha3yq8z0OL70C61ZqkhnDnL4ncJ2v85k1JTMnFZjItZVeJ1AlNThW6ZSTRiCIjnDwmPZQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\pmbal01.tga
+  data: trrHmOuZilAUH8j4xTPoY/Fa80mw9u4B9++NNHlI4mGQyf0a1QV43pRvzPV5CtrEFtR4wefaCKOCXNTm1rgTqA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\PMHC06.tga
+  data: jINADGCeg7U+/6ZIhY4M74YPRPeThNDrwGJvh9iIF50hbzUjc6rAZslRmh8D55QYty0DvPwBbHKmpKOHLhZl+w==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\PO_pjolee.tga
+  data: z/+WuklvSlvw4M5KxeqNT9yW/zBbi+E81bdrzGzV8m6BIfEIMuA3Dalyjhq5hc/oFuOJxyPbRRGxpPZ6uN9TCg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\TOM_tr01.tga
+  data: 7jxfs8C+1hq8cCy2QXiUZyfGkgDdRiKBvnWM8h143fF84+rg8KbaY4qbmLRExsVS9lgpd4z/lE85fMePjX/kaQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\TOM_wn02.tga
+  data: aqvjMH0lC6iK82GekZV9Jap+doseF67f5FweCMKkmIDGeDjEP5BJHvGAAEvTx5h0xn/2hbZO4Bc37fKKCIFxIQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\TOM_wn03.tga
+  data: cWdFrleefKb2W955tEtGuGjHQc5uFfahvdcLwcZ+0cXp17YFd+9SfrYMWI3sV0dgzvLey1yRZZ1QZ4zAlr6VRA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\740KORa.wok
+  data: ee7hZbdHHgLvP8zvMZ6GLr11J2MqXnsrDFJz4Bl+OheudV3DLSN9rWMUQCYP7ywYWyLCw7SZccJoLDiM3VK8gw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\740KORb.wok
+  data: +LF0pgy6UAQGb93ny3dtoOfVrXkevSa0pzOR+FKgtUr0zXdY+fj6y8p8wWHLA1x+aolJrKMQzpnVrv65bNluPg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\740KORc.wok
+  data: BfRptBdY/ar5N5u/rnN6BOi1Szdhu1xMvP3A2hvt/FknzhhxzKCsJYs6mLEhXujurltIaMWpCJ0PEVtFX3I9AQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\740KORd.wok
+  data: 56s/dBj8vW1E2/Q03quvycCFMJ9Sb6SJHyRJJjTip6yYuvfv2qF0a1OxVl2UKFS3MfQdHBWeuwXEPmnZP0wSZg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\740KORe.wok
+  data: T6pOoCmhA+TaN16x74lpoVunUptjh3vPmNyqa12oWKn8t1Q0/zhC0BvrUexfs/kto4+ZNz+HSnGm2aq0v3qocQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\740KORf.wok
+  data: B6dc9p3WsJ7LqMydYP0p+yiNMnZ0t9afUjfSIe9Nt8XQoXFkNAgAQXbdowj4h/sk5gVQ+0rbD52yW0BSw7mi0w==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\740KORg.wok
+  data: tM3OxhDrTOhVc+nTy8tnqnQ7l/uRfKrD7pIK6H+sx/y1bZY7A6wniU4yxATLvuEmaJpxEqkABG4XZasIiEI6Xw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\740KORh.wok
+  data: HI2C3TbJdhvloU3kxU9vMSSPWKgy7Sav6Vnx4oDAkdSqZKxXEGWPxwOxpKviI/jGFc7gaLlWfU7dF6drfV1j+A==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\740KORi.wok
+  data: bNkxM0+yhEG6ek+WD5fB+zfLiAZ1zEGLUZXuioe5FQgEPbG16cW9JUdDNf0bQmTswyvaWXlMmHgh8Etl5pDL5A==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\740KORj.wok
+  data: uAmewRrW+b/XHo1DO+TUf9NXzmyV9kjOq0Isr0SXlZtTNWGAmuPMJyvbgRUIa7y3Ga4JbGLl5mdZSU+/EOb5GQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORa.wok
+  data: oJ83VmlCv1/ZOVuVSJRAwO0LVD11cSzoL+XuGFL5tGDu/dOQRmNJ7s+Sc4LT3q9PxESwGSRYnPH0kJP6wwjOrg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORb.wok
+  data: qIWUFuserOt0/Say1p6DmitJBj7enYf7pxa6jWbzMGfjerp0SVwOw9xW7JK0Vuk7KZlspFMeoUNXxPPSc0wVXw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORc.wok
+  data: v8j/dZxVWokNBjzghaMb5zxeeWb+yDn++tJ1Co+9glT3/csU3B0z0yk8v4Tq6XYHuwJoLoYALNIltHsFqyuafA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORd.wok
+  data: 8U1rprlLk6JYDW86VI1yN7oZQvhn6YmoGbjAfEaDl2smC4KO2JNggD9vIy9ZQejJnmGswiw3XzjbO1MfqivIwQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORe.wok
+  data: 9IHucwnFbkYIYP1XBPPiAgsGVadqNnMy7gAAkeZH0/OH8NpVQomXvtePnsPS1yqDQZf7M4Z/YdqyFLB1j1vNbQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORf.wok
+  data: No5XOCMSigoFPdWnW7Zw1rDQE0OiOKD8fV4C9DFrz3GdhTIQl0Xr1M5FUa/ylGZCh5DpMups4rNGXRX36z9dLA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORg.wok
+  data: PIrnVV5Gbd3jp652TJU9C/W5HSbBFQAJa7mN5+E5ZeFmGTstWdLpbZk14HbC7JdCvb0fpq0rtRjq7Ci7otAlwA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORh.wok
+  data: G7Rmy+42GqqEUlvY83WiTWGb44YsTM6eZekTLyCo/+OCuFXshXzBiP/kBe/PIjUaRyXzQJLwwCVUdQchEX9btw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORi.wok
+  data: RHyyyhbguzxOyjWbGNIOE6a2FGlIPCWmnTq51ryEb/YFNhd1c3rGSvlTJgFxwVddva55xtkU+B9tOuH3TrvgLw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORj.wok
+  data: Ug8icU6hFGMS4s/xE8EjW9xdEZI2LZ5JEfFpiCT5BzM8sZTK4dYLvtS7Ql95hrLgkS6YS8ZdV12viE+9lTaWgg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORk.wok
+  data: VEDZHRXnO0VeQXNcDaL0HqYWc4I8i9alXUpUTeclBoT/QKZMIvqNcWHgY5+1N7cTO4B33YykgSM2+hBRG7vAWw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORl.wok
+  data: yLQllvNMLKxWUcF/fJuK/R6EQWUkgNLbKLLRkNQjQDLyFSIUHaWko55qhDeOWJHRrHjCVbS3Ct+keOq1ZZYPTw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORm.wok
+  data: M9HaXLjIjEg3DR8u78clbYTU7dAF4obWfq4uhgcU5ppyq92XomFBKKXxalzV6j9STELIFpeCkehTavVo0iOUHw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORn.wok
+  data: 3O0gm3qu9Je2qxeuSRYTKS5fWjZUPkHvbU6sPMsZuDIQlKr5F7zmnyq7QhDSXWYaJIgYMJsfZz6Zb8X/lJDEhg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORo.wok
+  data: Ptmy7Nffe960k6NanFfqlsy0E2I7tyVt2eWQWMK3vvMEJiLuYVjuNfXbgA+KGRKcbYxoZy0/cD4bsfasK20cBg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORp.wok
+  data: dZHQ9sGjlJVTujRg+MuwvnjFe7O93TLrEr4qwPxnUavKKJgMs1a2iVbvN2Gq2Hml6IKRA7KAZBV71cZ8JHHe6A==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORq.wok
+  data: 0WKauolcN1haa4D7BEekMs6Moau4oANhsJqn9Utwpuoyp9rGmRns7YW6D2/jf6AHdgFAv3rNpD3NJIADpcyn6Q==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORr.wok
+  data: k9EbDt47BtF6Em1+E2PBFYnsTmQb6vACbtx+NOiGGPR4NF61Rp6PLjlQ3dh5mQTEhZStnWhaFZPTZw0ngl1Ekw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORs.wok
+  data: mvGNhteOv7lg3KR7m6FTOpK/eiqg0yfchMgB1ZbnYZF8twWe/CjgQsb0PfnryKq5Cw35YHL46vYhh/5zcHgEiA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORt.wok
+  data: +oTzL5ZGEmEnHRKTquj+ykMW1TcQdhlsRI+kK4ftDAZb0UlesezFgKHVGpd5VJSEckcINEqDLByYmbkpHOpw/g==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORu.wok
+  data: Eogp5gwZiCteg8Xrwyrz2FaBjDouZe65mO/wu1uNpeEpruiLzJH+Jszii8YbZo3xPqTYbrA7sz6G8XjhoBnNbg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORv.wok
+  data: j/OPCxSqYfnS+4c33HifXAMSrT7JxcHuEAhQgEyTG7EJ2a/OGc92jO8z/aSilt2812slQdEmLqgacTcRhpKDMg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORw.wok
+  data: pMCucVqPfVJHwKBWk7N9tVZZxHMiNV1Ruq2E5Oh/ZmEYZwPaEY1QCQayFm9RSslAzOnRIvTBonGt+ZDox8Q3vw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORx.wok
+  data: vPX+D17IHJGgGO8FtwS2J3ufk3sOr10+RRH7qVuSve32vXQRwID+2Y4ne2xi7F5abemXMDOiBn/kt5HbzgK1kA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORy.wok
+  data: hXi3wgZSXhUaoQ66LzGqdCsawDQqwYJP9P4spijgNRlKJpoOO8OpFOi/XZNL5O5+2ZLTFo6S/V4607Wo69J4xA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORz.wok
+  data: 8Gc9y/SyPM5DU+r/QoKQkTDfvoO2Fd1GEumIRvc4yn703bytqHgaRNipzBwAhoBw+hNqAW9zJmb1MgK+kZo+DA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\745KORzz.wok
+  data: fXcs7fVFAe80DR7UkIeuNTXYmXE/t9pRaPMCZwhtUkjEasg+RqNun4Cx6afzcE4fqg2NSZPyFwQ8KtrmFbSTxA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\746KORa.wok
+  data: 7GLomFsQzFBGGMsRXwQ8KT3QWzgq6tgLMN6EUb5t+yL2/PiA+ao2AXiwzC3/fQHdl4zTiIVoS5AjPNSohpPbOQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\746KORsb.wok
+  data: woQpdGUiZ7cPctAgOAY8OhjLASE+UY7etQjWkl6Y8lnChuDQKeguLrOQeKHU8ke7eCL06vx6P230DBlIHBqGuw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\747KOR12.wok
+  data: l9TEEm1vUNsegGNVh7UVyC93ySVdACgQrbVCYHqu4NVS+j/qrDoPbMdEIOjIPtF1B7lIkfy3Jtf5ovVCV5gJRg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\747KOR14.wok
+  data: RTuGXUPlAE34LneYp6NQR/EX0rda4RSgTBo7/QRUNioFM/bC1Vx4IAFmFvARPxXkD89wzEVd6m8Yz/RIMOJaqQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\747KOR15.wok
+  data: kMuPlBUE/spf+toqN7U5XxpZX3Utw49tsFShITj16qE+DwWyavbIDz4IaLxtIUmVhwguMfAV4GGbiC9uvmeT3g==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\747KOR16.wok
+  data: zigYjS0cIYI9i6HYf+7yhdgmbXJIVtwZtpeXi45U8KrlASRp8gIaibaVUHQIjLUnpJyqX8bzgI+knPAocpF2eQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\747KOR17.wok
+  data: gf/umnR+JBl5XJdgzH5v7CtZCmkqbFHcQoX13n82Ph6KRf7tyWZEcCM45iwWKLp+vMjZwfxq+hsXrXO1qkPAkg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\748KORa.wok
+  data: F92YGoJkCYfp+8l/IDvUlI15Qbowk+qSmY0kxSisva0qNYhYbOKeY8d4UcWkwcmAy/tDn0yjjkPEHrA7WvMFng==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\750KORa.wok
+  data: hkiAxyOswQZQZy6FQU6XrBAXuZ4fMcVkXZ891XzHK3tHzWvfLQlnq9rJ7avdiEE0B4I2OiYYug/+UMaLv22A9g==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\910DAG1.wok
+  data: 6o6/13kMlDOs27KeN6Fh9K01D0DfhksP+4YRddcY1tvM+tjL3u+nOEI3V7OjN5rsqlVBAqJf0CERPKj15CIY2g==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\910DAGf.wok
+  data: H3D66H+0I5ycjy4GD88OSSwQrZrCXUDaesZ3fdx9cGlGy0quVoVVMrr4vjxhF/lagbtCtSOZtQLagSi5Zgp13g==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\910DAGl.wok
+  data: 5UJdya1HzHQb6TJNxkpOQw01ijdej3INlNN/+cFYWyC6fiPhh6t/g1f+7X6k7OnUcHV6EnT6H//0xChQ6c718g==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\910DAGo.wok
+  data: B6k+217PtIk00GKO+5xAg+3C/lzyzS4ifK3luhHrtP5YHUKG5AJe+xUoH/C4EJC+of7mUJPM+7gWeV6kwKKkdg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\910DAGy.wok
+  data: KmVTtlXChX+QbwaUPULVYZ9yHhjbcoQ9XZVh4in2CuI4CC+FF4TvU3zo2Glii5XbnuAWID4bCGtMwtoCNkEnOw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\910DAGz.wok
+  data: r7WgPGQKgs7MVpMfiUzISraUVPNiJ7p6/0f2FE/c3nAeErKFfvSZU2F7H6rPneEEeaNxZIvRRlucmt2GDsjr0w==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\Sithghost.dlg
+  data: PAbQXyPJDglIvIqmntexk0qde1yce6P1js/IHc7+pcvMSgU6WDNBJB53jJvhAWXjsmcsPTnwjLC/4yaS51Ifrw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\plc_wdwcvr.mdx
+  data: HhC87rRmlMa2ij4HPpYnSLxZxKNzfbT9sXEiix/C95MhH0ofAVhc6/NGhy3lkyx5ytCpF+VuGe1qA7Lpm9KWMg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\plc_wdwcvr.mdl
+  data: uExfPSav0MTmeXl0WKDnAv19FD+u+5wOSeaDbGiGL+BxmtgC8N0GQtMdH02YqD7ND6P9j+kYqreUh3OPRgb+UQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\p_jolee02.utc
+  data: MTgvY3pfovVfQXUYoDBwaqvpeWD4wYTKZl3b1pg37lM0iZBzFvvxQBpFTDLIIPyYf1CfTLDM2yoDOrCnLagiSw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\p_jolee.utc
+  data: IL8HRYtdH4zZ013Nouncb7d0rhpRfjKo4hdmZCyfm9GaBTYAqvByzXa3fO/3cMfSt5fdFu5NUV6azjAUw1dGmg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\n_joleeH.mdx
+  data: CX571iw69NDAFe5hCr4R2HIQ6aRTAIlElgp018TJPv4RSXAgqNMQF20LZM39PSg43RS52ME+c2sK9b7pj14HhQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\n_joleeH.mdl
+  data: /NCc19RsehvHmH+yWYczbONx162mhWgsM0pkITEJsTiPJJhmy4qrhqnMKMGTxn5e94AA638e9tH9E4+urh9a5A==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\n_ezerarden.utc
+  data: YR4HIzwGaKHTYUZ66diHqtnzfQ7lOfxPmMJvkvZ3qXz7GAXZEEnAJXKt/ZRFex/S4eKkC0oQOa7/ePg0IZUO1w==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\uthar_pad.uti
+  data: yOESq6hHltls9fh7tWMS3+YUbtUQeER/pC3rO5WbG4oeRAIPwabUGI/jbhwyCgQBqwTiDfCpGTDyhY0660iLTg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\sp_uthartable.ncs
+  data: RiYQh5bSByS+Dka0FPspgqoJlMCQDBbwtpNOtFhy8wfHVXRjZpRKVbT7KmIKbkdwocQlfZ4+SPxCWtmenM62HQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\plc_uthartable.utp
+  data: H0y+437m9KL7s6OPDJVca5QglNRxUf1YfSkg9DCZ1xyh4+G8RimvjgWhipEDvd80pM0gVJXBlZGK7qAB1oafXQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\jrnl_floor.ncs
+  data: JNp/5zvB7q3XGSH7w0ZKtuHV54mg1H53pGLNQ5BEC6ZsaYDwx0ODyyvwRSl2OffdHZVWQvG496xB+9wzVuYrRw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\door_thorium.utd
+  data: l1uaTwaK7mgaWRRGc9ZKoSeJXkHJR258hnI3zARDJ74j7hTj1+q/n/xCHxRFku4hN2CGwnhOaewJPp+uc5d/tw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\n_dummy.mdl
+  data: SwwMBVAJVTolmvId9yrty8HahJ487uxy43hlAkm/33ZM2VFKHthlF9G1g98P/mURAsmZZEQ8tg61f0bATKnYiw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\n_dummy.mdx
+  data: z4PhNX7vuL3xVChQ1m2AB9Yg5AULVxXcg/SpIdNs6c5H0NE8XYXysP+DGNKHfuwvY7kxvUdBeoGlODJ6+SfaPg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\n_pox_alt.mdl
+  data: qnThKW2wCOiTtr4IVM/a9P05q4a0fmjIVeGeDgDmrB7kLAWpQhJ8oEg2/kmcGNtwoHVKuCR5s+NFDJxuLG5H5w==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\n_pox_alt.mdx
+  data: czpigE1xr9qrKBu47nA4tPGqmS56Giz/VUUV6JAQG5jT4U7o33HRILfLqAhCooTdIH48xNq5TaSPhLcXCFPgSg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\n_pox_altB.mdl
+  data: ZP+1jSKfgt/Umk1KhQD1ieiZa/QYiYXAsXqD2iToTm14KCJe/3xoCoCcDvEpEqtAM2HaqxxNhotuTKYFXjEoBQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\n_pox_altB.mdx
+  data: Bkh0frcyHNRzQbjNl2UyUG1Go4Gfn7RWZiWPTz9BHQCUxVBr3/DOaheO2+Oc4r9p6Sf2kMbHbLGgwTo//hM7TA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\Override\N_DarthPoxH02.tga
+  data: ViintTxA2usVaLAy36Rv3rAU7OGEbMkhlJPmJoaJ+UXhUmqKCOi6180WRrH3b0jv+NqPA5T3JmpBx3fHxfWywg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\override\plc_wdwcvr.utp
+  data: MgW22s4SRhSpRtgnGtuxQEkuA3eHevEYCYy5amCQ/n/4JlBAwyxYNzojqMwSKnOcBoL/7Kd57DC1Z94DnuPT0A==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\741\pox\741pox002.wav
+  data: bovZ1m4n8iUD6xFFMajQt3+UeLRksdMqC9ZeNXg1PDzO1izM7KYy06iUn/ibfoJtf2579awXO+AG8bwxmKVzHw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\741\pox\741pox001.wav
+  data: gPMuVFupqP9d1/Aqa8s2T6pkU8BnAXI8Ek3dL2cUvdIqSkNl9PUc/BeQjWY/LdaCUs/UAS9V40r2CZ5BbUmW4g==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\746\jett\746jett001.wav
+  data: YWGfDC3GUc+7ki0IHiL1q8vd5WeLvCcTDrBvB0A+BC9/zpE/fICeMY4MWG+O6VyJqUxwncscLtr8X0PvlzgvTA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\746\jett\746jett002.wav
+  data: TjCbBXhQsAHNqtZ7txu5ifrb6TL2ddv7zaGUSfsK3UN22FfnfjvqVkxXNXI4r/GiniJf7eCjZNvHNGSkxhV7Pg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\746\jett\746jett003.wav
+  data: 3WJtBEHuoeiTne9hVl+PGoFRFXNvr3jQsxGANFAnuOPNR8zxNrt0G+N1iJaJD/dTDVirGgTHIzNHRi/okQ4RDw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\746\jett\746jett004.wav
+  data: LKGggafibd2P3bazx/manBJhZQ2yYZqiI9svOUBcOhR/46HZtpzFHeHXakVDu5PZFHkK+4HponVkroIqJKQRWw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\746\jett\746jett005.wav
+  data: S0TREJrZmOTNi699Rba/KSnsGCIHTeHkfmw8Vw6nTejo9a3QECnp5a/G+Ced5G3AGUFnJ4YOxwl5DJgHxmkH0Q==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\746\jett\746jett006.wav
+  data: StdddxBV4K8gC2SOgTWG9eCrA9h9bSi5vkoI12yv06gL7Km49GEwOhbmc90G+8K4g9EhqCvFjt4Iip1uMhugCg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\746\jett\746jett007.wav
+  data: YynCQgFDgt9caC20yTwf6fahajpm2qC9I/BxIXIhCgTmsG6RQNIcX9mpQvjvCuHaUF3+08d3qyfclJtE2QG5zQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\746\jett\746jett008.wav
+  data: A29mzJudesfqePOEdyp88u2qqJlP7vR7Ae0hm8cKc72g0Nqt1D4k3gTT9LUBcBFyJ4C+xOiA4KXal2/MIrSfuw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\746\jett\746jett009.wav
+  data: 4C2rV9ajfP8YRRVEQ2h3g++xziu9S+mGDWDxDoAdG520MX9UvLsSheFifhes080hKFTKrK2TAVPAZKlVSfXLXA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\746\jett\746jett010.wav
+  data: hTFvKCPmGIjvSzLrMxkzeQ5H9ISR4+fwGYUnJbz6F14K8YY3U7A2fF/1F+P56Urfv98LuuvEKknyEw+mzJ8TeQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\746\jett\746jett011.wav
+  data: M/w400s1vP5T4aNzSJzraohgCxjdBUhr7OWvDyYICPDU5895/Buc/WMaP7/QYimE/lEWoa/pAAZBCnt0cnUEcA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\746\jett\746jett012.wav
+  data: prgqpX23/1xFT5yzRNf1OBWtrDn6+Lg3eFBh5Oh20BeClSeu1lsJhO6AhATcldbCwM1ZvU8dv+impeqkH8qSkg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\746\jett\746jett013.wav
+  data: BbW5f2DDUMOIuKwsgRCBccCou3TAMC52w4t6IL59Bs6fBxpYkv6I4HXJ3gIABD405Y/dkBAm3VaUWFiCoBkeoQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\746\jett\746jett014.wav
+  data: AlMR3wBIlzHT3IsI7HCkf3cEtU6Se6ci1sqR4t3Y3X9YLGmToWUp7pJqyXNZ2SCGPh7Z2ZvEoAU6u07t02IxBg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\746\jett\746jett015.wav
+  data: zBP60yoOQN4zKPx2O/eGqIRkQ4vMte3OXttrzcs7kc0nQMoadWH0ix3KeYI2lArrGd5Hyyn/Cf8b8vL3D5ox9g==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\746\jett\746jett016.wav
+  data: 5U+aZtCCyKKG0MFIA/i8FG8A7IC6wxPCy3YZoVPMAyZN6drapB2R4zQqr8ZTKPvdVKaNQeB97Jd3ELZh8FAfpQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\746\jett\746jett017.wav
+  data: A/RGiOqIpOk/5+ndCQMKpy0IaKcF3ipZHpoop3jhf8xCZVtjrgM8TzbhXQEfm73vdM0OG8d/NsAKmOdnA5QsHw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\746\jett\746jett018.wav
+  data: XOSVZtxt6nIOT2wVqNdsWUTxl0pQascQG4I8KfcWz0R519jVmN3KBB3i/bn3Q/3Jro4hqyxChuDfqt8xIXEVKg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\StreamVoice\745\pox\745pox001.wav
+  data: p8itikdtsTSZHiMxAQ5amFUXWGrxwS9LntDCK+fsmvArEd7PQeAHr3roC9tMvm+SRahDCq4VRvd7k1gBTZbAdQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\override\global.jrl
+  data: 6QMswJocefxR5x0VXSg1z99p8cYNO+wOksJItDgmuodIBahTVWy/REhQO0kipZUrMPCy7OLscxTf0nAs1v2HxQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\override\n_kazius.utc
+  data: dC/gT7o5/Y4FiFiA54drCd+GfjfCVF9q+UgyCuZGGoVDt8N2A2170IamYY31vwob0+6/o9honzY1zIRVXSy7MQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\override\n_darthloqi.utc
+  data: qRp5wROrQA30AyhsxPK68y+EvfEP6vD0COaNXSUqMGw8uBPbI+8vCOpmoexQ7ZL6tKBCpI9QuLWAlyWI6NzBsA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\override\n_sithsent.utc
+  data: EN3hBkF/HSZ+JMYfSIu8ufgSyuapoh4b8m3AS+0zqaldR1SbOMIxrbcH+4drWJjSyeH8ynkKgKQ2mIfLkRmsQA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\override\n_jetpuppet.utc
+  data: Ko3OSV5vmjXje05m2Nz0Ic7TgbTg/b1EMH+cYmExpahBvR/spRvpSOSTwhbhO6GZkF6OWtzgSWEKnbLB9KWHrQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\override\n_ezerarden.utc
+  data: brJLOMa36W/z+JoG+iPSecRWBBz2FD+Gpuu8Rx/ajUBmJe9R8RY6Nn4dKj2gCM380bYiVUuXtHxE7nsGAneJIQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\override\plc_dbleruin.utp
+  data: 69P5KO6m+NUC3rq5YLPqtKVXCeTzdNPc+DC9x+yr+b9c96/izOp27MqcOhktKvPSvuLW/EGitbs/F8uHAsojBQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\override\plc_sglmon.utp
+  data: XPMe2S3CC2xNXf4DNqty1HMpjSF3QKUgZPUMfTSVFXwgtaOO3TmFvqfMRs+ZZrQCF1Aq/1SyIfGBfLgFUXxyog==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\override\plc_tallmon.utp
+  data: DNR9fvhR6CvxY9LvJtJdwpOi1SHAJMHvuO+Ez6zPaGVOzIZosqNKRuBlPWmzZ1hZHxKJIGgEO6XJxAa9iuDUmw==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\override\plc_valstat01.utp
+  data: sSNOvhbuY8cRdN4nbMWSYpimQ8g5yL4bG3tiLs9zVUh5nnOoA2ejkGWrQW/UBK57UCGeJlKKKZe6M6hp7F8nnQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\override\plc_valstat02.utp
+  data: LVKBkCwqr3wSmTVZQxT1gS4s8M2muCPBpqB75gfhfm3+/R4PtyLuR4d9tbJfXxh4OeDYPT0EDZiH6Qjfr6wxqQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\override\plc_valstat03.utp
+  data: WLjtP9e7cqxKO1uxIcX+qK957JM34aLJfJ9/0h0FYXoiOMBV+PDZBVbHNifoQXPq5zltw1HKPu9VyHbaEGNCPQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\override\plc_bigstatue.utp
+  data: cs1rYTX56HvkE8c3947GGx0wDtID3/Kpmr8tceOt6zFXchIAhCDyHxV1khB3xWHNS5IMF3gdTZXR2gmjy+oLtA==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\override\plc_bigstatue02.utp
+  data: EktriEPfkWJTaEz+5LPDJ1IERH1VHncPHAVTZ/kevzNoBjv6Jn9i5kAj2WVvHeWcUc/53hCa63GbCDrHJ28eEQ==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\override\plc_ritualped.utp
+  data: Kyqw3WdZqptEZvutEBhJ6JFpH75bgH6udTD+PebuwxGyTYQvJ4lg+Yw07QWWkdD4/veBXLRad0yY+StQa6DJbg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\override\p_jolee.utc
+  data: GBOu/j5p8cVHcNAHIw3fL1byP5bbpTEJyemSQFB7jlzhocZJD1ZlWTCCu8WpHxiZPzOOWv8LqV2AQX5nXBj+jg==
+-
+  path: ..\..\KPatcherTests\Snapshots\Resources\gameRoot\override\p_jolee02.utc
+  data: qcNzcov/2q7y3zuDpZWWahBytdii0xjeZH9EVFALan3lphYrProVdkGQD2M8PB3bERaMj0u6spBLoTYcv3EnvA==

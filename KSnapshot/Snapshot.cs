@@ -37,7 +37,11 @@ namespace KSnapshot {
             return File.ReadAllText(GetFilePath(fileName)); 
         }
 
-        private string GetFilePath(string fileName) {
+        public string GetDirectory(string directory) {
+            return Path.Combine(Directory, directory);
+        }
+
+        public string GetFilePath(string fileName) {
             return Path.Combine(Directory, fileName);
         }
 
@@ -66,7 +70,8 @@ namespace KSnapshot {
         static string snapshotOutputDIrectory(string className, string methodName) {
             return Path.Combine(KSEnvironment.Bundle.OutputDirectory,
                 "Artifacts",
-                String.Format("{0}\\{1}\\actual", Path.GetFileNameWithoutExtension(className), methodName));
+                Path.GetFileNameWithoutExtension(className),
+                methodName);
         }
 
         public static string PatchDataDirectory([CallerMemberName] string methodName = "", [CallerFilePath] string className = "") {
@@ -117,41 +122,42 @@ namespace KSnapshot {
             Verify(String.Join("\n", allFiles), record, className, methodName);
         }
 
-        public static void Verify(String actual, bool record = false, [CallerFilePath] string className = "", [CallerMemberName] string methodName = "") {
-            Verify(Encoding.ASCII.GetBytes(actual), record, className, methodName);
-        }
-
-        public static void Verify(byte[] actual, bool record = false, [CallerFilePath] string className = "", [CallerMemberName] string methodName = "") {
-            
+        public static void Verify(String actual, bool record = false, [CallerFilePath] string className = "", [CallerMemberName] string methodName = "") {            
             var expectedPath = expectedSnapshotFilePath(className, methodName);
 
             if (record) {
                 if (!Directory.Exists(Path.GetDirectoryName(expectedPath))) {
                     Directory.CreateDirectory(Path.GetDirectoryName(expectedPath));
                 }
-                File.WriteAllBytes(expectedPath, actual);
+                File.WriteAllText(expectedPath, actual);
             } else {
-                var expected = File.ReadAllBytes(expectedPath);
+                var expectedCleaned = File.ReadAllText(expectedPath).ReplaceLineEndings();
+                var actualCleaned = actual.ReplaceLineEndings();
 
                 var outputDirectory = snapshotOutputDIrectory(className, methodName);
                 var expectedOutputPath = Path.Combine(outputDirectory, "expected");
                 var actualOutputPath = Path.Combine(outputDirectory, "actual");
 
-                if (expected.SequenceEqual(actual)) {
+                if (expectedCleaned.Equals(actualCleaned)) {
                     Assert.IsTrue(true);
 
                     if (Directory.Exists(Path.GetDirectoryName(expectedOutputPath)))
                         Directory.Delete(Path.GetDirectoryName(expectedOutputPath), true);
                     if (Directory.Exists(Path.GetDirectoryName(actualOutputPath)))
                         Directory.Delete(Path.GetDirectoryName(actualOutputPath), true);
+                    if (File.Exists(expectedOutputPath))
+                        File.Delete(expectedOutputPath);
                 } else {
                     if (!Directory.Exists(Path.GetDirectoryName(expectedOutputPath)))
                         Directory.CreateDirectory(Path.GetDirectoryName(expectedOutputPath));
                     if (!Directory.Exists(Path.GetDirectoryName(actualOutputPath)))
                         Directory.CreateDirectory(Path.GetDirectoryName(actualOutputPath));
 
-                    File.Copy(expectedPath, Path.Combine(outputDirectory, "expected"), true);
-                    File.WriteAllBytes(Path.Combine(outputDirectory, "actual"), actual);
+                    if (File.Exists(actualOutputPath))
+                        File.Delete(actualOutputPath);
+
+                    File.Copy(expectedPath, expectedOutputPath, true);
+                    File.WriteAllText(actualOutputPath, actualCleaned);
                     Assert.Fail(String.Format("Snapshots did not match, see expected vs. actual at {0}", Path.GetDirectoryName(outputDirectory)));
                 }
             }

@@ -15,7 +15,7 @@ namespace AuroraIOTests.Source {
             var table = coder.decode(resources.GetFileBytes("gameFile.tlk"));
 
             var newTable = coder.decode(coder.encode(table));
-            Snapshot.Verify(newTable, true);
+            Snapshot.Verify(newTable);
         }
 
         [TestMethod]

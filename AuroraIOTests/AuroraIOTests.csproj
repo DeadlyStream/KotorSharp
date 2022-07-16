@@ -47,8 +47,4 @@
     </EmbeddedResource>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Source\Artifacts\" />
-  </ItemGroup>
-
 </Project>

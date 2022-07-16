@@ -16,14 +16,8 @@ namespace KPatcherTests.Source {
     [TestClass]
     public class PatcherTests {
 
-        [TestMethod]
-        public void testRunPatcher() {
-            VirtualFileInterface fileInterface = new VirtualFileInterface();
-
-            Patcher.Run(Snapshot.PatchDataDirectory(), Snapshot.RootGameDirectory(), fileInterface, 0);
-
-            Snapshot.Verify(fileInterface, true);
-        }
+        string RootGameDirectory = GameRoot.Directory;
+        ResourceBundle resources = ResourceBundle.GetCurrent();
 
         [TestMethod]
         public void testTLKChanges() { 
@@ -31,7 +25,7 @@ namespace KPatcherTests.Source {
 
             var date = new DateTime(2003, 7, 15);
 
-            Patcher.Run(Snapshot.PatchDataDirectory(), Snapshot.RootGameDirectory(), fileInterface, date);
+            Patcher.Run(resources.GetFilePath("tlk_tslpatchdata\\changes.ini"), RootGameDirectory, fileInterface, date);
 
             Snapshot.Verify(fileInterface);
         }
